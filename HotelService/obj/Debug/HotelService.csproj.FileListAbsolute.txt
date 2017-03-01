@@ -1,0 +1,6 @@
+E:\kerjaan\HotelCalifornia\HotelService\bin\Debug\HotelService.dll.config
+E:\kerjaan\HotelCalifornia\HotelService\bin\Debug\HotelService.dll
+E:\kerjaan\HotelCalifornia\HotelService\bin\Debug\HotelService.pdb
+E:\kerjaan\HotelCalifornia\HotelService\obj\Debug\HotelService.dll
+E:\kerjaan\HotelCalifornia\HotelService\obj\Debug\HotelService.pdb
+E:\kerjaan\HotelCalifornia\HotelService\obj\Debug\HotelService.csprojResolveAssemblyReference.cache
