@@ -11,7 +11,22 @@ namespace HotelService
     [ServiceContract]
     public interface IHotel
     {
+        // vendor
         [OperationContract]
-        List<Vendor> findByID(int id);
+        List<Vendor> FindVendors();
+
+        // category item
+        [OperationContract]
+        List<ItemCategory> FindCategory();
+
+        [OperationContract]
+        List<ItemCategory> FindItemCategory();
+
+        // item
+        [OperationContract]
+        List<Item> SelectAllItems();
+
+
+
     }
 }

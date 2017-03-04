@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<script>function AddToCart(id) {
+    alert("halo sayang");
+}</script>
+<ul>
+    @foreach (var Category in ViewBag.Category)
+    {
+        <h4>@Category.category_name</h4>
+            foreach (var Item in ViewBag.Item)
+            {
+                    if(@Item.ItemCategory.id == Category.id){
+                      <li>@Item.item_name</li>
+                    }
+            } 
+    }
+
+    <button onclick="AddToCart()">bete</button>
+
+    
+</ul>
+
+
+
+

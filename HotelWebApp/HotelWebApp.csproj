@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{207CC6E4-FDEB-41BD-90C2-ED03E7AAA19E}</ProjectGuid>
+    <ProjectGuid>{2661D3CB-4FEC-41B7-AC7A-12F83FB167D5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -198,9 +198,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,7 +208,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\HotelService\Reference.cs">
+    <Compile Include="Service References\Hotel\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -239,14 +239,20 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Service References\HotelService\Hotel.wsdl" />
-    <None Include="Service References\HotelService\HotelService.disco" />
-    <None Include="Service References\HotelService\configuration91.svcinfo" />
-    <None Include="Service References\HotelService\configuration.svcinfo" />
-    <Content Include="Service References\HotelService\HotelWebApp.HotelService.Vendor.datasource">
+    <None Include="Service References\Hotel\Hotel.wsdl" />
+    <None Include="Service References\Hotel\HotelService.disco" />
+    <None Include="Service References\Hotel\configuration91.svcinfo" />
+    <None Include="Service References\Hotel\configuration.svcinfo" />
+    <Content Include="Service References\Hotel\HotelWebApp.Hotel.Item.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\HotelService\Reference.svcmap">
+    <Content Include="Service References\Hotel\HotelWebApp.Hotel.ItemCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Hotel\HotelWebApp.Hotel.Vendor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Hotel\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -284,16 +290,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <None Include="Service References\HotelService\HotelService.xsd">
+    <None Include="Service References\Hotel\HotelService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\HotelService\HotelService1.xsd">
+    <None Include="Service References\Hotel\HotelService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\HotelService\HotelService2.xsd">
+    <None Include="Service References\Hotel\HotelService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,7 +316,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\HotelService\" />
+    <WCFMetadataStorage Include="Service References\Hotel\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -328,7 +334,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>24695</DevelopmentServerPort>
+          <DevelopmentServerPort>20954</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:24695/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

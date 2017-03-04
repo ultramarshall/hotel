@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62878b18-cd21-4b83-be95-bb81a2772825" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/california/HotelService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HotelService.xsd" MetadataType="Schema" ID="780d2ab4-268b-455d-808c-64bd93f90894" SourceId="1" SourceUrl="http://desktop-0si1hn9/california/HotelService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HotelService.disco" MetadataType="Disco" ID="a4559285-9cb3-4eb3-8560-0f004334a1a0" SourceId="1" SourceUrl="http://desktop-0si1hn9/california/HotelService.svc?disco" />
+    <MetadataFile FileName="HotelService1.xsd" MetadataType="Schema" ID="bef20061-baf4-4dad-889c-9de9beeb7273" SourceId="1" SourceUrl="http://desktop-0si1hn9/california/HotelService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HotelService2.xsd" MetadataType="Schema" ID="5bffaa35-4a17-43e3-9a4c-b011211563f0" SourceId="1" SourceUrl="http://desktop-0si1hn9/california/HotelService.svc?xsd=xsd2" />
+    <MetadataFile FileName="Hotel.wsdl" MetadataType="Wsdl" ID="84783bda-ded6-4ca4-ab45-e9d3151080ee" SourceId="1" SourceUrl="http://desktop-0si1hn9/california/HotelService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

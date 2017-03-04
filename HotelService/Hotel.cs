@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 using HotelService.Contract;
 using System.Data.SqlClient;
 using System.Data;
@@ -38,15 +34,14 @@ namespace HotelService
         }
 
 
-        public List<Vendor> findByID(int id)
+        public List<Vendor> FindVendors()
         {
             var data = new List<Vendor>();
             try
             {
                 _comm.CommandText = @"SELECT id, vendor_name, vendor_company, vendor_address, vendor_phone, join_date
-                                      FROM vendor
-                                      WHERE id = @id";
-                _comm.Parameters.AddWithValue("id", id);
+                                      FROM vendor";
+                //_comm.Parameters.AddWithValue("id", id);
                 _comm.CommandType = CommandType.Text;
                 _conn.Open();
                 SqlDataReader reader = _comm.ExecuteReader();
@@ -67,8 +62,120 @@ namespace HotelService
             }
             finally
             {
-                _conn?.Close();
+                _conn.Close();
             }
         }
+
+
+        // category 
+        public List<ItemCategory> FindCategory()
+        {
+            var data = new List<ItemCategory>();
+            try
+            {
+                _comm.CommandText = @"SELECT id, category_code, category_name
+                                      FROM item_category";
+                
+                
+                //_comm.Parameters.AddWithValue("id", id);
+                _comm.CommandType = CommandType.Text;
+                _conn.Open();
+                SqlDataReader reader = _comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    var list = new ItemCategory()
+                    {
+                        id = Convert.ToInt16(reader[0]),
+                        category_code = Convert.ToString(reader[1]).TrimEnd(),
+                        category_name = Convert.ToString(reader[2]).TrimEnd(),
+                        
+                    };
+                    data.Add(list);
+                }
+                return data;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public List<ItemCategory> FindItemCategory()
+        {
+            var data = new List<ItemCategory>();
+            try
+            {
+                _comm.CommandText = @"SELECT        item_category.category_name, item.item_code, item.item_name
+                                      FROM          item_category INNER JOIN
+                                                    item ON item_category.id = item.id_item_category";
+
+
+                //_comm.Parameters.AddWithValue("id", id);
+                _comm.CommandType = CommandType.Text;
+                _conn.Open();
+                SqlDataReader reader = _comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    var list = new ItemCategory()
+                    {
+                        category_name = Convert.ToString(reader[0]).TrimEnd(),
+                        Item = new Item()
+                        {
+                            item_code = reader[1].ToString().TrimEnd(),
+                            item_name = reader[2].ToString().TrimEnd()
+                        }
+                    };
+                    data.Add(list);
+                }
+                return data;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        // item
+        public List<Item> SelectAllItems()
+        {
+            var data = new List<Item>();
+            try
+            {
+                _comm.CommandText = @"SELECT    id, 
+                                                item_code,
+                                                item_name,
+                                                item_prize,
+                                                added_by_date,
+                                                edit_by_date,
+                                                id_vendor,
+                                                id_item_category                                       
+                                      FROM      item";
+                _comm.CommandType = CommandType.Text;
+                _conn.Open();
+                SqlDataReader reader = _comm.ExecuteReader(); while (reader.Read())
+                {
+                    var list = new Item()
+                    {
+                        id = Convert.ToInt16(reader[0]),
+                        item_code = Convert.ToString(reader[1]).TrimEnd(),
+                        item_name = Convert.ToString(reader[2]).TrimEnd(),
+                        item_prize = Convert.ToDecimal(reader[3]),
+                        added_by_date = Convert.ToDateTime(reader[4] != DBNull.Value ? reader[4] : new DateTime().ToString("")),
+                        create_by_date = Convert.ToDateTime(reader[5] != DBNull.Value ? reader[5] : new DateTime().ToString()),
+                        Vendor = new Vendor() { id = Convert.ToInt16(reader[6]) },
+                        ItemCategory = new ItemCategory() { id = Convert.ToInt16(reader[7]) }
+                    };
+                    data.Add(list);
+                }
+                return data;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+
+
     }
 }

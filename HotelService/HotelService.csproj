@@ -45,6 +45,13 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contract\Transaction.cs" />
+    <Compile Include="Contract\Division.cs" />
+    <Compile Include="Contract\Employee.cs" />
+    <Compile Include="Contract\EmployeeBiodata.cs" />
+    <Compile Include="Contract\Outlet.cs" />
+    <Compile Include="Contract\Item.cs" />
+    <Compile Include="Contract\ItemCategory.cs" />
     <Compile Include="Contract\Vendor.cs" />
     <Compile Include="Hotel.cs" />
     <Compile Include="IHotel.cs" />
