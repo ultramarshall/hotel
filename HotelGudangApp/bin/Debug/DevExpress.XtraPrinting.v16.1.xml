@@ -135,7 +135,7 @@
         </member>
         <member name="M:DevExpress.XtraPrintingLinks.DataGridLink.CreateDocument(DevExpress.XtraPrinting.PrintingSystem)">
             <summary>
-                <para>Generates a report using the specified Printing System. 
+                <para>Creates a document using the specified Printing System, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="ps">
@@ -257,6 +257,22 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraPrintingLinks.DataGridLink.ShowPreview(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>Invokes the Print Preview Form that shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings.
+</para>
+            </summary>
+            <param name="owner">
+		A <see cref="T:System.Windows.Forms.IWin32Window"/> object representing the <i>parent</i> window for this dialog.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Print Preview Form. 
+
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.XtraPrintingLinks.DataGridLink.ShowPreviewDialog(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
             <summary>
                 <para>Invokes the Print Preview Form which modally shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings. 
@@ -366,7 +382,7 @@
         </member>
         <member name="M:DevExpress.XtraPrintingLinks.RichTextBoxLink.CreateDocument(DevExpress.XtraPrinting.PrintingSystem)">
             <summary>
-                <para>Generates a report using the specified Printing System. 
+                <para>Creates a document using the specified Printing System, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="ps">
@@ -487,6 +503,22 @@
                 <para>Invokes the Print Preview Form which shows the print preview of the document for this link. 
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrintingLinks.RichTextBoxLink.ShowPreview(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>Invokes the Print Preview Form that shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings.
+</para>
+            </summary>
+            <param name="owner">
+		A <see cref="T:System.Windows.Forms.IWin32Window"/> object representing the <i>parent</i> window for this dialog.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Print Preview Form. 
+
+            </param>
 
 
         </member>
@@ -611,7 +643,7 @@
         </member>
         <member name="M:DevExpress.XtraPrintingLinks.CompositeLink.CreateDocument(DevExpress.XtraPrinting.PrintingSystem)">
             <summary>
-                <para>Generates a report using the specified Printing System. 
+                <para>Creates a document using the specified Printing System, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="ps">
@@ -734,6 +766,22 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraPrintingLinks.CompositeLink.ShowPreview(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>Invokes the Print Preview Form that shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings.
+</para>
+            </summary>
+            <param name="owner">
+		A <see cref="T:System.Windows.Forms.IWin32Window"/> object representing the <i>parent</i> window for this dialog.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Print Preview Form. 
+
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.XtraPrintingLinks.CompositeLink.ShowPreviewDialog">
             <summary>
                 <para>Invokes the modal Print Preview form with the document created from this link. 
@@ -844,7 +892,7 @@
         </member>
         <member name="M:DevExpress.XtraPrintingLinks.TreeViewLink.CreateDocument(DevExpress.XtraPrinting.PrintingSystem)">
             <summary>
-                <para>Generates a report using the specified Printing System. 
+                <para>Creates a document using the specified Printing System, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="ps">
@@ -968,6 +1016,22 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraPrintingLinks.TreeViewLink.ShowPreview(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>Invokes the Print Preview Form that shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings.
+</para>
+            </summary>
+            <param name="owner">
+		A <see cref="T:System.Windows.Forms.IWin32Window"/> object representing the <i>parent</i> window for this dialog.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Print Preview Form. 
+
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.XtraPrintingLinks.TreeViewLink.ShowPreviewDialog(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
             <summary>
                 <para>Invokes the Print Preview Form which modally shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings. 
@@ -1066,7 +1130,7 @@
         </member>
         <member name="M:DevExpress.XtraPrintingLinks.ListViewLink.CreateDocument(DevExpress.XtraPrinting.PrintingSystem)">
             <summary>
-                <para>Generates a report using the specified Printing System. 
+                <para>Creates a document using the specified Printing System, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="ps">
@@ -1186,6 +1250,22 @@
                 <para>Invokes the Print Preview Form which shows the print preview of the document for this link. 
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrintingLinks.ListViewLink.ShowPreview(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>Invokes the Print Preview Form that shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings.
+</para>
+            </summary>
+            <param name="owner">
+		A <see cref="T:System.Windows.Forms.IWin32Window"/> object representing the <i>parent</i> window for this dialog.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Print Preview Form. 
+
+            </param>
 
 
         </member>
@@ -1886,7 +1966,7 @@
         <member name="T:DevExpress.XtraReports.UI.ReportPrintTool">
 
             <summary>
-                <para>An instrument for report printing.
+                <para>An instrument for publishing reports in WinForms applications.
 
 </para>
             </summary>
@@ -2563,6 +2643,174 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.PageSetupEditorForm.Setup(DevExpress.XtraPrinting.Native.MarginsF,DevExpress.XtraPrinting.Native.MarginsF,System.Boolean,System.Drawing.Printing.PaperSizeCollection,System.Drawing.Size,System.Drawing.Printing.PaperKind)">
+            <summary>
+                <para>Specifies the page settings applied to a document and displayed in the <b>Page Setup</b> dialog.
+</para>
+            </summary>
+            <param name="marginsF">
+		The margins (measured in <b>1/300</b> of an inch) of a report page. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Preview.PageSetupEditorForm.MarginsF"/> property.
+
+            </param>
+            <param name="minMarginsF">
+		The minimum allowed margins (measured in <b>1/300</b> of an inch) of a report page. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Preview.PageSetupEditorForm.MinMarginsF"/> property.
+
+            </param>
+            <param name="landscape">
+		<b>true</b>, if the page orientation is landscape; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.Preview.PageSetupEditorForm.Landscape"/> property.
+
+            </param>
+            <param name="paperSizes">
+		A <see cref="T:System.Drawing.Printing.PrinterSettings.PaperSizeCollection"/> value, specifying the collection of available paper sizes. 
+
+            </param>
+            <param name="pageSize">
+		A <see cref="T:System.Drawing.Size"/> structure, specifying the required page size. The corresponding paper size is selected from the list of available paper sizes and assigned to the <see cref="P:DevExpress.XtraPrinting.Preview.PageSetupEditorForm.PaperSize"/> property. If no matching paper size is found, it is selected based on the specified <i>paperKind</i> value.
+
+            </param>
+            <param name="paperKind">
+		A <see cref="T:System.Drawing.Printing.PaperKind"/> enumeration value, specifying the paper kind. The corresponding paper size is selected from the list of available paper sizes and assigned to the <see cref="P:DevExpress.XtraPrinting.Preview.PageSetupEditorForm.PaperSize"/> property. If no matching paper size is found, it is selected based on the specified <i>pageSize</i> value.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController">
+
+            <summary>
+                <para>A <see cref="T:DevExpress.XtraPrinting.Preview.PrintRibbonController"/> tailored to provide a ribbon toolbar to the <see cref="T:DevExpress.XtraPrinting.Preview.DocumentViewer"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DocumentViewerRibbonController class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the DocumentViewerRibbonController class with the specified container.
+</para>
+            </summary>
+            <param name="container">
+		An object implementing the <see cref="T:System.ComponentModel.IContainer"/> interface which specifies the owner container of a DocumentViewerRibbonController class instance.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController.#ctor(System.Object)">
+            <summary>
+                <para>Initializes a new instance of the DocumentViewerRibbonController class with the specified context.
+</para>
+            </summary>
+            <param name="contextSpecifier">
+		A <see cref="T:System.Object"/> which contains information about the current context.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController.DocumentViewer">
+            <summary>
+                <para>Gets or sets a <see cref="T:DevExpress.XtraPrinting.Preview.DocumentViewer"/> associated with the DocumentViewerRibbonController.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.Preview.DocumentViewer"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController.PrintControl">
+            <summary>
+                <para>Gets or sets a <see cref="T:DevExpress.XtraPrinting.Control.PrintControl"/> associated with the DocumentViewerRibbonController.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.Control.PrintControl"/> object.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.Preview.DocumentViewerBarManager">
+
+            <summary>
+                <para>A <see cref="T:DevExpress.XtraBars.BarManager"/> tailored to provide the toolbar, status bar and menu elements to the <see cref="T:DevExpress.XtraPrinting.Preview.DocumentViewer"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.DocumentViewerBarManager.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DocumentViewerBarManager class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.DocumentViewerBarManager.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the DocumentViewerBarManager class with the specified container.
+</para>
+            </summary>
+            <param name="container">
+		An object implementing the <see cref="T:System.ComponentModel.IContainer"/> interface which specifies the owner container of a DocumentViewerBarManager class instance.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Preview.DocumentViewerBarManager.DocumentViewer">
+            <summary>
+                <para>Gets or sets a <see cref="T:DevExpress.XtraPrinting.Preview.DocumentViewer"/> associated with the DocumentViewerBarManager.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.Preview.DocumentViewer"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Preview.DocumentViewerBarManager.PrintControl">
+            <summary>
+                <para>Gets or sets a <see cref="T:DevExpress.XtraPrinting.Control.PrintControl"/> associated with the DocumentViewerBarManager.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraPrinting.Control.PrintControl"/> object.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.Control.AreaPaintEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraPrinting.Control.PrintControl.PaintMarkedBricksArea"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Control.AreaPaintEventArgs.Area">
+            <summary>
+                <para>Gets the area around the element being painted.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.RectangleF"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Control.AreaPaintEventArgs.Graphics">
+            <summary>
+                <para>Gets the drawing surface of the element being painted.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Graphics"/> object.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.Control.BrickEventHandler">
 
             <summary>
@@ -2753,7 +3001,7 @@
         </member>
         <member name="M:DevExpress.XtraPrinting.PrintableComponentLink.CreateDocument(DevExpress.XtraPrinting.PrintingSystem)">
             <summary>
-                <para>Generates a report using the specified Printing System. 
+                <para>Creates a document using the specified Printing System, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="ps">
@@ -2871,6 +3119,22 @@
             </summary>
             <param name="lookAndFeel">
 		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Preview Form. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.PrintableComponentLink.ShowPreview(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>Invokes the Print Preview Form that shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings.
+</para>
+            </summary>
+            <param name="owner">
+		A <see cref="T:System.Windows.Forms.IWin32Window"/> object representing the <i>parent</i> window for this dialog.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Print Preview Form. 
 
             </param>
 
@@ -3144,7 +3408,8 @@
         </member>
         <member name="M:DevExpress.XtraPrinting.Control.PrintControl.CloseFindControl">
             <summary>
-                <para> </para>
+                <para>Hides the <b>Search</b> panel within the current PrintControl.
+</para>
             </summary>
 
 
@@ -3338,7 +3603,8 @@
         </member>
         <member name="E:DevExpress.XtraPrinting.Control.PrintControl.PaintMarkedBricksArea">
             <summary>
-                <para> </para>
+                <para>Occurs when the area of a marked brick is painted.
+</para>
             </summary>
 
 
@@ -3398,13 +3664,16 @@
         </member>
         <member name="M:DevExpress.XtraPrinting.Control.PrintControl.ShowBrickCenter(DevExpress.XtraPrinting.Brick,DevExpress.XtraPrinting.Page)">
             <summary>
-                <para> </para>
+                <para>Selects the specified brick and displays it in the center of the visible PrintControl area.
+</para>
             </summary>
             <param name="brick">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.Brick"/> object.
+
             </param>
             <param name="page">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.Page"/> object.
+
             </param>
 
 
@@ -3748,6 +4017,22 @@
                 <para>Invokes the <b>Print Preview Form</b> which shows the print preview of the document for this link. 
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Link.ShowPreview(System.Windows.Forms.IWin32Window,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>Invokes the Print Preview Form that shows the print preview of the document for this link as a child of the specified parent window, using the specified look and feel settings.
+</para>
+            </summary>
+            <param name="owner">
+		A <see cref="T:System.Windows.Forms.IWin32Window"/> object representing the <i>parent</i> window for this dialog.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the Print Preview Form. 
+
+            </param>
 
 
         </member>

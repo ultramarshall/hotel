@@ -192,6 +192,24 @@
 
 
         </member>
+        <member name="T:DevExpress.Office.AzureCompatibility">
+
+            <summary>
+                <para>Provides an option to fix issues with unexpected output content (such as red crosses, distorted fonts, etc.) for documents published on the Microsoft Azure Web Sites.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Office.AzureCompatibility.Enable">
+            <summary>
+                <para>Obsolete. Specifies whether or not the document export mode is Azure-compatible.
+</para>
+            </summary>
+            <value><b>true</b> if the document export is Azure-compatible; otherwise <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Office.Localization.OfficeResLocalizer">
 
             <summary>

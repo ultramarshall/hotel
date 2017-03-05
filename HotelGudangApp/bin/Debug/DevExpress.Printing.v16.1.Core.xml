@@ -4,436 +4,362 @@
         <name>DevExpress.Printing.v16.1.Core</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService">
+        <member name="T:DevExpress.XtraReports.UI.XRConvert">
 
             <summary>
-                <para>If implemented by a class, provides a service contract for the <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/>.
+                <para>Enables you to convert value types and adjust values to different measure units.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetBuildStatus(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.#ctor(System.Single)">
             <summary>
-                <para>Starts obtaining the document build status.
+                <para>Initializes a new instance of the XRConvert class with the specified DPI.
 </para>
             </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertFrom(System.Drawing.Size,System.Single)">
+            <summary>
+                <para>Adjusts the size calculated for the specified DPI according to the current DPI.
+</para>
+            </summary>
+            <param name="val">
+		A <see cref="T:System.Drawing.Size"/> structure.
 
             </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the initial DPI setting.
 
             </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.Drawing.Size"/> structure.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetDocumentData(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertFrom(System.Drawing.Rectangle,System.Single)">
             <summary>
-                <para>Starts obtaining the document data.
+                <para>Adjusts the location and size of a rectangle calculated for the specified DPI according to the current DPI.
+
 </para>
             </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+            <param name="val">
+		A <see cref="T:System.Drawing.Rectangle"/> structure.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the initial DPI setting.
 
             </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.Drawing.Rectangle"/> structure.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetLookUpValues(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter[],System.String[],System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertFrom(System.Drawing.Point,System.Single)">
             <summary>
-                <para>Starts obtaining the parameter lookup values.
+                <para>Adjusts the coordinates of a point calculated for the specified DPI according to the current DPI.
 </para>
             </summary>
-            <param name="identity">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> value.
+            <param name="val">
+		A <see cref="T:System.Drawing.Point"/> structure.
 
             </param>
-            <param name="parameterValues">
-		An array of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter"/> objects.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the initial DPI setting.
 
             </param>
-            <param name="requiredParameterPaths">
-		An array of <see cref="T:System.String"/> values, specifying the parameter paths (for example, <i>"subreport1.subreportParameter1"</i>).
-
-            </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.Drawing.Point"/> structure.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetPages(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Int32[],DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertFrom(System.Int32,System.Single)">
             <summary>
-                <para>Starts obtaining the document pages.
+                <para>Adjusts the integer value calculated for the specified DPI according to the current DPI.
 </para>
             </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object.
+            <param name="val">
+		An integer value.
 
             </param>
-            <param name="pageIndexes">
-		An array of integer values.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the initial DPI setting.
 
             </param>
-            <param name="compatibility">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value.
-
-            </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>An integer value.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetPrintDocument(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertMargins(System.Drawing.Printing.Margins,System.Single,System.Single)">
             <summary>
-                <para>Starts obtaining the printed document.
+                <para>Adjusts the document margins according to the specified DPI setting.
 </para>
             </summary>
-            <param name="printId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
+            <param name="val">
+		A <see cref="T:System.Drawing.Printing.Margins"/> object.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
+            <param name="fromDpi">
+		A <see cref="T:System.Single"/> value, specifying the initial DPI setting.
 
             </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+            <param name="toDpi">
+		A <see cref="T:System.Single"/> value, specifying the required DPI setting.
 
             </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.Drawing.Printing.Margins"/> object.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetPrintStatus(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertTo(System.Drawing.Point,System.Single)">
             <summary>
-                <para>Starts obtaining the status of the printed document.
+                <para>Adjusts the coordinates of a point calculated for the current DPI according to the specified DPI.
 </para>
             </summary>
-            <param name="printId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object. 
+            <param name="val">
+		A <see cref="T:System.Drawing.Point"/> structure.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the required DPI setting.
 
             </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.Drawing.Point"/> structure.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetReportParameters(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertTo(System.Drawing.Rectangle,System.Single)">
             <summary>
-                <para>Starts obtaining the report parameters.
+                <para>Adjusts the location and size of a rectangle calculated for the current DPI according to the specified DPI.
 </para>
             </summary>
-            <param name="identity">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
+            <param name="val">
+		A <see cref="T:System.Drawing.Rectangle"/> structure.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the required DPI setting.
 
             </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.Drawing.Rectangle"/> structure.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStartBuild(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertTo(System.Drawing.Size,System.Single)">
             <summary>
-                <para>Starts the initial phase of asynchronously building the report.
+                <para>Adjusts the size calculated for the current DPI according to the specified DPI.
 </para>
             </summary>
-            <param name="identity">
-		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
+            <param name="val">
+		A <see cref="T:System.Drawing.Size"/> structure.
 
             </param>
-            <param name="buildArgs">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs"/> object, storing the arguments required to create the report.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the required DPI setting.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.Drawing.Size"/> structure.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStartPrint(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ConvertTo(System.Int32,System.Single)">
             <summary>
-                <para>Starts the initial phase of asynchronously printing of the specified document.
-
+                <para>Adjusts the integer value calculated for the current DPI according to the specified DPI.
 </para>
             </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object.
+            <param name="val">
+		An integer value.
 
             </param>
-            <param name="compatibility">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value.
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value, specifying the required DPI setting.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>An integer value.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStopBuild(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.AsyncCallback,System.Object)">
+        <member name="P:DevExpress.XtraReports.UI.XRConvert.Dpi">
             <summary>
-                <para>Starts the terminal phase of asynchronously building the report.
+                <para>Returns the current DPI value.
 </para>
             </summary>
-            <param name="documentId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object that identifies the report document.
+            <value>A <see cref="T:System.Single"/> value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.StringArrayToString(System.String[])">
+            <summary>
+                <para>Converts the specified string array to a string value that delimits the array values with the "\r\n" sequence.
+</para>
+            </summary>
+            <param name="array">
+		An array of <see cref="T:System.String"/> values.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>A <see cref="T:System.String"/> value.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStopPrint(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.AsyncCallback,System.Object)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.StringToStringArray(System.String)">
             <summary>
-                <para>Starts the terminal phase of asynchronously printing the document.
+                <para>Splits the specified string into an array of substrings at the positions defined by the "\r\n" sequence.
 </para>
             </summary>
-            <param name="printId">
-		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object.
+            <param name="str">
+		A <see cref="T:System.String"/> value.
 
             </param>
-            <param name="callback">
-		References a method to be called when a corresponding asynchronous operation is completed.
-
-            </param>
-            <param name="asyncState">
-		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
-
-            </param>
-            <returns>An object containing information about the status of an asynchronous operation.
+            <returns>An array of <see cref="T:System.String"/> values.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetBuildStatus(System.IAsyncResult)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ToContentAlignment(DevExpress.XtraPrinting.TextAlignment)">
             <summary>
-                <para>Ends obtaining the document build status.
-
+                <para>Adjusts the specified <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> value to a corresponding <see cref="T:System.Drawing.ContentAlignment"/> value.
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
+            <param name="align">
+		A <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> enumeration value.
 
             </param>
-            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.BuildStatus"/> structure.
+            <returns>A <see cref="T:System.Drawing.ContentAlignment"/> enumeration value.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetDocumentData(System.IAsyncResult)">
+        <member name="M:DevExpress.XtraReports.UI.XRConvert.ToTextAlignment(System.Drawing.ContentAlignment)">
             <summary>
-                <para>Ends obtaining the document data.
+                <para>Adjusts the specified <see cref="T:System.Drawing.ContentAlignment"/> value to a corresponding <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> value.
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
+            <param name="align">
+		A <see cref="T:System.Drawing.ContentAlignment"/> enumeration value.
 
             </param>
-            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentData"/> object.
+            <returns>A <see cref="T:DevExpress.XtraPrinting.TextAlignment"/> enumeration value.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetLookUpValues(System.IAsyncResult)">
+        <member name="T:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator">
+
             <summary>
-                <para>Ends obtaining the parameter lookup values.
+                <para>Generates an Intelligent Mail Package barcode.
+
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
 
-            </param>
-            <returns>An array of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ParameterLookUpValues"/> objects.
-</returns>
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the IntelligentMailPackageGenerator class with default settings.
+</para>
+            </summary>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetPages(System.IAsyncResult)">
+        <member name="P:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator.AddLeadingZero">
             <summary>
-                <para>Ends obtaining the document pages. 
+                <para>This property is not in effect for the IntelligentMailPackageGenerator class.
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
-
-            </param>
-            <returns>A <see cref="T:System.Byte"/> array.
-</returns>
+            <value> 
+</value>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetPrintDocument(System.IAsyncResult)">
+        <member name="P:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator.CharacterSet">
             <summary>
-                <para>Ends obtaining the printed document.
+                <para>This property is not in effect for the IntelligentMailPackageGenerator class.
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
-
-            </param>
-            <returns>A <see cref="T:System.Byte"/> array.
-</returns>
+            <value> 
+</value>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetPrintStatus(System.IAsyncResult)">
+        <member name="P:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator.HumanReadableText">
             <summary>
-                <para>Ends obtaining the status of the printed document.
+                <para>This property is not in effect for the IntelligentMailPackageGenerator class.
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintStatus"/> object.
-</returns>
+            <value> 
+</value>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetReportParameters(System.IAsyncResult)">
+        <member name="P:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator.SymbologyCode">
             <summary>
-                <para>Ends obtaining the report parameters.
+                <para>This property is not in effect for the IntelligentMailPackageGenerator class.
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameterContainer"/> object.
-</returns>
+            <value> 
+</value>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStartBuild(System.IAsyncResult)">
+        <member name="T:DevExpress.Export.BandedLayoutMode">
+
             <summary>
-                <para>Ends the initial phase of asynchronously building the report.
+                <para>Contains values that enumerate possible ways of exporting bands and columns from Banded Views.
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
 
-            </param>
-            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object.
-</returns>
+        </member>
+        <member name="F:DevExpress.Export.BandedLayoutMode.Default">
+            <summary>
+                <para>The layout of grid bands and columns is preserved in the output worksheet.
+<para>
+
+</para>
+</para>
+            </summary>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStartPrint(System.IAsyncResult)">
+        <member name="F:DevExpress.Export.BandedLayoutMode.LinearBandsAndColumns">
             <summary>
-                <para>Ends the initial phase of asynchronously printing the document.
+                <para>Bands and columns are stretched out in a single line in the output worksheet. Bands are presented in the output by worksheet collapsible columns without data.
+<para>
+
+</para>
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object.
-</returns>
 
 
         </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStopBuild(System.IAsyncResult)">
+        <member name="F:DevExpress.Export.BandedLayoutMode.LinearColumns">
             <summary>
-                <para>Ends the terminal phase of asynchronously building the document.
+                <para>Columns from all visible grid bands are stretched out in a single line in the output worksheet. Grid bands are not added to the output.
+<para>
+
+</para>
 </para>
             </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStopPrint(System.IAsyncResult)">
-            <summary>
-                <para>Ends the terminal phase of asynchronously printing the document.
-</para>
-            </summary>
-            <param name="ar">
-		An object containing information about the status of an asynchronous operation.
-
-            </param>
 
 
         </member>
         <member name="T:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo">
 
             <summary>
-                <para> </para>
+                <para>Provides information about a data source.
+</para>
             </summary>
 
         </member>
@@ -447,33 +373,41 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.Data">
             <summary>
-                <para> </para>
+                <para>Specifies the data serialized to the report layout in JSON format using the <see cref="P:DevExpress.XtraReports.UI.XtraReport.ObjectStorage"/> property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.Id">
             <summary>
-                <para> </para>
+                <para>Specifies the data source ID.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value, specifying the data source ID.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.IsSqlDataSource">
             <summary>
-                <para> </para>
+                <para>Specifies whether or not the data source is a <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if the data source is a <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/>; otherwise <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.Name">
             <summary>
-                <para> </para>
+                <para>Specifies the data source name.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value, specifying the data source name.
+</value>
 
 
         </member>
@@ -1010,6 +944,176 @@
 
 
         </member>
+        <member name="T:DevExpress.Export.Xl.XlTableReference">
+
+            <summary>
+                <para>Represents a reference to table data. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlTableReference.#ctor(DevExpress.Export.Xl.IXlTable,System.String)">
+            <summary>
+                <para>Initializes a new instance of the XlTableReference class with the specified settings.
+</para>
+            </summary>
+            <param name="table">
+		An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object that specifies the referenced table.
+
+
+            </param>
+            <param name="columnName">
+		A string that specifies the name of the column containing data to which the structured reference refers. 
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlTableReference.#ctor(DevExpress.Export.Xl.IXlTable,System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the XlTableReference class with the specified settings.
+</para>
+            </summary>
+            <param name="table">
+		An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object that specifies the referenced table. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.Table"/> property.
+
+            </param>
+            <param name="firstColumnName">
+		A string that is the name of the column specifying the left bound of the referenced data range. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.FirstColumn"/> property.
+
+            </param>
+            <param name="lastColumnName">
+		A string that is the name of the column specifying the right bound of the referenced data range. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.LastColumn"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlTableReference.#ctor(DevExpress.Export.Xl.IXlTable,System.String,DevExpress.Export.Xl.XlTablePart)">
+            <summary>
+                <para>Initializes a new instance of the XlTableReference class with the specified settings.
+</para>
+            </summary>
+            <param name="table">
+		An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object that specifies the referenced table.
+
+            </param>
+            <param name="columnName">
+		A string that is the name of the column to the specified portion of which the structured reference refers. 
+
+            </param>
+            <param name="part">
+		An <see cref="T:DevExpress.Export.Xl.XlTablePart"/> enumeration member that specifies the part of the table column to use in the reference.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlTableReference.#ctor(DevExpress.Export.Xl.IXlTable,System.String,System.String,DevExpress.Export.Xl.XlTablePart)">
+            <summary>
+                <para>Initializes a new instance of the XlTableReference class with the specified settings.
+</para>
+            </summary>
+            <param name="table">
+		An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object that specifies the referenced table. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.Table"/> property.
+
+            </param>
+            <param name="firstColumnName">
+		A string that is the name of the column specifying the left bound of the referenced range. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.FirstColumn"/> property.
+
+            </param>
+            <param name="lastColumnName">
+		A string that is the name of the column specifying the right bound of the referenced range. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.LastColumn"/> property.
+
+            </param>
+            <param name="part">
+		An <see cref="T:DevExpress.Export.Xl.XlTablePart"/> enumeration member that specifies the part of the table to use in the reference. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.Part"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlTableReference.#ctor(DevExpress.Export.Xl.IXlTable,DevExpress.Export.Xl.XlTablePart)">
+            <summary>
+                <para>Initializes a new instance of the XlTableReference class with the specified settings.
+</para>
+            </summary>
+            <param name="table">
+		An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object that specifies the referenced table. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.Table"/> property.
+
+            </param>
+            <param name="part">
+		An <see cref="T:DevExpress.Export.Xl.XlTablePart"/> enumeration member specifying the part of the table to which the structured reference refers. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTableReference.Part"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlTableReference.FirstColumn">
+            <summary>
+                <para>Gets the name of the column used as the left bound to specify the portion of the table to be referenced.
+</para>
+            </summary>
+            <value>A string that specifies the column name. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlTableReference.LastColumn">
+            <summary>
+                <para>Gets the name of the column used as the right bound to specify the portion of the table to be referenced.
+</para>
+            </summary>
+            <value>A string that specifies the column name. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlTableReference.Part">
+            <summary>
+                <para>Gets a special item specifier used by the current structured reference to refer to a specific part of the table.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.XlTablePart"/> enumeration member.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlTableReference.Table">
+            <summary>
+                <para>Gets the table to which the current structured reference refers.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object that is the referenced table.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlTableReference.ToString(System.Globalization.CultureInfo)">
+            <summary>
+                <para>Converts a table reference to a string. 
+</para>
+            </summary>
+            <param name="culture">
+		A <see cref="T:System.Globalization.CultureInfo"/> object that provides culture-specific information.
+
+            </param>
+            <returns>A string that specifies the textual representation of a table reference.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlTableReference.ToString">
+            <summary>
+                <para>Converts a table reference to a string. 
+</para>
+            </summary>
+            <returns>A string that specifies the textual representation of a table reference.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.HtmlExportOptionsBase">
 
             <summary>
@@ -1024,6 +1128,14 @@
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.HtmlExportOptionsBase.AllowUrlWithJSContent">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -1164,6 +1276,420 @@
             </summary>
             <value><b>true</b> to use standard HTML link references in document navigation; otherwise <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlFunc">
+
+            <summary>
+                <para>Provides static methods used to construct an internal representation of an expression (an <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object).
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Average(DevExpress.Export.Xl.IXlFormulaParameter[])">
+            <summary>
+                <para>An AVERAGE statistical function.
+</para>
+            </summary>
+            <param name="parameters">
+		An array of <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> objects interpreted as function parameters.
+
+            </param>
+            <returns>An <see cref="IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Column(DevExpress.Export.Xl.XlCellRange)">
+            <summary>
+                <para>A COLUMN reference function.
+</para>
+            </summary>
+            <param name="range">
+		An <see cref="T:DevExpress.Export.Xl.XlCellRange"/> that is the worksheet range.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Column">
+            <summary>
+                <para>A COLUMN reference function
+</para>
+            </summary>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Concatenate(DevExpress.Export.Xl.IXlFormulaParameter[])">
+            <summary>
+                <para>A CONCATENATE text function.
+</para>
+            </summary>
+            <param name="parameters">
+		An array of the <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> objects which are the strings to join.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Count(DevExpress.Export.Xl.IXlFormulaParameter[])">
+            <summary>
+                <para>A COUNT statistical function.
+</para>
+            </summary>
+            <param name="parameters">
+		An array of <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> objects interpreted as function parameters.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.CountA(DevExpress.Export.Xl.IXlFormulaParameter[])">
+            <summary>
+                <para>A COUNTA statistical function.
+</para>
+            </summary>
+            <param name="parameters">
+		An array of <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> objects interpreted as function parameters.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.CountBlank(DevExpress.Export.Xl.XlCellRange)">
+            <summary>
+                <para>A COUNTBLANK statistical function.
+</para>
+            </summary>
+            <param name="range">
+		A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> that specifies the range containing the cells to be counted.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.If(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>An IF logical function.
+</para>
+            </summary>
+            <param name="predicate">
+		A <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the predicate.
+
+            </param>
+            <param name="thenParam">
+		A <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is returned if a predicate is <b>true</b>.
+
+            </param>
+            <param name="elseParam">
+		A <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is returned if a predicate is <b>false</b>.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Max(DevExpress.Export.Xl.IXlFormulaParameter[])">
+            <summary>
+                <para>A MAX statistical function.
+</para>
+            </summary>
+            <param name="parameters">
+		An array of <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> objects interpreted as function parameters.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Min(DevExpress.Export.Xl.IXlFormulaParameter[])">
+            <summary>
+                <para>A MIN statistical function.
+</para>
+            </summary>
+            <param name="parameters">
+		An array of <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> objects interpreted as function parameters.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Param(DevExpress.Export.Xl.XlVariantValue)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object from the specified value.
+</para>
+            </summary>
+            <param name="value">
+		An <b>DevExpress.Export.Xl.XlVariantValue</b> object. However, a value of any standard type can be supplied because the XlVariantValue class implements multiple implicit constructors.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Row(DevExpress.Export.Xl.XlCellRange)">
+            <summary>
+                <para>A ROW reference function
+</para>
+            </summary>
+            <param name="range">
+		An <see cref="T:DevExpress.Export.Xl.XlCellRange"/> that is the worksheet range.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Row">
+            <summary>
+                <para>A ROW reference function
+</para>
+            </summary>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Subtotal(System.Collections.Generic.IList`1,DevExpress.Export.Xl.XlSummary,System.Boolean)">
+            <summary>
+                <para>A SUBTOTAL mathematical function.
+</para>
+            </summary>
+            <param name="ranges">
+		A list of <see cref="T:DevExpress.Export.Xl.XlCellRange"/> objects which are the references to cells containing values for calculation.
+
+            </param>
+            <param name="summary">
+		A <see cref="T:DevExpress.Export.Xl.XlSummary"/> enumeration member that specifies the calculation type, i.e., the function used for calculation.
+
+            </param>
+            <param name="ignoreHidden">
+		<b>True</b>, to include hidden rows or columns
+  in the calculation; otherwise, <b>false</b>.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Subtotal(DevExpress.Export.Xl.XlCellRange,DevExpress.Export.Xl.XlSummary,System.Boolean)">
+            <summary>
+                <para>A SUBTOTAL mathematical function.
+</para>
+            </summary>
+            <param name="range">
+		A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object which references the cells containing values for calculation.
+
+            </param>
+            <param name="summary">
+		A <see cref="T:DevExpress.Export.Xl.XlSummary"/> enumeration member that specifies the calculation type, i.e. the function used for calculation.
+
+            </param>
+            <param name="ignoreHidden">
+		<b>True</b> to include hidden rows or columns
+  in the calculation; otherwise, <b>false</b>.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Sum(DevExpress.Export.Xl.IXlFormulaParameter[])">
+            <summary>
+                <para>A SUM mathematical function.
+</para>
+            </summary>
+            <param name="parameters">
+		An array of <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> objects which are the constants, expressions or function results to sum.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Text(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.XlNumberFormat)">
+            <summary>
+                <para>A TEXT text function.
+</para>
+            </summary>
+            <param name="formula">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function parameter.
+
+            </param>
+            <param name="numberFormat">
+		A <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies the formatting applied to the function parameter.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Text(DevExpress.Export.Xl.IXlFormulaParameter,System.String,System.Boolean)">
+            <summary>
+                <para>A TEXT text function.
+</para>
+            </summary>
+            <param name="formula">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function parameter.
+
+            </param>
+            <param name="netFormatString">
+		A .NET Framework format string. 
+
+            </param>
+            <param name="isDateTimeFormatString">
+		<b>True</b> if the format string is the date and time format string; otherwise, <b>false</b>.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Text(DevExpress.Export.Xl.XlVariantValue,System.String,System.Boolean)">
+            <summary>
+                <para>A TEXT text function.
+</para>
+            </summary>
+            <param name="value">
+		An <b>DevExpress.Export.Xl.XlVariantValue</b> object. However, a value of any standard type can be supplied because the XlVariantValue class implements multiple implicit constructors.
+
+            </param>
+            <param name="netFormatString">
+		A .NET Framework format string. 
+
+            </param>
+            <param name="isDateTimeFormatString">
+		<b>True</b> if the format string is the date and time format string; otherwise, <b>false</b>.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Text(DevExpress.Export.Xl.XlVariantValue,DevExpress.Export.Xl.XlNumberFormat)">
+            <summary>
+                <para>A TEXT text function.
+</para>
+            </summary>
+            <param name="value">
+		An <b>DevExpress.Export.Xl.XlVariantValue</b> value. However, a value of any standard type can be supplied because XlVariantValue class implements multiple implicit constructors.
+
+            </param>
+            <param name="numberFormat">
+		A <see cref="T:DevExpress.Export.Xl.XlNumberFormat"/> object that specifies the formatting applied to the function parameter.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Trunc(DevExpress.Export.Xl.IXlFormulaParameter,System.Int32)">
+            <summary>
+                <para>A TRUNC mathematical function.
+</para>
+            </summary>
+            <param name="number">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function parameter.
+
+            </param>
+            <param name="num_digits">
+		An integer that is the number of decimal places left in the truncated number.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.Trunc(DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A TRUNC mathematical function.
+</para>
+            </summary>
+            <param name="number">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function parameter.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.VLookup(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.XlCellRange,System.Int32,System.Boolean)">
+            <summary>
+                <para>A VLOOKUP reference function
+</para>
+            </summary>
+            <param name="lookupValue">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the lookup value.
+
+            </param>
+            <param name="table">
+		A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that is the reference to the range to search.
+
+            </param>
+            <param name="columnIndex">
+		An integer that is the index of a column in the range to search from which to retrieve a value.
+
+            </param>
+            <param name="rangeLookup">
+		<b>True</b> means that if the function cannot find an exact match to the lookup value, it should use the closest match below the supplied value; <b>false</b> means that if the function cannot find an exact match, it should return an error.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlFunc.VLookup(DevExpress.Export.Xl.XlVariantValue,DevExpress.Export.Xl.XlCellRange,System.Int32,System.Boolean)">
+            <summary>
+                <para>A VLOOKUP reference function.
+</para>
+            </summary>
+            <param name="lookupValue">
+		An <b>DevExpress.Export.Xl.XlVariantValue</b> object that is the lookup value. However, a value of any standard type can be supplied because the XlVariantValue class implements multiple implicit constructors.
+
+            </param>
+            <param name="table">
+		A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that is the reference to the range to search.
+
+            </param>
+            <param name="columnIndex">
+		An integer that is the index of a column in the range to search from which to retrieve a value.
+
+            </param>
+            <param name="rangeLookup">
+		<b>True</b> means that if the function cannot find an exact match to the lookup value, it should use the closest match below the supplied value; <b>false</b> means that if the function cannot find an exact match, it should return an error.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the function result.
+</returns>
 
 
         </member>
@@ -1429,6 +1955,62 @@
 
 
         </member>
+        <member name="T:DevExpress.Export.Xl.XlTablePart">
+
+            <summary>
+                <para>Lists special item specifiers used within structured references to refer to specific parts of a table or table column(s).
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlTablePart.All">
+            <summary>
+                <para>A special item specifier that refers to the entire table, including column headers, data, and totals (if any).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlTablePart.Any">
+            <summary>
+                <para>No special item specifiers are defined to restrict the portion of the table used in the structured reference.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlTablePart.Data">
+            <summary>
+                <para>A special item specifier that refers to the data area.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlTablePart.Headers">
+            <summary>
+                <para>A special item specifier that refers to the header row.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlTablePart.ThisRow">
+            <summary>
+                <para>A special item specifier that refers to the cells in the same row as the formula.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlTablePart.Totals">
+            <summary>
+                <para>A special item specifier that refers to the total row.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.DocumentServices.ServiceModel.DataContracts.BuildStatus">
 
             <summary>
@@ -1686,9 +2268,11 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.PanelBrick.RightToLeftLayout">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -1929,80 +2513,95 @@
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableColumn.DataFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets format characteristics for the data area of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> instance that specifies format characteristics applied to the column's data area.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableColumn.Name">
             <summary>
-                <para>Gets or sets the table name.
+                <para>Gets the unique name of the table column.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the name of the table.
+            <value>A <see cref="T:System.String"/> value that specifies the table column name. 
 </value>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTableColumn.SetFormula(DevExpress.Export.Xl.IXlFormulaParameter)">
             <summary>
-                <para> </para>
+                <para>Specifies the formula to apply to all cells in the table column.
+</para>
             </summary>
             <param name="formula">
-		 
+		An object exposing the <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> interface that specifies a formula contained in the cells of the table column.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTableColumn.SetFormula(DevExpress.Export.Xl.XlExpression)">
             <summary>
-                <para> </para>
+                <para>Specifies the formula to apply to all cells in the table column.
+</para>
             </summary>
             <param name="formula">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlExpression"/> object that is a collection of formula tokens (aka PTGs, "parsed things") arranged in Reverse-Polish Notation order.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTableColumn.SetFormula(System.String)">
             <summary>
-                <para> </para>
+                <para>Specifies the formula to apply to all cells in the table column.
+</para>
             </summary>
             <param name="formula">
-		 
+		A string that specifies a formula contained in the cells of the table column. 
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableColumn.TotalRowFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets format characteristics for the total row cell of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> instance that specifies format characteristics applied to the column's total cell.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableColumn.TotalRowFunction">
             <summary>
-                <para> </para>
+                <para>Gets or sets the function to calculate the total of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>The <see cref="T:DevExpress.Export.Xl.XlTotalRowFunction"/> enumeration member.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableColumn.TotalRowLabel">
             <summary>
-                <para> </para>
+                <para>Gets or sets the text displayed in the total cell of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value that specifies the text contained in the total cell of the table column.
+</value>
 
 
         </member>
         <member name="T:DevExpress.Export.Xl.IXlTableColumnCollection">
 
             <summary>
-                <para> </para>
+                <para>A collection of columns in a table.
+</para>
             </summary>
 
         </member>
@@ -2023,49 +2622,58 @@
         <member name="T:DevExpress.Export.Xl.IXlTableStyleInfo">
 
             <summary>
-                <para> </para>
+                <para>Contains table style settings. 
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableStyleInfo.Name">
             <summary>
-                <para>Gets or sets the name of the table style.
+                <para>Gets or sets the name of the built-in style applied to a table.
 </para>
             </summary>
-            <value>A string specifying the style name.
+            <value>A string specifying the built-in table style name.
 </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableStyleInfo.ShowColumnStripes">
             <summary>
-                <para> </para>
+                <para>Gets or sets a value indicating whether alternate shading should be applied to the table columns.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to apply striped column formatting to the table; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableStyleInfo.ShowFirstColumn">
             <summary>
-                <para> </para>
+                <para>Gets or sets a value indicating whether special formatting should be applied to the first column of the table.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to apply special formatting to the first column of the table; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableStyleInfo.ShowLastColumn">
             <summary>
-                <para> </para>
+                <para>Gets or sets a value indicating whether special formatting should be applied to the last column of the table.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to apply special formatting to the last column of the table; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableStyleInfo.ShowRowStripes">
             <summary>
-                <para> </para>
+                <para>Gets or sets a value indicating whether alternate shading should be applied to the table rows.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to apply striped row formatting to the table; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -2107,103 +2715,126 @@
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.DataFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets format characteristics for the data area of the table.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> instance that specifies format characteristics applied to the table's data area.
+</value>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTable.GetReference(DevExpress.Export.Xl.XlTablePart,System.String)">
             <summary>
-                <para> </para>
+                <para>Returns a reference to the specified part of the table column. 
+</para>
             </summary>
             <param name="part">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlTablePart"/> enumeration member that specifies the part of the table column to use in the reference.
+
             </param>
             <param name="columnName">
-		 
+		A string that is the name of the column to the specified portion of which the structured reference should refer. 
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.XlTableReference"/> object that specifies the created reference.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTable.GetReference(DevExpress.Export.Xl.XlTablePart)">
             <summary>
-                <para> </para>
+                <para>Returns a reference to the specified part of the table. 
+</para>
             </summary>
             <param name="part">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlTablePart"/> enumeration member specifying the part of the table to which the structured reference should refer.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.XlTableReference"/> object that specifies the created reference.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTable.GetReference(DevExpress.Export.Xl.XlTablePart,System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Returns a reference to the specified part of the table bounded by the specified columns. 
+</para>
             </summary>
             <param name="part">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlTablePart"/> enumeration member that specifies the part of the table to use in the reference.
+
             </param>
             <param name="firstColumnName">
-		 
+		A string that is the name of the column specifying the left bound of the referenced table range.
+
             </param>
             <param name="lastColumnName">
-		 
+		A string that is the name of the column specifying the right bound of the referenced table range.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.XlTableReference"/> object that specifies the created reference.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTable.GetRowReference(System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Returns a reference to the portion of the current row bounded by the specified columns. 
+</para>
             </summary>
             <param name="firstColumnName">
-		 
+		A string that is the name of the column specifying the leftmost cell in the referenced row.
+
             </param>
             <param name="lastColumnName">
-		 
+		A string that is the name of the column specifying the rightmost cell in the referenced row.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.XlTableReference"/> object that specifies the created reference.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlTable.GetRowReference(System.String)">
             <summary>
-                <para> </para>
+                <para>Gets a reference to the cell at the intersection of the current row and the specified table column.
+</para>
             </summary>
             <param name="columnName">
-		 
+		A string that is the name of the column containing a value to which the structured reference should refer. 
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.XlTableReference"/> object that specifies the created reference.
+</returns>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.HasAutoFilter">
             <summary>
-                <para> </para>
+                <para>Gets or sets a value indicating whether the filtering functionality is enabled for the table.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to enable filtering for the table; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.HasHeaderRow">
             <summary>
-                <para>Gets a value indicating whether the table has the header row.
+                <para>Gets a value indicating whether the header row is displayed for the table.
 </para>
             </summary>
-            <value><b>true</b>, if the table has the header row; otherwise, <b>false</b>.
+            <value><b>true</b>, if the table has the visible header row; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.HasTotalRow">
             <summary>
-                <para>Gets a value indicating whether the table has the total row.
+                <para>Gets a value indicating whether the total row is displayed at the end of the table.
 </para>
             </summary>
-            <value><b>true</b>, if the table has the total row; otherwise, <b>false</b>.
+            <value><b>true</b>, if the table total row is visible; otherwise, <b>false</b>.
 </value>
 
 
@@ -2220,33 +2851,41 @@
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.Range">
             <summary>
-                <para> </para>
+                <para>Gets the range of cells occupied by the table.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>IXlCellRange</b> object specifying the cell range that contains the table.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.Style">
             <summary>
-                <para> </para>
+                <para>Provides access to the table style options.
+</para>
             </summary>
-            <value> </value>
+            <value>An <see cref="T:DevExpress.Export.Xl.IXlTableStyleInfo"/> object that controls style settings for the table.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.TableBorderFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets border settings for a table.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> instance that specifies border formatting applied to the table's borders.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTable.TotalRowFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets format characteristics for the total row of the table.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> instance that specifies format characteristics applied to the table's total row.
+</value>
 
 
         </member>
@@ -3062,6 +3701,85 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraPrinting.Native.PrintingSettings">
+
+            <summary>
+                <para>Enables you to overcome possible issues related to document rendering after migrating to newer versions of XtraReports.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.AllowMapiModelessDialog">
+            <summary>
+                <para>Enables you to display a non-modal Microsoft Outlook dialog before sending a report by email.
+</para>
+            </summary>
+            <value><b>true</b> to display a non-modal dialog when sending a report by email; otherwise <b>false</b>. The default is <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.MultiColumnDownThenAcrossNewBehavior">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.NewExcelExport">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.PassPdfDrawingExceptions">
+            <summary>
+                <para>Enables you to prevent PDF drawing exceptions related to the GDI+ engine from being handled by the DevExpress export engine.
+
+</para>
+            </summary>
+            <value><b>true</b> to avoid handling PDF drawing exceptions; otherwise <b>false</b>. The default is <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.UseNewPdfExport">
+            <summary>
+                <para>Enables you to avoid possible issues related to PDF export that you may encounter after upgrading to version <b>16.1</b>.
+</para>
+            </summary>
+            <value><b>true</b> to use the newer PDF rendering engine; otherwise <b>false</b>. The default is <b>true</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.UseNewSingleFileRtfExport">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.VerticalContentSplittingNewBehavior">
+            <summary>
+                <para>Enables you to make the Pivot Grid width equal to the page width when setting the <see cref="P:DevExpress.XtraReports.UI.XtraReport.VerticalContentSplitting"/> property to <see cref="F:DevExpress.XtraPrinting.VerticalContentSplitting.Smart"/>.
+</para>
+            </summary>
+            <value><b>true</b> to make the Pivot Grid occupy the entire page width; otherwise <b>false</b>. The default is <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.XlExportOptionsBase">
 
             <summary>
@@ -3210,6 +3928,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.XlExportOptionsBase.FitToPrintedPageHeight">
+            <summary>
+                <para>Gets or sets whether the output document should be fit to the page height when printed.
+</para>
+            </summary>
+            <value><b>true</b>, to fit the output document to the printed page height; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.XlExportOptionsBase.FitToPrintedPageWidth">
             <summary>
                 <para>Gets or sets whether the output document should be fit to the page width when printed. 
@@ -3226,6 +3954,26 @@
 </para>
             </summary>
             <value>An <see cref="T:DevExpress.Export.Xl.XlIgnoreErrors"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlExportOptionsBase.RasterizationResolution">
+            <summary>
+                <para>Specifies the resolution used to rasterize vector images on export to Excel.
+</para>
+            </summary>
+            <value>An integer value specifying the resolution (in dpi) used to rasterize vector images.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlExportOptionsBase.RasterizeImages">
+            <summary>
+                <para>Specifies whether or not vector images should be rasterized on export to Excel.
+</para>
+            </summary>
+            <value><b>true</b>, to rasterize vector images; otherwise, <b>false</b>.
 </value>
 
 
@@ -4456,6 +5204,14 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraReports.IReport.InitializeDocumentCreation">
+            <summary>
+                <para>For internal use. 
+</para>
+            </summary>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.IReport.IsDisposed">
             <summary>
                 <para>For internal use. Gets a value indicating whether the control has been disposed of.
@@ -4559,7 +5315,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.IReport.StopPageBuilding">
             <summary>
-                <para>If implemented by a class, finishes generating report pages. 
+                <para>If implemented by a class, interrupts the process of document creation.
 </para>
             </summary>
 
@@ -4763,11 +5519,11 @@
         </member>
         <member name="M:DevExpress.XtraPrintingLinks.PrintableComponentLinkBase.CreateDocument(System.Boolean)">
             <summary>
-                <para>Creates a document from the <see cref="T:DevExpress.XtraPrinting.PrintableComponentLink"/> object, so the document can be displayed or printed. Optionally, can generate pages in background. 
+                <para>Creates a document from the <see cref="T:DevExpress.XtraPrinting.PrintableComponentLink"/> object, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="buildPagesInBackground">
-		<b>true</b> to generate pages in background; otherwise, <b>false</b>.
+		A Boolean value. This value is ignored and has no effect on the document creation process.
 
             </param>
 
@@ -5370,7 +6126,7 @@
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.AllowCsvFormat">
             <summary>
-                <para>Gets or sets whether the copied data should be compatible with the CSV format.
+                <para>Gets or sets whether the data is copied in CSV format.
 </para>
             </summary>
             <value>A value that specifies the data copied from the target control is compatible with the CSV format.
@@ -5380,7 +6136,7 @@
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.AllowExcelFormat">
             <summary>
-                <para>Gets or sets whether the copied data should be compatible with the Excel format (XLS/XLSX).
+                <para>Gets or sets whether the data is copied in Excel format (XLS/XLSX).
 </para>
             </summary>
             <value>A value that specifies the data copied from the target control is compatible with the Excel format (XLS/XLSX).
@@ -5391,17 +6147,17 @@
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.AllowHtmlFormat">
             <summary>
-                <para>Gets or sets whether the copied data should be compatible with the Html format.
+                <para>Gets or sets whether the data is copied in HTML format.
 </para>
             </summary>
-            <value>A value that specifies the data copied from the target control is compatible with the Html format.
+            <value>A value that specifies the data copied from the target control is compatible with the HTML format.
 </value>
 
 
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.AllowRtfFormat">
             <summary>
-                <para>Gets or sets whether the copied data should be compatible with the RTF format.
+                <para>Gets or sets whether the data is copied in RTF format.
 </para>
             </summary>
             <value>A value that specifies the data copied from the target control is compatible with the RTF format.
@@ -5411,7 +6167,7 @@
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.AllowTxtFormat">
             <summary>
-                <para>Gets or sets whether or not the copied data should be compatible with the TXT format. 
+                <para>Gets or sets whether or not the data is copied in TXT format. 
 </para>
             </summary>
             <value>A value that specifies the data copied from the target control is compatible with the TXT format.
@@ -5434,7 +6190,7 @@
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.ClipboardMode">
             <summary>
-                <para>Gets or sets whether or not data copied from the target control should be stored together with its format settings.
+                <para>Gets or sets whether or not data is copied to the clipboard along with its format settings.
 </para>
             </summary>
             <value>A <b>ClipboardMode</b> enumerator value that specifies whether or not data copied from the target control should be stored together with its format settings.
@@ -5444,7 +6200,7 @@
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.CopyCollapsedData">
             <summary>
-                <para>Gets or sets whether or not an end-user can copy formatted data from both expanded and collapsed rows/nodes. 
+                <para>Gets or sets whether formatted data is copied from both expanded and collapsed rows/nodes. 
 
 </para>
             </summary>
@@ -5455,22 +6211,24 @@
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.CopyColumnHeaders">
             <summary>
-                <para>Gets or sets whether or not the column headers should be copied along with copied Data Grid cells/TreeList nodes.
+                <para>Gets or sets whether or not column and band headers are to be copied along with data cells.
+
 
 </para>
             </summary>
-            <value>A value that specifies if the column headers should be copied.
+            <value>A value that specifies if the column and band headers are copied. The Default value is equal to <b>DefaultBoolean.True</b>. 
+
 </value>
 
 
         </member>
         <member name="P:DevExpress.Export.ClipboardOptions.ShowProgress">
             <summary>
-                <para>Gets or sets whether or not the progress bar should be visible when copying very large amounts of RTF or HTML formatted data.
+                <para>Gets or sets whether a progress bar that indicates the progress of a data copy operation is enabled.
 
 </para>
             </summary>
-            <value>A value that specifies if the progress bar should be visible when copying very large amounts of RTF or HTML formatted data.
+            <value>A value that specifies if the progress bar is visible when copying very large amounts of RTF or HTML formatted data.
 
 </value>
 
@@ -6560,10 +7318,10 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.PdfPermissionsOptions.EnableCopying">
             <summary>
-                <para>Specifies the permissions for copying the exported PDF document.
+                <para>Specifies the permissions for copying the content of the exported PDF document.
 </para>
             </summary>
-            <value><b>true</b> to enable document copying; otherwise, <b>false</b>.
+            <value><b>true</b> to enable copying of the document content; otherwise, <b>false</b>.
 </value>
 
 
@@ -6978,7 +7736,7 @@
                 <para>Gets or sets specific columns to be repeated on every printed page. 
 </para>
             </summary>
-            <value>An <b>XlCellRange</b> object that specifies worksheet columns repeated on every printed page.
+            <value>An <see cref="XlCellRange"/> object that specifies worksheet columns repeated on every printed page.
 </value>
 
 
@@ -6988,7 +7746,7 @@
                 <para>Gets or sets specific rows to be repeated on every printed page. 
 </para>
             </summary>
-            <value>An <b>XlCellRange</b> object that specifies worksheet rows repeated on every printed page.
+            <value>An <see cref="XlCellRange"/> object that specifies worksheet rows repeated on every printed page.
 </value>
 
 
@@ -7147,30 +7905,6 @@
 <para></para>
 <para>The screenshot that illustrates this error type is taken in Microsoft&#174; Excel&#174;.</para>
 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Export.Xl.XlPagePrintOrder">
-
-            <summary>
-                <para>Lists values used to specify the order in which worksheet pages are numbered and printed when the worksheet data does not fit on one page.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Export.Xl.XlPagePrintOrder.DownThenOver">
-            <summary>
-                <para>Worksheet pages are numbered and printed from the top down and then left to right.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Export.Xl.XlPagePrintOrder.OverThenDown">
-            <summary>
-                <para>Worksheet pages are numbered and printed from left to right and then from the top down.
 </para>
             </summary>
 
@@ -7604,49 +8338,63 @@ The default value is <b>600</b> DPI.
         </member>
         <member name="M:DevExpress.Export.Xl.IXlRow.BeginTable(System.Collections.Generic.IEnumerable`1,System.Boolean,DevExpress.Export.Xl.XlCellFormatting)">
             <summary>
-                <para> </para>
+                <para>Starts generating a table in the worksheet.
+</para>
             </summary>
             <param name="columns">
-		 
+		A list of the <see cref="T:DevExpress.Export.Xl.XlTableColumnInfo"/> objects containing the unique names of table columns and their formatting settings. 
+
             </param>
             <param name="hasHeaderRow">
-		 
+		A <see cref="T:System.Boolean"/> value indicating whether the header row is displayed for the table.
+
             </param>
             <param name="headerRowFormatting">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlCellFormatting"/> object that specifies format settings for the header row of the table.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object representing the generated table.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlRow.BeginTable(System.Collections.Generic.IEnumerable`1,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Starts generating a table in the worksheet.
+</para>
             </summary>
             <param name="columnNames">
-		 
+		A list of string values representing the unique captions for table columns.
+
             </param>
             <param name="hasHeaderRow">
-		 
+		A <see cref="T:System.Boolean"/> value indicating whether the header row is displayed for the table.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object representing the generated table.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlRow.BeginTable(System.Collections.Generic.IEnumerable`1,System.Boolean,DevExpress.Export.Xl.XlCellFormatting)">
             <summary>
-                <para> </para>
+                <para>Starts generating a table in the worksheet.
+</para>
             </summary>
             <param name="columnNames">
-		 
+		A list of string values representing the unique captions for table columns.
+
             </param>
             <param name="hasHeaderRow">
-		 
+		A <see cref="T:System.Boolean"/> value indicating whether the header row is displayed for the table.
+
             </param>
             <param name="headerRowFormatting">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlCellFormatting"/> object that specifies format settings for the header row of the table.
+
             </param>
-            <returns> </returns>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object representing the generated table.
+</returns>
 
 
         </member>
@@ -7709,13 +8457,16 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
         </member>
         <member name="M:DevExpress.Export.Xl.IXlRow.EndTable(DevExpress.Export.Xl.IXlTable,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Finishes table generation after calling the <see cref="M:DevExpress.Export.Xl.IXlRow.BeginTable"/> method.
+</para>
             </summary>
             <param name="table">
-		 
+		An <see cref="T:DevExpress.Export.Xl.IXlTable"/> object that is the generated table.
+
             </param>
             <param name="hasTotalRow">
-		 
+		A <see cref="T:System.Boolean"/> value indicating whether the total row is displayed for the table.
+
             </param>
 
 
@@ -8275,7 +9026,7 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
                 <para>Gets the current cell position in a worksheet.
 </para>
             </summary>
-            <value>An XlCellPosition object.
+            <value>An <see cref="XlCellPosition"/> object.
 </value>
 
 
@@ -8296,7 +9047,8 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
 </para>
             </summary>
             <param name="formula">
-		 
+		A string that is a formula contained in the cell. 
+
             </param>
 
 
@@ -8307,7 +9059,8 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
 </para>
             </summary>
             <param name="formula">
-		 
+		A <see cref="T:DevExpress.Export.Xl.XlExpression"/> object that is a collection of syntactic tokens (PTGs, an acronym of "parsed thing").
+
             </param>
 
 
@@ -8318,7 +9071,8 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
 </para>
             </summary>
             <param name="formula">
-		 
+		An object with the <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> interface which can be transformed into an expression.
+
             </param>
 
 
@@ -8341,10 +9095,12 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
 </para>
             </summary>
             <param name="formula">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlExpression"/> object used to specify a shared formula.
+
             </param>
             <param name="range">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that is the worksheet cell range in which each cell will contain a shared formula.
+
             </param>
 
 
@@ -8355,10 +9111,12 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
 </para>
             </summary>
             <param name="formula">
-		 
+		A string that is the textual expression used as a cell formula.
+
             </param>
             <param name="range">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that is the worksheet cell range in which each cell will contain a shared formula.
+
             </param>
 
 
@@ -8369,7 +9127,9 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
 </para>
             </summary>
             <param name="hostCell">
-		 
+		An <see cref="T:DevExpress.Export.Xl.XlCellPosition"/> structure that determines a cell which contains the host formula.
+
+
             </param>
 
 
@@ -10242,7 +11002,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
                 <para>Gets or sets the cell range to which the filter is applied.
 </para>
             </summary>
-            <value>An XlCellRange object for which the AutoFilter functionality is enabled.
+            <value>An <see cref="XlCellRange"/> object for which the AutoFilter functionality is enabled.
 </value>
 
 
@@ -10397,7 +11157,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
                 <para>Gets the cell range that encompasses non-empty cells (i.e., cells containing data). 
 </para>
             </summary>
-            <value>An XlCellRange object which encompasses all cells containing data in a worksheet. 
+            <value>An <see cref="XlCellRange"/> object which encompasses all cells containing data in a worksheet. 
 </value>
 
 
@@ -10579,20 +11339,22 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.SplitPosition">
             <summary>
-                <para>Freezes the specified number of rows and columns at the top and left side of the worksheet.
+                <para>Freezes a specific number of rows and columns above and to the left of the specified cell.
 
 </para>
             </summary>
-            <value>An XlCellPosition object that specifies the portion of the worksheet to be frozen.
+            <value>An <see cref="XlCellPosition"/> object specifying the position of a cell below the rows and to the right of the columns that should be frozen.
 </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.Tables">
             <summary>
-                <para> </para>
+                <para>Provides access to the read-only collection of tables contained in the worksheet.
+</para>
             </summary>
-            <value> </value>
+            <value>An <see cref="T:DevExpress.Export.Xl.IXlTableCollection"/> object specifying the worksheet's collection of tables.
+</value>
 
 
         </member>
@@ -10682,7 +11444,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 		One of the <see cref="T:DevExpress.Export.Xl.XlDocumentFormat"/> enumeration members that specifies the type of the output document.
 
             </param>
-            <returns>An object exposing the  <see cref="T:DevExpress.Export.Xl.IXlExporter"/> interface.
+            <returns>An object exposing the <see cref="T:DevExpress.Export.Xl.IXlExporter"/> interface.
 </returns>
 
 
@@ -10697,7 +11459,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
             </param>
             <param name="formulaParser">
-		An object exposing the IXlFormulaParser interface that provides the capability to parse worksheet formulas.
+		An object exposing the IXlFormulaParser interface that provides the capability to parse worksheet formulas. Required to validate worksheet formulas before export.
 
             </param>
             <returns>An object exposing the  <see cref="T:DevExpress.Export.Xl.IXlExporter"/> interface.
@@ -12169,7 +12931,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
             </param>
             <param name="to">
-		A <see cref="T:System.String"/> value, specifying the recipient.
+		A <see cref="T:System.String"/> value, specifying a comma-separated list of recipients.
 
             </param>
             <param name="subject">
@@ -12191,7 +12953,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 
             </param>
             <param name="to">
-		A <see cref="T:System.String"/> value, specifying the recipient.
+		A <see cref="T:System.String"/> value, specifying a comma-separated list of recipients.
 
             </param>
             <param name="subject">
@@ -13450,6 +14212,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.CsvExportOptionsEx.DocumentCulture">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="E:DevExpress.XtraPrinting.CsvExportOptionsEx.ExportProgress">
             <summary>
                 <para>Fires repeatedly while the data is being exported.
@@ -13526,9 +14296,11 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.AllowConditionalFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether conditional formatting rules applied to columns are preserved in the exported document.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether conditional formatting rules are preserved in the exported document. The DefaultBoolean.Default value is equivalent to <b>True</b>.
+</value>
 
 
         </member>
@@ -13604,9 +14376,22 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.ApplyFormattingToEntireColumn">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether cell formatting (cell appearance and borders) is applied to entire sheet columns (faster) or to individual sheet cells within the range of exported rows (slower).
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether cell formatting is applied to entire sheet columns or to individual sheet cells within the range of exported rows.
+The DefaultBoolean.Default value is equivalent to <b>True</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.BandedLayoutMode">
+            <summary>
+                <para>Gets or sets how bands and columns are arranged in the output worksheet (when exporting from Banded Views).
+</para>
+            </summary>
+            <value>A value that identifies the current layout of bands and columns in the output worksheet.
+</value>
 
 
         </member>
@@ -13643,6 +14428,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.DocumentCulture">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.ExportHyperlinks">
             <summary>
                 <para>This property is not supported by the XlsxExportOptionsEx class. Use the <see cref="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.AllowHyperLinks"/> property instead.
@@ -13671,6 +14464,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.FitToPrintedPageWidth">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.GroupState">
             <summary>
                 <para>Gets or sets the expanded state of data groups in the output document.
@@ -13678,6 +14479,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
             </summary>
             <value>A value that specifies the expanded state of data groups in the output document.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.PageRange">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -13719,6 +14528,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
             </summary>
             <value>A value that specifies whether total summaries are enabled in the exported document. 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.SummaryCountBlankCells">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -13790,9 +14607,11 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.AllowConditionalFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether conditional formatting rules applied to columns are preserved in the exported document.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether conditional formatting rules are preserved in the exported document. The DefaultBoolean.Default value is equivalent to <b>True</b>.
+</value>
 
 
         </member>
@@ -13872,9 +14691,22 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.ApplyFormattingToEntireColumn">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether cell formatting (cell appearance and borders) is applied to entire sheet columns (faster) or to individual sheet cells within the range of exported rows (slower).
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether cell formatting is applied to entire sheet columns or to individual sheet cells within the range of exported rows.
+The DefaultBoolean.Default value is equivalent to <b>True</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.BandedLayoutMode">
+            <summary>
+                <para>Gets or sets how bands and columns are arranged in the output worksheet (when exporting from Banded Views).
+</para>
+            </summary>
+            <value>A value that identifies the current layout of bands and columns in the output worksheet.
+</value>
 
 
         </member>
@@ -13911,6 +14743,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.DocumentCulture">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.ExportHyperlinks">
             <summary>
                 <para>This property is not supported by the XlsExportOptionsEx class. Use the <see cref="P:DevExpress.XtraPrinting.XlsExportOptionsEx.AllowHyperLinks"/> property instad.
@@ -13939,6 +14779,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.FitToPrintedPageWidth">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.GroupState">
             <summary>
                 <para>Gets or sets the expanded state of data groups in the output document.
@@ -13946,6 +14794,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
             </summary>
             <value>A value that specifies the expanded state of data groups in the output document.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.PageRange">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -13987,6 +14843,14 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
             <value>A value that specifies whether total summaries are enabled in the exported document.
 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.SummaryCountBlankCells">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -15035,12 +15899,14 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="M:DevExpress.XtraReports.Parameters.ParameterInfo.GetEditor(System.Boolean)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="forceCreate">
 		 
+
             </param>
-            <returns>A <see cref="T:System.Windows.Forms.Control"/> value.
+            <returns> 
 </returns>
 
 
@@ -15498,6 +16364,194 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlOper">
+
+            <summary>
+                <para>A static class that implements methods to create arithmetic and logical operations in the <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> expression.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.Add(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>An arithmetic addition operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is right the operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.Divide(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A division operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.Equal(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>An equality operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.Greater(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A "Greater than" operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.GreaterEqual(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A "Greater than or equal" operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.Less(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A "Less than" operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.LessEqual(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A "Less than or equal" operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.Multiply(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A multiplication operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.NotEqual(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>An inequality operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlOper.Subtract(DevExpress.Export.Xl.IXlFormulaParameter,DevExpress.Export.Xl.IXlFormulaParameter)">
+            <summary>
+                <para>A subtraction operator.
+</para>
+            </summary>
+            <param name="left">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the left operand.
+
+            </param>
+            <param name="right">
+		An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the right operand.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Export.Xl.IXlFormulaParameter"/> object that is the operation result.
+</returns>
 
 
         </member>
@@ -16071,17 +17125,17 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="P:DevExpress.XtraReports.Parameters.Parameter.Type">
             <summary>
-                <para>Specifies the parameter's type.
+                <para>Determines which values a report parameter can accept.
 </para>
             </summary>
-            <value>A <see cref="T:System.Type"/> object that represents type declarations.
+            <value>A <see cref="T:System.Type"/> object, specifying the type declarations.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.Parameters.Parameter.Value">
             <summary>
-                <para>Specifies the parameter's value.
+                <para>Specifies the report parameter's value.
 </para>
             </summary>
             <value>A <see cref="T:System.Object"/>, which represents the parameter's value.
@@ -17285,7 +18339,8 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.Client.FormsAuthenticationMessageInspector.AfterReceiveReply(System.ServiceModel.Channels.Message@,System.Object)">
             <summary>
-                <para> </para>
+                <para>Ensures that no invalid messages received from the service are relayed to the client user code.
+</para>
             </summary>
             <param name="reply">
 		A <see cref="T:System.ServiceModel.Channels.Message"/> reference.
@@ -17300,7 +18355,8 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.Client.FormsAuthenticationMessageInspector.BeforeSendRequest(System.ServiceModel.Channels.Message@,System.ServiceModel.IClientChannel)">
             <summary>
-                <para> </para>
+                <para>Ensures that no invalid messages are sent to the service.
+</para>
             </summary>
             <param name="request">
 		A <see cref="T:System.ServiceModel.Channels.Message"/> reference.
@@ -17381,7 +18437,8 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="M:DevExpress.ReportServer.ServiceModel.Client.FormsAuthenticationEndpointBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)">
             <summary>
-                <para> </para>
+                <para>Examines the description tree and a corresponding runtime object to ensure it conforms to some set of criteria.
+</para>
             </summary>
             <param name="endpoint">
 		A <see cref="T:System.ServiceModel.Description.ServiceEndpoint"/> object, specifying the endpoint.
@@ -17409,7 +18466,8 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="P:DevExpress.ReportServer.ServiceModel.Client.FormsAuthenticationBehaviorExtension.BehaviorType">
             <summary>
-                <para> </para>
+                <para>Gets a value indicating the behavior type.
+</para>
             </summary>
             <value>A <see cref="T:System.Type"/> enumeration value.
 </value>
@@ -17762,6 +18820,249 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
             </summary>
             <value>One of the <see cref="XlVariantValueType"/> enumeration values. 
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlCellPosition">
+
+            <summary>
+                <para>Defines the column, row and the reference type (relative or absolute).
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellPosition.#ctor(System.Int32,System.Int32)">
+            <summary>
+                <para>Initializes a new instance of the XlCellPosition class with the specified column and row indexes.
+</para>
+            </summary>
+            <param name="column">
+		An integer that is the zero-based column index.
+
+            </param>
+            <param name="row">
+		An integer that is the zero-based row index.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellPosition.#ctor(System.Int32,System.Int32,DevExpress.Export.Xl.XlPositionType,DevExpress.Export.Xl.XlPositionType)">
+            <summary>
+                <para>Initializes a new instance of the XlCellPosition class with the specified column and row indexes and reference type.
+</para>
+            </summary>
+            <param name="column">
+		An integer that is the zero-based column index.
+
+            </param>
+            <param name="row">
+		An integer that is the zero-based row index.
+
+            </param>
+            <param name="columnType">
+		A <see cref="T:DevExpress.Export.Xl.XlPositionType"/> enumeration member that specifies the column reference type.
+
+            </param>
+            <param name="rowType">
+		A <see cref="T:DevExpress.Export.Xl.XlPositionType"/> enumeration member that specifies the row reference type.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellPosition.AsAbsolute">
+            <summary>
+                <para>Returns a new XlCellPosition instance transformed into absolute reference.
+</para>
+            </summary>
+            <returns>An <see cref="XlCellPosition"/> object with absolute reference.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellPosition.AsRelative">
+            <summary>
+                <para>Returns a new XlCellPosition instance transformed into relative reference.
+</para>
+            </summary>
+            <returns>An <see cref="XlCellPosition"/> object with relative reference.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.Column">
+            <summary>
+                <para>Gets the index of a column in the position.
+</para>
+            </summary>
+            <value>An integer that is the zero-based column index.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.ColumnType">
+            <summary>
+                <para>Gets the reference type of the column in the position.
+</para>
+            </summary>
+            <value>An <see cref="XlPositionType"/> enumeration member that is the column reference type.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellPosition.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current XlCellPosition instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object. 
+
+            </param>
+            <returns><b>True</b> if the specified object is equal to the current XlCellPosition instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellPosition.GetHashCode">
+            <summary>
+                <para>Gets a numerical value that is used to identify an object during equality testing.
+</para>
+            </summary>
+            <returns>An integer value that is the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.InvalidValue">
+            <summary>
+                <para>A static method to get a special XlCellPosition instance that denotes an invalid position.
+</para>
+            </summary>
+            <value>An <see cref="XlCellPosition"/> structure with special property values to identify an invalid position.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.IsAbsolute">
+            <summary>
+                <para>Gets whether both the column and the row are absolute references.
+</para>
+            </summary>
+            <value><b>True</b>, if the position has the absolute column reference and the absolute row reference; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.IsColumn">
+            <summary>
+                <para>Gets whether the position refers to the entire column.
+</para>
+            </summary>
+            <value><b>True</b>, if the position refers to the entire column; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.IsColumnOrRow">
+            <summary>
+                <para>Gets whether the position refers to the entire column or the entire row.
+</para>
+            </summary>
+            <value><b>True</b> if the position refers to the entire row or the entire column; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.IsRelative">
+            <summary>
+                <para>Gets whether both the column and the row are relative references.
+</para>
+            </summary>
+            <value><b>True</b> if the position has the relative column reference and the relative row reference; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.IsRow">
+            <summary>
+                <para>Gets whether the position refers to the entire row.
+</para>
+            </summary>
+            <value><b>True</b> if the position refers to the entire row; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.IsValid">
+            <summary>
+                <para>Gets whether the XlCellPosition instance denotes a valid position.
+</para>
+            </summary>
+            <value><b>True</b> if the position is valid; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.MaxColumnCount">
+            <summary>
+                <para>Gets the maximum number of columns.
+</para>
+            </summary>
+            <value>An integer that is the maximum number of columns; at the moment it is 16384.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.MaxRowCount">
+            <summary>
+                <para>Gets the maximum number of rows.
+</para>
+            </summary>
+            <value>An integer that is the maximum number of rows; at the moment it is 1048576.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.Row">
+            <summary>
+                <para>Gets the index of a row in the position.
+</para>
+            </summary>
+            <value>An integer that is the zero-based row index.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.RowType">
+            <summary>
+                <para>Gets the reference type of the row in the position.
+</para>
+            </summary>
+            <value>An <see cref="XlPositionType"/> enumeration member that is the row reference type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellPosition.TopLeft">
+            <summary>
+                <para>Returns the top left position in a worksheet which is the point of reference for cell coordinates.
+
+</para>
+            </summary>
+            <value>An <see cref="XlCellPosition"/> that is the origin of cell positions.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellPosition.ToString">
+            <summary>
+                <para>Constructs a textual cell reference from the position.
+</para>
+            </summary>
+            <returns>A string that is the textual cell reference.
+</returns>
 
 
         </member>
@@ -18263,6 +19564,299 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
 
 
         </member>
+        <member name="T:DevExpress.Export.Xl.XlCellRange">
+
+            <summary>
+                <para>Defines a range of cells.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.#ctor(System.String,DevExpress.Export.Xl.XlCellPosition,DevExpress.Export.Xl.XlCellPosition)">
+            <summary>
+                <para>Initializes a new instance of the XlCellRange class with the specified worksheet, top left and bottom right positions.
+</para>
+            </summary>
+            <param name="sheetName">
+		A string that is the name of a worksheet.
+
+            </param>
+            <param name="topLeft">
+		A <see cref="T:DevExpress.Export.Xl.XlCellPosition"/> structure which defines the top left cell of the range.
+
+            </param>
+            <param name="bottomRight">
+		A <see cref="T:DevExpress.Export.Xl.XlCellPosition"/> structure which defines the bottom right cell of the range.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.#ctor(DevExpress.Export.Xl.XlCellPosition,DevExpress.Export.Xl.XlCellPosition)">
+            <summary>
+                <para>Initializes a new instance of the XlCellRange class with the specified top left and bottom right positions.
+</para>
+            </summary>
+            <param name="topLeft">
+		A <see cref="T:DevExpress.Export.Xl.XlCellPosition"/> structure which defines the top left cell of the range.
+
+            </param>
+            <param name="bottomRight">
+		A <see cref="T:DevExpress.Export.Xl.XlCellPosition"/> structure which defines the bottom right cell of the range.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.#ctor(DevExpress.Export.Xl.XlCellPosition)">
+            <summary>
+                <para>Initializes a new instance of the XlCellRange class which defines a single cell.
+</para>
+            </summary>
+            <param name="singleCell">
+		A <see cref="T:DevExpress.Export.Xl.XlCellPosition"/> structure which defines the cell position.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.AsAbsolute">
+            <summary>
+                <para>Returns a new XlCellRange instance transformed into absolute reference.
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object with absolute references.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.AsRelative">
+            <summary>
+                <para>Returns a new XlCellRange instance transformed into relative reference.
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object with relative references.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellRange.BottomRight">
+            <summary>
+                <para>Gets or sets the position which specifies the bottom right cell in the range.
+</para>
+            </summary>
+            <value>An <see cref="XlCellPosition"/> structure which defines a cell.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.ColumnInterval(System.Int32,System.Int32)">
+            <summary>
+                <para>Returns a range that is a continuous interval of entire columns.
+
+</para>
+            </summary>
+            <param name="left">
+		An integer that is the zero-based index of the leftmost column.
+
+            </param>
+            <param name="right">
+		An integer that is the zero-based index of the rightmost column.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that references the column interval.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.ColumnInterval(System.Int32,System.Int32,DevExpress.Export.Xl.XlPositionType)">
+            <summary>
+                <para>Returns a range that is a continuous interval of entire columns referenced using the specified reference type.
+
+</para>
+            </summary>
+            <param name="left">
+		An integer that is the zero-based index of the leftmost column.
+
+            </param>
+            <param name="right">
+		An integer that is the zero-based index of the rightmost column.
+
+            </param>
+            <param name="columnType">
+		A <see cref="T:DevExpress.Export.Xl.XlPositionType"/> enumeration member that specifies the reference type.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that references the column interval.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current XlCellRange instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object. 
+
+            </param>
+            <returns><b>True</b> if the specified object is equal to the current XlCellRange instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                <para>Returns a XlCellRange object by the indexes of the bounding rows and columns.
+</para>
+            </summary>
+            <param name="left">
+		An integer that is the zero-based index of the left column.
+
+            </param>
+            <param name="top">
+		An integer that is the zero-based index of the top row. 
+
+            </param>
+            <param name="right">
+		An integer that is the zero-based index of the right column.
+
+            </param>
+            <param name="bottom">
+		An integer that is the zero-based index of the bottom row.
+
+            </param>
+            <returns>A XlCellRange object that defines a worksheet range.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.GetHashCode">
+            <summary>
+                <para>Gets a numerical value that is used to identify an object during equality testing.
+</para>
+            </summary>
+            <returns>An integer value that is the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.Parse(System.String)">
+            <summary>
+                <para>Returns a XlCellRange object by its reference string in the in the A1 reference style.
+</para>
+            </summary>
+            <param name="reference">
+		A string that specifies the cell range reference in the A1 reference style.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object created for the specified reference.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.RowInterval(System.Int32,System.Int32)">
+            <summary>
+                <para>Returns a range that is a continuous interval of entire rows referenced using the specified reference type.
+
+</para>
+            </summary>
+            <param name="top">
+		An integer that is the zero-based index of the top row.
+
+            </param>
+            <param name="bottom">
+		An integer that is the zero-based index of the bottom row.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that references the row interval.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.RowInterval(System.Int32,System.Int32,DevExpress.Export.Xl.XlPositionType)">
+            <summary>
+                <para>Returns a range that is a continuous interval of entire rows referenced using the specified reference type.
+
+</para>
+            </summary>
+            <param name="top">
+		An integer that is the zero-based index of the top row.
+
+            </param>
+            <param name="bottom">
+		An integer that is the zero-based index of the bottom row.
+
+            </param>
+            <param name="rowType">
+		A <see cref="T:DevExpress.Export.Xl.XlPositionType"/> enumeration member that specifies the reference type.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that references the row interval.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellRange.SheetName">
+            <summary>
+                <para>Gets or sets the name of the worksheet that owns the range.
+</para>
+            </summary>
+            <value>A string that is the worksheet name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlCellRange.TopLeft">
+            <summary>
+                <para>Gets or sets the position which specifies the top left cell in the range.
+</para>
+            </summary>
+            <value>An <see cref="XlCellPosition"/> structure which defines a cell.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.ToString(System.Boolean)">
+            <summary>
+                <para>Get a string reference to the range defined by the XlCellRange object.
+</para>
+            </summary>
+            <param name="intervalRange">
+		<b>True</b>, to get single cell reference displayed as an interval; otherwise, <b>false</b>.
+
+
+            </param>
+            <returns>A string that is the reference to the worksheet range in A1 style. If a worksheet name is present (the <see cref="P:DevExpress.Export.Xl.XlCellRange.SheetName"/> is not null), it is included in the reference. 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.ToString(System.Globalization.CultureInfo)">
+            <summary>
+                <para>Get a string reference to the range defined by the XlCellRange object.
+</para>
+            </summary>
+            <param name="culture">
+		A <see cref="T:System.Globalization.CultureInfo"/> object providing culture-specific information.
+
+            </param>
+            <returns>A string that is the reference to the worksheet range in A1 style.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlCellRange.ToString">
+            <summary>
+                <para>Get a string reference to the range defined by the XlCellRange object.
+</para>
+            </summary>
+            <returns>A string that is the reference to the worksheet range in A1 style. If a worksheet name is present (the <see cref="P:DevExpress.Export.Xl.XlCellRange.SheetName"/> is not null), it is included in the reference. 
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraPrinting.BookmarkInfo">
 
             <summary>
@@ -18394,6 +19988,28 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
                 <para>Keep the original color values, but include only the first <b>56</b> colors into the palette. 
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.IXlFormulaParameter">
+
+            <summary>
+                <para>An internal representation of an expression. Used to set the cell formula.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.IXlFormulaParameter.ToString(System.Globalization.CultureInfo)">
+            <summary>
+                <para>Converts an internal formula representation to a string.
+</para>
+            </summary>
+            <param name="culture">
+		A <see cref="T:System.Globalization.CultureInfo"/> object that specifies culture settings on which function names and numeric formatting depend.
+
+            </param>
+            <returns>A string that is the textual formula.
+</returns>
 
 
         </member>
@@ -18770,10 +20386,12 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="M:DevExpress.Export.Xl.XlCellFormatting.MergeWith(DevExpress.Export.Xl.XlDifferentialFormatting)">
             <summary>
-                <para> </para>
+                <para>Combines the format settings of the specified <b>XlDifferentialFormatting</b> object with the current instance of the XlCellFormatting class. 
+</para>
             </summary>
             <param name="other">
-		 
+		An <b>XlDifferentialFormatting</b> object that specifies the object to combine with the current XlCellFormatting instance. 
+
             </param>
 
 
@@ -19769,9 +21387,11 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.LabelBrick.CanShrinkAndGrow">
             <summary>
-                <para> </para>
+                <para>Specifies whether or not a brick's height can be automatically changed based on the amount of its contents.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> to enable automatic adjustment of a brick's height; otherwise <b>false</b>.
+</value>
 
 
         </member>
@@ -19799,9 +21419,11 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.LabelBrick.RightToLeftLayout">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -19920,6 +21542,16 @@ Converts the current cell format to the differential formatting object.
                 <para>Initializes a new instance of the PageWatermark class with default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Drawing.PageWatermark.ActualImage">
+            <summary>
+                <para>For internal use. 
+</para>
+            </summary>
+            <value> 
+</value>
 
 
         </member>
@@ -20981,8 +22613,6 @@ Converts the current cell format to the differential formatting object.
         <member name="P:DevExpress.XtraPrinting.BarCode.EAN128Generator.HumanReadableText">
             <summary>
                 <para>Specifies whether or not parentheses should be included in the barcode's text.
-
-
 </para>
             </summary>
             <value><b>true</b> to insert parentheses into the barcode's printed text; otherwise, <b>false</b>.
@@ -21135,10 +22765,10 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code128Generator.CharacterSet">
             <summary>
-                <para>Gets or sets the charset type for the barcode. 
+                <para>Gets or sets the character set type for the barcode. 
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Code128Charset"/> enumeration value that specifies a charset to be used.
+            <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Code128Charset"/> enumeration value, specifying a character set to be used.
 </value>
 
 
@@ -22844,7 +24474,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.ExportOptionKind.HtmlExportWatermarks">
             <summary>
-                <para>The <see cref="P:DevExpress.XtraPrinting.HtmlExportOptionsBase.ExportWatermarks"/> property of the HTML export options.
+                <para><para>The <see cref="P:DevExpress.XtraPrinting.HtmlExportOptionsBase.ExportWatermarks"/> property of the HTML export options.</para>
 </para>
             </summary>
 
@@ -23194,15 +24824,6 @@ Converts the current cell format to the differential formatting object.
         <member name="F:DevExpress.XtraPrinting.ExportOptionKind.XlsShowGridLines">
             <summary>
                 <para><para>The <see cref="P:DevExpress.XtraPrinting.XlExportOptionsBase.ShowGridLines"/> property of the XLS export options.</para>
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.ExportOptionKind.XlsUseNativeFormat">
-            <summary>
-                <para><para>The <see cref="P:DevExpress.XtraPrinting.XlExportOptionsBase.TextExportMode"/> property of the XLS export options.</para>
 
 </para>
             </summary>
@@ -24536,9 +26157,11 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
         </member>
         <member name="P:DevExpress.XtraPrinting.CompositeBrick.RightToLeftLayout">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -24625,9 +26248,11 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
         </member>
         <member name="P:DevExpress.XtraPrinting.BrickBase.RightToLeftLayout">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -25273,11 +26898,11 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
         </member>
         <member name="M:DevExpress.XtraPrinting.LinkBase.CreateDocument(System.Boolean)">
             <summary>
-                <para>Creates a document from the link, so the document can be displayed or printed. Optionally, can generate pages in background. 
+                <para>Creates a document from the link, so the document can be displayed or printed.
 </para>
             </summary>
             <param name="buildPagesInBackground">
-		<b>true</b> to generate pages in background; otherwise, <b>false</b>.
+		A Boolean value. This value is ignored and has no effect on the document creation process.
 
             </param>
 
@@ -26259,49 +27884,60 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
         <member name="T:DevExpress.Export.Xl.XlTableColumnInfo">
 
             <summary>
-                <para> </para>
+                <para>Represents an object used to create a table column with custom formatting applied to its regions.  
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlTableColumnInfo.#ctor(System.String)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the XlTableColumnInfo class with the specified settings.
+</para>
             </summary>
             <param name="name">
-		 
+		A string specifying the unique name of the table column.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTableColumnInfo.DataFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets format characteristics for the data area of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> object that specifies format characteristics applied to the column's data area.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTableColumnInfo.HeaderRowFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets format characteristics for the header row cell of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> instance that specifies format characteristics applied to the column's header cell.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTableColumnInfo.Name">
             <summary>
-                <para> </para>
+                <para>Gets the unique name of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value that specifies the table column name.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTableColumnInfo.TotalRowFormatting">
             <summary>
-                <para> </para>
+                <para>Gets or sets format characteristics for the total row cell of the table column.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>XlDifferentialFormatting</b> instance that specifies format characteristics applied to the column's total cell.
+</value>
 
 
         </member>
@@ -27748,7 +29384,7 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
         </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UseMargins">
             <summary>
-                <para>Gets or sets a value which specifies whether the default printer's margins value is used when printing a document.
+                <para>Gets or sets a value specifying whether the default printer's margins value is used when printing a document.
 
 
 </para>
@@ -28563,6 +30199,432 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
 
         </member>
+        <member name="T:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService">
+
+            <summary>
+                <para>If implemented by a class, provides a service contract for the <see cref="T:DevExpress.DocumentServices.ServiceModel.Client.ReportServiceClient"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetBuildStatus(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts obtaining the document build status.
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetDocumentData(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts obtaining the document data.
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object, identifying the document.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetLookUpValues(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter[],System.String[],System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts obtaining the parameter lookup values.
+</para>
+            </summary>
+            <param name="identity">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> value.
+
+            </param>
+            <param name="parameterValues">
+		An array of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter"/> objects.
+
+            </param>
+            <param name="requiredParameterPaths">
+		An array of <see cref="T:System.String"/> values, specifying the parameter paths (for example, <i>"subreport1.subreportParameter1"</i>).
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetPages(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.Int32[],DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts obtaining the document pages.
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object.
+
+            </param>
+            <param name="pageIndexes">
+		An array of integer values.
+
+            </param>
+            <param name="compatibility">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetPrintDocument(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts obtaining the printed document.
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object, identifying the printed document.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetPrintStatus(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts obtaining the status of the printed document.
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object. 
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginGetReportParameters(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts obtaining the report parameters.
+</para>
+            </summary>
+            <param name="identity">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStartBuild(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts the initial phase of asynchronously building the report.
+</para>
+            </summary>
+            <param name="identity">
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
+
+            </param>
+            <param name="buildArgs">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs"/> object, storing the arguments required to create the report.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStartPrint(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts the initial phase of asynchronously printing of the specified document.
+
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object.
+
+            </param>
+            <param name="compatibility">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PageCompatibility"/> enumeration value.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStopBuild(DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts the terminal phase of asynchronously building the report.
+</para>
+            </summary>
+            <param name="documentId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object that identifies the report document.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.BeginStopPrint(DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId,System.AsyncCallback,System.Object)">
+            <summary>
+                <para>Starts the terminal phase of asynchronously printing the document.
+</para>
+            </summary>
+            <param name="printId">
+		A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object.
+
+            </param>
+            <param name="callback">
+		References a method to be called when a corresponding asynchronous operation is completed.
+
+            </param>
+            <param name="asyncState">
+		A <see cref="T:System.Object"/> value, containing information about the asynchronous operation.
+
+            </param>
+            <returns>An object containing information about the status of an asynchronous operation.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetBuildStatus(System.IAsyncResult)">
+            <summary>
+                <para>Ends obtaining the document build status.
+
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.BuildStatus"/> structure.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetDocumentData(System.IAsyncResult)">
+            <summary>
+                <para>Ends obtaining the document data.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentData"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetLookUpValues(System.IAsyncResult)">
+            <summary>
+                <para>Ends obtaining the parameter lookup values.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>An array of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ParameterLookUpValues"/> objects.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetPages(System.IAsyncResult)">
+            <summary>
+                <para>Ends obtaining the document pages. 
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:System.Byte"/> array.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetPrintDocument(System.IAsyncResult)">
+            <summary>
+                <para>Ends obtaining the printed document.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:System.Byte"/> array.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetPrintStatus(System.IAsyncResult)">
+            <summary>
+                <para>Ends obtaining the status of the printed document.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintStatus"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndGetReportParameters(System.IAsyncResult)">
+            <summary>
+                <para>Ends obtaining the report parameters.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameterContainer"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStartBuild(System.IAsyncResult)">
+            <summary>
+                <para>Ends the initial phase of asynchronously building the report.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentId"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStartPrint(System.IAsyncResult)">
+            <summary>
+                <para>Ends the initial phase of asynchronously printing the document.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.PrintId"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStopBuild(System.IAsyncResult)">
+            <summary>
+                <para>Ends the terminal phase of asynchronously building the document.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DocumentServices.ServiceModel.Client.IAsyncReportService.EndStopPrint(System.IAsyncResult)">
+            <summary>
+                <para>Ends the terminal phase of asynchronously printing the document.
+</para>
+            </summary>
+            <param name="ar">
+		An object containing information about the status of an asynchronous operation.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.DocumentServices.ServiceModel.Client.IReportServiceClientFactory">
 
             <summary>
@@ -29066,6 +31128,65 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
 
         </member>
+        <member name="T:DevExpress.XtraPrinting.TableRowCollection">
+
+            <summary>
+                <para>Represents a collection of rows owned by the <see cref="T:DevExpress.XtraPrinting.PageTableBrick"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.TableRowCollection.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPrinting.TableRowCollection"/> class that is empty and has the default initial capacity.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.TableRowCollection.Add(DevExpress.XtraPrinting.TableRow)">
+            <summary>
+                <para>Adds the specified <see cref="T:DevExpress.XtraPrinting.TableRow"/> object to the collection.
+</para>
+            </summary>
+            <param name="row">
+		A <see cref="T:DevExpress.XtraPrinting.TableRow"/> object to add to the collection.
+
+            </param>
+            <returns>An integer value indicating the position into which the new element was inserted.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.TableRowCollection.AddRow">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPrinting.TableRow"/> class and adds it to the collection.
+
+</para>
+            </summary>
+            <returns>The <see cref="T:DevExpress.XtraPrinting.TableRow"/> object added to the collection of rows.
+
+
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.TableRowCollection.Item(System.Int32)">
+            <summary>
+                <para>Provides indexed access to individual items in the collection.
+
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer specifying the desired item's position within the collection. If it's negative or exceeds the last available index, an exception is raised. 
+
+
+            </param>
+            <value>A <see cref="T:DevExpress.XtraPrinting.TableRow"/> object which represents the table row at the specified position.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Printing.Core.FieldListNodeSpecifics">
 
             <summary>
@@ -29324,9 +31445,11 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs.DrillDownKeys">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -29547,14 +31670,14 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         <member name="T:DevExpress.XtraReports.Parameters.LookUpHelper">
 
             <summary>
-                <para>For internal use.
+                <para>Enables you to obtain parameter values that were selected in the look-up editor.
 </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraReports.Parameters.LookUpHelper.GetLookUpValues(DevExpress.XtraReports.Parameters.LookUpSettings,DevExpress.Data.Browsing.DataContext)">
             <summary>
-                <para>For internal use.
+                <para>Returns a collection of parameter values that have been selected in a look-up editor.
 </para>
             </summary>
             <param name="lookUpSettings">
@@ -29562,7 +31685,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
 
             </param>
             <param name="dataContext">
-		A DevExpress.Data.Browsing.DataContext object.
+		A <see cref="T:DevExpress.Data.Browsing.DataContext"/> object.
 
             </param>
             <returns>A <see cref="T:DevExpress.XtraReports.Parameters.LookUpValueCollection"/> object.
@@ -29572,7 +31695,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="M:DevExpress.XtraReports.Parameters.LookUpHelper.GetLookUpValues(DevExpress.XtraReports.Parameters.LookUpSettings,DevExpress.Data.Browsing.DataContext,DevExpress.XtraReports.Parameters.IParameterEditorValueProvider)">
             <summary>
-                <para>Returns a collection of <see cref="T:DevExpress.XtraReports.Parameters.LookUpValue"/> objects associated with the report parameter.
+                <para>Returns a collection of parameter values that have been selected in a look-up editor.
 </para>
             </summary>
             <param name="lookUpSettings">
@@ -29944,6 +32067,277 @@ The default is <b>XlPageUnits.Inches</b>.
 
 
         </member>
+        <member name="T:DevExpress.Export.Xl.XlSparkline">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlSparkline.#ctor(DevExpress.Export.Xl.XlCellRange,DevExpress.Export.Xl.XlCellRange)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="dataRange">
+		 
+            </param>
+            <param name="location">
+		 
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparkline.DataRange">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparkline.Location">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlSparklineGroup">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlSparklineGroup.#ctor(DevExpress.Export.Xl.XlCellRange,DevExpress.Export.Xl.XlCellRange)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="dataRange">
+		 
+            </param>
+            <param name="location">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlSparklineGroup.#ctor">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorAxis">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorFirst">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorHigh">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorLast">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorLow">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorMarker">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorNegative">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ColorSeries">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.DateRange">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.DisplayBlanksAs">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.DisplayHidden">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.DisplayMarkers">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.DisplayXAxis">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.HighlightFirst">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.HighlightHighest">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.HighlightLast">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.HighlightLowest">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.HighlightNegative">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.LineWeight">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ManualMax">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.ManualMin">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.MaxScaling">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.MinScaling">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.RightToLeft">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.Sparklines">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.Xl.XlSparklineGroup.SparklineType">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.Export.Xl.XlDocumentFormat">
 
             <summary>
@@ -30114,6 +32508,272 @@ The default is <b>XlPageUnits.Inches</b>.
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions">
+
+            <summary>
+                <para>Provides options that control the layout of an <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> that is generated by a <see cref="T:DevExpress.XtraReports.ReportGeneration.ReportGenerator"/> based on a <see cref="T:DevExpress.XtraGrid.GridControl"/>'s data.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ReportGenerationOptions class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.EnablePrintAppearanceEvenRow">
+            <summary>
+                <para>Specifies whether even rows in the resulting report are painted using the appearance settings provided by the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances.EvenRow"/> property.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to render even rows in the report using the corresponding grid view appearance settings; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.EnablePrintAppearanceOddRow">
+            <summary>
+                <para>Specifies whether odd rows in the resulting report are painted using the appearance settings provided by the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridViewPrintAppearances.OddRow"/> property.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to render odd rows in the report using the corresponding grid view appearance settings; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.PrintColumnHeaders">
+            <summary>
+                <para>Specifies whether to add column headers to the report.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to add column headers to the report; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.PrintGroupRows">
+            <summary>
+                <para>Specifies whether to include group rows in the report.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to include group rows in the report; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.PrintGroupSummaryFooter">
+            <summary>
+                <para>Specifies whether to add group footers to the report.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to add group footers to the report; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.PrintHorizontalLines">
+            <summary>
+                <para>Specifies the visibility of horizontal grid lines in the report.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to add horizontal grid lines to the report; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.PrintTotalSummaryFooter">
+            <summary>
+                <para>Specifies whether to add the summary footer to the report.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to add the summary footer to the report; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.PrintVerticalLines">
+            <summary>
+                <para>Specifies the visibility of vertical grid lines in the report.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to add vertical grid lines to the report; otherwise <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.UsePrintAppearances">
+            <summary>
+                <para>Specifies whether dedicated print appearance settings (<see cref="P:DevExpress.XtraGrid.Views.Grid.GridView.AppearancePrint"/>) or regular appearance settings (<see cref="P:DevExpress.XtraGrid.Views.Grid.GridView.Appearance"/>) are used when generating a report.
+</para>
+            </summary>
+            <value><see cref="F:DevExpress.Utils.DefaultBoolean.True"/> to use print appearance settings; <see cref="F:DevExpress.Utils.DefaultBoolean.False"/> or <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> to use regular appearance settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlPositionType">
+
+            <summary>
+                <para>Lists reference types used to specify a cell position.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlPositionType.Absolute">
+            <summary>
+                <para>Absolute reference type.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlPositionType.Relative">
+            <summary>
+                <para>Relative reference type.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlSummary">
+
+            <summary>
+                <para>Lists summary functions used in subtotals.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.Average">
+            <summary>
+                <para>The AVERAGE statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.Count">
+            <summary>
+                <para>The COUNT statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.CountA">
+            <summary>
+                <para>The COUNTA statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.Max">
+            <summary>
+                <para>The MAX statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.Min">
+            <summary>
+                <para>The MIN statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.Product">
+            <summary>
+                <para>The PRODUCT mathematical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.StdevP">
+            <summary>
+                <para>The STDEV.P statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.StdevS">
+            <summary>
+                <para>The STDEV.S statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.Sum">
+            <summary>
+                <para>The SUM mathematical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.VarP">
+            <summary>
+                <para>The VAR.P statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlSummary.VarS">
+            <summary>
+                <para>The VAR.S statistical function.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlExpression">
+
+            <summary>
+                <para>An object which can be used to specify a worksheet cell formula.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlExpression.#ctor">
+            <summary>
+                <para>Initializes a new instance of the XlExpression class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlExpression.ToString">
+            <summary>
+                <para>Constructs a textual expression from the XlExpression object.
+</para>
+            </summary>
+            <returns>A string expression.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Export.Xl.XlExpression.ToString(DevExpress.Export.Xl.IXlExpressionContext)">
+            <summary>
+                <para>Constructs a textual expression from the XlExpression object using the specified settings. Intended for internal use.
+</para>
+            </summary>
+            <param name="context">
+		An <b>DevExpress.Export.Xl.IXlExpressionContext</b> object that contains culture-specific, reference style and other settings.
+
+            </param>
+            <returns>A string expression.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.LineDirection">
 
             <summary>
@@ -30149,6 +32809,30 @@ The default is <b>XlPageUnits.Inches</b>.
         <member name="F:DevExpress.XtraReports.UI.LineDirection.Vertical">
             <summary>
                 <para>A line is drawn vertically.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Export.Xl.XlPagePrintOrder">
+
+            <summary>
+                <para>Lists values used to specify the order in which worksheet pages are numbered and printed when the worksheet data does not fit on one page.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlPagePrintOrder.DownThenOver">
+            <summary>
+                <para>Worksheet pages are numbered and printed from the top down and then left to right.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Export.Xl.XlPagePrintOrder.OverThenDown">
+            <summary>
+                <para>Worksheet pages are numbered and printed from left to right and then from the top down.
 </para>
             </summary>
 
@@ -31303,65 +33987,6 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
                 <para>Specifies a theme-based color.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPrinting.TableRowCollection">
-
-            <summary>
-                <para>Represents a collection of rows owned by the <see cref="T:DevExpress.XtraPrinting.PageTableBrick"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.TableRowCollection.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPrinting.TableRowCollection"/> class that is empty and has the default initial capacity.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.TableRowCollection.Add(DevExpress.XtraPrinting.TableRow)">
-            <summary>
-                <para>Adds the specified <see cref="T:DevExpress.XtraPrinting.TableRow"/> object to the collection.
-</para>
-            </summary>
-            <param name="row">
-		A <see cref="T:DevExpress.XtraPrinting.TableRow"/> object to add to the collection.
-
-            </param>
-            <returns>An integer value indicating the position into which the new element was inserted.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.TableRowCollection.AddRow">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPrinting.TableRow"/> class and adds it to the collection.
-
-</para>
-            </summary>
-            <returns>The <see cref="T:DevExpress.XtraPrinting.TableRow"/> object added to the collection of rows.
-
-
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.TableRowCollection.Item(System.Int32)">
-            <summary>
-                <para>Provides indexed access to individual items in the collection.
-
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer specifying the desired item's position within the collection. If it's negative or exceeds the last available index, an exception is raised. 
-
-
-            </param>
-            <value>A <see cref="T:DevExpress.XtraPrinting.TableRow"/> object which represents the table row at the specified position.
-</value>
 
 
         </member>
@@ -32668,9 +35293,11 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.Document.RightToLeftLayout">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -33977,9 +36604,11 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.Page.RightToLeftLayout">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -34309,13 +36938,10 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageBrick.UseImageResolution">
             <summary>
-                <para>Gets or sets a value indicating whether to use the initial resolution of the image shown within this ImageBrick.
-
-
+                <para>Specifies whether the original or default image DPI (dots per inch) value should be taken into account when rendering the image in a document.
 </para>
             </summary>
-            <value><b>true</b> to use the initial resolution; otherwise, <b>false</b>.
-
+            <value><b>true</b> to use the original image resolution; otherwise <b>false</b>.
 </value>
 
 
@@ -35217,6 +37843,16 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
                 <para>Releases all resources used by <see cref="T:DevExpress.XtraPrinting.Brick"/>.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.Brick.DrillDownKey">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value> 
+</value>
 
 
         </member>

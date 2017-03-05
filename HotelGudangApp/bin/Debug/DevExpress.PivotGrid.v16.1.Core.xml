@@ -232,6 +232,14 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraPivotGrid.AdomdVersion.Version13">
+            <summary>
+                <para>ADOMD.NET 13 is used.
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraPivotGrid.AdomdVersion.Version9">
             <summary>
                 <para>ADOMD.NET 9 is used.
@@ -382,6 +390,64 @@
 
 
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter,DevExpress.Utils.OptionsLayoutBase)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="stream">
+		 
+            </param>
+            <param name="customObjectConverter">
+		 
+            </param>
+            <param name="options">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter,DevExpress.Utils.OptionsLayoutBase)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="fileName">
+		 
+            </param>
+            <param name="customObjectConverter">
+		 
+            </param>
+            <param name="options">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream,DevExpress.Utils.OptionsLayoutBase)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="stream">
+		 
+            </param>
+            <param name="options">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String,DevExpress.Utils.OptionsLayoutBase)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="fileName">
+		 
+            </param>
+            <param name="options">
+		 
             </param>
 
 
@@ -9522,6 +9588,14 @@ An end-user can move fields between areas by dragging their field headers within
 
 
         </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldCollectionBase.UseExtendedNameGeneration">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraPivotGrid.PivotGridOptionsPrint">
 
             <summary>
@@ -9837,6 +9911,14 @@ An end-user can move fields between areas by dragging their field headers within
             </summary>
             <value><b>true</b> to take into account filter conditions of visible filter fields only; <b>false</b>, to take into account filter conditions of all filter fields.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsData.RetrieveNestedFields">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

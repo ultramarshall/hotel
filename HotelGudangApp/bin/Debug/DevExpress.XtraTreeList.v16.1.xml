@@ -369,18 +369,20 @@
         </member>
         <member name="P:DevExpress.XtraTreeList.VirtualTreeSetCellValueInfo.IsCheckState">
             <summary>
-                <para> </para>
+                <para>Gets whether the <see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue"/> event/<b>IVirtualTreeListData.VirtualTreeGetCellValue</b> interface method is currently fired for you to save a node's check state.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if the <see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue"/> event/<b>IVirtualTreeListData.VirtualTreeGetCellValue</b> interface method is fired for you to save a node's check state; <b>false</b> if this event/method is fired for you to save a node's cell values.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraTreeList.VirtualTreeSetCellValueInfo.NewCellData">
             <summary>
-                <para>Gets the new data for the current cell.
+                <para>Gets the new cell value (when <see cref="P:DevExpress.XtraTreeList.VirtualTreeSetCellValueInfo.IsCheckState"/> is <b>false</b>) or the node's new check state (when <see cref="P:DevExpress.XtraTreeList.VirtualTreeSetCellValueInfo.IsCheckState"/> is <b>true</b>).
 </para>
             </summary>
-            <value>An object that represents the new data for the cell.
+            <value>An object that represents the new cell value/node's new check state.
 </value>
 
 
@@ -471,10 +473,10 @@
         </member>
         <member name="P:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo.CellData">
             <summary>
-                <para>Gets or sets the current cell's data.
+                <para>Gets or sets the current cell value (when <see cref="P:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo.IsCheckState"/> is <b>false</b>) or the node's check state (when <see cref="P:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo.IsCheckState"/> is <b>true</b>).
 </para>
             </summary>
-            <value>Initially this property is set to a null reference. Use this property to supply data for the current cell.
+            <value>Initially this property is set to a null reference. Use this property to supply data for the current cell or provide the node check state.
 </value>
 
 
@@ -493,9 +495,11 @@
         </member>
         <member name="P:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo.IsCheckState">
             <summary>
-                <para> </para>
+                <para>Gets whether the <see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue"/> event/<b>IVirtualTreeListData.VirtualTreeGetCellValue</b> interface method is currently fired for you to provide a node's check state.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if the <see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue"/> event/<b>IVirtualTreeListData.VirtualTreeGetCellValue</b> interface method is fired for you to provide a node's check state; <b>false</b> if this event/method is fired for you to provide a node's cell values.
+</value>
 
 
         </member>
@@ -1181,7 +1185,9 @@
         </member>
         <member name="F:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit.DefaultExportMode">
             <summary>
-                <para> </para>
+                <para>Returns the <see cref="F:DevExpress.XtraEditors.Repository.ExportMode.Default"/> value, which is equivalent to <see cref="F:DevExpress.XtraEditors.Repository.ExportMode.DisplayText"/>.
+This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItem.ExportMode"/> property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1408,6 +1414,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraTreeList.OptionsLayoutTreeList.StoreAllOptions">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraTreeList.OptionsLayoutTreeList.StoreAppearance">
             <summary>
                 <para>Gets or sets whether the control's appearance settings are also stored when the layout is saved to storage, and restored when the layout is restored from storage.
@@ -1429,10 +1443,13 @@
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeListOptionsClipboard.#ctor(System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the TreeListOptionsClipboard class with the specified settings.
+</para>
             </summary>
             <param name="allowFormattedMode">
-		 
+		<b>true</b>, to enable copying formatted data; otherwise, <b>false</b>. This property value is used to initialize the <see cref="P:DevExpress.Export.ClipboardOptions.ClipboardMode"/> property.
+
+
             </param>
 
 
@@ -1463,10 +1480,11 @@
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeListOptionsClipboard.CopyNodeHierarchy">
             <summary>
-                <para>Specifies whether the nodes hierarchy should be saved when copying data from this Tree List.
+                <para>Specifies whether the nodes hierarchy is copied to the clipboard.
 </para>
             </summary>
-            <value>A <b>DefaultBoolean</b> enumerator value that specifies whether the nodes hierarchy should be saved.
+            <value>A <b>DefaultBoolean</b> enumerator value that specifies whether the nodes hierarchy is copied to the clipboard.
+
 
 </value>
 
@@ -2273,7 +2291,7 @@
                 <para>Gets or sets whether nodes display check boxes.
 </para>
             </summary>
-            <value><b>true</b> to show check boxes; otherwise, <b>false</b>.
+            <value><b>true</b>, to show check boxes; otherwise, <b>false</b>.
 </value>
 
 
@@ -2567,9 +2585,11 @@
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeListOptionsPrint.PrintCheckBoxes">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to print node check boxes (see <see cref="P:DevExpress.XtraTreeList.TreeListOptionsView.ShowCheckBoxes"/>).
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to print built-in check boxes; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -2784,9 +2804,11 @@
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.AllowBoundCheckBoxesInVirtualMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether node check states can be specified dynamically - via the <see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue"/>/<see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeSetCellValue"/> events, and <b>IVirtualTreeListData.VirtualTreeGetCellValue</b>/<b>VirtualTreeSetCellValue</b> interface methods.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if node check states can be specified dynamically - via dedicated events and methods; <b>false</b> if these events/methods are only fired to get/set node values.
+</value>
 
 
         </member>
@@ -3866,10 +3888,10 @@ If there is no underlying data that would fall into a specific date range, the c
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListBand.RowCount">
             <summary>
-                <para>Gets or sets the band header height, in rows. 
+                <para>Gets or sets the band header height, in logical rows. 
 </para>
             </summary>
-            <value>The band header height, in rows. Values less than 1 are not accepted. 
+            <value>The band header height, in logical rows. Values less than 1 are not accepted. 
 </value>
 
 
@@ -9230,10 +9252,10 @@ If there is no underlying data that would fall into a specific date range, the c
         </member>
         <member name="P:DevExpress.XtraTreeList.Nodes.TreeListNode.Visible">
             <summary>
-                <para>Gets or sets whether the node is visible.
+                <para>Gets or sets whether the node is visible. The property allows you to perform node filtering.
 </para>
             </summary>
-            <value><b>true</b> if the node is visible; otherwise, <b>false</b>.
+            <value><b>true</b>, if the node is visible; otherwise, <b>false</b>.
 </value>
 
 
@@ -9586,9 +9608,11 @@ If there is no underlying data that would fall into a specific date range, the c
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListColumn.RowCount">
             <summary>
-                <para> </para>
+                <para>Gets or sets the column header height, in logical rows. This property is in effect when columns can be arranged one under another in Banded mode.
+</para>
             </summary>
-            <value> </value>
+            <value>The height of the column header, in logical rows.
+</value>
 
 
         </member>
@@ -9932,6 +9956,19 @@ If there is no underlying data that would fall into a specific date range, the c
             <param name="childId">
 		A child <see cref="T:System.Windows.Forms.Control"/> which fires the event.
 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraTreeList.TreeList.AccessibleNotifyClients(System.Windows.Forms.AccessibleEvents,DevExpress.Accessibility.BaseAccessible)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="accEvent">
+		 
+            </param>
+            <param name="acc">
+		 
             </param>
 
 
@@ -10304,7 +10341,7 @@ If there is no underlying data that would fall into a specific date range, the c
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeList.BandPanelRowHeight">
             <summary>
-                <para>Gets or sets the band panel row height.
+                <para>Gets or sets the logical row height of band headers.
 </para>
             </summary>
             <value>A value that specifies the band panel row height, in pixels.
@@ -10573,9 +10610,11 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeList.CheckBoxFieldName">
             <summary>
-                <para> </para>
+                <para>Gets or sets the name of the field whose values define the states of built-in check boxes (see <see cref="P:DevExpress.XtraTreeList.TreeListOptionsView.ShowCheckBoxes"/>).
+</para>
             </summary>
-            <value> </value>
+            <value>The name of the field to bind to built-in check boxes.
+</value>
 
 
         </member>
@@ -10846,9 +10885,11 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeList.Cursor">
             <summary>
-                <para> </para>
+                <para>Gets or sets the cursor that is displayed when the mouse pointer is over the TreeList control.
+</para>
             </summary>
-            <value> </value>
+            <value>The cursor to display when the mouse pointer is over the control
+</value>
 
 
         </member>
@@ -11085,7 +11126,8 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
         </member>
         <member name="F:DevExpress.XtraTreeList.TreeList.DefaultTreeLevelWidth">
             <summary>
-                <para> </para>
+                <para>The default value for the <see cref="P:DevExpress.XtraTreeList.TreeList.TreeLevelWidth"/> property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -11199,9 +11241,11 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeList.EnableDynamicLoading">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether a node hierarchy is created dynamically (on node expansion) or all at once on initial loading. This property is in effect in virtual binding mode.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if a node hierarchy is created dynamically (on node expansion); <b>false</b> if a node hierarchy is created all at once on initial loading.
+</value>
 
 
         </member>
@@ -13979,11 +14023,11 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeList.TreeLevelWidth">
             <summary>
-                <para>Gets or sets the width of the level's indent space.
+                <para>Gets or sets the width of the level indents.
 
 </para>
             </summary>
-            <value>An integer which specifies the width of the level's indent space.
+            <value>An integer which specifies the width of the level indents. The property's minimum value is <b>12</b>.
 </value>
 
 
@@ -14153,7 +14197,7 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue">
             <summary>
-                <para>This event allows you to initialize cells of the processed node, when populating the Tree List control with data dynamically.
+                <para>This event allows you to initialize cells (and optionally the check state) of the processed node, when populating the Tree List control with data dynamically.
 </para>
             </summary>
 
@@ -14170,7 +14214,7 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="E:DevExpress.XtraTreeList.TreeList.VirtualTreeSetCellValue">
             <summary>
-                <para>Allows changes that are made via the TreeListControl's cells to be stored.
+                <para>Allows changes that are made to node cells and check state to be stored.
 </para>
             </summary>
 
@@ -14726,36 +14770,6 @@ When handling the <see cref="E:DevExpress.XtraTreeList.TreeList.GetSelectImage"/
 		A <see cref="T:DevExpress.XtraTreeList.ColumnChangedEventArgs"/> class instance containing event data.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraTreeList.ColumnChangedEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraTreeList.TreeList.ColumnChanged"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.ColumnChangedEventArgs.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn)">
-            <summary>
-                <para>Creates an instance of the <see cref="T:DevExpress.XtraTreeList.ColumnChangedEventArgs"/> class.
-</para>
-            </summary>
-            <param name="column">
-		A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> object representing the column related to the event. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.ColumnChangedEventArgs.Column"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.ColumnChangedEventArgs.Column">
-            <summary>
-                <para>Gets a Tree List column.
-</para>
-            </summary>
-            <value>A Tree List column.
-</value>
 
 
         </member>
@@ -15368,6 +15382,36 @@ When handling the <see cref="E:DevExpress.XtraTreeList.TreeList.GetSelectImage"/
                 <para>The test point belongs to the Tree List's vertical scroll bar.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraTreeList.ColumnChangedEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraTreeList.TreeList.ColumnChanged"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraTreeList.ColumnChangedEventArgs.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn)">
+            <summary>
+                <para>Creates an instance of the <see cref="T:DevExpress.XtraTreeList.ColumnChangedEventArgs"/> class.
+</para>
+            </summary>
+            <param name="column">
+		A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> object representing the column related to the event. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.ColumnChangedEventArgs.Column"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.ColumnChangedEventArgs.Column">
+            <summary>
+                <para>Gets a Tree List column.
+</para>
+            </summary>
+            <value>A Tree List column.
+</value>
 
 
         </member>

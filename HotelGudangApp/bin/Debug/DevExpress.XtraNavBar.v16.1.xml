@@ -160,6 +160,18 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraNavBar.OptionsNavPane.HeaderImageSize">
+            <summary>
+                <para>Gets or sets the size of the frame into which the header image of an expanded group is fitted.
+
+</para>
+            </summary>
+            <value>A <see cref="Size"/> structure that specifies the size of the frame into which the header image of an expanded group is fitted.
+
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraNavBar.OptionsNavPane.IsAnimationInProgress">
             <summary>
                 <para>Gets whether the control is being expanded or collapsed.
@@ -3449,9 +3461,13 @@ A specific version of the addressed image is automatically chosen, based on the 
         </member>
         <member name="P:DevExpress.XtraNavBar.NavBarControl.AllowHorizontalResizing">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether a built-in resizer is enabled at the control's right or left edge (depending on the control's Dock setting) that allows an end-user to resize the control horizontally.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies if the built-in horizontal resizer is enabled. 
+The <b>Default</b> value is equivalent to <b>False</b>.
+
+</value>
 
 
         </member>

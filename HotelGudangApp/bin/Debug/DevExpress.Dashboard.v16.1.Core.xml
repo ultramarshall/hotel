@@ -2343,7 +2343,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ActionSelectDateTimePeriod">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Select Date Time Period
+</para>
             </summary>
 
 
@@ -2444,6 +2445,13 @@ Note that this sort order is in effect in OLAP mode only.
 
 
         </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.CategoryNameGeneral">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ChartTotalValue">
             <summary>
                 <para><b>Default value</b>: Total
@@ -2526,7 +2534,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.CustomExpressionCalculationMeasureCaption">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Calculation
+</para>
             </summary>
 
 
@@ -2765,14 +2774,16 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DefaultFileExtractDataSourceName">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Extract Data Source
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DefaultNameBoundImageItem">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Bound Image
+</para>
             </summary>
 
 
@@ -2955,7 +2966,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DescriptionBoundImageAttribute">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Attribute
+</para>
             </summary>
 
 
@@ -3202,7 +3214,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DifferenceCalculationMeasureCaptionFormatString">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Difference of {0}
+</para>
             </summary>
 
 
@@ -3241,75 +3254,92 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorEmptyPeriodName">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> The name cannot be null or empty
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingDataBindingError">
+            <summary>
+                <para><b>Default value:</b> The following errors occur during data binding:
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingEFServerModeError">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Server mode is not supported for this data member
+</para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingInternalError">
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingInvalidCustomFunctions">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Calculated Field and Window expressions cannot contain some custom functions. Evaluated expressions contain the following forbidden functions
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingNoSuchDataMembers">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> The following data items do not exist
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingOrderByCalculationDataMembers">
             <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingQueryExecutionError">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingQueryValidationError">
-            <summary>
-                <para> </para>
+                <para><b>Default value:</b> Sorting by measure cannot be applied if the target measure has calculations. The following dimensions are ordered by measures with calculations
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingRecursiveDataMembers">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> The following data items refer to each other
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingSQLServerModeError">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Server mode is not supported for stored procedures
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorHandlingTopNByCalculationDataMembers">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Top N cannot be applied if its target measure has a calculation. The following dimensions have Top N applied by measures with calculations
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorIncorrectIntervalCount">
+            <summary>
+                <para><b>Default value:</b> The count parameter should be greater or equal to 1.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorToBooleanCharOperand">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ErrorToBooleanDateTimeOperand">
             <summary>
                 <para> </para>
             </summary>
@@ -3326,6 +3356,28 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ExpressionFieldsTreeItemName">
             <summary>
+                <para><b>Default value:</b> Expressions
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ExtractPreprocessorColumnError">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ExtractPreprocessorError">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ExtractSourceDataSourceNamePostfix">
+            <summary>
                 <para> </para>
             </summary>
 
@@ -3334,6 +3386,30 @@ Note that this sort order is in effect in OLAP mode only.
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FileName">
             <summary>
                 <para><b>Default value</b>: File Name
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FilterElementCheckedComboBoxNoDataCaption">
+            <summary>
+                <para><b>Default value</b>: (none)
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FilterElementNoDataToDisplay">
+            <summary>
+                <para><b>Default value</b>: No data to display
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FilterElementRadioComboBoxNoDataCaption">
+            <summary>
+                <para><b>Default value</b>: Select...
 </para>
             </summary>
 
@@ -3381,7 +3457,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FilterStatePresentationSplitSheet">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Separate Sheet
+</para>
             </summary>
 
 
@@ -3444,63 +3521,72 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateHour">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> GetDateHour(DateTime)\r\nExtracts the date part with the hour value from the defined DateTime.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateHourMinute">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> GetDateHourMinute(DateTime)\r\nExtracts the date part with the hour and minute values from the defined DateTime.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateHourMinuteSecond">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> GetDateHourMinuteSecond(DateTime)\r\nExtracts the date part with the hour, minute, and second values from the defined DateTime.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateMonthYear">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> GetDateMonthYear(DateTime)\r\nExtracts the date with the month and year from the defined DateTime.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateQuarterYear">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> GetDateQuarterYear(DateTime)\r\nExtracts the date with the quarter and year from the defined DateTime.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionGetQuarter">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> GetQuarter(DateTime)\r\nExtracts a quarter from the defined DateTime.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionGetWeekOfYear">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> GetWeekOfYear(DateTime)\r\nExtracts the week of the year from the defined DateTime.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionToBoolean">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> ToBoolean(Value)\r\nConverts Value to an equivalent Boolean value.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FunctionOperatorExFunctionDescriptionToDateTime">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> ToDateTime(Value)\r\nConverts Value to a DateTime value.
+</para>
             </summary>
 
 
@@ -3700,7 +3786,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageAggregateFunctionInMasterFilterDimension">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Master filtering cannot be applied by values of the dimension created based on the calculated field with the Aggr function. The following dimensions are created based on such fields: {0}.
+</para>
             </summary>
 
 
@@ -3740,6 +3827,14 @@ Note that this sort order is in effect in OLAP mode only.
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageDuplicatedLayoutItem">
             <summary>
                 <para><b>Default value</b>: This layout item is already contained in the tree
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageEFNotSupportedMedian">
+            <summary>
+                <para><b>Default value</b>: Median is not supported for the Entity Framework.
 </para>
             </summary>
 
@@ -3905,6 +4000,22 @@ Note that this sort order is in effect in OLAP mode only.
 
 
         </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageServerModeNotSupportedCountDistinct">
+            <summary>
+                <para><b>Default value</b>: Count Distinct is not supported in server mode for
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageServerModeNotSupportedMedian">
+            <summary>
+                <para><b>Default value</b>: Median is not supported in server mode for
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageSummaryCalculatedFieldInDimension">
             <summary>
                 <para><b>Default value:</b> Cannot change the expression of the '{0}' calculated field that provides data for the '{1}' dimension. Summary-based calculated fields can provide data for measures only.
@@ -3931,6 +4042,14 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageWrongDateTimePeriodName">
             <summary>
+                <para><b>Default value:</b> The DateTimePeriodCollection does not contain the item with the specified name.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MessageWrongExcelDataSourceConnectionParametersType">
+            <summary>
                 <para> </para>
             </summary>
 
@@ -3938,7 +4057,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.MovingCalculationMeasureCaptionFormatString">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Moving of {0}
+</para>
             </summary>
 
 
@@ -3994,6 +4114,14 @@ Note that this sort order is in effect in OLAP mode only.
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.NumericGroupIntervalDiscrete">
             <summary>
                 <para><b>Default value</b>: Discrete
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.OlapCubeNotFoundError">
+            <summary>
+                <para><b>Default value</b>: The cube with the following name cannot be found:\r\n{0}.
 </para>
             </summary>
 
@@ -4097,7 +4225,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ParametersFormAllowNullColumnCaption">
             <summary>
-                <para> </para>
+                <para><b>Default Value:</b> Pass Null
+</para>
             </summary>
 
 
@@ -4112,14 +4241,16 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ParametersFormNameColumnCaption">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Parameter Name
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ParametersFormValueColumnCaption">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Value
+</para>
             </summary>
 
 
@@ -4134,154 +4265,176 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PercentOfTotalCalculationMeasureCaptionFormatString">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Percent of {0} Total
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodLastDay">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Last Day
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodLastHour">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Last Hour
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodLastMinute">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Last Minute
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodLastMonth">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Last Month
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodLastQuarter">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Last Quarter
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodLastSecond">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Last Second
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodLastYear">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Last Year
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodNextDay">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Next Day 
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodNextHour">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Next Hour
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodNextMinute">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Next Minute
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodNextMonth">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Next Month
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodNextQuarter">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Next Quarter
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodNextSecond">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Next Second
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodNextYear">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Next Year
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodThisDay">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> This Day
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodThisHour">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> This Hour
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodThisMinute">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> This Minute
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodThisMonth">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> This Month
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodThisQuarter">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> This Quarter
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodThisSecond">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> This Second
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.PeriodThisYear">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> This Year
+</para>
             </summary>
 
 
@@ -4312,7 +4465,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.RangeFilterCustomDateTimePeriod">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Custom Period...
+</para>
             </summary>
 
 
@@ -4335,7 +4489,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.RangeFilterHasNoData">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> The Range Filter does not contain any data to display.
+</para>
             </summary>
 
 
@@ -4398,6 +4553,21 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.RangeFilterSelectRange">
             <summary>
+                <para><b>Default value:</b> Select Range
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.RangeFilterSelectRangeFromCaption">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.RangeFilterSelectRangeToCaption">
+            <summary>
                 <para> </para>
             </summary>
 
@@ -4405,7 +4575,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.RankCalculationMeasureCaptionFormatString">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Rank of {0}
+</para>
             </summary>
 
 
@@ -4420,7 +4591,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.RunningTotalCalculationMeasureCaptionFormatString">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Running Total of {0}
+</para>
             </summary>
 
 
@@ -4827,7 +4999,8 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.SummaryTypeMedian">
             <summary>
-                <para> </para>
+                <para><b>Default value:</b> Median
+</para>
             </summary>
 
 
@@ -6156,17 +6329,21 @@ Note that this sort order is in effect in OLAP mode only.
         </member>
         <member name="P:DevExpress.DashboardCommon.RangeFilterDashboardItem.DateTimePeriods">
             <summary>
-                <para> </para>
+                <para>Gets a collection of date-time periods that can be used to select a predefined range in the Range Filter using its context menu.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriodCollection"/> object that is a collection of date-time periods.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.RangeFilterDashboardItem.DefaultDateTimePeriodName">
             <summary>
-                <para> </para>
+                <para>Gets or sets the name of the date-time period used to apply a default selection to the Range Filter.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> that specifies the name of the date-time period used to apply a default selection to the Range Filter.
+</value>
 
 
         </member>
@@ -7031,7 +7208,7 @@ Note that this sort order is in effect in OLAP mode only.
         <member name="T:DevExpress.DashboardCommon.Dimension">
 
             <summary>
-                <para>A dimension that is a <see cref="T:DevExpress.DashboardCommon.DataItem"/> whose values are not intended to be summarized. 
+                <para>A dimension that is a <see cref="T:DevExpress.DashboardCommon.DataItem"/> whose values are used to categorize data.
 
 </para>
             </summary>
@@ -9668,6 +9845,46 @@ The <i>dataMember</i> parameter should be specified for a SQL Data Source (a que
 
 
         </member>
+        <member name="T:DevExpress.DashboardCommon.DifferenceTarget">
+
+            <summary>
+                <para>Lists values used to calculate differences in the <see cref="T:DevExpress.DashboardCommon.DifferenceCalculation"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.DifferenceTarget.First">
+            <summary>
+                <para>A difference is calculated between the current value and the first value in a window.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.DifferenceTarget.Last">
+            <summary>
+                <para>A difference is calculated between the current value and the last value in a window.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.DifferenceTarget.Next">
+            <summary>
+                <para>A difference is calculated between the current value and the next value. If the current value is the last value in a window, a difference is not calculated.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DashboardCommon.DifferenceTarget.Previous">
+            <summary>
+                <para>A difference is calculated between the current value and the previous value. If the current value is the first value in a window, a difference is not calculated.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.DashboardCommon.ChartPaneCollection">
 
             <summary>
@@ -9793,33 +10010,6 @@ The <i>dataMember</i> parameter should be specified for a SQL Data Source (a que
 
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.DashboardCommon.BaseCalculation`1">
-
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.BaseCalculation`1.Equals(System.Object)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="obj">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.BaseCalculation`1.GetHashCode">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
@@ -11324,17 +11514,21 @@ The <i>dataMember</i> parameter should be specified for a SQL Data Source (a que
         </member>
         <member name="P:DevExpress.DashboardCommon.Measure.Calculation">
             <summary>
-                <para> </para>
+                <para>Gets or sets a calculation applied to values of the current measure.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.MeasureCalculation"/> descendant that specifies a calculation applied to values of the current measure.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.Measure.Expression">
             <summary>
-                <para> </para>
+                <para>Gets or sets the expression for the current measure.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> that specifies the expression for the current measure.
+</value>
 
 
         </member>
@@ -11370,9 +11564,11 @@ The <i>dataMember</i> parameter should be specified for a SQL Data Source (a que
         </member>
         <member name="P:DevExpress.DashboardCommon.Measure.WindowDefinition">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window definition used to apply a calculation to values of the current measure.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.MeasureCalculationWindowDefinition"/> descendant that specifies the window definition used to apply a calculation to values of the current measure.
+</value>
 
 
         </member>
@@ -11425,7 +11621,8 @@ The <i>dataMember</i> parameter should be specified for a SQL Data Source (a que
         <member name="T:DevExpress.DashboardCommon.DataLoadingErrorEventHandler">
 
             <summary>
-                <para> </para>
+                <para>References a method that will handle the <b>DataLoadingError</b> events.
+</para>
             </summary>
 
         </member>
@@ -12731,6 +12928,16 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
 
 
         </member>
+        <member name="P:DevExpress.DashboardCommon.DashboardParameter.SelectAllValues">
+            <summary>
+                <para>Gets or sets whether or not all parameter values should be selected in the initial state of the Dashboard Viewer.
+</para>
+            </summary>
+            <value><b>true</b>, to select all parameter values by default; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.DashboardCommon.DashboardParameter.Visible">
             <summary>
                 <para>Gets or sets whether a parameter's editor is visible within the Dashboard Parameters dialog.
@@ -12867,6 +13074,114 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.DashboardCommon.Dimension"/> object specifying a dimension used to provide sparkline argument values.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventHandler">
+
+            <summary>
+                <para>References a method that will handle the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ValidateCustomSqlQuery"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventHandler.Invoke(System.Object,DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs)">
+            <summary>
+                <para>References a method that will handle the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ValidateCustomSqlQuery"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs"/> object that contains event data.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ValidateCustomSqlQuery"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs.#ctor(System.String,DevExpress.DashboardCommon.ValidateDashboardCustomSqlQueryEventArgs)">
+            <summary>
+                <para>Initializes a new instance of the ServiceValidateDashboardCustomSqlQueryEventArgs class.
+</para>
+            </summary>
+            <param name="dashboardId">
+		A <see cref="T:System.String"/> that identifies the current dashboard.
+
+            </param>
+            <param name="innerArgs">
+		A <see cref="T:DevExpress.DashboardCommon.ValidateDashboardCustomSqlQueryEventArgs"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs.CustomSqlQuery">
+            <summary>
+                <para>Gets the custom SQL query that should be checked.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.Sql.CustomSqlQuery"/> object that specifies the custom SQL query.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs.DashboardId">
+            <summary>
+                <para>Gets the identifier of the current dashboard. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that identifies the current dashboard.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs.DataSourceComponentName">
+            <summary>
+                <para>Gets or sets the component name of the data source for which the event was raised.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the component name of the data source for which the event was raised.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs.DataSourceName">
+            <summary>
+                <para>Gets or sets the name of the data source for which the event was raised.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the name of the data source for which the event was raised.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs.ExceptionMessage">
+            <summary>
+                <para>Gets or sets the exception message returned after custom SQL query validation.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the exception message returned after custom SQL query validation.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceValidateDashboardCustomSqlQueryEventArgs.Valid">
+            <summary>
+                <para>Gets or sets whether the current custom SQL query is valid.
+</para>
+            </summary>
+            <value><b>true</b>, if the current custom SQL query is valid; otherwise, <b>false</b>.
 </value>
 
 
@@ -13155,6 +13470,30 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
                 <para>Initializes a new instance of the ExtractWeakCache class.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DashboardCommon.ServiceConnectionErrorEventHandler">
+
+            <summary>
+                <para>References a method that will handle the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ConnectionError"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ServiceConnectionErrorEventHandler.Invoke(System.Object,DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs)">
+            <summary>
+                <para>References a method that will handle the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ConnectionError"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs"/> object that contains event data.
+
+            </param>
 
 
         </member>
@@ -13869,6 +14208,108 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
 
 
         </member>
+        <member name="T:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ConnectionError"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+                <para>Initializes a new instance of the ServiceConnectionErrorEventArgs class.
+</para>
+            </summary>
+            <param name="dashboardId">
+		A <see cref="T:System.String"/> that is the dashboard identifier.
+
+            </param>
+            <param name="connectionName">
+		A <see cref="T:System.String"/> that specifies the name of the connection. 
+
+            </param>
+            <param name="dataSourceName">
+		A <see cref="T:System.String"/> value that is the data source name. 
+
+            </param>
+            <param name="exception">
+		A <see cref="T:System.Exception"/> object representing the exception. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.Cancel">
+            <summary>
+                <para>Gets or sets whether the operation performed on the processed event should be canceled.
+</para>
+            </summary>
+            <value><b>true</b>, to cancel the operation performed on the event; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.ConnectionName">
+            <summary>
+                <para>Gets the name of the connection for which the event has been raised.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that specifies the name of the connection for which the event has been raised. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.ConnectionParameters">
+            <summary>
+                <para>Gets or sets parameters used to establish a connection to data.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that contains parameters used to establish a connection to data. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.DashboardId">
+            <summary>
+                <para>Gets the identifier of the currently processed dashboard.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that is the identifier of the currently processed dashboard.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.DataSourceName">
+            <summary>
+                <para>Gets the data source name for which the event was raised.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that is the data source name. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.Exception">
+            <summary>
+                <para>Gets an exception that caused the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ConnectionError"/> event.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Exception"/> object representing the exception that caused the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ConnectionError"/> event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConnectionErrorEventArgs.Handled">
+            <summary>
+                <para>Gets or sets whether default actions are required to connect to a data store.
+</para>
+            </summary>
+            <value><b>true</b>, if no default actions are required to connect to a data store; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.NotifyingCollectionBeforeItemAddedEventArgs`1">
 
             <summary>
@@ -13960,7 +14401,8 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         <member name="T:DevExpress.DashboardCommon.ValidateDashboardCustomSqlQueryEventHandler">
 
             <summary>
-                <para> </para>
+                <para>References a method that will handle <b>ValidateCustomSqlQuery</b> events.
+</para>
             </summary>
 
         </member>
@@ -14200,365 +14642,495 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastDay">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one day. The period includes a day previous to the current day.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastDays(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is a specified number of days. The period includes days previous to the current day.
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of days.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastHour">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one hour. The period includes the hour previous to the current hour.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastHours(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is a specified number of hours. The period includes the hours previous to the current hour.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of hours.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastMinute">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one minute. The period includes the minute previous to the current minute.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastMinutes(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is a specified number of minutes. The period includes the minutes previous to the current minute.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of minutes.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastMonth">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one month. The period includes the month previous to the current month.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastMonths(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is a specified number of months. The period includes the months previous to the current month.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of months.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastQuarter">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one quarter. The period includes the quarter previous to the current quarter.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastQuarters(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of quarters. The period includes the quarters previous to the current quarter.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of quarters.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastSecond">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one second. The period includes the second previous to the current second.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastSeconds(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of seconds. The period includes the seconds previous to the current second.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of seconds.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastYear">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one year. The period includes the year previous to the current year.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateLastYears(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of years. The period includes the years previous to the current year.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of years.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextDay">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one day. The period includes the day after the current day.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextDays(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of days. The period includes the days after the current day.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of days.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextHour">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one hour. The period includes the hour after the current hour.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextHours(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of hours. The period includes the hours after the current hour.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of hours.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextMinute">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one minute. The period includes the minute after the current minute.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextMinutes(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of minutes. The period includes the minutes after the current minute.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of minutes.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextMonth">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one month. The period includes the month after the current month.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextMonths(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of months. The period includes the months after the current month.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of months.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextQuarter">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one quarter. The period includes the quarter after the current quarter.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextQuarters(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of quarters. The period includes the quarters after the current quarter.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of quarters.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextSecond">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one second. The period includes the second after the current second.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextSeconds(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of seconds. The period includes the seconds after the current second.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of seconds.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextYear">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one year. The period includes the year after the current year.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateNextYears(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is the specified number of years. The period includes the years after the current year.
+
+</para>
             </summary>
             <param name="name">
-		 
+		A <see cref="T:System.String"/> value that specifies the period name.
+
             </param>
             <param name="count">
-		 
+		An integer value that specifies the number of years.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateThisDay">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one day. The period includes the current day.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateThisHour">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one hour. The period includes the current hour.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateThisMinute">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one minute. The period includes the current minute.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateThisMonth">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one month. The period includes the current month.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateThisQuarter">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one quarter. The period includes the current quarter.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateThisSecond">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one second. The period includes the current second.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.DateTimePeriod.CreateThisYear">
             <summary>
-                <para> </para>
+                <para>Creates the period whose duration is one year. The period includes the current year.
+
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:DevExpress.DashboardCommon.DateTimePeriod"/> object that is the created period.
+</returns>
 
 
         </member>
@@ -14634,59 +15206,73 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.ServiceDataLoadingEventArgs.#ctor(System.String,System.String,System.String,System.Object)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the ServiceDataLoadingEventArgs class.
+</para>
             </summary>
             <param name="dashboardId">
-		 
+		A <see cref="T:System.String"/> that identifies the current dashboard. 
+
             </param>
             <param name="dataSourceComponentName">
-		 
+		A <see cref="T:System.String"/> that is the component name of the data source for which the event has been raised. 
+
             </param>
             <param name="dataSourceName">
-		 
+		A <see cref="T:System.String"/> that is the name of the data source for which the event has been raised. 
+
             </param>
             <param name="data">
-		 
+		Data for the current data source. 
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ServiceDataLoadingEventArgs.DashboardId">
             <summary>
-                <para> </para>
+                <para>Gets the identifier of the current dashboard.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> that identifies the current dashboard. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ServiceDataLoadingEventArgs.Data">
             <summary>
-                <para> </para>
+                <para>Gets or sets data for the current data source.
+</para>
             </summary>
-            <value> </value>
+            <value>Data for the current data source. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ServiceDataLoadingEventArgs.DataSourceComponentName">
             <summary>
-                <para> </para>
+                <para>Get the component name of the data source for which the event has been raised.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> that is the component name of the data source for which the event has been raised. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ServiceDataLoadingEventArgs.DataSourceName">
             <summary>
-                <para> </para>
+                <para>Gets the name of the data source for which the event has been raised.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> that is the name of the data source for which the event has been raised. 
+</value>
 
 
         </member>
         <member name="T:DevExpress.DashboardCommon.ServiceConfigureDataConnectionEventHandler">
 
             <summary>
-                <para> </para>
+                <para>References a method that will handle the <see cref="E:DevExpress.DashboardWeb.DataApiProvider.ConfigureDataConnection"/> event.
+</para>
             </summary>
 
         </member>
@@ -14714,43 +15300,67 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
             </summary>
 
         </member>
-        <member name="M:DevExpress.DashboardCommon.ServiceConfigureDataConnectionEventArgs.#ctor(System.String,System.String,DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase)">
+        <member name="M:DevExpress.DashboardCommon.ServiceConfigureDataConnectionEventArgs.#ctor(System.String,System.String,System.String,DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the ServiceConfigureDataConnectionEventArgs class.
+</para>
             </summary>
+            <param name="dashboardId">
+		A <see cref="T:System.String"/> that identifies the current dashboard.
+
+            </param>
             <param name="connectionName">
-		 
+		A <see cref="T:System.String"/> that specifies the name of the connection for which the event has been raised. 
+
             </param>
             <param name="dataSourceName">
-		 
+		A <see cref="T:System.String"/> value that is the data source name.
+
             </param>
             <param name="connectionParameters">
-		 
+		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that contains parameters used to establish a connection to data.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ServiceConfigureDataConnectionEventArgs.ConnectionName">
             <summary>
-                <para> </para>
+                <para>Gets the name of the connection for which the event has been raised. 
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> that specifies the name of the connection for which the event has been raised. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ServiceConfigureDataConnectionEventArgs.ConnectionParameters">
             <summary>
-                <para> </para>
+                <para>Gets or sets parameters used to establish a connection to data.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant that contains parameters used to establish a connection to data.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DashboardCommon.ServiceConfigureDataConnectionEventArgs.DashboardId">
+            <summary>
+                <para>Gets the identifier of the current dashboard. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that identifies the current dashboard.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ServiceConfigureDataConnectionEventArgs.DataSourceName">
             <summary>
-                <para> </para>
+                <para>Gets the data source name for which the event was raised.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value that is the data source name.
+</value>
 
 
         </member>
@@ -14772,16 +15382,19 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.ChartWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the ChartWindowDefinition class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ChartWindowDefinition.DefinitionMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window definition mode used to perform calculations within the <see cref="T:DevExpress.DashboardCommon.ChartDashboardItem"/>.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.ChartWindowDefinitionMode"/> enumeration value that specifies the window definition mode.
+</value>
 
 
         </member>
@@ -14795,16 +15408,19 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.CardWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the CardWindowDefinition class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.CardWindowDefinition.DefinitionMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window definition mode used to perform calculations within the <see cref="T:DevExpress.DashboardCommon.CardDashboardItem"/>.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.CardWindowDefinitionMode"/> enumeration value that specifies the window definition mode.
+</value>
 
 
         </member>
@@ -14868,42 +15484,6 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
             <summary>
                 <para>An interval duration is one year.
 </para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.DashboardCommon.CalculationTarget">
-
-            <summary>
-                <para>A difference type for <see cref="T:DevExpress.DashboardCommon.DifferenceCalculation"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.CalculationTarget.First">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.CalculationTarget.Last">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.CalculationTarget.Next">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DashboardCommon.CalculationTarget.Previous">
-            <summary>
-                <para> </para>
             </summary>
 
 
@@ -15070,24 +15650,30 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.DifferenceCalculation.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the DifferenceCalculation class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DifferenceCalculation.DifferenceType">
             <summary>
-                <para> </para>
+                <para>Gets or sets the difference type of the current DifferenceCalculation. 
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.DifferenceType"/> enumeration value that specifies a difference type of the current DifferenceCalculation. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.DifferenceCalculation.Target">
             <summary>
-                <para> </para>
+                <para>Gets or sets a target value used to calculate differences in the current DifferenceCalculation.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.DifferenceTarget"/> enumeration value that specifies a target value used to calculate differences in the current DifferenceCalculation.
+</value>
 
 
         </member>
@@ -15101,7 +15687,8 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.GaugeWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the GaugeWindowDefinition class.
+</para>
             </summary>
 
 
@@ -15116,16 +15703,19 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.GridWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the GridWindowDefinition class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.GridWindowDefinition.DefinitionMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window definition mode used to perform calculations within the <see cref="T:DevExpress.DashboardCommon.GridDashboardItem"/>.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.GridWindowDefinitionMode"/> enumeration value that specifies the window definition mode.
+</value>
 
 
         </member>
@@ -15140,7 +15730,8 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.PercentOfTotalCalculation.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the PercentOfTotalCalculation class.
+</para>
             </summary>
 
 
@@ -15155,16 +15746,19 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.PivotWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the PivotWindowDefinition class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.PivotWindowDefinition.DefinitionMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window definition mode used to perform calculations within the <see cref="T:DevExpress.DashboardCommon.PivotDashboardItem"/>.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.PivotWindowDefinitionMode"/> enumeration value that specifies the window definition mode.
+</value>
 
 
         </member>
@@ -15178,16 +15772,19 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.RangeFilterWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the RangeFilterWindowDefinition class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.RangeFilterWindowDefinition.DefinitionMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window definition mode used to perform calculations within the <see cref="T:DevExpress.DashboardCommon.RangeFilterDashboardItem"/>.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.RangeFilterWindowDefinitionMode"/> enumeration value that specifies the window definition mode.
+</value>
 
 
         </member>
@@ -15201,24 +15798,29 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.RankCalculation.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the RankCalculation class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.RankCalculation.RankOrder">
             <summary>
-                <para> </para>
+                <para>Gets or sets the ranking order of the current RankCalculation.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.RankOrder"/> enumeration value that specifies the ranking order.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.RankCalculation.RankType">
             <summary>
-                <para> </para>
+                <para>Gets or sets the ranking type of the current RankCalculation.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.RankType"/> enumeration value that specifies the ranking type.
+</value>
 
 
         </member>
@@ -15232,16 +15834,20 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.RunningTotalCalculation.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the RunningTotalCalculation class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.RunningTotalCalculation.SummaryType">
             <summary>
-                <para> </para>
+                <para>Gets or sets the type of summary function used by the RunningTotalCalculation.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.SummaryType"/> enumeration value that specifies the type of summary function used by the RunningTotalCalculation.
+</value>
 
 
         </member>
@@ -15255,35 +15861,43 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.SpecificWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the SpecificWindowDefinition class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.SpecificWindowDefinition.Dimensions">
             <summary>
-                <para> </para>
+                <para>Gets the set of dimensions that fall into the window.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.DimensionCollection"/> object that is the set of dimensions that fall into the window.
+</value>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.SpecificWindowDefinition.Equals(System.Object)">
             <summary>
-                <para> </para>
+                <para>Determines whether the specified object is equal to the current SpecificWindowDefinition instance.
+</para>
             </summary>
             <param name="obj">
-		 
+		The object to compare with the current object. 
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b> if the specified object is equal to the current SpecificWindowDefinition instance; otherwise <b>false</b>. 
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.SpecificWindowDefinition.GetHashCode">
             <summary>
-                <para> </para>
+                <para>Gets the hash code that corresponds to the value of the current SpecificWindowDefinition object.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>An integer value representing the hash code for the current object. 
+</returns>
 
 
         </member>
@@ -15297,16 +15911,19 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.PieWindowDefinition.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the PieWindowDefinition class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.PieWindowDefinition.DefinitionMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window definition mode used to perform calculations within the <see cref="T:DevExpress.DashboardCommon.PieDashboardItem"/>.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.PieWindowDefinitionMode"/> enumeration value that specifies the window definition mode.
+</value>
 
 
         </member>
@@ -15320,32 +15937,42 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.MovingCalculation.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the MovingCalculation class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.MovingCalculation.NextValuesCount">
             <summary>
-                <para> </para>
+                <para>Gets or sets a number of next values (relative to the current value) participating in the MovingCalculation.
+
+</para>
             </summary>
-            <value> </value>
+            <value>An integer value that specifies the number of next values (relative to the current value) participating in the MovingCalculation.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.MovingCalculation.PreviousValuesCount">
             <summary>
-                <para> </para>
+                <para>Gets or sets a number of previous values (relative to the current value) participating in the MovingCalculation.
+
+</para>
             </summary>
-            <value> </value>
+            <value>An integer value that specifies the number of previous values (relative to the current value) participating in the MovingCalculation.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.MovingCalculation.SummaryType">
             <summary>
-                <para> </para>
+                <para>Gets or sets the type of summary function used by the MovingCalculation.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.SummaryType"/> enumeration value that specifies the type of summary function used by the MovingCalculation.
+</value>
 
 
         </member>
@@ -15359,28 +15986,25 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.MeasureCalculationWindowDefinition.Equals(System.Object)">
             <summary>
-                <para> </para>
+                <para>Determines whether the specified object is equal to the current MeasureCalculationWindowDefinition instance.
+</para>
             </summary>
             <param name="obj">
-		 
+		The object to compare with the current object. 
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b> if the specified object is equal to the current MeasureCalculationWindowDefinition instance; otherwise <b>false</b>. 
+</returns>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.MeasureCalculationWindowDefinition.GetHashCode">
             <summary>
-                <para> </para>
+                <para>Gets the hash code that corresponds to the value of the current MeasureCalculationWindowDefinition object.
+</para>
             </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.DashboardCommon.MeasureCalculationWindowDefinition.ToString">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
+            <returns>An integer value representing the hash code for the current object. 
+</returns>
 
 
         </member>
@@ -15394,14 +16018,16 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.DifferenceType.Absolute">
             <summary>
-                <para> </para>
+                <para>The absolute difference is calculated.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.DifferenceType.Percentage">
             <summary>
-                <para> </para>
+                <para>The percentage difference is calculated.
+</para>
             </summary>
 
 
@@ -15416,35 +16042,40 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.RankType.Competition">
             <summary>
-                <para> </para>
+                <para>Identifies the <i>competition</i> ranking.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RankType.Dense">
             <summary>
-                <para> </para>
+                <para>Identifies the <i>dense</i> ranking.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RankType.Modified">
             <summary>
-                <para> </para>
+                <para>Identifies the <i>modified competition</i> ranking.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RankType.Percentile">
             <summary>
-                <para> </para>
+                <para>Identifies the percentile ranking.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RankType.Unique">
             <summary>
-                <para> </para>
+                <para>Identifies the unique ranking.
+</para>
             </summary>
 
 
@@ -15459,14 +16090,16 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.RankOrder.Ascending">
             <summary>
-                <para> </para>
+                <para>Values are ranked in ascending order.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RankOrder.Descending">
             <summary>
-                <para> </para>
+                <para>Values are ranked in descending order.
+</para>
             </summary>
 
 
@@ -15481,28 +16114,32 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.RangeFilterWindowDefinitionMode.Argument">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through argument values.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RangeFilterWindowDefinitionMode.ArgumentAndSeries">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through argument values, then series.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RangeFilterWindowDefinitionMode.Series">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through series.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.RangeFilterWindowDefinitionMode.SeriesAndArgument">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through series, then argument values
+</para>
             </summary>
 
 
@@ -15517,56 +16154,64 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.Columns">
             <summary>
-                <para> </para>
+                <para>A calculation is performed horizontally through Pivot columns.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.ColumnsAndRows">
             <summary>
-                <para> </para>
+                <para>A calculation is performed horizontally through Pivot columns, then rows.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.GroupsInColumns">
             <summary>
-                <para> </para>
+                <para>A calculation is performed horizontally through Pivot columns within <i>groups</i>.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.GroupsInColumnsAndRows">
             <summary>
-                <para> </para>
+                <para>A calculation is performed horizontally through Pivot columns, then rows within <i>groups</i>.	
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.GroupsInRows">
             <summary>
-                <para> </para>
+                <para>A calculation is performed vertically through Pivot rows within <i>groups</i>.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.GroupsInRowsAndColumns">
             <summary>
-                <para> </para>
+                <para>A calculation is performed vertically through Pivot rows, then columns within groups.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.Rows">
             <summary>
-                <para> </para>
+                <para>A calculation is performed vertically through Pivot rows.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.PivotWindowDefinitionMode.RowsAndColumns">
             <summary>
-                <para> </para>
+                <para>A calculation is performed vertically through Pivot rows, then columns.
+</para>
             </summary>
 
 
@@ -15641,28 +16286,32 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.GridWindowDefinitionMode.Rows">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through Grid rows.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.GridWindowDefinitionMode.RowsAndSparklineArgument">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through Grid rows, then sparkline argument values.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.GridWindowDefinitionMode.SparklineArgument">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through sparkline argument values.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.GridWindowDefinitionMode.SparklineArgumentAndRows">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through sparkline argument values, then Grid rows.
+</para>
             </summary>
 
 
@@ -15677,28 +16326,32 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.ChartWindowDefinitionMode.Arguments">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through arguments.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.ChartWindowDefinitionMode.ArgumentsAndSeries">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through arguments, then series.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.ChartWindowDefinitionMode.Series">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through series.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.ChartWindowDefinitionMode.SeriesAndArguments">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through series, then arguments.
+</para>
             </summary>
 
 
@@ -15713,28 +16366,32 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="F:DevExpress.DashboardCommon.CardWindowDefinitionMode.Cards">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through cards.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.CardWindowDefinitionMode.CardsAndSparklineArgument">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through cards, then sparkline argument values.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.CardWindowDefinitionMode.SparklineArgument">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through sparkline argument values.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.CardWindowDefinitionMode.SparklineArgumentAndCards">
             <summary>
-                <para> </para>
+                <para>A calculation is performed through sparkline argument values, then cards.
+</para>
             </summary>
 
 
@@ -16343,56 +17000,71 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.ExtractSourceOptions.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the ExtractSourceOptions class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ExtractSourceOptions.DataFields">
             <summary>
-                <para> </para>
+                <para>Gets or sets names of the data source fields that will fall into the resulting data extract. 
+</para>
             </summary>
-            <value> </value>
+            <value>An array of <see cref="T:System.String"/> values that specify names of the data source fields that will fall into the resulting data extract. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ExtractSourceOptions.DataMember">
             <summary>
-                <para> </para>
+                <para>Gets or sets the data member contained in the original data source.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value that specifies the data member contained in the original data source.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ExtractSourceOptions.DataSource">
             <summary>
-                <para> </para>
+                <para>Gets or sets the original data source for the current data extract.
+</para>
             </summary>
-            <value> </value>
+            <value>An object implementing the <see cref="T:DevExpress.DashboardCommon.IDashboardDataSource"/> interface that is the original data source for the current data extract.
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ExtractSourceOptions.Filter">
             <summary>
-                <para> </para>
+                <para>Gets or sets the logical expression to be applied to the data for filtering. 
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value specifying the logical expression to be applied to the data for filtering. 
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ExtractSourceOptions.Parameters">
             <summary>
-                <para> </para>
+                <para>Provides access to the dashboard parameters.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.DashboardParameterCollection"/> object representing a collection of dashboard parameters. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ExtractSourceOptions.RowCount">
             <summary>
-                <para> </para>
+                <para>Gets or sets the number of extracted rows.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer value that specifies the number of extracted rows.
+</value>
 
 
         </member>
@@ -16406,26 +17078,31 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.ExtractDataSourceConnectionParameters.#ctor(System.String)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the ExtractDataSourceConnectionParameters class.
+</para>
             </summary>
             <param name="fileName">
-		 
+		A <see cref="T:System.String"/> that specifies a path to the data extract file.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.DashboardCommon.ExtractDataSourceConnectionParameters.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the ExtractDataSourceConnectionParameters class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.ExtractDataSourceConnectionParameters.FileName">
             <summary>
-                <para> </para>
+                <para>Gets or sets the path to the file containing a data extract.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> value that specifies the path to the file containing a data extract.
+</value>
 
 
         </member>
@@ -16617,11 +17294,11 @@ Note that in the Web Viewer the <b>Reposition</b> mode is not in effect and work
         </member>
         <member name="M:DevExpress.DashboardCommon.DashboardExtractDataSource.UpdateExtractFile(System.Threading.CancellationToken)">
             <summary>
-                <para>Updates a file containing a data extract.
+                <para>Updates a file containing a data extract and allows task cancellation through the use of a cancellation token.
 </para>
             </summary>
             <param name="cancellationToken">
-		A <see cref="T:System.Threading.CancellationToken"/> structure.
+		A <see cref="T:System.Threading.CancellationToken"/> object to monitor for cancellation requests.
 
             </param>
 
@@ -18521,9 +19198,11 @@ Note that the <b>Percent</b> value type is not in effect when formatting is appl
         </member>
         <member name="P:DevExpress.DashboardCommon.ExcelExportOptions.FilterState">
             <summary>
-                <para> </para>
+                <para>Gets or sets the filter state's location on the exported document.
+</para>
             </summary>
-            <value> </value>
+            <value>A string value returned by the <see cref="T:DevExpress.DashboardCommon.ExcelExportFilterState"/> class that specifies the filter state's location on the exported document.
+</value>
 
 
         </member>
@@ -21404,31 +22083,39 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="M:DevExpress.DashboardCommon.MeasureDefinition.#ctor(System.String,DevExpress.DashboardCommon.SummaryType,DevExpress.DashboardCommon.MeasureCalculation,DevExpress.DashboardCommon.MeasureCalculationWindowDefinition,System.String)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the MeasureDefinition class.
+</para>
             </summary>
             <param name="dataMember">
-		 
+		A <see cref="T:System.String"/> that specifies the data member.
+
             </param>
             <param name="summaryType">
-		 
+		A <see cref="T:DevExpress.DashboardCommon.SummaryType"/> object that specifies the summary function type.
+
             </param>
             <param name="calculation">
-		 
+		A <see cref="T:DevExpress.DashboardCommon.MeasureCalculation"/> descendant that specifies the calculation applied to the measure.
+
             </param>
             <param name="windowDefinition">
-		 
+		A <see cref="T:DevExpress.DashboardCommon.MeasureCalculationWindowDefinition"/> descendant that specifies a window definition used to apply a calculation.
+
             </param>
             <param name="expression">
-		 
+		A <see cref="T:System.String"/> that specifies the measure expression.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.DashboardCommon.MeasureDefinition.Calculation">
             <summary>
-                <para> </para>
+                <para>Gets the calculation applied to the measure.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.MeasureCalculation"/> descendant that is the calculation applied to the measure.
+</value>
 
 
         </member>
@@ -21448,9 +22135,11 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="P:DevExpress.DashboardCommon.MeasureDefinition.Expression">
             <summary>
-                <para> </para>
+                <para>Gets a measure expression.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.String"/> that is the measure expression.
+</value>
 
 
         </member>
@@ -21476,9 +22165,11 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
         </member>
         <member name="P:DevExpress.DashboardCommon.MeasureDefinition.WindowDefinition">
             <summary>
-                <para> </para>
+                <para>Gets a window definition used to apply a calculation.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.DashboardCommon.MeasureCalculationWindowDefinition"/> descendant that is a window definition used to apply a calculation.
+</value>
 
 
         </member>
@@ -21954,6 +22645,38 @@ To load the custom shapefile, use the <see cref="P:DevExpress.DashboardCommon.Ma
             </summary>
             <value>A <see cref="T:DevExpress.DashboardCommon.GridColumnFixedWidthType"/> enumeration value that specifies the mode used to manage the width of the current column.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.DashboardCommon.Native.BaseCalculation`1">
+
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.Native.BaseCalculation`1.Equals(System.Object)">
+            <summary>
+                <para>For internal use. 
+</para>
+            </summary>
+            <param name="obj">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DashboardCommon.Native.BaseCalculation`1.GetHashCode">
+            <summary>
+                <para>For internal use. 
+</para>
+            </summary>
+            <returns> 
+</returns>
 
 
         </member>
@@ -23361,21 +24084,24 @@ Note that the <see cref="F:DevExpress.DashboardCommon.GridColumnTotalType.Auto"/
         </member>
         <member name="F:DevExpress.DashboardCommon.ExcelExportFilterState.Below">
             <summary>
-                <para> </para>
+                <para>The filter state is placed below in the exported document.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.ExcelExportFilterState.None">
             <summary>
-                <para> </para>
+                <para>The filter state is not included in the exported document.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.DashboardCommon.ExcelExportFilterState.SeparateSheet">
             <summary>
-                <para> </para>
+                <para>The filter state is placed on a separate sheet in the exported workbook.
+</para>
             </summary>
 
 

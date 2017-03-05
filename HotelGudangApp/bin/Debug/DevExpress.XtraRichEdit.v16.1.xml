@@ -933,9 +933,11 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditPen.Color">
             <summary>
-                <para> </para>
+                <para>Gets or sets the color of a <see cref="T:DevExpress.XtraRichEdit.RichEditPen"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the ARGB color values indicating the pen color.
+</value>
 
 
         </member>
@@ -961,9 +963,11 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditBrush.Color">
             <summary>
-                <para> </para>
+                <para>Gets or sets the color of a <see cref="T:DevExpress.XtraRichEdit.RichEditBrush"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the ARGB color values indicating the brush color.
+</value>
 
 
         </member>
@@ -1696,7 +1700,9 @@
         </member>
         <member name="E:DevExpress.XtraRichEdit.RichEditControl.BorderShadingFormShowing">
             <summary>
-                <para> </para>
+                <para>Occurs before the Borders and Shading dialog is invoked.
+
+</para>
             </summary>
 
 
@@ -1891,7 +1897,9 @@
         </member>
         <member name="E:DevExpress.XtraRichEdit.RichEditControl.CustomPropertiesChanged">
             <summary>
-                <para> </para>
+                <para>Occurs when one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> has changed.
+
+</para>
             </summary>
 
 
@@ -1971,14 +1979,17 @@
         </member>
         <member name="E:DevExpress.XtraRichEdit.RichEditControl.DocumentPropertiesChanged">
             <summary>
-                <para> </para>
+                <para>Occurs after one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties"/> has changed.
+
+</para>
             </summary>
 
 
         </member>
         <member name="E:DevExpress.XtraRichEdit.RichEditControl.DocumentPropertiesFormShowing">
             <summary>
-                <para> </para>
+                <para>Occurs before the Document Properties dialog is invoked.
+</para>
             </summary>
 
 
@@ -2599,16 +2610,21 @@
         </member>
         <member name="M:DevExpress.XtraRichEdit.RichEditControl.LoadDocument(System.IO.Stream,DevExpress.XtraRichEdit.DocumentFormat,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Loads a document from a stream, specifying the document's format.
+</para>
             </summary>
             <param name="stream">
-		 
+		A string value specifying the path to the file from which to load a document.
+
             </param>
             <param name="documentFormat">
-		 
+		One of the <see cref="T:DevExpress.XtraRichEdit.DocumentFormat"/> members.
+
             </param>
             <param name="leaveOpen">
-		 
+		<b>true</b>, to leave the stream open after the document is loaded ; otherwise, <b>false</b>.
+
+
             </param>
 
 
@@ -3548,9 +3564,11 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditControl.VerticalScrollValue">
             <summary>
-                <para> </para>
+                <para>Gets or sets a numeric value that represents the current position of the scroll bar box on the vertical scroll bar.
+</para>
             </summary>
-            <value> </value>
+            <value>A numeric value that is the scroll bar box position between the top and the bottom of the vertical scroll bar.
+</value>
 
 
         </member>

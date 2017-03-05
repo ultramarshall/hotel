@@ -5182,6 +5182,16 @@
 
 
         </member>
+        <member name="P:DevExpress.Pdf.PdfFontDescriptor.CIDMapping">
+            <summary>
+                <para>Provides access to a dictionary identifying which CIDs are present in the CIDFont file.
+</para>
+            </summary>
+            <value>A dictionary, containing the System.Int16 objects, along with their <see cref="T:System.Int16"/> key values.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.Pdf.PdfFontDescriptor.Descent">
             <summary>
                 <para>Indicates the maximum depth below the baseline reached by glyphs in this font.
@@ -7508,6 +7518,30 @@
         <member name="F:DevExpress.Pdf.Localization.PdfCoreStringId.MsgUnsupportedGraphicsUnit">
             <summary>
                 <para><b>"The Display and World units are not supported for the source image coordinate system."</b>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.Localization.PdfCoreStringId.MsgUnsupportedStream">
+            <summary>
+                <para><b>"Stream should support the read, write, and seek operations."</b>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.Localization.PdfCoreStringId.MsgUnsupportedStreamForLoadOperation">
+            <summary>
+                <para><b>"Stream should support the read and seek operations for loading."</b>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.Localization.PdfCoreStringId.MsgUnsupportedStreamForSaveOperation">
+            <summary>
+                <para><b>"Stream should support the write and seek operations for saving."</b>
 </para>
             </summary>
 

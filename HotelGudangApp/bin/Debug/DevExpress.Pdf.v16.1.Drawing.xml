@@ -1069,6 +1069,23 @@
 
 
         </member>
+        <member name="M:DevExpress.Pdf.PdfGraphics.ScaleTransform(System.Single,System.Single)">
+            <summary>
+                <para>Scales the transformation matrix of this Graphic by multiplying the transformation matrix by a diagonal matrix whose elements are (sx, sy, 1). 
+
+</para>
+            </summary>
+            <param name="sx">
+		Scale factor in the x direction. 
+
+            </param>
+            <param name="sy">
+		Scale factor in the y direction.
+
+            </param>
+
+
+        </member>
         <member name="P:DevExpress.Pdf.PdfGraphics.TextOrigin">
             <summary>
                 <para>Specifies the exact position where you wish the text to be drawn on the page content.
@@ -1134,64 +1151,6 @@
                 <para>Orientation of the document pages is portrait.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.Drawing.PdfToolTipSettings">
-
-            <summary>
-                <para>Provides tooltip settings.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.Drawing.PdfToolTipSettings.#ctor(System.String,System.String,DevExpress.Pdf.Native.PdfAnnotationState)">
-            <summary>
-                <para>Initializes a new instance of the PdfToolTipSettings class with the specified settings.
-</para>
-            </summary>
-            <param name="title">
-		A <see cref="T:System.String"/> that represents the tooltip's title.
-
-            </param>
-            <param name="text">
-		A <see cref="T:System.String"/> that represents text shown in the tooltip.
-
-            </param>
-            <param name="annotationState">
-		A <see cref="T:DevExpress.Pdf.Native.PdfAnnotationState"/> object that represents the annotation state. 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.Drawing.PdfToolTipSettings.DocumentArea">
-            <summary>
-                <para>Gets a document area. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentArea"/> object that represents the document area.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.Drawing.PdfToolTipSettings.Text">
-            <summary>
-                <para>Gets the tooltip's text.
-</para>
-            </summary>
-            <value>A string value that is the tooltip's text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.Drawing.PdfToolTipSettings.Title">
-            <summary>
-                <para>Gets the title of the hint.
-</para>
-            </summary>
-            <value>A string value that is the tooltip's title.
-</value>
 
 
         </member>

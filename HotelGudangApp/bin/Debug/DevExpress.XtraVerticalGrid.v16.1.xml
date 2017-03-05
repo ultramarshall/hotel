@@ -541,25 +541,32 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.VGridAppearanceCollection.SelectedCell">
             <summary>
-                <para> </para>
+                <para>Contains appearance settings used to paint selected cells in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>).
+</para>
             </summary>
-            <value> </value>
+            <value>An object that provides appearance settings used to paint selected cells.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.VGridAppearanceCollection.SelectedRecord">
             <summary>
-                <para> </para>
+                <para>Contains appearance settings used to paint selected records in multiple record selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RecordSelect"/>).
+</para>
             </summary>
-            <value> </value>
+            <value>An object that provides appearance settings used to paint selected cells.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.VGridAppearanceCollection.SelectedRow">
             <summary>
-                <para> </para>
+                <para>Contains appearance settings used to paint selected rows in multiple row selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RowSelect"/>).
+</para>
             </summary>
-            <value> </value>
+            <value>An object that provides appearance settings used to paint selected cells.
+
+</value>
 
 
         </member>
@@ -657,17 +664,21 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.FilterCriteria">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the PropertyGridControl class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.FilterString">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the PropertyGridControl class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -1214,6 +1225,14 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
 
 
         </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.ClearSelection">
+            <summary>
+                <para>Clears the current selection.
+</para>
+            </summary>
+
+
+        </member>
         <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.CloseEditor">
             <summary>
                 <para>Hides the active editor saving any changes made.
@@ -1233,7 +1252,7 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
         </member>
         <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.CopyToClipboard">
             <summary>
-                <para>Copies the focused cell to the clipboard as text.
+                <para>Copies the focused cell or selection to the clipboard as text.
 </para>
             </summary>
 
@@ -1833,17 +1852,21 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.VGridControlBase.FilterCriteria">
             <summary>
-                <para> </para>
+                <para>Gets or sets the filter criteria applied to the control.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that specifies the filter criteria applied to the control.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.VGridControlBase.FilterString">
             <summary>
-                <para> </para>
+                <para>Gets or sets the filter criteria applied to the control in text format.
+</para>
             </summary>
-            <value> </value>
+            <value>A string that specifies the filter criteria applied to the control.
+</value>
 
 
         </member>
@@ -2328,6 +2351,36 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
 
 
         </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.GetSelectedCells">
+            <summary>
+                <para>Returns selected cells in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>).
+</para>
+            </summary>
+            <returns>An array of objects that refer to the selected cells.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.GetSelectedRecords">
+            <summary>
+                <para>Returns selected cells in multiple record selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RecordSelect"/>).
+</para>
+            </summary>
+            <returns>An array of data source indexes identifying the selected records.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.GetSelectedRows">
+            <summary>
+                <para>Returns selected cells in multiple row selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RowSelect"/>).
+</para>
+            </summary>
+            <returns>An array of row objects.
+</returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraVerticalGrid.VGridControlBase.GridDisposing">
             <summary>
                 <para>Gets a value which indicates whether the <see cref="T:DevExpress.XtraVerticalGrid.VGridControl"/> is being unloaded from memory.
@@ -2448,7 +2501,8 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
         </member>
         <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.InvalidateData">
             <summary>
-                <para> </para>
+                <para>Marks the control as not valid (needs repainting) and causes the control to reload data from the data source with the next repaint operation.
+</para>
             </summary>
 
 
@@ -2938,7 +2992,8 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
         </member>
         <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.RefreshEditor">
             <summary>
-                <para> </para>
+                <para>Refreshes the active editor. 
+</para>
             </summary>
 
 
@@ -3242,26 +3297,102 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
 
 
         </member>
-        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.Select(System.Int32,System.Int32,System.Int32)">
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.SelectCell(System.Int32,DevExpress.XtraVerticalGrid.Rows.RowProperties)">
             <summary>
-                <para> </para>
+                <para>Adds a cell to the current selection in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>).
+
+</para>
             </summary>
-            <param name="record">
-		 
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
             </param>
-            <param name="rowHandle">
-		 
+            <param name="properties">
+		A row identifier, which matches the <see cref="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Properties"/> object.
+
             </param>
-            <param name="cell">
-		 
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.SelectCell(System.Int32,System.String)">
+            <summary>
+                <para>Adds a cell to the current selection in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>).
+
+</para>
+            </summary>
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
+            </param>
+            <param name="fieldName">
+		A string that identifies a row's field name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.SelectCell(System.Int32,DevExpress.XtraVerticalGrid.Rows.BaseRow,System.Int32)">
+            <summary>
+                <para>Adds a cell to the current selection in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>). This overload allows you to address a certain cell within a <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRow"/>.
+
+</para>
+            </summary>
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
+            </param>
+            <param name="row">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRow"/> object.
+
+            </param>
+            <param name="cellIndex">
+		The index of a cell within the specified <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRow"/>.
+
             </param>
 
 
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControlBase.SelectedChanged">
             <summary>
-                <para> </para>
+                <para>Allows you to respond to changes to the current selection.
+</para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.SelectRecord(System.Int32)">
+            <summary>
+                <para>Adds a record to the current selection in multiple record selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RecordSelect"/>).
+</para>
+            </summary>
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.SelectRow(System.String)">
+            <summary>
+                <para>Adds a row to the current selection in multiple row selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RowSelect"/>).
+</para>
+            </summary>
+            <param name="fieldName">
+		A string that identifies a row's field name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.SelectRow(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
+            <summary>
+                <para>Adds a row to the current selection in multiple row selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RowSelect"/>).
+</para>
+            </summary>
+            <param name="row">
+		A row object.
+
+            </param>
 
 
         </member>
@@ -3529,32 +3660,102 @@ For the <see cref="T:DevExpress.XtraVerticalGrid.PropertyGridControl"/>, this me
 
 
         </member>
-        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.Unselect(System.Int32,System.Int32,System.Int32)">
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.UnselectCell(System.Int32,DevExpress.XtraVerticalGrid.Rows.RowProperties)">
             <summary>
-                <para> </para>
+                <para>Removes the specified cell from the current selection in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>).
+
+</para>
             </summary>
-            <param name="record">
-		 
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
             </param>
-            <param name="rowHandle">
-		 
-            </param>
-            <param name="cell">
-		 
+            <param name="properties">
+		A row identifier, which matches the <see cref="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Properties"/> object.
+
             </param>
 
 
         </member>
-        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.Unselect">
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.UnselectCell(System.Int32,System.String)">
             <summary>
-                <para> </para>
+                <para>Removes the specified cell from the current selection in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>).
+</para>
             </summary>
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
+            </param>
+            <param name="fieldName">
+		A string that identifies a row's field name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.UnselectCell(System.Int32,DevExpress.XtraVerticalGrid.Rows.BaseRow,System.Int32)">
+            <summary>
+                <para>Removes the specified cell from the current selection in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>). This overload allows you to address a certain cell within a <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRow"/>.
+
+
+</para>
+            </summary>
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
+            </param>
+            <param name="row">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRow"/>.
+
+            </param>
+            <param name="cellIndex">
+		The index of a cell within the specified <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRow"/>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.UnselectRecord(System.Int32)">
+            <summary>
+                <para>Removes a record from the current selection in multiple record selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RecordSelect"/>).
+</para>
+            </summary>
+            <param name="dataSourceRecordIndex">
+		A record's index in the bound data source.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.UnselectRow(System.String)">
+            <summary>
+                <para>Removes a row from the current selection in multiple row selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RowSelect"/>).
+</para>
+            </summary>
+            <param name="fieldName">
+		A string that identifies a row's field name.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.UnselectRow(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
+            <summary>
+                <para>Removes a row from the current selection in multiple row selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RowSelect"/>).
+</para>
+            </summary>
+            <param name="row">
+		A row object.
+
+            </param>
 
 
         </member>
         <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.UpdateData">
             <summary>
-                <para> </para>
+                <para>Reloads data from the data source. 
+
+</para>
             </summary>
 
 
@@ -4160,17 +4361,21 @@ The <b>DefaultLevelIndent</b> field is set to -1.
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsSelectionAndFocus.MultiSelect">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether selection of multiple records, rows and cells is enabled.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if selection of multiple records, rows and cells is enabled; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsSelectionAndFocus.MultiSelectMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether multiple records, rows or cells can be selected.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether multiple records, rows or cells can be selected.
+</value>
 
 
         </member>
@@ -5062,6 +5267,13 @@ Office2003 style:
 
 
         </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Rows.VGridRows.DestroyRows">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridRows.FirstVisible">
             <summary>
                 <para>Gets the first row from the collection whose <see cref="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Visible"/> property is <b>true</b>.
@@ -5342,9 +5554,11 @@ Office2003 style:
         </member>
         <member name="M:DevExpress.XtraVerticalGrid.Rows.RowProperties.CanDrawEditorBorder">
             <summary>
-                <para> </para>
+                <para>Returns whether to draw borders around row items. 
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A value that specifies whether to draw borders around row items. 
+</returns>
 
 
         </member>
@@ -5372,9 +5586,11 @@ Office2003 style:
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.RowProperties.DrawEditorBorder">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to draw borders around row items.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether to draw borders around row items. The <b>null</b> value is equivalent to <b>false</b>.
+</value>
 
 
         </member>
@@ -5443,9 +5659,11 @@ Office2003 style:
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.RowProperties.Padding">
             <summary>
-                <para> </para>
+                <para>Gets or sets padding for row items.
+</para>
             </summary>
-            <value> </value>
+            <value>Padding for row items.
+</value>
 
 
         </member>
@@ -7975,7 +8193,8 @@ Specifies the pointer feedback indicating that none of the predefined effects is
         </member>
         <member name="F:DevExpress.XtraVerticalGrid.RowChangeTypeEnum.DrawEditorBorder">
             <summary>
-                <para> </para>
+                <para>The row's <see cref="P:DevExpress.XtraVerticalGrid.Rows.RowProperties.DrawEditorBorder"/> property has changed. 
+</para>
             </summary>
 
 
@@ -8094,7 +8313,8 @@ Specifies the pointer feedback indicating that none of the predefined effects is
         </member>
         <member name="F:DevExpress.XtraVerticalGrid.RowChangeTypeEnum.Padding">
             <summary>
-                <para> </para>
+                <para>The row's <see cref="P:DevExpress.XtraVerticalGrid.Rows.RowProperties.Padding"/> property has changed. 
+</para>
             </summary>
 
 
@@ -8929,6 +9149,38 @@ Specifies the pointer feedback indicating that none of the predefined effects is
             </summary>
             <value>A string value.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraVerticalGrid.MultiSelectMode">
+
+            <summary>
+                <para>Contains values that specify multiple selection mode in the Vertical Grid control.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect">
+            <summary>
+                <para>Enables selection of multiple blocks of cells.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RecordSelect">
+            <summary>
+                <para>Enables selection of multiple records.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraVerticalGrid.MultiSelectMode.RowSelect">
+            <summary>
+                <para>Enables selection of multiple rows.
+</para>
+            </summary>
 
 
         </member>

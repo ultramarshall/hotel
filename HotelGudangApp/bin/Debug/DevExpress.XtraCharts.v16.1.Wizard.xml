@@ -3970,6 +3970,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraCharts.Wizard.WizardPage.Header">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraCharts.Wizard.WizardPage.Image">
             <summary>
                 <para>Gets an image displayed  in the ChartWizard sidebar, symbolizing the page.

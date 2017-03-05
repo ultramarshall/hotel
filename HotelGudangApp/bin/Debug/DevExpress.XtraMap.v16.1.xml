@@ -1493,6 +1493,55 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraMap.ListSourceDataAdapter">
+
+            <summary>
+                <para>The data adapter that provides the means to bind the Map control to data.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraMap.ListSourceDataAdapter.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ListSourceDataAdapter class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.ListSourceDataAdapter.DefaultMapItemType">
+            <summary>
+                <para>Specifies the type of map items to be used by default when generating items from a data source.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraMap.MapItemType"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.ListSourceDataAdapter.Mappings">
+            <summary>
+                <para>Contains information on how data for map items should be obtained from a data source.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraMap.MapItemMappingInfo"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.ListSourceDataAdapter.ToString">
+            <summary>
+                <para>Returns the textual representation of the ListSourceDataAdapter.
+
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value, which is the textual representation of the ListSourceDataAdapter.
+
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraMap.BingRouteOptimization">
 
             <summary>
@@ -1723,7 +1772,7 @@
         </member>
         <member name="P:DevExpress.XtraMap.RouteCalculationResult.IntermediatePoints">
             <summary>
-                <para>Returns all intermediates points that were used to calculate routes.
+                <para>Returns all intermediate points that were used to calculate routes.
 </para>
             </summary>
             <value>A list of <see cref="T:DevExpress.XtraMap.RouteWaypoint"/> objects.
@@ -2167,6 +2216,14 @@
         <member name="M:DevExpress.XtraMap.BingSearchDataProvider.#ctor">
             <summary>
                 <para>Initializes a new instance of the BingSearchDataProvider class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.BingSearchDataProvider.ClearResults">
+            <summary>
+                <para>Clears all results returned by a BingSearchDataProvider class object.
 </para>
             </summary>
 
@@ -2949,20 +3006,20 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapPolyline.Fill">
             <summary>
-                <para>Gets or sets the color that is used to fill a map polyline.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.Fill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that specifies the color used to fill a map polyline. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPolyline.HighlightedFill">
             <summary>
-                <para>Gets or sets the color that specifies how the highlighted map polyline is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedFill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that is the color used to fill the highlighted map polyline. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
@@ -2989,10 +3046,10 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapPolyline.SelectedFill">
             <summary>
-                <para>Gets or sets the color that specifies how the selected map polyline is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedFill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that is the color used to fill the selected map polyline. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
@@ -3086,6 +3143,28 @@
 
             </param>
             <returns>A <see cref="T:DevExpress.XtraMap.MapEllipse"/> object with the specified center point width and height.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.MapEllipse.FromLeftTopRightBottom(DevExpress.XtraMap.MapCoordinateSystem,DevExpress.Map.CoordPoint,DevExpress.Map.CoordPoint)">
+            <summary>
+                <para>Creates a map ellipse using the left-top and right-bottom points of its bounding rectangle.
+</para>
+            </summary>
+            <param name="coordSystem">
+		A <see cref="T:DevExpress.XtraMap.MapCoordinateSystem"/> value specifying the coordinate system.
+
+            </param>
+            <param name="leftTop">
+		A <see cref="T:DevExpress.Map.CoordPoint"/> value specifying the left-top coordinate of the ellipse bounding rectangle.
+
+            </param>
+            <param name="rightBottom">
+		A <see cref="T:DevExpress.Map.CoordPoint"/> value specifying the right-bottom coordinate of the ellipse bounding rectangle.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraMap.MapEllipse"/> object.
 </returns>
 
 
@@ -5670,7 +5749,7 @@
                 <para>Returns a collection of available layers supported by a Web Map Service.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraMap.WmsLayerCollection"/> object.
+            <value>A collection of <see cref="T:DevExpress.XtraMap.WmsLayer"/> objects.
 </value>
 
 
@@ -6017,6 +6096,14 @@
             </summary>
             <value>A <see cref="T:System.String"/> value specifying the layer name.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.WmsDataProvider.CustomParameters">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -7340,20 +7427,21 @@
         </member>
         <member name="P:DevExpress.XtraMap.PieSegment.Stroke">
             <summary>
-                <para>Gets or sets the pie segment's stroke color.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapSegmentBase.Stroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> value.
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.PieSegment.StrokeWidth">
             <summary>
-                <para>Gets or sets the pie segment's stroke width.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapSegmentBase.StrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Int32"/> value.
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -7798,6 +7886,22 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraMap.ISupportWebRequest">
+
+            <summary>
+                <para>An interface that should be implemented by a class that sends web requests.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.XtraMap.ISupportWebRequest.WebRequest">
+            <summary>
+                <para>Occurs when the information provider must send a web request.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraMap.MapItemAttributeMappingCollection">
 
             <summary>
@@ -8190,6 +8294,28 @@
 
             </param>
             <returns>A <see cref="T:DevExpress.XtraMap.MapRectangle"/> object with the specified center point width and height.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.MapRectangle.FromLeftTopRightBottom(DevExpress.XtraMap.MapCoordinateSystem,DevExpress.Map.CoordPoint,DevExpress.Map.CoordPoint)">
+            <summary>
+                <para>Creates a map rectangle using its left-top and right-bottom points.
+</para>
+            </summary>
+            <param name="coordSystem">
+		A <see cref="T:DevExpress.XtraMap.MapCoordinateSystem"/> value specifying the map coordinate system.
+
+            </param>
+            <param name="leftTop">
+		A <see cref="T:DevExpress.Map.CoordPoint"/> value specifying the left-top coordinate.
+
+            </param>
+            <param name="rightBottom">
+		A <see cref="T:DevExpress.Map.CoordPoint"/> value specifying the right-bottom coordinate.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraMap.MapRectangle"/> object.
 </returns>
 
 
@@ -8627,20 +8753,21 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapCallout.HighlightedStroke">
             <summary>
-                <para>Gets or sets the color that specifies how the highlighted outline is painted on a map callout.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedStroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object that is a color to fill the highlighted outline of a map callout.
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapCallout.HighlightedStrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the highlighted stroke on the map callout.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedStrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the highlighted stroke on the map callout. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -8658,21 +8785,21 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapCallout.SelectedStroke">
             <summary>
-                <para>Gets or sets the color that specifies how the selected outline is painted on a map callout.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedStroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object that is the color to fill the selected outline of a map callout.
-
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapCallout.SelectedStrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the selected stroke on the map callout.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedStrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the selected stroke on the map callout. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -8691,20 +8818,21 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapCallout.Stroke">
             <summary>
-                <para>Gets or sets the color that specifies how the map callout outline is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.Stroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> value that specifies how the map callout outline is painted.
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapCallout.StrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the stroke on the map callout.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.StrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the stroke on the map callout. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -10061,20 +10189,21 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapCustomElement.HighlightedStroke">
             <summary>
-                <para>Gets or sets the color that specifies how the highlighted outline is  painted on a map custom element.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedStroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object that is a color to fill the highlighted outline of a map custom element.
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapCustomElement.HighlightedStrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the highlighted stroke on the map custom element.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedStrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the highlighted stroke on the map custom element. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -10101,41 +10230,42 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapCustomElement.SelectedStroke">
             <summary>
-                <para>Gets or sets the color that specifies how the selected outline is painted on a map custom element.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedStroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object that is the color to fill the selected outline of a map custom element.
-
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapCustomElement.SelectedStrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the selected stroke on the map custom element.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedStrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the selected stroke on the map custom element. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapCustomElement.Stroke">
             <summary>
-                <para>Gets or sets the color that specifies how the map custom element outline is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.Stroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> value that specifies how the map custom element outline is painted.
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapCustomElement.StrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the stroke on the current map custom element.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.StrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the stroke on the map custom element. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -11347,6 +11477,16 @@
                 <para>Occurs when the clusterer starts clustering.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.MapClustererBase.DisplayNonClusteredItems">
+            <summary>
+                <para>Gets or sets the value indicating whether or not the map items that can't be clustered should be displayed.
+</para>
+            </summary>
+            <value><b>true</b> if non-clustered items should be displayed, otherwise <b>false</b>;
+</value>
 
 
         </member>
@@ -13443,6 +13583,77 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraMap.WmsCustomParameterCollection">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraMap.WmsCustomParameterCollection.#ctor">
+            <summary>
+                <para>Initializes a new instance of the WmsCustomParameterCollection class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.WmsCustomParameterCollection.Add(System.String,System.String)">
+            <summary>
+                <para>
+</para>
+            </summary>
+            <param name="key">
+		 
+            </param>
+            <param name="value">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.WmsCustomParameterCollection.Clear">
+            <summary>
+                <para>Removes all items from the collection.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraMap.WmsCustomParameterCollection.Item(System.String)">
+            <summary>
+                <para>Returns the item from WmsCustomParameterCollection by its key.
+</para>
+            </summary>
+            <param name="key">
+		 
+            </param>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.WmsCustomParameterCollection.Remove(System.String)">
+            <summary>
+                <para>Removes the item from collection by its key.
+</para>
+            </summary>
+            <param name="key">
+		A <see cref="T:System.String"/> value specifying the item key.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraMap.WmsCustomParameterCollection.ToString">
+            <summary>
+                <para>Returns the textual representation of the WmsCustomParameterCollection.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value, which is the textual representation of the WmsCustomParameterCollection.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraMap.Ellipsoid">
 
             <summary>
@@ -15082,20 +15293,20 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapLine.Fill">
             <summary>
-                <para>Gets or sets the color that is used to fill a map line.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.Fill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that specifies the color used to fill a map line. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapLine.HighlightedFill">
             <summary>
-                <para>Gets or sets the color that specifies how the highlighted map line is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedFill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that is the color used to fill the highlighted map line. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
@@ -15134,10 +15345,10 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapLine.SelectedFill">
             <summary>
-                <para>Gets or sets the color that specifies how the selected map line is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedFill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that is the color used to fill the selected map line. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
@@ -15604,40 +15815,41 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.Fill">
             <summary>
-                <para>Gets or sets the color that is used to fill a map pushpin.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapPushpin.Fill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that specifies the color used to fill a map pushpin. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.HighlightedFill">
             <summary>
-                <para>Gets or sets the color that specifies how the highlighted map pushpin is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapPushpin.HighlightedFill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that specifies the color used to fill the highlighted map pushpin. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.HighlightedStroke">
             <summary>
-                <para>Gets or sets the color that specifies how the highlighted outline is painted on a map pushpin.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedStroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object that is a color to fill the highlighted outline of a map pushpin.
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.HighlightedStrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the highlighted stroke on the map pushpin.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.HighlightedStrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the highlighted stroke on the map pushpin. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -15664,51 +15876,52 @@
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.SelectedFill">
             <summary>
-                <para>Gets or sets the color that specifies how the selected map pushpin is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedFill"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> that specifies the color used to fill the selected map pushpin. 
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.SelectedStroke">
             <summary>
-                <para>Gets or sets the color that specifies how the selected outline is painted on a map pushpin.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedStroke"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object that is the color to fill the selected outline of a map pushpin.
-
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.SelectedStrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the selected stroke on the map pushpin.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.SelectedStrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the selected stroke on the map pushpin. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.Stroke">
             <summary>
-                <para>Gets or sets the color that specifies how the map pushpin outline is painted.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.Stroke"/> property to hide it. 
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> value that specifies how the map pushpin outline is painted.
+            <value>Always the <see cref="F:System.Drawing.Color.Empty"/> value.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraMap.MapPushpin.StrokeWidth">
             <summary>
-                <para>Gets or sets a value that specifies the width of the stroke on the map pushpin.
+                <para>Overrides the <see cref="P:DevExpress.XtraMap.MapItem.StrokeWidth"/> property to hide it.
 </para>
             </summary>
-            <value>An integer value that is the width of the stroke on the map pushpin. 
+            <value>Always <b>-1</b>.
+
 </value>
 
 
@@ -17405,55 +17618,6 @@
             <value><b>true</b>, to play the animation when a location of the map pointer is changed;  otherwise, <b>false</b>.
 
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraMap.ListSourceDataAdapter">
-
-            <summary>
-                <para>The data adapter that provides the means to bind the Map control to data.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraMap.ListSourceDataAdapter.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ListSourceDataAdapter class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.ListSourceDataAdapter.DefaultMapItemType">
-            <summary>
-                <para>Specifies the type of map items to be used by default when generating items from a data source.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraMap.MapItemType"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraMap.ListSourceDataAdapter.Mappings">
-            <summary>
-                <para>Contains information on how data for map items should be obtained from a data source.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraMap.MapItemMappingInfo"/> object.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraMap.ListSourceDataAdapter.ToString">
-            <summary>
-                <para>Returns the textual representation of the ListSourceDataAdapter.
-
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> value, which is the textual representation of the ListSourceDataAdapter.
-
-</returns>
 
 
         </member>

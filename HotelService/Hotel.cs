@@ -16,7 +16,8 @@ namespace HotelService
         {
             _connStringBuilder = new SqlConnectionStringBuilder()
             {
-                DataSource = "DESKTOP-0SI1HN9\\SQLSERVER",
+                //DataSource = "DESKTOP-0SI1HN9\\SQLSERVER", //laptop
+                DataSource = "DESKTOP-3RKCN07", // pc
                 InitialCatalog = "pt_california_db",
                 Encrypt = true,
                 TrustServerCertificate = true,

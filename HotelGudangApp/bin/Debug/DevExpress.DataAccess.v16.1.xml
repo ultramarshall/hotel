@@ -4,6 +4,38 @@
         <name>DevExpress.DataAccess.v16.1</name>
     </assembly>
     <members>
+        <member name="T:DevExpress.DataAccess.EntityFramework.CustomAssemblyBehavior">
+
+            <summary>
+                <para>Lists the values specifying how to treat custom assemblies that may be referenced by an <see cref="T:DevExpress.DataAccess.EntityFramework.EFDataSource"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.DataAccess.EntityFramework.CustomAssemblyBehavior.LoadSilently">
+            <summary>
+                <para>Custom assemblies can be loaded without notice.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.EntityFramework.CustomAssemblyBehavior.NeverLoad">
+            <summary>
+                <para>No custom assembly can ever be loaded.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.EntityFramework.CustomAssemblyBehavior.Prompt">
+            <summary>
+                <para>A user is asked for a permission to load each custom assembly.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.ConnectionParameters.PostgreSqlConnectionParameters">
 
             <summary>
@@ -144,6 +176,75 @@
                 <para>Specifies the "not equal" relational operator.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Model.IEFDataSourceModel">
+
+            <summary>
+                <para>If implemented, accumulates intermediate settings of the Entity Framework data source during the execution of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IEFDataSourceModel.ConnectionParameters">
+            <summary>
+                <para>If implemented, specifies connection parameters. 
+</para>
+            </summary>
+            <value>An object that contains connection parameters.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IEFDataSourceModel.ConnectionStringLocation">
+            <summary>
+                <para>If implemented, specifies from where a data connection is obtained.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Data.Entity.DataConnectionLocation"/> enumeration value that specifies from where the data connection is obtained.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IEFDataSourceModel.DataConnection">
+            <summary>
+                <para>If implemented, specifies the connection to an Entity Framework data source.
+</para>
+            </summary>
+            <value>An object that specifies the connection to the Entity Framework data source. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IEFDataSourceModel.DataMember">
+            <summary>
+                <para>If implemented, specifies the selected member of an Entity Framework data source.
+</para>
+            </summary>
+            <value>An object that provides information about the selected member. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IEFDataSourceModel.ModelHelper">
+            <summary>
+                <para>If implemented, specifies the model helper.
+</para>
+            </summary>
+            <value>An object that provides functionality to configure the model.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IEFDataSourceModel.StoredProceduresInfo">
+            <summary>
+                <para>If implemented, specifies the stored procedures selected for use.
+
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo"/> objects, which provide the settings of stored procedures.  
+</value>
 
 
         </member>
@@ -311,6 +412,24 @@
                 <para>Initializes a new instance of the PartialAggregationValidationException class with default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseDataSourceTypePageView">
+
+            <summary>
+                <para> If implemented, provides a view for the Select the Data Source Type page of the Data Source Wizard.  
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseDataSourceTypePageView.DataSourceType">
+            <summary>
+                <para>If implemented, specifies the selected data source type.
+</para>
+            </summary>
+            <value>A value that specifies the data source type.
+</value>
 
 
         </member>
@@ -2968,6 +3087,36 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.BrowseForAssemblyEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView.BrowseForAssembly"/> and <see cref="E:DevExpress.DataAccess.UI.Wizard.Views.ChooseEFContextPageView.BrowseForAssembly"/> events.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.BrowseForAssemblyEventArgs.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the BrowseForAssemblyEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="assemblyPath">
+		A string that specifies the path to the assembly selected to load available data contexts from it.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.BrowseForAssemblyEventArgs.AssemblyPath">
+            <summary>
+                <para>Specifies the path to the assembly selected to load available data contexts from it.
+</para>
+            </summary>
+            <value>A string that specifies the path to the assembly.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.Sql.SelectQuery">
 
             <summary>
@@ -4664,6 +4813,86 @@
                 <para>A connection is established to a server-based SAP SQL Anywhere database.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo">
+
+            <summary>
+                <para>Provides information about a stored procedure that is displayed in the Data Source Wizard when binding to an Entity Framework data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo.#ctor(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the StoredProcedureViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="procedure">
+		An object containing settings of a stored procedure provided by an Entity Framework data source. 
+
+            </param>
+            <param name="isChecked">
+		A value that specifies whether a stored procedure is selected for use.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo.#ctor(DevExpress.DataAccess.EntityFramework.EFStoredProcedureInfo)">
+            <summary>
+                <para>Initializes a new instance of the StoredProcedureViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="procedure">
+		An object containing settings of a stored procedure provided by an Entity Framework data source. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the StoredProcedureViewInfo class with the specified name.
+</para>
+            </summary>
+            <param name="procedureName">
+		A string that specifies the stored procedure name.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo.Checked">
+            <summary>
+                <para>Specifies whether a stored procedure is added to the list for use.
+
+</para>
+            </summary>
+            <value><b>true</b>, if the stored procedure is selected to be used; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo.StoredProcedure">
+            <summary>
+                <para>Gets a stored procedure.
+</para>
+            </summary>
+            <value>An object containing settings of a stored procedure provided by an Entity Framework data source.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo.ToString">
+            <summary>
+                <para>Returns the stored procedure display name.
+</para>
+            </summary>
+            <returns>A string that specifies the stored procedure name.
+</returns>
 
 
         </member>
@@ -7506,7 +7735,7 @@
         </member>
         <member name="M:DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo.#ctor(DevExpress.DataAccess.ObjectBinding.Parameter[])">
             <summary>
-                <para>Initializes a new instance of the ObjectConstructorInfo class with default settings.
+                <para>Initializes a new instance of the ObjectConstructorInfo class with the specified constructor parameters.
 </para>
             </summary>
             <param name="parameters">
@@ -7669,6 +7898,90 @@
             </param>
             <returns>An <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> object.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPageBase`2">
+
+            <summary>
+                <para>A base class from which the <see cref="T:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPage`1"/> class is derived. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPageBase`2.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPageBase`2.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPageBase`2.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageViewBase">
+
+            <summary>
+                <para>A base interface from which the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageView"/> interface is derived. 
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageViewBase.DataMember">
+            <summary>
+                <para>If implemented, specifies the name of the selected data member.
+</para>
+            </summary>
+            <value>A string that specifies the name of the selected data member.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageViewBase.DataMemberChanged">
+            <summary>
+                <para>Occurs when the selected item in the list of available members is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageViewBase.Initialize(System.Collections.Generic.IEnumerable`1,System.Collections.Generic.IEnumerable`1,System.String)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available data members.
+</para>
+            </summary>
+            <param name="tables">
+		A collection of the <see cref="T:DevExpress.Xpo.DB.DBTable"/> objects specifying tables from an Entity Framework data source.
+
+            </param>
+            <param name="procedures">
+		A collection of the <see cref="T:DevExpress.Xpo.DB.DBStoredProcedure"/> objects specifying stored procedures from an Entity Framework data source.
+
+            </param>
+            <param name="dataMember">
+		A string that specifies the name of the selected data member.
+
+            </param>
 
 
         </member>
@@ -8267,6 +8580,22 @@
 
 
         </member>
+        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.MessageDuplicateQueryName">
+            <summary>
+                <para><b>Default value</b>: "A query with the specified name already exists: {0}."
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.MessageEmptyQueryName">
+            <summary>
+                <para><b>Default value</b>: "The query name cannot be empty."
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.MessageInvalidItemName">
             <summary>
                 <para><b>Default value</b>: "Item name cannot be null or an empty string"
@@ -8342,6 +8671,14 @@
         <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.NoTablesValidationException">
             <summary>
                 <para><b>Default value</b>: "The collection of tables cannot be empty."
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.NoXpoProviderStringId">
+            <summary>
+                <para><b>Default value</b>: "The connection string contains no XpoProvider key or the specified key is invalid. \r\n\r\nException details:\r\n {0}"
 </para>
             </summary>
 
@@ -9724,6 +10061,34 @@
 
 
         </member>
+        <member name="M:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.#ctor(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the FireBirdConnectionParameters class.
+</para>
+            </summary>
+            <param name="serverName">
+		A <see cref="T:System.String"/> that specifies the name of the Firebird server to which the connection should be established. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.ServerName"/> property.
+
+            </param>
+            <param name="port">
+		An integer value, specifying the port number. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.Port"/> property.
+
+            </param>
+            <param name="databaseName">
+		A <see cref="T:System.String"/> that specifies the name of the database that contains the required data. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.DatabaseName"/> property.
+
+            </param>
+            <param name="userName">
+		A <see cref="T:System.String"/> that specifies the user name used to authenticate to the Firebird server. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.UserName"/> property.
+
+            </param>
+            <param name="password">
+		A <see cref="T:System.String"/> that specifies the password used to authenticate to the Firebird server. This value is assigned to the <see cref="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.Password"/> property.
+
+            </param>
+
+
+        </member>
         <member name="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.ConnectionType">
             <summary>
                 <para>Gets or sets whether to connect to a database server or an embedded database.
@@ -9741,6 +10106,15 @@
             </summary>
             <value>A <see cref="T:System.String"/> that specifies the name of the database that contains the required data.
 </value>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.DefaultPort">
+            <summary>
+                <para>3050
+</para>
+            </summary>
+            <returns> </returns>
 
 
         </member>
@@ -9764,6 +10138,16 @@
 
 
         </member>
+        <member name="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.Port">
+            <summary>
+                <para>Specifies the port number.
+</para>
+            </summary>
+            <value>An integer value, specifying the port number. This value cannot be negative or greater than <b>65535</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.DataAccess.ConnectionParameters.FireBirdConnectionParameters.ServerName">
             <summary>
                 <para>Gets or sets the name of the Firebird server to which the connection should be established.
@@ -9780,6 +10164,130 @@
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> that specifies the user name used for authentication.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1">
+
+            <summary>
+                <para> The Select the Data Source Type page of the Data Source Wizard.  
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseDataSourceTypePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,System.Collections.Generic.IEnumerable`1,DevExpress.Entity.ProjectModel.ISolutionTypesProvider,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
+            <summary>
+                <para>Initializes a new instance of the ChooseDataSourceTypePage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseDataSourceTypePageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="dataConnections">
+		A collection of <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> objects.
+
+            </param>
+            <param name="solutionTypesProvider">
+		An object implementing the <see cref="T:DevExpress.Entity.ProjectModel.ISolutionTypesProvider"/> interface that provides access to the known types in the current solution.
+
+            </param>
+            <param name="options">
+		An object that specifies the wizard options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.SolutionTypesProvider">
+            <summary>
+                <para>Specifies the solution types provider.
+</para>
+            </summary>
+            <value>An object implementing the <see cref="T:DevExpress.Entity.ProjectModel.ISolutionTypesProvider"/> interface that provides access to the known types in the current solution.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceTypePage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select a Data Member page of the Data Source Wizard. 
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageView.StoredProcChosen">
+            <summary>
+                <para>If implemented, specifies whether the selected data member is a stored procedure.
+</para>
+            </summary>
+            <value><b>true</b>, if the selected data member is a stored procedure; otherwise, <b>false</b>.
 </value>
 
 
@@ -10632,16 +11140,6 @@
 
 
         </member>
-        <member name="P:DevExpress.DataAccess.EntityFramework.EFDataSource.ConnectionName">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="P:DevExpress.DataAccess.EntityFramework.EFDataSource.ConnectionParameters">
             <summary>
                 <para>Specifies the connection parameters of an Entity Framework data source.
@@ -10728,7 +11226,29 @@
 </para>
             </summary>
             <param name="element">
-		A <see cref="T:System.Xml.Linq.XElement"/> value containing an XML definition of the data source schema.
+		A <see cref="T:System.Xml.Linq.XElement"/> value, containing an XML definition of the data source schema.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFDataSource.LoadFromXml(System.Xml.Linq.XElement,DevExpress.DataAccess.EntityFramework.CustomAssemblyBehavior,System.Predicate`1)">
+            <summary>
+                <para>Loads the Entity Framework data source schema definition from XML with the specified security considerations with respect to any custom assemblies that may be referenced by the data source.
+
+</para>
+            </summary>
+            <param name="element">
+		A <see cref="T:System.Xml.Linq.XElement"/> value, containing an XML definition of the data source schema.
+
+            </param>
+            <param name="behavior">
+		A <see cref="T:DevExpress.DataAccess.EntityFramework.CustomAssemblyBehavior"/> enumeration value, specifying how to treat custom assemblies that may be referenced by the <see cref="T:DevExpress.DataAccess.EntityFramework.EFDataSource"/>.
+
+
+            </param>
+            <param name="allowLoadAssembly">
+		A predicate method delegate, which returns <b>true</b> if a user has allowed to load an assembly from the path specified by the <see cref="T:System.String"/> value.
 
             </param>
 
@@ -11636,6 +12156,56 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase">
+
+            <summary>
+                <para>Serves as the base for classes that contain parameters used to connect to SQL servers.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.DatabaseName">
+            <summary>
+                <para>Gets or sets the name of the database that contains the required data.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that specifies the name of the database that contains the required data.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.Password">
+            <summary>
+                <para>Gets or sets the password used to authenticate to a SQL server.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that specifies the password used to authenticate to a SQL server.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.ServerName">
+            <summary>
+                <para>Gets or sets the name of the SQL server to which the connection should be established.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that specifies the name of the SQL server to which the connection should be established.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.UserName">
+            <summary>
+                <para>Gets or sets the user name used to authenticate to the SQL server.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that specifies the user name used to authenticate to the SQL server.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.Sql.RelationException">
 
             <summary>
@@ -11978,6 +12548,98 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel">
+
+            <summary>
+                <para>If implemented, accumulates intermediate SQL data source settings during the execution of a <b>Data Source Wizard</b>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SqlDataSourceModel class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.#ctor(DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel)">
+            <summary>
+                <para>Initializes a new instance of the SqlDataSourceModel class with the specified prototype.
+</para>
+            </summary>
+            <param name="other">
+		An <see cref="T:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel"/> object, specifying a prototype for a new <b>SqlDataSourceModel</b> instance.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.Clone">
+            <summary>
+                <para>Creates a new SqlDataSourceModel instance, which is a copy of the current instance. 
+</para>
+            </summary>
+            <returns>A new SqlDataSourceModel instance, which is a copy of the current instance. 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.DataConnection">
+            <summary>
+                <para>Specifies the connection to a <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/>.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.Equals(System.Object)">
+            <summary>
+                <para>Determines whether or not the specified object is equal to the current SqlDataSourceModel instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object.
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current SqlDataSourceModel instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.GetHashCode">
+            <summary>
+                <para>Gets the hash code that corresponds to the value of the current SqlDataSourceModel object.
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.Query">
+            <summary>
+                <para>Specifies the <see cref="T:DevExpress.DataAccess.Sql.SqlQuery"/>.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.Sql.SqlQuery"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.SqlDataSourceModel.SqlQueryText">
+            <summary>
+                <para>Specifies the SQL string.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the SQL string.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.Sql.ConnectionErrorEventHandler">
 
             <summary>
@@ -12103,6 +12765,36 @@
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the expression.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.ContextNameChangedEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView.ContextNameChanged"/> and <see cref="E:DevExpress.DataAccess.UI.Wizard.Views.ChooseEFContextPageView.ContextNameChanged"/> events.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ContextNameChangedEventArgs.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the ContextNameChangedEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="contextName">
+		A string specifying the context name.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.ContextNameChangedEventArgs.ContextName">
+            <summary>
+                <para>The name of the selected data context.
+</para>
+            </summary>
+            <value>A string specifying the name of the selected data context.
 </value>
 
 
@@ -12957,6 +13649,95 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1">
+
+            <summary>
+                <para>The Select a Data Source Type page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.OperationMode)">
+            <summary>
+                <para>Initializes a new instance of the ChooseObjectTypePage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="operationMode">
+		An <see cref="T:DevExpress.DataAccess.Wizard.OperationMode"/> enumeration value that specifies which modes of operation are available.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectTypePage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.Sql.ExpressionStringNullValidationException">
 
             <summary>
@@ -13014,6 +13795,53 @@
 </para>
             </summary>
             <value>A collection of <see cref="T:System.String"/> values, specifying the table names.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1">
+
+            <summary>
+                <para>The Specify the Constructor Parameters page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView)">
+            <summary>
+                <para>Initializes a new instance of the ObjectConstructorParametersPage&lt;TModel&gt; class with the specified view.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
 </value>
 
 
@@ -13253,6 +14081,74 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select the Connection String page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView.Changed">
+            <summary>
+                <para>Occurs when the selected item in the list of available connections is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView.ExistingConnectionName">
+            <summary>
+                <para>If implemented, gets the name of the connection selected from the list of available connections.
+</para>
+            </summary>
+            <value>A string specifying the name of the selected connection. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView.Initialize">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available connections.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView.SetConnections(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, changes the list of available connections on a wizard page.
+</para>
+            </summary>
+            <param name="connections">
+		A collection of objects containing connection names. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView.SetSelectedConnection(DevExpress.DataAccess.Native.INamedItem)">
+            <summary>
+                <para>If implemented, changes the selected item from the list of available connections.
+</para>
+            </summary>
+            <param name="connection">
+		An object that contains the name of the connection to be selected. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView.ShouldCreateNewConnection">
+            <summary>
+                <para>If implemented, gets whether to create a new data connection or use an existing one from the list.
+</para>
+            </summary>
+            <value><b>true</b>, to create a new connection; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.Sql.HavingWithoutGroupByValidationException">
 
             <summary>
@@ -13301,10 +14197,3247 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select the Data Binding Mode page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView.Changed">
+            <summary>
+                <para>Occurs when the object binding mode selected on a wizard page is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView.SchemaOnly">
+            <summary>
+                <para>If implemented, specifies whether the mode obtaining the data source schema or the mode retrieving actual data is selected on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, to select the mode obtaining only the data source schema; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseDataSourceNamePageView">
+
+            <summary>
+                <para>If implemented, provides a view for the <b>Enter the Data Source Name</b> page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseDataSourceNamePageView.DataSourceName">
+            <summary>
+                <para>If implemented, specifies the data source name.
+</para>
+            </summary>
+            <value>A string that specifies the data source name.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseDataSourceNamePageView.ShowErrorMessage">
+            <summary>
+                <para>If implemented, displays an error message when a data source with the specified name already exists.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPage`1">
+
+            <summary>
+                <para>The Select a Data Member page of the Data Source Wizard. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext)">
+            <summary>
+                <para>Initializes a new instance of the ChooseEFDataMemberPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseEFDataMemberPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFDataMemberPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1">
+
+            <summary>
+                <para>The <b>Enter the Data Source Name</b> page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseDataSourceNamePageView,DevExpress.DataAccess.Wizard.Services.IDataSourceNameCreationService)">
+            <summary>
+                <para>Initializes a new instance of the ChooseDataSourceNamePage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseDataSourceNamePageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="dataSourceNameCreator">
+		An object implementing the <b>IDataSourceNameCreationService</b> interface that provides a service functionality to create a data source name. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseDataSourceNamePage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.QueryType">
+
+            <summary>
+                <para>Enumerates values that specify the type of a query created on the Customize the Query page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Wizard.Presenters.QueryType.StoredProcedure">
+            <summary>
+                <para>Specifies a stored procedure.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Wizard.Presenters.QueryType.TableOrCustomSql">
+            <summary>
+                <para>Specifies an SQL query.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ItemType">
+
+            <summary>
+                <para>Enumerates values that specify the type of list box items displayed on a wizard page when binding to an Excel file.  
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Wizard.Presenters.ItemType.DefinedName">
+            <summary>
+                <para>Specifies an Excel named region.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Wizard.Presenters.ItemType.Table">
+            <summary>
+                <para>Specifies an Excel table.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DataAccess.Wizard.Presenters.ItemType.Worksheet">
+            <summary>
+                <para>Specifies an Excel worksheet.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem">
+
+            <summary>
+                <para>An item displayed on a wizard page within the list of available worksheets, tables and named regions when binding to an Excel file .
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ListBoxItem class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem.ImageIndex">
+            <summary>
+                <para>Gets the index of an image associated with the current list box item.
+
+</para>
+            </summary>
+            <value>An integer value specifying the index of an image associated with the current list box item.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem.ItemName">
+            <summary>
+                <para>Specifies the list box item name.
+</para>
+            </summary>
+            <value>A string specifying the name of the current list box item.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem.ItemType">
+            <summary>
+                <para>Specifies the type of the current list box item.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.DataAccess.Wizard.Presenters.ItemType"/> enumeration value that specifies the current item's type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem.LockObject">
+            <summary>
+                <para>Gets an object used for locking the current list box item.
+</para>
+            </summary>
+            <value>An object used for locking.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem.ToString">
+            <summary>
+                <para>Returns the textual representation of the current list box item.
+</para>
+            </summary>
+            <returns>A string that represents the current list box item. 
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.FileInfo">
+
+            <summary>
+                <para>Provides information about an Excel file selected in the Data Source Wizard when binding to an Excel data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.FileInfo.FileName">
+            <summary>
+                <para>Specifies the file name.
+</para>
+            </summary>
+            <value>A string specifying the file name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.FileInfo.Password">
+            <summary>
+                <para>Specifies a password that can be used to open a password protected file.
+</para>
+            </summary>
+            <value>A string specifying the password to open the file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.FileInfo.SavePassword">
+            <summary>
+                <para>Specifies whether to save a password used to open a password protected file.
+</para>
+            </summary>
+            <value><b>true</b>, to save the password; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.ParametersViewInfo">
+
+            <summary>
+                <para>Provides information about parameters displayed in the Data Source Wizard when binding to an object data source.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ParametersViewInfo.#ctor(System.Reflection.ParameterInfo[])">
+            <summary>
+                <para>Initializes a new instance of the ParametersViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="data">
+		A collection of parameters displayed on a wizard page. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.ParametersViewInfo.Data"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.ParametersViewInfo.Data">
+            <summary>
+                <para>Gets a collection of parameters displayed on a wizard page.
+</para>
+            </summary>
+            <value>An array of <see cref="T:System.Reflection.ParameterInfo"/> objects specifying parameter settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ParametersViewInfo.Equals(DevExpress.DataAccess.Wizard.Views.ParametersViewInfo,DevExpress.DataAccess.Wizard.Views.ParametersViewInfo)">
+            <summary>
+                <para>Determines whether the specified objects are equal.
+</para>
+            </summary>
+            <param name="x">
+		The first object to compare.
+
+            </param>
+            <param name="y">
+		The second object to compare.
+
+            </param>
+            <returns><b>true</b>, if the specified objects are equal; otherwise, <b>false</b>. 
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ParametersViewInfo.ToString">
+            <summary>
+                <para>Returns the textual representation of the current ParametersViewInfo object.
+</para>
+            </summary>
+            <returns>A string that represents the current object.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.ConstructorViewInfo">
+
+            <summary>
+                <para>Contains information about an object constructor that is displayed in the Data Source Wizard when binding to an object data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ConstructorViewInfo.#ctor(System.Boolean,DevExpress.DataAccess.Wizard.Views.ParametersViewInfo)">
+            <summary>
+                <para>Initializes a new instance of the ConstructorViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="highlighted">
+		Specifies whether a constructor is highlighted. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.ConstructorViewInfo.Highlighted"/> property.
+
+
+            </param>
+            <param name="parameters">
+		An object containing the settings of constructor parameters. These values are assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.ConstructorViewInfo.Parameters"/> property.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.ConstructorViewInfo.Highlighted">
+            <summary>
+                <para>Gets whether a constructor is highlighted using the <see cref="T:DevExpress.DataAccess.ObjectBinding.HighlightedMemberAttribute"/>.
+</para>
+            </summary>
+            <value><b>true</b>, if the constructor is highlighted; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.ConstructorViewInfo.Parameters">
+            <summary>
+                <para>Obtains constructor parameters.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.ParametersViewInfo"/> objects containing the settings of constructor parameters.
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.TypeViewInfo">
+
+            <summary>
+                <para>Contains information about a type that is displayed in the Data Source Wizard when binding to an object data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.#ctor(System.Boolean,System.String,System.String,DevExpress.DataAccess.Wizard.Views.NodeType,System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>Initializes a new instance of the TypeViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="highlighted">
+		Specifies whether a type is highlighted. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Highlighted"/> property.
+
+            </param>
+            <param name="ns">
+		The name of the namespace containing the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Namespace"/> property.
+
+            </param>
+            <param name="typeName">
+		The name of the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.TypeName"/> property.
+
+            </param>
+            <param name="classType">
+		The type of the current object class. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.ClassType"/> property.
+
+            </param>
+            <param name="nested">
+		Nested types of the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Nested"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.#ctor(System.Boolean,System.String,System.String,DevExpress.DataAccess.Wizard.Views.NodeType)">
+            <summary>
+                <para>Initializes a new instance of the TypeViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="highlighted">
+		Specifies whether a type is highlighted. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Highlighted"/> property.
+
+            </param>
+            <param name="ns">
+		The name of the namespace containing the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Namespace"/> property.
+
+            </param>
+            <param name="typeName">
+		The name of the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.TypeName"/> property.
+
+            </param>
+            <param name="classType">
+		The type of the current object class. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.ClassType"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.ClassType">
+            <summary>
+                <para>Gets the type of the current object class. 
+</para>
+            </summary>
+            <value>One of the enumeration values which specifies the class type.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Highlighted">
+            <summary>
+                <para>Gets whether a type is highlighted using the <see cref="T:DevExpress.DataAccess.ObjectBinding.HighlightedClassAttribute"/>.
+</para>
+            </summary>
+            <value><b>true</b>, if the class is highlighted; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Namespace">
+            <summary>
+                <para>Gets the name of the namespace containing the current type.
+</para>
+            </summary>
+            <value>A string that specifies the namespace containing the current type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Nested">
+            <summary>
+                <para>Gets nested types of the current type in the hierarchy displayed on a wizard page.
+</para>
+            </summary>
+            <value>An array of <see cref="T:DevExpress.DataAccess.Wizard.Views.TypeViewInfo"/> objects specifying nested types of the current type. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Parent">
+            <summary>
+                <para>Gets the parent type of the current type in the hierarchy displayed on a wizard page.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.Wizard.Views.TypeViewInfo"/> object specifying the parent of the current type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.TypeName">
+            <summary>
+                <para>Gets the name of the current type.
+</para>
+            </summary>
+            <value>A string specifying the type name.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo">
+
+            <summary>
+                <para>Provides information about an assembly that is displayed in the Data Source Wizard when binding to an object data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.#ctor(System.Boolean,System.String,System.Version,System.Int32)">
+            <summary>
+                <para>Creates a new instance of the AssemblyViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="highlighted">
+		A value specifying whether an assembly is highlighted. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Highlighted"/> property.
+
+            </param>
+            <param name="name">
+		A string specifying the assembly name. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Name"/> property.
+
+            </param>
+            <param name="version">
+		The version number of an assembly. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Version"/> property.
+
+            </param>
+            <param name="priority">
+		An assembly priority. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Priority"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.#ctor(System.Boolean,System.String,System.Version)">
+            <summary>
+                <para>Creates a new instance of the AssemblyViewInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="highlighted">
+		A value specifying whether an assembly is highlighted. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Highlighted"/> property.
+
+            </param>
+            <param name="name">
+		A string specifying the assembly name. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Name"/> property.
+
+            </param>
+            <param name="version">
+		The version number of an assembly. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Version"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Highlighted">
+            <summary>
+                <para>Gets whether an assembly is highlighted using the <see cref="T:DevExpress.DataAccess.ObjectBinding.HighlightedAssemblyAttribute"/>.
+
+</para>
+            </summary>
+            <value><b>true</b>, if the assembly is highlighted; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Name">
+            <summary>
+                <para>Gets the assembly name.
+</para>
+            </summary>
+            <value>A string specifying the assembly name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Priority">
+            <summary>
+                <para>Gets the assembly priority defining the position in which the assembly is displayed on a wizard page.
+
+</para>
+            </summary>
+            <value>An integer value specifying the assembly priority. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo.Version">
+            <summary>
+                <para>Gets the version number of an assembly.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Version"/> object specifying the version number of the assembly.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IConfigureExcelFileColumnsPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Choose Columns page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureExcelFileColumnsPageView.Changed">
+            <summary>
+                <para>Occurs when a collection of selected columns from an Excel file is changed.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureExcelFileColumnsPageView.Initialize(DevExpress.DataAccess.Excel.FieldInfo[],System.Func`2)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available columns.
+</para>
+            </summary>
+            <param name="schema">
+		A collection of <see cref="T:DevExpress.DataAccess.Excel.FieldInfo"/> objects containing settings of Excel data fields. 
+
+
+            </param>
+            <param name="loadPreviewData">
+		A function that previews the result data.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureExcelFileColumnsPageView.Schema">
+            <summary>
+                <para>If implemented, gets a collection of columns selected on a wizard page.
+</para>
+            </summary>
+            <value>An array of <see cref="T:DevExpress.DataAccess.Excel.FieldInfo"/> objects containing the settings of Excel data fields. 
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseExcelFileDataRangePageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select a Worksheet, Table or Named Range page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseExcelFileDataRangePageView.Changed">
+            <summary>
+                <para>Occurs when the selected item in the list of available worksheets, tables and named regions is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseExcelFileDataRangePageView.Initialize(DevExpress.DataAccess.Wizard.Presenters.ListBoxItem[])">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available worksheets, tables and named regions.
+</para>
+            </summary>
+            <param name="items">
+		A collection of <see cref="T:DevExpress.DataAccess.Wizard.Presenters.ListBoxItem"/> objects containing the settings of file data ranges.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseExcelFileDataRangePageView.SelectedItem">
+            <summary>
+                <para>If implemented, specifies the item selected in the list of available worksheets, tables and named regions.
+</para>
+            </summary>
+            <value>An object containing settings of the selected item. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Specify Import Settings page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.DetectEncoding">
+            <summary>
+                <para>Occurs when the state of the <b>Detect automatically</b> check box for the <b>Encoding</b> option is changed. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.DetectNewlineType">
+            <summary>
+                <para>Occurs when the state of the <b>Detect automatically</b> check box for the <b>Newline type</b> option is changed. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.DetectValueSeparator">
+            <summary>
+                <para>Occurs when the state of the <b>Detect automatically</b> check box for the <b>Value separator</b> option is changed. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.DocumentFormat">
+            <summary>
+                <para>If implemented, specifies the format of the selected document.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.DataAccess.Excel.ExcelDocumentFormat"/> enumeration value that specifies the format of the selected document.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.Initialize(DevExpress.DataAccess.Excel.ExcelSourceOptionsBase)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the available options depending on the type of the selected file.
+</para>
+            </summary>
+            <param name="options">
+		An <see cref="T:DevExpress.DataAccess.Excel.ExcelSourceOptionsBase"/> descendant containing options used to extract data from the selected file.  This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.SourceOptions"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.SetEncoding(System.Text.Encoding)">
+            <summary>
+                <para>If implemented, changes the entry selected in the <b>Encoding</b> editor.
+</para>
+            </summary>
+            <param name="encoding">
+		An <see cref="T:System.Text.Encoding"/> value that specifies character encoding in the selected CSV file.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.SetNewlineType(DevExpress.DataAccess.Excel.CsvNewlineType)">
+            <summary>
+                <para>If implemented, changes the entry selected in the <b>Newline type</b> editor.
+</para>
+            </summary>
+            <param name="newlineType">
+		An <see cref="T:DevExpress.XtraExport.Csv.CsvNewlineType"/> enumeration value that specifies the line break type in the source CSV file.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.SetValueSeparator(System.Char)">
+            <summary>
+                <para>If implemented, changes the entry selected in the <b>Value separator</b> editor.
+</para>
+            </summary>
+            <param name="separator">
+		A character used to separate values in the selected CSV file.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView.SourceOptions">
+            <summary>
+                <para>If implemented, gets options used to extract data form the selected file (Microsoft Excel workbook or CSV file).
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.DataAccess.Excel.ExcelSourceOptionsBase"/> descendant containing options used to extract data from the selected file.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseFilePageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select an Excel Workbook or CSV file page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseFilePageView.Changed">
+            <summary>
+                <para>Occurs when the selected file is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseFilePageView.FileName">
+            <summary>
+                <para>If implemented, specifies the name of the selected file.
+</para>
+            </summary>
+            <value>A string specifying the file name.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseFilePageView.ShowPasswordForm(System.String,System.String,DevExpress.DataAccess.Wizard.Presenters.FileInfo@)">
+            <summary>
+                <para>If implemented, shows the form for specifying a password, if the selected file is password protected.
+</para>
+            </summary>
+            <param name="caption">
+		The caption of the password form.
+
+            </param>
+            <param name="fileName">
+		The name of the selected file.
+
+            </param>
+            <param name="fileInfo">
+		An object containing settings of the selected file.
+
+            </param>
+            <returns><b>true</b>, if the password was successfully specified, otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Specify the Constructor Parameters page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView.GetParameters">
+            <summary>
+                <para>If implemented, returns a collection of constructor parameters.
+</para>
+            </summary>
+            <returns>A collection of objects implementing the <see cref="T:DevExpress.Data.IParameter"/> interface. 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView.Initialize(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available constructor parameters.
+</para>
+            </summary>
+            <param name="parameters">
+		A collection of objects implementing the <see cref="T:DevExpress.Data.IParameter"/> interface. 
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IObjectMemberParametersPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Specify the Member Parameters page of the Data Source Wizard.
+
+
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IObjectMemberParametersPageView.GetParameters">
+            <summary>
+                <para>If implemented, returns a collection of member parameters.
+</para>
+            </summary>
+            <returns>A collection of objects implementing the <see cref="T:DevExpress.Data.IParameter"/> interface. 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IObjectMemberParametersPageView.Initialize(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available parameters.
+</para>
+            </summary>
+            <param name="parameters">
+		A collection of objects implementing the <see cref="T:DevExpress.Data.IParameter"/> interface. 
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select a Data Source Type page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView.Changed">
+            <summary>
+                <para>Occurs when the selected item in the list of available types is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView.Initialize(System.Collections.Generic.IEnumerable`1,System.Boolean)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available types.
+</para>
+            </summary>
+            <param name="items">
+		A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.TypeViewInfo"/> objects containing settings of object types. 
+
+            </param>
+            <param name="showAll">
+		The state of the <b>Show only highlighted types</b> check box. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView.SelectedItem">
+            <summary>
+                <para>If implemented, specifies the item selected in the list of available types.
+</para>
+            </summary>
+            <value>An object containing settings of the selected type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectTypePageView.ShowAll">
+            <summary>
+                <para>If implemented, specifies the state of the <b>Show only highlighted types</b> check box.
+</para>
+            </summary>
+            <value><b>true</b>, to disable the check box; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select an Assembly page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView.Changed">
+            <summary>
+                <para>Occurs when the selected item in the list of available assemblies is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView.Initialize">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available assemblies.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView.SelectedItem">
+            <summary>
+                <para>If implemented, specifies the item selected in the list of available assemblies.
+</para>
+            </summary>
+            <value>An object containing settings of the selected assembly.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView.SetData(System.Collections.Generic.IEnumerable`1,System.Boolean)">
+            <summary>
+                <para>If implemented, changes the list of available assemblies. 
+</para>
+            </summary>
+            <param name="items">
+		A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.AssemblyViewInfo"/> objects containing settings of assemblies.
+
+            </param>
+            <param name="showAll">
+		The state of the <b>Show only highlighted assemblies</b> check box.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView.ShowAll">
+            <summary>
+                <para>If implemented, specifies the state of the <b>Show only highlighted assemblies</b> check box.
+</para>
+            </summary>
+            <value><b>true</b>, to disable the check box; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Bind to a Stored Procedure page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.AddClick">
+            <summary>
+                <para>Occurs when the <b>Add</b> button is clicked on a wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.AddToList(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, adds the specified stored procedures to the list to be used.
+
+</para>
+            </summary>
+            <param name="procedures">
+		A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo"/> objects, which provide the settings of stored procedures. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.ChooseProceduresToAdd(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, shows the dialog for selecting stored procedures to be added to the list. 
+</para>
+            </summary>
+            <param name="available">
+		A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo"/> objects containing the settings of available stored procedures.
+
+            </param>
+            <returns>A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo"/> objects containing the settings of the selected stored procedures.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.Initialize(System.Collections.Generic.IEnumerable`1,System.Func`1)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the specified settings.
+</para>
+            </summary>
+            <param name="procedures">
+		A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo"/> objects, which provide the settings of available stored procedures. 
+
+            </param>
+            <param name="getPreviewDataFunc">
+		A function that returns a preview of the result data. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.Procedures">
+            <summary>
+                <para>If implemented, gets the stored procedures with the specified parameters from the list of procedures to be used. 
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo"/> objects, which provide the settings of stored procedures. 
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.RemoveClick">
+            <summary>
+                <para>Occurs when the <b>Remove</b> button is clicked on a wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.RemoveFromList(DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo)">
+            <summary>
+                <para>If implemented, removes the specified stored procedure from the list of procedures to be used.
+
+</para>
+            </summary>
+            <param name="procedure">
+		A <see cref="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo"/> object that provides the stored procedure settings. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.SelectedItem">
+            <summary>
+                <para>If implemented, gets the selected item in the list of stored procedures to be used.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.Wizard.Views.StoredProcedureViewInfo"/> object containing the settings of the selected stored procedure.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView.SetAddEnabled(System.Boolean)">
+            <summary>
+                <para>If implemented, activates or deactivates the <b>Add</b> button on a wizard page.
+</para>
+            </summary>
+            <param name="value">
+		<b>true</b>, to activate the button; <b>false</b>, to deactivate the button. 
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Specify a Connection String page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView.ConnectionName">
+            <summary>
+                <para>If implemented, specifies the name of the created connection.
+</para>
+            </summary>
+            <value>A string specifying the name of the created connection. 
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView.ConnectionParametersChanged">
+            <summary>
+                <para>Occurs when connection information on a wizard page is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView.ConnectionString">
+            <summary>
+                <para>If implemented, specifies the connection string created on a wizard page.
+</para>
+            </summary>
+            <value>The connection string.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView.SetCanSaveToStorage(System.Boolean)">
+            <summary>
+                <para>If implemented, sets whether the connection string can be saved to the dedicated storage.
+</para>
+            </summary>
+            <param name="value">
+		<b>true</b>, if the connection string can be saved to the storage; otherwise, <b>false</b>. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView.ShouldSaveConnectionString">
+            <summary>
+                <para>If implemented, specifies whether to save the connection string to the dedicated storage.
+</para>
+            </summary>
+            <value><b>true</b>, to save the connection string; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView.UseDefaultConnectionString">
+            <summary>
+                <para>If implemented, specifies whether to use the default connection string.
+</para>
+            </summary>
+            <value><b>true</b>, to use the default connection string; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select the Data Context page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView.BrowseForAssembly">
+            <summary>
+                <para>Occurs after the <b>Browse</b> button is clicked on a wizard page and an assembly is selected.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView.ContextName">
+            <summary>
+                <para>If implemented, specifies the item selected in the list of available data contexts.
+</para>
+            </summary>
+            <value>A string that specifies the selected data context.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView.ContextNameChanged">
+            <summary>
+                <para>Occurs when the selected item in the list of available data contexts is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView.Initialize">
+            <summary>
+                <para>If implemented, initializes a wizard page with a list of available data contexts.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView.RefreshContextList(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, changes the list of available data contexts.
+</para>
+            </summary>
+            <param name="enumerable">
+		A collection of <see cref="T:DevExpress.Entity.Model.IContainerInfo"/> objects containing settings of data contexts.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Configure Query Parameters page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView.ConfirmQueryExecution">
+            <summary>
+                <para>If implemented, displays the dialog to confirm query execution.
+
+</para>
+            </summary>
+            <returns><b>true</b>, if the query execution is confirmed; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView.GetParameters">
+            <summary>
+                <para>If implemented, returns a collection of stored procedure parameters.
+</para>
+            </summary>
+            <returns>A collection of objects implementing the <see cref="T:DevExpress.Data.IParameter"/> interface. 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView.Initialize(System.Collections.Generic.IEnumerable`1,System.Boolean,System.Func`1,System.Boolean,System.Boolean)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the specified settings.
+</para>
+            </summary>
+            <param name="parameters">
+		A collection of objects implementing the <see cref="T:DevExpress.Data.IParameter"/> interface, which provides the settings of query parameters. 
+
+            </param>
+            <param name="previewDataRowLimit">
+		Specifies whether the number of data rows in a preview is limited.
+
+            </param>
+            <param name="getPreviewDataFunc">
+		A function that returns a preview of the result data.
+
+            </param>
+            <param name="fixedParameters">
+		Specifies whether the parameters are fixed (their names and types cannot be changed).
+
+            </param>
+            <param name="legacyExpressionEditor">
+		Specifies whether to use an older version of the Expression Editor that does not support intelligent code completion.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView.ShowDuplicatingColumnNameError(System.String)">
+            <summary>
+                <para>If implemented, displays the error message about duplicating the specified column.
+
+</para>
+            </summary>
+            <param name="columnName">
+		The name of the column that is duplicated.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Customize the Query page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.CreateQueryBuilderRunner(DevExpress.DataAccess.Sql.IDBSchemaProvider,DevExpress.DataAccess.Sql.SqlDataConnection,DevExpress.DataAccess.Wizard.Services.IParameterService)">
+            <summary>
+                <para>If implemented, creates an object that enables running the <b>Query Builder</b>.
+</para>
+            </summary>
+            <param name="schemaProvider">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProvider"/> interface that provides the capability to customize the data source schema.
+
+            </param>
+            <param name="connection">
+		An object specifying a connection to an SQL data source.
+
+            </param>
+            <param name="parameterService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface that provides the capability to manage report parameters.
+
+            </param>
+            <returns>An object that enables running the <b>Query Builder</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.Initialize(System.Boolean,System.Boolean,DevExpress.DataAccess.Native.Sql.ConnectionProviders.IAliasFormatter)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the specified options.
+</para>
+            </summary>
+            <param name="allowCustomSql">
+		Specifies whether custom SQL editing is enabled on a wizard page.
+
+            </param>
+            <param name="storedProceduresSupported">
+		Specifies whether a data source contains stored procedures.
+
+            </param>
+            <param name="aliasFormatter">
+		An object specifying an SQL query formatter.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.InitializeStoredProcedures(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available stored procedures.
+</para>
+            </summary>
+            <param name="items">
+		A collection of strings specifying the names of the stored procedures.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.QueryType">
+            <summary>
+                <para>If implemented, specifies the type of the query selected on a wizard page.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.Wizard.Presenters.QueryType"/> enumerator value.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.QueryTypeChanged">
+            <summary>
+                <para>Occurs when the query type selected on a wizard page is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.RunQueryBuilder">
+            <summary>
+                <para>Occurs when the <b>Run Query Builder</b> button is clicked on a wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.SelectedStoredProcedureIndex">
+            <summary>
+                <para>If implemented, specifies the index of the selected item in the list of available stored procedures. 
+</para>
+            </summary>
+            <value>An index of the selected stored procedure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.SqlString">
+            <summary>
+                <para>If implemented, specifies the SQL string created on a wizard page.
+</para>
+            </summary>
+            <value>The SQL string.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.SqlStringChanged">
+            <summary>
+                <para>Occurs when the SQL string created on a wizard page is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView.StoredProcedureChanged">
+            <summary>
+                <para>Occurs when the selected item in the list of available stored procedures is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Save the Connection String page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView.ConnectionName">
+            <summary>
+                <para>If implemented, specifies the name of the created connection.
+</para>
+            </summary>
+            <value>A string specifying the name of the created connection.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView.SetCanSaveToStorage(System.Boolean)">
+            <summary>
+                <para>If implemented, sets whether the connection string can be saved to the dedicated storage.
+</para>
+            </summary>
+            <param name="value">
+		<b>true</b>, if the connection string can be saved to the storage; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView.SetConnectionUsesServerAuth(System.Boolean)">
+            <summary>
+                <para>If implemented, sets whether the data connection uses server authentication.
+
+</para>
+            </summary>
+            <param name="value">
+		<b>true</b>, if the data connection uses server authentication; otherwise, <b>false</b>.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView.ShouldSaveConnectionString">
+            <summary>
+                <para>If implemented, specifies whether to save the connection string to the dedicated storage.
+</para>
+            </summary>
+            <value><b>true</b>, to save the connection string; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView.ShouldSaveCredentials">
+            <summary>
+                <para>If implemented, gets whether to save the user credentials along with the connection string.
+</para>
+            </summary>
+            <value><b>true</b>, to save the user credentials; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Specify a Connection String page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView.Changed">
+            <summary>
+                <para>Occurs when the item selected in the <b>Provider</b> drop-down list is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView.ConnectionName">
+            <summary>
+                <para>If implemented, specifies the name of the connection created on a wizard page.
+</para>
+            </summary>
+            <value>A string specifying the connection name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView.DataConnectionParameters">
+            <summary>
+                <para>If implemented, specifies the parameters of the current data connection.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> descendant containing connection parameters.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView.InitControls">
+            <summary>
+                <para>If implemented, initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView.SelectProvider(System.String)">
+            <summary>
+                <para>If implemented, changes the item selected in the <b>Provider</b> drop-down list. 
+</para>
+            </summary>
+            <param name="provider">
+		A string specifying the name of the provider to be selected.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView.SetConnections(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, changes the list of existing connections on a wizard page.
+</para>
+            </summary>
+            <param name="connections">
+		A collection of objects containing connection names. 
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select a Data Connection page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView.Changed">
+            <summary>
+                <para>Occurs when the selected item in the list of available connections is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView.ExistingConnectionName">
+            <summary>
+                <para>If implemented, gets the name of the connection selected from the list of available connections.
+
+</para>
+            </summary>
+            <value>A string specifying the name of the selected connection.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView.SetConnections(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>If implemented, changes the list of available connections on a wizard page.
+</para>
+            </summary>
+            <param name="connections">
+		A collection of objects containing connection names.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView.SetSelectedConnection(DevExpress.DataAccess.Native.INamedItem)">
+            <summary>
+                <para>If implemented, changes the selected item from the list of available connections.
+
+</para>
+            </summary>
+            <param name="connection">
+		An object that contains the name of the connection to be selected.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView.ShouldCreateNewConnection">
+            <summary>
+                <para>If implemented, gets whether to create a new data connection or use an existing one from the list.
+</para>
+            </summary>
+            <value><b>true</b>, to create a new connection; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureExcelFileColumnsPage`1">
+
+            <summary>
+                <para>The Choose Columns page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureExcelFileColumnsPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureExcelFileColumnsPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureExcelFileColumnsPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureExcelFileColumnsPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureExcelFileColumnsPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureExcelFileColumnsPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureExcelFileColumnsPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1">
+
+            <summary>
+                <para>The Select a Worksheet, Table or Named Range page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseExcelFileDataRangePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Excel.IExcelSchemaProvider)">
+            <summary>
+                <para>Initializes a new instance of the ChooseExcelFileDataRangePage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseExcelFileDataRangePageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="excelSchemaProvider">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Excel.IExcelSchemaProvider"/> interface that provides the capability to obtain the schema of a specified Excel data source.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseExcelFileDataRangePage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1">
+
+            <summary>
+                <para>The Specify Import Settings page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Excel.IExcelSchemaProvider)">
+            <summary>
+                <para>Initializes a new instance of the ChooseFileOptionsPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseFileOptionsPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="excelSchemaProvider">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Excel.IExcelSchemaProvider"/> interface that provides the capability to obtain the schema of a specified Excel data source.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFileOptionsPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1">
+
+            <summary>
+                <para>The Select an Excel Workbook or CSV file page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseFilePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext)">
+            <summary>
+                <para>Initializes a new instance of the ChooseFilePage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseFilePageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseFilePage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1">
+
+            <summary>
+                <para>The Select a Data Source Constructor page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView,DevExpress.DataAccess.Wizard.OperationMode)">
+            <summary>
+                <para>Initializes a new instance of the ChooseObjectConstructorPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="operationMode">
+		An <see cref="T:DevExpress.DataAccess.Wizard.OperationMode"/> enumeration value that specifies which modes of operation are available.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectConstructorPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1">
+
+            <summary>
+                <para>The Select the Data Binding Mode page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView,DevExpress.DataAccess.Wizard.OperationMode)">
+            <summary>
+                <para>Initializes a new instance of the ChooseObjectBindingModePage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="operationMode">
+		An <see cref="T:DevExpress.DataAccess.Wizard.OperationMode"/> enumeration value that specifies which modes of operation are available.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1">
+
+            <summary>
+                <para>The Specify the Member Parameters page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IObjectMemberParametersPageView,DevExpress.DataAccess.Wizard.OperationMode)">
+            <summary>
+                <para>Initializes a new instance of the ObjectMemberParametersPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IObjectMemberParametersPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="operationMode">
+		An <see cref="T:DevExpress.DataAccess.Wizard.OperationMode"/> enumeration value that specifies which modes of operation are available.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ObjectMemberParametersPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1">
+
+            <summary>
+                <para>The Select a Data Source Member page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.OperationMode)">
+            <summary>
+                <para>Initializes a new instance of the ChooseObjectMemberPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="operationMode">
+		An <see cref="T:DevExpress.DataAccess.Wizard.OperationMode"/> enumeration value that specifies which modes of operation are available.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.ShowMessage(System.String)">
+            <summary>
+                <para>Displays a message with the specified text when validating a wizard page.
+</para>
+            </summary>
+            <param name="message">
+		A string specifying the message text.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectMemberPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1">
+
+            <summary>
+                <para>The Select an Assembly page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Entity.ProjectModel.ISolutionTypesProvider)">
+            <summary>
+                <para>Initializes a new instance of the ChooseObjectAssemblyPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectAssemblyPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="solutionTypesProvider">
+		An object implementing the <see cref="T:DevExpress.Entity.ProjectModel.ISolutionTypesProvider"/> interface that provides access to the known types in the current solution.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectAssemblyPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1">
+
+            <summary>
+                <para>The Bind to a Stored Procedure page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IParameterService)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureEFStoredProceduresPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureEFStoredProceduresPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="parameterService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface that provides a service functionality to manage query parameters.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1.GetPreviewData">
+            <summary>
+                <para>Returns a preview of the result data. 
+</para>
+            </summary>
+            <returns>An object that specifies a preview of the result data. 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFStoredProceduresPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1">
+
+            <summary>
+                <para>The Specify a Connection String page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureEFConnectionStringPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureEFConnectionStringPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="connectionStorageService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IConnectionStorageService"/> interface that provides a service functionality to store the data connection settings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureEFConnectionStringPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1">
+
+            <summary>
+                <para>The Select the Connection String page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Data.Entity.IConnectionStringsProvider,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService)">
+            <summary>
+                <para>Initializes a new instance of the ChooseEFConnectionStringPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseEFConnectionStringPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="connectionStringsProvider">
+		An object implementing the <see cref="T:DevExpress.Data.Entity.IConnectionStringsProvider"/> interface that provides access to the available connection strings.
+
+            </param>
+            <param name="connectionStorageService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IConnectionStorageService"/> interface that provides a service functionality to store the data connection settings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFConnectionStringPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1">
+
+            <summary>
+                <para>The Select the Data Context page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.Entity.ProjectModel.ISolutionTypesProvider,DevExpress.Data.Entity.IConnectionStringsProvider)">
+            <summary>
+                <para>Initializes a new instance of the ChooseEFContextPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseEFContextPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="solutionTypesProvider">
+		An object implementing the <see cref="T:DevExpress.Entity.ProjectModel.ISolutionTypesProvider"/> interface that provides access to the known types in the current solution.
+
+            </param>
+            <param name="connectionStringsProvider">
+		An object implementing the <see cref="T:DevExpress.Data.Entity.IConnectionStringsProvider"/> interface that provides access to the available connection strings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.GetDataConnection">
+            <summary>
+                <para>Returns a data connection for the selected data context.
+</para>
+            </summary>
+            <returns>An object that specifies the connection to an Entity Framework data source.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.ShowMessage(System.String)">
+            <summary>
+                <para>Displays a message with the specified text.
+</para>
+            </summary>
+            <param name="message">
+		A string specifying the message text.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1">
+
+            <summary>
+                <para>The Customize the Query page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Sql.IDBSchemaProvider,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureQueryPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="options">
+		An object that specifies the wizard options.
+
+            </param>
+            <param name="dbSchemaProvider">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProvider"/> interface that provides the capability to customize the data source schema.
+
+            </param>
+            <param name="parameterService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface that provides a service functionality to manage query parameters.
+
+            </param>
+            <param name="customQueryValidator">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator"/> interface that provides custom validation logic for SQL queries.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.DBSchema">
+            <summary>
+                <para>Gets the schema of the connected SQL data source.
+</para>
+            </summary>
+            <value>An object specifying the database schema.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1">
+
+            <summary>
+                <para>The Save the Connection String page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService)">
+            <summary>
+                <para>Initializes a new instance of the SaveConnectionPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.ISaveConnectionPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="connectionStorageService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IConnectionStorageService"/> interface that provides a service functionality to store the data connection settings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.ShowMessage(System.String)">
+            <summary>
+                <para>Displays a message with the specified text when validating a wizard page.
+</para>
+            </summary>
+            <param name="message">
+		A string specifying the message text.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.SaveConnectionPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1">
+
+            <summary>
+                <para>The Specify a Connection String page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Native.Sql.IDataConnectionParametersService,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,System.Collections.Generic.IEnumerable`1,DevExpress.DataAccess.Wizard.SqlWizardOptions,System.Collections.Generic.List`1)">
+            <summary>
+                <para>Initializes a new instance of the ConnectionPropertiesPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConnectionPropertiesPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="dataConnectionParametersService">
+		An object implementing the <b>IDataConnectionParametersService</b> interface that provides a service functionality to manage data connection parameters.
+
+            </param>
+            <param name="connectionStorageService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IConnectionStorageService"/> interface that provides a service functionality to store the data connection settings.
+
+            </param>
+            <param name="dataConnections">
+		A collection of <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> objects.
+
+            </param>
+            <param name="options">
+		An object that specifies the wizard options.
+
+            </param>
+            <param name="dataProviders">
+		A collection of available data providers.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConnectionPropertiesPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1">
+
+            <summary>
+                <para>The Select a Data Connection page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Native.Sql.IDataConnectionParametersService,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,System.Collections.Generic.IEnumerable`1,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
+            <summary>
+                <para>Initializes a new instance of the ChooseConnectionPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseConnectionPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="dataConnectionParametersService">
+		An object implementing the <b>IDataConnectionParametersService</b> interface that provides a service functionality to manage data connection parameters.
+
+            </param>
+            <param name="connectionStorageService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IConnectionStorageService"/> interface that provides a service functionality to store the data connection settings.
+
+            </param>
+            <param name="dataConnections">
+		A collection of <see cref="T:DevExpress.DataAccess.Sql.SqlDataConnection"/> objects.
+
+            </param>
+            <param name="options">
+		An object that specifies the wizard options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseConnectionPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Excel.TypeIsNullValidationException">
+
+            <summary>
+                <para>The exception thrown during <see cref="P:DevExpress.DataAccess.Excel.ExcelDataSource.Schema"/> validation when the schema references a <see cref="T:DevExpress.DataAccess.Excel.FieldInfo"/> object without a proper <see cref="P:DevExpress.DataAccess.Excel.FieldInfo.Type"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Excel.TypeIsNullValidationException.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TypeIsNullValidationException class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Excel.SchemaValidationException">
+
+            <summary>
+                <para>The base for exceptions thrown when the <see cref="P:DevExpress.DataAccess.Excel.ExcelDataSource.Schema"/> validation fails.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Excel.DuplicateNameValidationException">
+
+            <summary>
+                <para>The exception thrown during <see cref="P:DevExpress.DataAccess.Excel.ExcelDataSource.Schema"/> validation when the schema references two or more <see cref="T:DevExpress.DataAccess.Excel.FieldInfo"/> objects having identical <see cref="P:DevExpress.DataAccess.Excel.FieldInfo.Name"/> values.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Excel.DuplicateNameValidationException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the DuplicateNameValidationException class with the specified <see cref="P:DevExpress.DataAccess.Excel.FieldInfo.Name"/>.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value, specifying the duplicate name that caused the error.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Excel.DuplicateNameValidationException.Name">
+            <summary>
+                <para>Indicates the duplicate <see cref="P:DevExpress.DataAccess.Excel.FieldInfo.Name"/>.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the duplicate name that caused the error.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.EntityFramework.EFConnectionException">
+
+            <summary>
+                <para>A wrapper for exceptions that may occur during a connection to an Entity Framework data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFConnectionException.#ctor(System.String,System.Exception)">
+            <summary>
+                <para>Initializes a new instance of the EFConnectionException class with the specified message and exception details.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
+
+            </param>
+            <param name="innerException">
+		A <see cref="T:System.Exception"/> object, specifying the error details.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.EntityFramework.EFConnectionException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the EFConnectionException class with the specified message.
+</para>
+            </summary>
+            <param name="message">
+		A <see cref="T:System.String"/> value, specifying the message displayed when a database connection fails.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.ObjectBinding.Parameter">
 
             <summary>
-                <para>Provides basic functionality for parameters.
+                <para>A constructor parameter of an <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectDataSource"/>.
 </para>
             </summary>
 
@@ -13491,6 +17624,117 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1">
+
+            <summary>
+                <para>The Configure Query Parameters page of the Data Source Wizard.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Sql.IDBSchemaProvider,DevExpress.DataAccess.Native.Sql.IDataConnectionParametersService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureSqlParametersPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureParametersPageView"/> interface that provides a view for a wizard page.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard.
+
+            </param>
+            <param name="parameterService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface that provides a service functionality to manage query parameters.
+
+            </param>
+            <param name="dbSchemaProvider">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProvider"/> interface that provides the capability to customize the data source schema.
+
+            </param>
+            <param name="connectionParametersService">
+		An object implementing the <b>IDataConnectionParametersService</b> interface that provides a service functionality to manage data connection parameters.
+
+            </param>
+            <param name="validatior">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator"/> interface that provides custom validation logic for SQL queries.
+
+            </param>
+            <param name="options">
+		An object that specifies the wizard options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureSqlParametersPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Excel.NameIsNullOrEmptyValidationException">
+
+            <summary>
+                <para>The exception thrown during <see cref="P:DevExpress.DataAccess.Excel.ExcelDataSource.Schema"/> validation when the schema references a <see cref="T:DevExpress.DataAccess.Excel.FieldInfo"/> object without a proper <see cref="P:DevExpress.DataAccess.Excel.FieldInfo.Name"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Excel.NameIsNullOrEmptyValidationException.#ctor">
+            <summary>
+                <para>Initializes a new instance of the NameIsNullOrEmptyValidationException class with default settings.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.ConnectionParameters.MySqlConnectionParameters">
 
             <summary>
@@ -13575,6 +17819,178 @@
 </para>
             </summary>
             <value>An integer value, specifying the port number. This value cannot be negative or greater than <b>65535</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Model.ISqlDataSourceModel">
+
+            <summary>
+                <para>If implemented, accumulates intermediate SQL data source settings during the execution of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.ISqlDataSourceModel.DataConnection">
+            <summary>
+                <para>If implemented, specifies the connection to an <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/>.
+</para>
+            </summary>
+            <value>An object that specifies the connection to the <see cref="T:DevExpress.DataAccess.Sql.SqlDataSource"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.ISqlDataSourceModel.Query">
+            <summary>
+                <para>If implemented, specifies the <see cref="T:DevExpress.DataAccess.Sql.SqlQuery"/>.
+</para>
+            </summary>
+            <value>An object that specifies the SQL query.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.ISqlDataSourceModel.SqlQueryText">
+            <summary>
+                <para>If implemented, specifies the SQL string.
+</para>
+            </summary>
+            <value>A string that specifies the SQL string.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select a Data Source Member page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView.Changed">
+            <summary>
+                <para>Occurs when the selected item in the list of available members is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView.Initialize(System.Collections.Generic.IEnumerable`1,System.Boolean,System.Boolean)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available members.
+</para>
+            </summary>
+            <param name="items">
+		A collection of <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectMember"/> objects containing settings of object members. 
+
+            </param>
+            <param name="staticType">
+		A value that specifies whether binding to an object member (not to the entire object) is selected.
+
+            </param>
+            <param name="showAll">
+		The state of the <b>Show only highlighted members</b> check box. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView.Result">
+            <summary>
+                <para>If implemented, specifies the item selected in the list of available members.
+</para>
+            </summary>
+            <value>An object containing settings of the selected member. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectMemberPageView.ShowAll">
+            <summary>
+                <para>If implemented, specifies the state of the <b>Show only highlighted members</b> check box.
+</para>
+            </summary>
+            <value><b>true</b>, to disable the check box; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel">
+
+            <summary>
+                <para>If implemented, accumulates intermediate object data source settings during the execution of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel.Assembly">
+            <summary>
+                <para>If implemented, specifies the selected assembly.
+</para>
+            </summary>
+            <value>An object that provides information about the selected assembly.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel.CtorParameters">
+            <summary>
+                <para>If implemented, specifies the parameters of the selected data source constructor.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> objects.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel.MemberParameters">
+            <summary>
+                <para>If implemented, specifies the parameters of the selected data source member.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> objects.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel.ObjectConstructor">
+            <summary>
+                <para>If implemented, specifies the selected data source constructor.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Reflection.ConstructorInfo"/> object providing information about the selected constructor.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel.ObjectMember">
+            <summary>
+                <para>If implemented, specifies the selected data source member.
+</para>
+            </summary>
+            <value>An object that provides information about the selected data source member.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel.ObjectType">
+            <summary>
+                <para>If implemented, specifies the selected data source type.
+</para>
+            </summary>
+            <value>An object that provides information about the selected data source type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IObjectDataSourceModel.ShowAllState">
+            <summary>
+                <para>If implemented, specifies which bindable objects are available in the Data Source Wizard.
+</para>
+            </summary>
+            <value>A value specifying which bindable objects are available.
 </value>
 
 
@@ -13708,6 +18124,107 @@
 
 
         </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Model.IExcelDataSourceModel">
+
+            <summary>
+                <para>If implemented, accumulates intermediate Excel data source settings during the execution of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IExcelDataSourceModel.FileName">
+            <summary>
+                <para>If implemented, specifies the name of the selected Excel file.
+</para>
+            </summary>
+            <value>A string specifying the file name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IExcelDataSourceModel.Schema">
+            <summary>
+                <para>If implemented, specifies a collection of Excel fields selected on a wizard page to be used.
+</para>
+            </summary>
+            <value>An array of <see cref="T:DevExpress.DataAccess.Excel.FieldInfo"/> objects containing the settings of Excel data fields. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IExcelDataSourceModel.ShouldSavePassword">
+            <summary>
+                <para>If implemented, specifies whether to save a password used to open a password protected Excel file.
+</para>
+            </summary>
+            <value><b>true</b>, to save the password; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.IExcelDataSourceModel.SourceOptions">
+            <summary>
+                <para>If implemented, specifies options used to extract data form the selected Excel file.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.DataAccess.Excel.ExcelSourceOptionsBase"/> descendant containing options used to extract data from the selected Excel file.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView">
+
+            <summary>
+                <para>If implemented, provides a view for the Select a Data Source Constructor page of the Data Source Wizard.
+</para>
+            </summary>
+
+        </member>
+        <member name="E:DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView.Changed">
+            <summary>
+                <para>Occurs when the selected item in the list of available constructors is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView.Initialize(System.Collections.Generic.IEnumerable`1,System.Boolean)">
+            <summary>
+                <para>If implemented, initializes a wizard page with the list of available constructors.
+</para>
+            </summary>
+            <param name="items">
+		A collection of <see cref="T:DevExpress.DataAccess.Wizard.Views.ConstructorViewInfo"/> objects containing the settings of constructors. 
+
+
+            </param>
+            <param name="showAll">
+		The state of the <b>Show only highlighted constructors</b> check box. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView.Result">
+            <summary>
+                <para>If implemented, specifies the item selected in the list of available data source constructors.
+</para>
+            </summary>
+            <value>An object containing settings of the selected data source constructor. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Views.IChooseObjectConstructorPageView.ShowAll">
+            <summary>
+                <para>If implemented, specifies the state of the <b>Show only highlighted constructors</b> check box.
+</para>
+            </summary>
+            <value><b>true</b>, to disable the check box; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.DataAccess.DataProviderBase">
 
             <summary>
@@ -13807,56 +18324,6 @@
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> that specifies the path to an XML file.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase">
-
-            <summary>
-                <para>Serves as the base for classes that contain parameters used to connect to SQL servers.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.DatabaseName">
-            <summary>
-                <para>Gets or sets the name of the database that contains the required data.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> that specifies the name of the database that contains the required data.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.Password">
-            <summary>
-                <para>Gets or sets the password used to authenticate to a SQL server.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> that specifies the password used to authenticate to a SQL server.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.ServerName">
-            <summary>
-                <para>Gets or sets the name of the SQL server to which the connection should be established.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> that specifies the name of the SQL server to which the connection should be established.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ConnectionParameters.SqlServerConnectionParametersBase.UserName">
-            <summary>
-                <para>Gets or sets the user name used to authenticate to the SQL server.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> that specifies the user name used to authenticate to the SQL server.
 </value>
 
 

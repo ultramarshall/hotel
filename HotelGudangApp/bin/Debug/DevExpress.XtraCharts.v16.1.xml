@@ -4,50 +4,6 @@
         <name>DevExpress.XtraCharts.v16.1</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.XtraCharts.FinancialExpandAnimation">
-
-            <summary>
-                <para>The <b>Expand</b> financial series point animation.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FinancialExpandAnimation.#ctor">
-            <summary>
-                <para>Initializes a new instance of the FinancialExpandAnimation class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.FinancialExpandAnimation.ApplyState(DevExpress.XtraCharts.SceneModifier,System.Drawing.RectangleF,DevExpress.XtraCharts.FinancialSeriesPointLayoutParameters,System.Single)">
-            <summary>
-                <para>Applies the current animation state to a financial series point.
-</para>
-            </summary>
-            <param name="modifier">
-		A <see cref="T:DevExpress.XtraCharts.SceneModifier"/> object applying animation to a series.
-
-            </param>
-            <param name="diagramBounds">
-		A <see cref="T:System.Drawing.RectangleF"/> value specifying the diagram bounds.
-
-
-            </param>
-            <param name="financialParameters">
-		A <see cref="T:DevExpress.XtraCharts.FinancialSeriesPointLayoutParameters"/> object containing the parameters required for animation of a financial series point layout.
-
-
-
-            </param>
-            <param name="progress">
-		A <see cref="T:System.Double"/> value specifying the current animation progress.
-
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.ScrollBarAlignment">
 
             <summary>
@@ -116,7 +72,7 @@
         <member name="T:DevExpress.XtraCharts.SmallChartTextShowingEventHandler">
 
             <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.ChartControl.SmallTextShowing"/> and <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.SmallTextShowing"/> events.
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.ChartControl.SmallChartTextShowing"/> and <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.SmallChartTextShowing"/> events.
 </para>
             </summary>
 
@@ -15835,6 +15791,24 @@
             </summary>
 
         </member>
+        <member name="M:DevExpress.XtraCharts.DefaultPalette.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DefaultPalette class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.DefaultPalette.DefaultActualPaletteName">
+            <summary>
+                <para>Specifies the default palette name.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value. 
+</returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraCharts.DefaultPalette.DefaultPaletteName">
             <summary>
                 <para>Gets the default palette name of the chart.
@@ -17366,6 +17340,122 @@
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraCharts.Shadow"/> object which provides the settings used to paint the series shadow. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.RadarLineSeriesView">
+
+            <summary>
+                <para>Represents a series view of the Radar Line type.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RadarLineSeriesView class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the RadarLineSeriesView object passed as the parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		A RadarLineSeriesView object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.Closed">
+            <summary>
+                <para>Specifies whether the last point in a series is joined with the first point to form a closed polygon.
+</para>
+            </summary>
+            <value><b>true</b> if the start and end point are joined with line; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current RadarLineSeriesView instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object.
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current RadarLineSeriesView instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.GetHashCode">
+            <summary>
+                <para>Gets the hash code (a number) that corresponds to the value of the current RadarLineSeriesView object.
+
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.LineMarkerOptions">
+            <summary>
+                <para>Gets the specific settings of the data point markers displayed by a series of the Radar Line view type.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Marker"/> object that contains the specific marker settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.LineStyle">
+            <summary>
+                <para>Gets the line style settings of a series of the Radar Line type.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.LineStyle"/> object that contains line style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.MarkerVisibility">
+            <summary>
+                <para>Specifies whether the series point markers are visible.
+</para>
+            </summary>
+            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.PointMarkerOptions">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraCharts.RadarPointSeriesView.PointMarkerOptions"/> property.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.SimpleMarker"/> object that contains the specific marker settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.SeriesAnimation">
+            <summary>
+                <para>Gets or sets the series animation of the circular series.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.CircularSeriesAnimationBase"/> class descendant object.
 </value>
 
 
@@ -20951,122 +21041,6 @@
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraCharts.SimpleMarker"/> object that contains the specific marker settings.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.RadarLineSeriesView">
-
-            <summary>
-                <para>Represents a series view of the Radar Line type.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.#ctor">
-            <summary>
-                <para>Initializes a new instance of the RadarLineSeriesView class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the RadarLineSeriesView object passed as the parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		A RadarLineSeriesView object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.Closed">
-            <summary>
-                <para>Specifies whether the last point in a series is joined with the first point to form a closed polygon.
-</para>
-            </summary>
-            <value><b>true</b> if the start and end point are joined with line; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current RadarLineSeriesView instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current RadarLineSeriesView instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RadarLineSeriesView.GetHashCode">
-            <summary>
-                <para>Gets the hash code (a number) that corresponds to the value of the current RadarLineSeriesView object.
-
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.LineMarkerOptions">
-            <summary>
-                <para>Gets the specific settings of the data point markers displayed by a series of the Radar Line view type.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Marker"/> object that contains the specific marker settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.LineStyle">
-            <summary>
-                <para>Gets the line style settings of a series of the Radar Line type.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.LineStyle"/> object that contains line style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.MarkerVisibility">
-            <summary>
-                <para>Specifies whether the series point markers are visible.
-</para>
-            </summary>
-            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.PointMarkerOptions">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraCharts.RadarPointSeriesView.PointMarkerOptions"/> property.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.SimpleMarker"/> object that contains the specific marker settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RadarLineSeriesView.SeriesAnimation">
-            <summary>
-                <para>Gets or sets the series animation of the circular series.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.CircularSeriesAnimationBase"/> class descendant object.
 </value>
 
 
@@ -29270,16 +29244,20 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Foundry</b
 
 
         </member>
-        <member name="M:DevExpress.XtraCharts.Palettes.GetPalette(System.String)">
+        <member name="M:DevExpress.XtraCharts.Palettes.GetPalette(System.String,DevExpress.XtraCharts.Native.IChartContainer)">
             <summary>
-                <para>Finds a palette with the specified name in the chart. 
+                <para>Returns the palette by its name.
 </para>
             </summary>
             <param name="name">
-		A <see cref="T:System.String"/> specifying the name of a palette.
+		A <see cref="T:System.String"/> value specifying the palette name.
 
             </param>
-            <returns>A <see cref="T:DevExpress.XtraCharts.Palette"/> object which is the palette with the specified name.
+            <param name="chart">
+		Optional parameter. Specify it to the <see cref="T:DevExpress.XtraCharts.ChartControl"/> class instance to obtain its default palette.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraCharts.Palette"/> object.
 </returns>
 
 
@@ -40143,6 +40121,50 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.FinancialExpandAnimation">
+
+            <summary>
+                <para>The <b>Expand</b> financial series point animation.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FinancialExpandAnimation.#ctor">
+            <summary>
+                <para>Initializes a new instance of the FinancialExpandAnimation class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.FinancialExpandAnimation.ApplyState(DevExpress.XtraCharts.SceneModifier,System.Drawing.RectangleF,DevExpress.XtraCharts.FinancialSeriesPointLayoutParameters,System.Single)">
+            <summary>
+                <para>Applies the current animation state to a financial series point.
+</para>
+            </summary>
+            <param name="modifier">
+		A <see cref="T:DevExpress.XtraCharts.SceneModifier"/> object applying animation to a series.
+
+            </param>
+            <param name="diagramBounds">
+		A <see cref="T:System.Drawing.RectangleF"/> value specifying the diagram bounds.
+
+
+            </param>
+            <param name="financialParameters">
+		A <see cref="T:DevExpress.XtraCharts.FinancialSeriesPointLayoutParameters"/> object containing the parameters required for animation of a financial series point layout.
+
+
+
+            </param>
+            <param name="progress">
+		A <see cref="T:System.Double"/> value specifying the current animation progress.
+
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.ISimpleDiagramPanel">
 
             <summary>
@@ -41943,6 +41965,168 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.RangeAreaSeriesView">
+
+            <summary>
+                <para>A series view of the Range Area type.
+
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RangeAreaSeriesView class with default settings.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the RangeAreaSeriesView object passed as a parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		A RangeAreaSeriesView object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Border">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraCharts.AreaSeriesViewBase.Border"/> property to hide it.
+</para>
+            </summary>
+            <value>Always <b>null</b> (<b>Nothing</b> in Visual Basic).
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Border1">
+            <summary>
+                <para>Provides access to the settings that specify the appearance of the border, which connects values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_1"/> in all data points of a <b>Range Area</b> series view.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.CustomBorder"/> object which specifies the border style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Border2">
+            <summary>
+                <para>Provides access to the settings that specify the appearance of the border which connects values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_2"/> in all data points of a <b>Range Area</b> series view.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.CustomBorder"/> object which specifies the border style.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.Equals(System.Object)">
+            <summary>
+                <para>Determines whether the specified object is equal to the current RangeAreaSeriesView instance.
+</para>
+            </summary>
+            <param name="obj">
+		The object to compare with the current object. 
+
+            </param>
+            <returns><b>true</b> if the specified object is equal to the current RangeAreaSeriesView instance; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.GetHashCode">
+            <summary>
+                <para>Gets the hash code (a number) that corresponds to the value of the current RangeAreaSeriesView object.
+</para>
+            </summary>
+            <returns>An integer value representing the hash code for the current object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.GetValueCaption(System.Int32)">
+            <summary>
+                <para>Gets a caption value for the RangeAreaSeriesView type.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer caption index. If it's negative or exceeds the last available index, an exception is raised. 
+
+            </param>
+            <returns>A <see cref="T:System.String"/> value  that is the caption for the RangeAreaSeriesView type.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker1">
+            <summary>
+                <para>Provides access to the settings that specify the appearance of markers drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_1"/> in all data points of a <b>Range Area</b> series view.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Marker"/> object that contains specific marker settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker1Visibility">
+            <summary>
+                <para>Specifies whether the series point markers drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_1"/>  are visible.
+</para>
+            </summary>
+            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker2">
+            <summary>
+                <para>Provides access to the settings that specify the appearance of markers  drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_2"/> in all data points of a <b>Range Area</b> series view.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Marker"/> object that contains specific marker settings. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker2Visibility">
+            <summary>
+                <para>Specifies whether the series point markers drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_2"/> are visible.
+</para>
+            </summary>
+            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of a diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.MarkerOptions">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraCharts.AreaSeriesViewBase.MarkerOptions"/> property to hide it.
+</para>
+            </summary>
+            <value>Always <b>null</b> (<b>Nothing</b> in Visual Basic).
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.MarkerVisibility">
+            <summary>
+                <para>Specifies whether the series point markers are visible.
+</para>
+            </summary>
+            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.AppearanceRepository">
 
             <summary>
@@ -42605,168 +42789,6 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
             </param>
             <returns>A <see cref="T:System.String"/> value  that is the caption for the RangeArea3DSeriesView type.
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.RangeAreaSeriesView">
-
-            <summary>
-                <para>A series view of the Range Area type.
-
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.#ctor">
-            <summary>
-                <para>Initializes a new instance of the RangeAreaSeriesView class with default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.Assign(DevExpress.XtraCharts.ChartElement)">
-            <summary>
-                <para>Copies all the settings from the RangeAreaSeriesView object passed as a parameter.
-
-</para>
-            </summary>
-            <param name="obj">
-		A RangeAreaSeriesView object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Border">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraCharts.AreaSeriesViewBase.Border"/> property to hide it.
-</para>
-            </summary>
-            <value>Always <b>null</b> (<b>Nothing</b> in Visual Basic).
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Border1">
-            <summary>
-                <para>Provides access to the settings that specify the appearance of the border, which connects values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_1"/> in all data points of a <b>Range Area</b> series view.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.CustomBorder"/> object which specifies the border style.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Border2">
-            <summary>
-                <para>Provides access to the settings that specify the appearance of the border which connects values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_2"/> in all data points of a <b>Range Area</b> series view.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.CustomBorder"/> object which specifies the border style.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.Equals(System.Object)">
-            <summary>
-                <para>Determines whether the specified object is equal to the current RangeAreaSeriesView instance.
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object. 
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current RangeAreaSeriesView instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.GetHashCode">
-            <summary>
-                <para>Gets the hash code (a number) that corresponds to the value of the current RangeAreaSeriesView object.
-</para>
-            </summary>
-            <returns>An integer value representing the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.RangeAreaSeriesView.GetValueCaption(System.Int32)">
-            <summary>
-                <para>Gets a caption value for the RangeAreaSeriesView type.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer caption index. If it's negative or exceeds the last available index, an exception is raised. 
-
-            </param>
-            <returns>A <see cref="T:System.String"/> value  that is the caption for the RangeAreaSeriesView type.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker1">
-            <summary>
-                <para>Provides access to the settings that specify the appearance of markers drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_1"/> in all data points of a <b>Range Area</b> series view.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Marker"/> object that contains specific marker settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker1Visibility">
-            <summary>
-                <para>Specifies whether the series point markers drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_1"/>  are visible.
-</para>
-            </summary>
-            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker2">
-            <summary>
-                <para>Provides access to the settings that specify the appearance of markers  drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_2"/> in all data points of a <b>Range Area</b> series view.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Marker"/> object that contains specific marker settings. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.Marker2Visibility">
-            <summary>
-                <para>Specifies whether the series point markers drawn for the values stored as <see cref="F:DevExpress.XtraCharts.SeriesPointKey.Value_2"/> are visible.
-</para>
-            </summary>
-            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of a diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.MarkerOptions">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraCharts.AreaSeriesViewBase.MarkerOptions"/> property to hide it.
-</para>
-            </summary>
-            <value>Always <b>null</b> (<b>Nothing</b> in Visual Basic).
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.RangeAreaSeriesView.MarkerVisibility">
-            <summary>
-                <para>Specifies whether the series point markers are visible.
-</para>
-            </summary>
-            <value><b>Default</b> - marker visibility (visible/invisible) is automatically determined according to the type of diagram currently displayed on a chart; <b>True</b> -if the markers are visible; <b>False</b> - markers are hidden. The default is <b>DefaultBoolean.Default</b>.
-</value>
 
 
         </member>

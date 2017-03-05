@@ -261,7 +261,8 @@
         </member>
         <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.CustomPropertiesChanged">
             <summary>
-                <para> </para>
+                <para>Occurs when one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> has changed.
+</para>
             </summary>
 
 
@@ -313,7 +314,8 @@
         </member>
         <member name="E:DevExpress.XtraRichEdit.RichEditDocumentServer.DocumentPropertiesChanged">
             <summary>
-                <para> </para>
+                <para>Occurs after one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties"/> has changed.
+</para>
             </summary>
 
 
@@ -403,6 +405,35 @@
             </param>
             <param name="saveOptions">
 		A <see cref="T:DevExpress.Pdf.PdfSaveOptions"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.ExportToPdf(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
+            <summary>
+                <para>Exports the content of the RichEditControl to the specified file path in PDF format, applying PDF-specific options.
+
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> which specifies the file name (including the full path) for the created PDF file.
+
+            </param>
+            <param name="pdfExportOptions">
+		A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object which specifies the PDF export options.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.RichEditDocumentServer.ExportToPdf(System.String)">
+            <summary>
+                <para>Exports the document content to the specified file path in PDF format.
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> which specifies the file name (including the full path) for the created PDF file.
 
             </param>
 
@@ -1059,6 +1090,63 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.HtmlImageSourceType">
+
+            <summary>
+                <para>List types of images that can be included in the HTML content of the Clipboard. 
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.HtmlImageSourceType.Embedded">
+            <summary>
+                <para>An embedded image.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.HtmlImageSourceType.Linked">
+            <summary>
+                <para>A linked image.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraRichEdit.ConflictNameAction">
+
+            <summary>
+                <para>Lists actions that can be performed when a bookmark in the document being inserted and in the target document have the same name.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.ConflictNameAction.Keep">
+            <summary>
+                <para>Keep bookmarks with the same name providing different internal names to distinguish them.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.ConflictNameAction.Rename">
+            <summary>
+                <para>Append the underscore and a number to the name of the bookmark being inserted if the target document already contains a bookmark with the same name.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.ConflictNameAction.Skip">
+            <summary>
+                <para>Do not create a bookmark if the target document contains a bookmark with the same name as the bookmark being inserted.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.Commands.UpdateTableOfContentsCommand">
 
             <summary>
@@ -1556,13 +1644,15 @@
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties">
 
             <summary>
-                <para> </para>
+                <para>Represents the table cell border properties accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.BottomPadding">
             <summary>
-                <para> </para>
+                <para>Gets the amount of space below the contents of the cell related to a current table cell border.
+</para>
             </summary>
             <value> </value>
 
@@ -1570,343 +1660,439 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.ColumnSpan">
             <summary>
-                <para> </para>
+                <para>Gets the number of columns that the cell related to a current table cell border spans.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer that is the number of columns or <b>null</b> if it's not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.Height">
             <summary>
-                <para> </para>
+                <para>Gets the height of a current table cell border.
+</para>
             </summary>
-            <value> </value>
+            <value>A System.Single that is the cell border's height or <b>null</b> if it's not specified.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.HeightType">
             <summary>
-                <para> </para>
+                <para>Gets the meaning of the height applied to a current table cell border.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="T:DevExpress.XtraRichEdit.API.Native.HeightType"/> enumeration values indicating the height type or <b>null</b> if it's not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.IsFirstInRow">
             <summary>
-                <para> </para>
+                <para>Gets whether the current table cell border is the first in a table row.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the table cell border is the first in the table row; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.IsFirstInTable">
             <summary>
-                <para> </para>
+                <para>Gets whether the current table cell border is the first in the entire table.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the current cell border is the first in the table; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.IsHidden">
             <summary>
-                <para> </para>
+                <para>Gets whether the current table cell border is hidden.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the cell border is hidden; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.IsLastInRow">
             <summary>
-                <para> </para>
+                <para>Gets whether the current table cell border is the last in a table row.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the current cell border is the last in a row; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.IsLastInTable">
             <summary>
-                <para> </para>
+                <para>Gets whether the current table cell border is the last in the entire table.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the current cell border is the last in a table; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.LeftPadding">
             <summary>
-                <para> </para>
+                <para>Gets the amount of space to the left of the contents of the cell related to the current table cell border.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value is the distance in points or <b>null</b> if the padding is not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.Length">
             <summary>
-                <para> </para>
+                <para>Gets the length of the current table cell border.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the cell border's length.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.Position">
             <summary>
-                <para> </para>
+                <para>Gets the position of the current table cell border within the document.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object indicating the current cell border's position.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.PreferredWidthType">
             <summary>
-                <para> </para>
+                <para>Gets how RichEditControl interprets the width specified for the cell related to the current table cell border.
+
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="T:DevExpress.XtraRichEdit.API.Native.WidthType"/> enumeration values indicating the width interpretation or <b>null</b> if it's not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.PrefferedWidth">
             <summary>
-                <para> </para>
+                <para>Gets the numerical value of the preferred width of a cell related to the current table cell border.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value indicating the table width or <b>null</b> if it's not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.RightPadding">
             <summary>
-                <para> </para>
+                <para>Gets the amount of space to the right of the contents of the cell related to the current table cell border.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value that is the distance in points or <b>null</b> if the padding is not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.TextDirection">
             <summary>
-                <para> </para>
+                <para>Gets the text direction within the cell related to the current table cell border.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <b>DevExpress.Office.TextDirection</b> enumeration values indicating the text direction or <b>null</b> if it's not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.TopPadding">
             <summary>
-                <para> </para>
+                <para>Gets the amount of space above the contents of the cell related to the current table cell border.
+</para>
             </summary>
-            <value> </value>
+            <value>A System.Single value that is the top padding or <b>null</b> if it's not set.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.VerticalAlignment">
             <summary>
-                <para> </para>
+                <para>Gets the vertical alignment within the cell related to the current table cell border.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="T:DevExpress.XtraRichEdit.API.Native.TableCellVerticalAlignment"/> enumeration values indicating the vertical alignment or <b>null</b> if it's not set.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties">
 
             <summary>
-                <para> </para>
+                <para>An interface implementing the section properties accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.DifferentFirstPage">
             <summary>
-                <para> </para>
+                <para>Gets whether the header and footer areas of the first page can be different from other pages in the section.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if different settings for the first page are enabled; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.FirstPageTray">
             <summary>
-                <para> </para>
+                <para>Gets the paper tray to use for the first page of a section.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer that is the code that identifies a specific printer tray to be used to print the first of this section of the document.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.LineNumbering">
             <summary>
-                <para> </para>
+                <para>Provides access to the line numbering parameters for the current section.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlySectionLineNumbering"/> object that provides access to the line numbering parameters.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.Margins">
             <summary>
-                <para> </para>
+                <para>Gets access to the page margins specified for the current section.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlySectionMargins"/> object that provides access to the page margins.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.OtherPagesTray">
             <summary>
-                <para> </para>
+                <para>Gets the paper tray to use for all pages except the first page of a section.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer that is the code that identifies a specific printer tray to be used to print all pages except the first page in this section of the document.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.Page">
             <summary>
-                <para> </para>
+                <para>Provides access to the page settings of a section.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlySectionPage"/> object that provides access to the page settings.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.PageNumbering">
             <summary>
-                <para> </para>
+                <para>Provides access to the page numbering parameters of the current section.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlySectionPageNumbering"/> object that provides access to the page numbering settings.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionsProperties.StartType">
             <summary>
-                <para> </para>
+                <para>Gets the type of a section break.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="SectionStartType"/> enumeration value that specifies the beginning of the next section.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase">
 
             <summary>
-                <para> </para>
+                <para>Base interface for all text properties accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.AllCaps">
             <summary>
-                <para> </para>
+                <para>Gets whether all characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object are capital letters.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if all characters are capitalized; otherwise, <b>false</b> .
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.BackColor">
             <summary>
-                <para> </para>
+                <para>Gets the background color of characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A System.Drawing.Color value representing the background color.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.DoubleFontSize">
             <summary>
-                <para> </para>
+                <para>Gets the font size of characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the font size.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.FontBold">
             <summary>
-                <para> </para>
+                <para>Gets whether the characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object are bold.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if characters are bold; otherwise, <b>false</b>.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.FontItalic">
             <summary>
-                <para> </para>
+                <para>Gets whether the characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object are italicized.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if characters are italicized; otherwise, <b>false</b>.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.FontName">
             <summary>
-                <para> </para>
+                <para>Gets the name of a font applied to characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the font name.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.ForeColor">
             <summary>
-                <para> </para>
+                <para>Gets the foreground color of characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Color"/> object that is the foreground color.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.Hidden">
             <summary>
-                <para> </para>
+                <para>Gets whether characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object are hidden.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the characters are hidden; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.Script">
             <summary>
-                <para> </para>
+                <para>Gets the type of script applied to characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="CharacterFormattingScript"/> enumeration values indicating the script type.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.StrikeoutColor">
             <summary>
-                <para> </para>
+                <para>Gets the color of the strikeout line.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Color"/> object that s the color of the strikeout line.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.StrikeoutType">
             <summary>
-                <para> </para>
+                <para>Gets the type of the strikeout applied to characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="StrikeoutType"/> enumeration values indicating the strikeout type. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.StrikeoutWordsOnly">
             <summary>
-                <para> </para>
+                <para>Gets whether all characters in the current  <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object are struck out.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the characters are struck out; otherwise, <b>false</b>.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.UnderlineColor">
             <summary>
-                <para> </para>
+                <para>Gets the color of the underline applied to characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A System.Drawing.Color object that is the underline color.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.UnderlineType">
             <summary>
-                <para> </para>
+                <para>Gets the type of the underline applied for characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="UnderlineType"/> enumeration values indicating the underline type.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.UnderlineWordsOnly">
             <summary>
-                <para> </para>
+                <para>Gets whether all characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object are underlined.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the characters are underlined; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextPropertiesBase.Visible">
             <summary>
-                <para> </para>
+                <para>Gets whether all characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object are visible.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the characters are visible; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -2013,19 +2199,23 @@
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCommentStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentCommentStart.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentStart"/> element.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentStart"/> object.
+</value>
 
 
         </member>
@@ -2070,36 +2260,46 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentCommentElement.Author">
             <summary>
-                <para> </para>
+                <para>Gets the comment's author.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the author's username.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentCommentElement.Date">
             <summary>
-                <para> </para>
+                <para>Gets the date and time when a comment was created.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DateTime"/> object that is the comment's creation time.
+
+</value>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCommentElement.GetIterator(System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Gives the iterator access to the content of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentElement"/> object.
+</para>
             </summary>
             <param name="visibleTextOnly">
-		 
+		<b>true</b>, if the iterator should visit only visible text; otherwise, <b>false</b>.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="DocumentIterator"/> object that is the iterator.
+</returns>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentCommentElement.Name">
             <summary>
-                <para> </para>
+                <para>Gets the comment's name.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is a comment's name.
+</value>
 
 
         </member>
@@ -2270,49 +2470,61 @@
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentText">
 
             <summary>
-                <para> </para>
+                <para>Document element that is a group of characters with the same format accessed by DocumentIterator
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentText.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentText.Length">
             <summary>
-                <para> </para>
+                <para>Gets the length of a text range.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the text range length.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentText.Text">
             <summary>
-                <para> </para>
+                <para>Gets the plain text contained in the range related to the DocumentText object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the DocumentText object's content.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentText.TextProperties">
             <summary>
-                <para> </para>
+                <para>Gets access to the text properties.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlyTextProperties"/> object that provides access to the text properties.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentText.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</value>
 
 
         </member>
@@ -3573,201 +3785,253 @@
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPageNumbering">
 
             <summary>
-                <para> </para>
+                <para>An interface implementing the page numbering setting of a document section accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPageNumbering.ContinueNumbering">
             <summary>
-                <para> </para>
+                <para>Gets whether the numbering should be continued from the previous section or should start from the beginning. 
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if numbering should be continued; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPageNumbering.FirstPageNumber">
             <summary>
-                <para> </para>
+                <para>Gets the initial number from which the page numbering starts.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the first page number.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPageNumbering.NumberingFormat">
             <summary>
-                <para> </para>
+                <para>Gets the format for displaying page numbers.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.NumberingFormat"/> enumeration member specifying the numbering format.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPage">
 
             <summary>
-                <para> </para>
+                <para>An interface implementing page settings of a document section accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPage.Height">
             <summary>
-                <para> </para>
+                <para>Gets the page height.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the page's height measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPage.Landscape">
             <summary>
-                <para> </para>
+                <para>Gets the value specifying whether the page's orientation is landscape.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if the page has landscape orientation; <b>false</b> if the page's orientation is portrait.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPage.PaperKind">
             <summary>
-                <para> </para>
+                <para>Gets a value specifying page's paper kind.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="T:System.Drawing.Printing.PaperKind"/> enumeration values.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionPage.Width">
             <summary>
-                <para> </para>
+                <para>Gets the page width.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value that specifies the page's width measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionMargins">
 
             <summary>
-                <para> </para>
+                <para>An interface implementing the margin options of a document section accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionMargins.Bottom">
             <summary>
-                <para> </para>
+                <para>Gets the bottom margin.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the bottom margin measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionMargins.FooterOffset">
             <summary>
-                <para> </para>
+                <para>Gets the distance between the footer and the bottom of the page.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the margin measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionMargins.HeaderOffset">
             <summary>
-                <para> </para>
+                <para>Gets the distance between a header and the top of the page.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the margin measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionMargins.Left">
             <summary>
-                <para> </para>
+                <para>Gets the left margin.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the left margin measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionMargins.Right">
             <summary>
-                <para> </para>
+                <para>Get the right margin.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the top margin measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionMargins.Top">
             <summary>
-                <para> </para>
+                <para>Gets the top margin.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the top margin measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionLineNumbering">
 
             <summary>
-                <para> </para>
+                <para>An interface implementing the line numbering properties of a document section accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionLineNumbering.CountBy">
             <summary>
-                <para> </para>
+                <para>Gets the line number increments to be displayed in the current document.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer by which the line number increments.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionLineNumbering.Distance">
             <summary>
-                <para> </para>
+                <para>Gets the distance between the line number and the start of the line.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value specifying the line numbering indent, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionLineNumbering.RestartType">
             <summary>
-                <para> </para>
+                <para>Gets when the line numbering should be reset to the line number specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionLineNumbering.Start"/> value.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="LineNumberingRestart"/> enumeration value, specifying the restart type (by default it is set to <see cref="F:DevExpress.XtraRichEdit.API.Native.LineNumberingRestart.NewPage"/>)
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlySectionLineNumbering.Start">
             <summary>
-                <para> </para>
+                <para>Gets the initial number from which the numbering starts.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the starting number.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphStyle">
 
             <summary>
-                <para> </para>
+                <para>An interface implementing the paragraph style properties accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphStyle.Name">
             <summary>
-                <para> </para>
+                <para>Gets the paragraph style name.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the name of a paragraph style.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphProperties">
 
             <summary>
-                <para> </para>
+                <para>Interface implementing the paragraph properties accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphProperties.ParagraphStyle">
             <summary>
-                <para> </para>
+                <para>Gets access to the paragraph style settings applied to the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlyParagraphStyle"/> object that provides access to the paragraph style settings.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor">
 
             <summary>
-                <para> </para>
+                <para>Interface implementing the <b>Visitor</b> pattern.
+</para>
             </summary>
 
         </member>
@@ -3785,190 +4049,228 @@
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd"/> element is encountered.
+</para>
             </summary>
             <param name="bookmarkEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentCommentStart)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentStart"/> element is encountered.
+</para>
             </summary>
             <param name="commentStart">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentStart"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentCommentEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentEnd"/> element is encountered.
+</para>
             </summary>
             <param name="commentEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentEnd"/> object the is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeStart)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeStart"/> element is encountered.
+</para>
             </summary>
             <param name="fieldCodeStart">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeStart"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeEnd"/> element is encountered.
+</para>
             </summary>
             <param name="fieldCodeEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeEnd"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentFieldResultEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldResultEnd"/> element is encountered.
+</para>
             </summary>
             <param name="fieldResultEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldResultEnd"/> object that is being encountered.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkStart)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkStart"/> element is encountered.
+</para>
             </summary>
             <param name="hyperlinkStart">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkStart"/> object that is being encountered.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkEnd"/> element is encountered.
+</para>
             </summary>
             <param name="hyperlinkEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkEnd"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture"/> element is encountered.
+</para>
             </summary>
             <param name="inlinePicture">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentParagraphEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphEnd"/> element is encountered.
+</para>
             </summary>
             <param name="paragraphEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphEnd"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart"/> element is encountered.
+</para>
             </summary>
             <param name="paragraphStart">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentPicture)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPicture"/> element is encountered.
+</para>
             </summary>
             <param name="picture">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPicture"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart"/> element is encountered.
+</para>
             </summary>
             <param name="rangePermissionStart">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd"/> is encountered.
+</para>
             </summary>
             <param name="rangePermissionEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentSectionStart)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart"/> element is encountered.
+</para>
             </summary>
             <param name="sectionStart">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentSectionEnd)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionEnd"/> element is encountered.
+</para>
             </summary>
             <param name="sectionEnd">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionEnd"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder"/> element is encountered.
+</para>
             </summary>
             <param name="cellBorder">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentTextBox)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTextBox"/> element is encountered.
+</para>
             </summary>
             <param name="textBox">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTextBox"/> object that is being visited.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor.Visit(DevExpress.XtraRichEdit.API.Native.DocumentText)">
             <summary>
-                <para> </para>
+                <para>Called when a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> element is encountered.
+</para>
             </summary>
             <param name="text">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object that is being visited.
+
             </param>
 
 
@@ -3983,118 +4285,147 @@
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentIterator.#ctor(DevExpress.XtraRichEdit.API.Native.SubDocument,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the DocumentIterator class for the specified document.
+</para>
             </summary>
             <param name="document">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> instance through which the document iterator will traverse. 
+
             </param>
             <param name="visibleTextOnly">
-		 
+		<b>true</b>, if the iterator should visit only visible text; otherwise, <b>false</b>.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentIterator.#ctor(DevExpress.XtraRichEdit.API.Native.SubDocument,System.Int32,System.Int32,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the DocumentIterator class for the specified part of the document.
+</para>
             </summary>
             <param name="document">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> instance through which the document iterator will traverse. 
+
             </param>
             <param name="start">
-		 
+		An Int object that is the DocumentIterator initial position.
+
             </param>
             <param name="length">
-		 
+		An Int object that is the range length the iterator needs to go through.
+
+
             </param>
             <param name="visibleTextOnly">
-		 
+		<b>true</b> if the iterator should visit only visible text; otherwise, <b>false</b>.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentIterator.#ctor(DevExpress.XtraRichEdit.API.Native.DocumentRange,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the DocumentIterator class for the specified document range.
+</para>
             </summary>
             <param name="range">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRange"/> object that is the range the iterator should traverse.
+
             </param>
             <param name="visibleTextOnly">
-		 
+		<b>true</b>, if the iterator should visit only visible text; otherwise, <b>false</b>.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentIterator.Current">
             <summary>
-                <para> </para>
+                <para>Gets the document element currently visited by the iterator.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="IDocumentElement"/> object that is the current document element.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentIterator.CurrentParagraphIndex">
             <summary>
-                <para> </para>
+                <para>Gets the index of a document paragraph currently visited by the iterator.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the paragraph index. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentIterator.CurrentParagraphProperties">
             <summary>
-                <para> </para>
+                <para>Gets access to the properties of a document paragraph currently visited by the iterator.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlyParagraphProperties"/> object that provides access to the current paragraph properties.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentIterator.CurrentSectionIndex">
             <summary>
-                <para> </para>
+                <para>Gets the index of a document section currently visited by the iterator.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the index of the current section.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentIterator.CurrentSectionProperties">
             <summary>
-                <para> </para>
+                <para>Gets access to the properties of a document section currently visited by the iterator.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlySectionsProperties"/> object that provides access to the current document section properties.
+</value>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentIterator.Dispose">
             <summary>
-                <para> </para>
+                <para>Disposes of the DocumentIterator object.
+</para>
             </summary>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentIterator.MoveNext">
             <summary>
-                <para> </para>
+                <para>Navigates to the next document element in the document model.
+</para>
             </summary>
-            <returns> </returns>
+            <returns><b>True</b>, on a successful navigation; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentIterator.MoveNext(DevExpress.XtraRichEdit.API.Native.DocumentElementType)">
             <summary>
-                <para> </para>
+                <para>Navigates to the next document element of the specific type.
+</para>
             </summary>
             <param name="elementType">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentElementType"/> enumeration value that sets the element type to traverse.
+
             </param>
-            <returns> </returns>
+            <returns><b>True</b>, on a successful navigation; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentIterator.Reset">
             <summary>
-                <para> </para>
+                <para>Rewinds the iterator to its initial position.
+</para>
             </summary>
 
 
@@ -7434,9 +7765,11 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditControlOptionsBase.ClipboardFormats">
             <summary>
-                <para> </para>
+                <para>Gets the data formats currently available on the clipboard.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DataFormatOptions"/> object.
+</value>
 
 
         </member>
@@ -7933,7 +8266,7 @@
         <member name="T:DevExpress.XtraRichEdit.API.Native.TabInfoCollection">
 
             <summary>
-                <para>Represents a collection of tab stops.
+                <para>A collection of tab stops.
 </para>
             </summary>
 
@@ -7949,7 +8282,7 @@
         <member name="T:DevExpress.XtraRichEdit.API.Native.TabInfo">
 
             <summary>
-                <para>Represents a tab stop.
+                <para>A tab stop.
 </para>
             </summary>
 
@@ -8097,198 +8430,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraRichEdit.Model.CustomPropertyValueType">
-
-            <summary>
-                <para>Lists allowed value types of the CustomPropertyValue.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Model.CustomPropertyValueType.Boolean">
-            <summary>
-                <para>Indicates the <see cref="T:System.Boolean"/> type.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Model.CustomPropertyValueType.DateTime">
-            <summary>
-                <para>Indicates the <see cref="T:System.DateTime"/> type.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Model.CustomPropertyValueType.Double">
-            <summary>
-                <para>Indicates the <see cref="T:System.Double"/> type.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Model.CustomPropertyValueType.Integer">
-            <summary>
-                <para>Indicates the <see cref="T:System.Integer"/> type.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Model.CustomPropertyValueType.None">
-            <summary>
-                <para>Indicates that the CustomPropertyValue instance is created without any values (its <see cref="P:DevExpress.XtraRichEdit.CustomPropertyValue.IsEmpty"/> property is <b>true</b>).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Model.CustomPropertyValueType.UnicodeString">
-            <summary>
-                <para>Indicates the <see cref="T:System.String"/> type.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraRichEdit.Model.CustomPropertyValue">
-
-            <summary>
-                <para>A structure that combines values of a custom property for all supported value types.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomPropertyValue.BooleanValue">
-            <summary>
-                <para>Gets or sets a boolean value of a custom document property.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Boolean"/> value. Default is <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomPropertyValue.DateTimeValue">
-            <summary>
-                <para>Gets or sets a DateTime value of a custom document property.
-</para>
-            </summary>
-            <value>A <see cref="T:System.DateTime"/> value. Default value is <b>DateTime.MinValue</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomPropertyValue.DoubleValue">
-            <summary>
-                <para>Gets or sets a Double value of a custom document property.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> value. Default value is <b>0.0</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomPropertyValue.Equals(System.Object)">
-            <summary>
-                <para>Determines whether or not the specified object is equal to the current CustomPropertyValue instance.
-
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current CustomPropertyValue instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomPropertyValue.Equals(DevExpress.XtraRichEdit.Model.CustomPropertyValue)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="value">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomPropertyValue.GetHashCode">
-            <summary>
-                <para>Serves as the default hash function.
-</para>
-            </summary>
-            <returns>An integer value, specifying the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomPropertyValue.IntegerValue">
-            <summary>
-                <para>Gets or sets an integer value of a custom document property.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Integer"/> value. Default is <b>0</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomPropertyValue.IsEmpty">
-            <summary>
-                <para>Indicates whether the current custom document property has any value.
-</para>
-            </summary>
-            <value><b>True</b> if the custom document property has any value; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomPropertyValue.ToString(System.IFormatProvider)">
-            <summary>
-                <para>Converts the object's value of the type which equals the <see cref="P:DevExpress.XtraRichEdit.CustomPropertyValue.Type"/> value to its equivalent string representation using the specified format information.
-</para>
-            </summary>
-            <param name="formatProvider">
-		An <see cref="T:System.IFormatProvider"/> object that supplies formatting information.
-
-            </param>
-            <returns>The string representation of the value of this instance and type as specified by provider.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomPropertyValue.ToString">
-            <summary>
-                <para>Converts the object's value of the type which equals the <see cref="P:DevExpress.XtraRichEdit.CustomPropertyValue.Type"/> value to its equivalent string representation using the format information specific to the current culture.
-</para>
-            </summary>
-            <returns>The string representation of the value of this instance and type formatted as the current culture specifies.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomPropertyValue.Type">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomPropertyValue.UnicodeStringValue">
-            <summary>
-                <para>Gets or sets a string value of a custom document property.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/>. Default is <b>null</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties">
 
             <summary>
@@ -8350,7 +8491,7 @@ Presentation, and so on.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Description">
             <summary>
-                <para>Gets or sets metadata recognized as explanation of the document's content (abstract, table of contents,
+                <para>Gets or sets metadata recognized as an explanation of the document's content (abstract, table of contents,
 reference to a graphical representation of content etc.).
 </para>
             </summary>
@@ -8372,7 +8513,8 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Keywords">
             <summary>
-                <para>Gets or sets metadata recognized as delimited set of keywords to support searching and indexing.
+                <para>Gets or sets metadata recognized as a delimited set of keywords to support searching and indexing.
+
 </para>
             </summary>
             <value>A string of text which is typically a list of terms that are not available elsewhere in the properties.
@@ -8471,78 +8613,97 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Add(System.String,System.String)">
             <summary>
-                <para> </para>
+                <para>Adds a new custom property with the specified name and value to the collection of custom properties for the document.
+</para>
             </summary>
             <param name="name">
-		 
+		A string that specifies the name of a custom property.
+
             </param>
             <param name="value">
-		 
+		A string that specifies the value of a custom property. 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Add(System.String,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Adds a new custom property with the specified name and value to the collection of custom properties for the document.
+</para>
             </summary>
             <param name="name">
-		 
+		A string that specifies the name of a custom property.
+
             </param>
             <param name="value">
-		 
+		An integer that specifies the value of a custom property. 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Add(System.String,System.Double)">
             <summary>
-                <para> </para>
+                <para>Adds a new custom property with the specified name and value to the collection of custom properties for the document.
+</para>
             </summary>
             <param name="name">
-		 
+		A string that specifies the name of a custom property.
+
             </param>
             <param name="value">
-		 
+		A <see cref="T:System.Double"/> value that specifies the value of a custom property. 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Add(System.String,System.DateTime)">
             <summary>
-                <para> </para>
+                <para>Adds a new custom property with the specified name and value to the collection of custom properties for the document.
+</para>
             </summary>
             <param name="name">
-		 
+		A string that specifies the name of a custom property.
+
             </param>
             <param name="value">
-		 
+		A <see cref="T:System.DateTime"/> value that specifies the value of a custom property. 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Add(System.String,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Adds a new custom property with the specified name and value to the collection of custom properties for the document.
+</para>
             </summary>
             <param name="name">
-		 
+		A string that specifies the name of a custom property.
+
             </param>
             <param name="value">
-		 
+		A boolean value that specifies the value of a custom property. 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Add(System.String,DevExpress.XtraRichEdit.API.Native.Bookmark)">
             <summary>
-                <para> </para>
+                <para>Adds a new custom property linked to the specified bookmark and value to the collection of custom properties for the document.
+</para>
             </summary>
             <param name="name">
-		 
+		A string that specifies the name of a custom property.
+
             </param>
             <param name="value">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.Bookmark"/> object that specifies the content that will be used to obtain the value of a custom property. 
+
+
             </param>
 
 
@@ -8567,12 +8728,15 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Item(System.String)">
             <summary>
-                <para> </para>
+                <para>Gets or sets the value of a custom property.
+</para>
             </summary>
             <param name="name">
-		 
+		A name of the custom property.
+
             </param>
-            <value> </value>
+            <value>An object that is the value of the property specified by its name.
+</value>
 
 
         </member>
@@ -8588,10 +8752,12 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties.Remove(System.String)">
             <summary>
-                <para> </para>
+                <para>Removes a custom property with the specified name from the current document.
+</para>
             </summary>
             <param name="name">
-		 
+		A name of the property.
+
             </param>
 
 
@@ -9038,54 +9204,69 @@ context.
         <member name="T:DevExpress.XtraRichEdit.DataFormatOptions">
 
             <summary>
-                <para> </para>
+                <para>Represents settings related to clipboard operations with different document formats.
+
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.DataFormatOptions.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the DataFormatOptions class with default settings.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.DataFormatOptions.AllowHtml">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the copied document range is available for pasting in HTML format.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>True</b>, to allow HTML format for the content copied to Clipboard; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.DataFormatOptions.AllowPlainText">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to place plain text data in the Clipboard.
+</para>
             </summary>
-            <value> </value>
+            <value><b>True</b> to allow pasting plain text content; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.DataFormatOptions.AllowRtf">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to place RTF content in the Clipboard.
+</para>
             </summary>
-            <value> </value>
+            <value><b>True</b> to allow pasting RTF content; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.DataFormatOptions.HtmlImagePath">
             <summary>
-                <para> </para>
+                <para>Gets or sets a path to the image files linked as pictures in the copied-and-pasted document content. 
+</para>
             </summary>
-            <value> </value>
+            <value>A string that is the valid file path.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.DataFormatOptions.HtmlImageSourceType">
             <summary>
-                <para> </para>
+                <para>Specifies how images are included in the HTML content of the Clipboard.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.HtmlImageSourceType"/> enumeration member that determines whether images are linked or embedded in HTML content.
+</value>
 
 
         </member>
@@ -9718,7 +9899,7 @@ context.
         </member>
         <member name="F:DevExpress.XtraRichEdit.PdfBookmarkDisplayMode.All">
             <summary>
-                <para>Specifies that all bookmarks contained in a document should be displayed in the <b>Bookmarks</b> panel.
+                <para>Specifies that all bookmarks for which there are references in a document should be displayed in the <b>Bookmarks</b> panel.
 </para>
             </summary>
 
@@ -12389,25 +12570,31 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.Import.DocDocumentImporterOptions.KeepBookmarksForRemovedRanges">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to keep bookmarks contained in the range deleted with the Track Changes option.
+</para>
             </summary>
-            <value> </value>
+            <value><b>True</b> to retain bookmarks in deleted ranges; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.Import.DocDocumentImporterOptions.KeepCommentsForRemovedRanges">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to keep the comment applied to the deleted ranges.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to leave the comments; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.Import.DocDocumentImporterOptions.KeepPermissionsForRemovedRanges">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to keep the permissions applied to the deleted ranges.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to leave the permissions ; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -14278,9 +14465,11 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutColumn.ParagraphFrames">
             <summary>
-                <para> </para>
+                <para>Provides access to the paragraph frames located in the column.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ParagraphFrameBoxCollection"/> object that is a collection of the column paragraph frames.
+</value>
 
 
         </member>
@@ -15379,9 +15568,11 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.DocumentPropertiesAutoUpdate">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to update the document properties automatically.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to update the properties automatically ; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -15441,6 +15632,16 @@ context.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraRichEdit.RichEditBaseValueSource"/> enumeration member, specifying the provider of the font color settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.RichEditBehaviorOptions.KeepTextHighlightingOnClearFormatting">
+            <summary>
+                <para>Gets or sets whether the <see cref="T:DevExpress.XtraRichEdit.Commands.ClearFormattingCommand"/> removes text highlighting.
+</para>
+            </summary>
+            <value><b>True</b> to retain text highlighting; otherwise, <b>false</b>.
 </value>
 
 
@@ -15941,9 +16142,13 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.BookmarkOptions.CaseSensitiveNames">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether creation of bookmarks with the same name but a different case is allowed.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>True</b>, to allow creating bookmarks with the same name but a different case; otherwise, <b>false</b>.
+
+</value>
 
 
         </member>
@@ -15959,9 +16164,12 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.BookmarkOptions.ConflictNameResolution">
             <summary>
-                <para> </para>
+                <para>Specifies an action that will be performed after inserting a document range if that range contains a bookmark with the same name as one in the current document.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.ConflictNameAction"/> enumeration member that identifies an action.
+</value>
 
 
         </member>
@@ -16117,9 +16325,11 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.IRichEditControl.GetContentOffset">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
-            <returns> </returns>
+            <returns> 
+</returns>
 
 
         </member>
@@ -16329,14 +16539,15 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowDocumentPropertiesForm">
             <summary>
-                <para> </para>
+                <para>For internal use. Invokes the <b>Document Properties</b> form.
+</para>
             </summary>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowDocumentProtectionQueryNewPasswordForm(DevExpress.XtraRichEdit.Commands.ProtectionInfo,DevExpress.XtraRichEdit.PasswordFormCallback)">
             <summary>
-                <para>Invokes the <b>Document Protection</b> form.
+                <para>for internal use. Invokes the <b>Document Protection</b> form.
 </para>
             </summary>
             <param name="passwordInfo">
@@ -16352,15 +16563,15 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowDocumentProtectionQueryPasswordForm(DevExpress.XtraRichEdit.Commands.ProtectionInfo,DevExpress.XtraRichEdit.PasswordFormCallback)">
             <summary>
-                <para>Invokes The <b>Unprotect Document</b> form.
+                <para>For internal use.Invokes The <b>Unprotect Document</b> form.
 </para>
             </summary>
             <param name="passwordInfo">
-		 
+		  
 
             </param>
             <param name="callback">
-		 
+		  
 
             </param>
 
@@ -16610,20 +16821,35 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowParagraphForm(DevExpress.XtraRichEdit.Model.MergedParagraphProperties,DevExpress.XtraRichEdit.ShowParagraphFormCallback,System.Object)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="paragraphProperties">
-		  
-
+		 
             </param>
             <param name="callback">
-		  
-
+		 
             </param>
             <param name="callbackData">
-		  
+		 
+            </param>
 
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowParagraphForm(DevExpress.XtraRichEdit.Model.MergedParagraphProperties,DevExpress.XtraRichEdit.ShowParagraphFormCallback,System.Object,DevExpress.XtraRichEdit.TabsClickCallback)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="paragraphProperties">
+		 
+            </param>
+            <param name="callback">
+		 
+            </param>
+            <param name="callbackData">
+		 
+            </param>
+            <param name="tabsClickCallback">
+		 
             </param>
 
 
@@ -16806,26 +17032,43 @@ context.
 
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowTabsForm(DevExpress.XtraRichEdit.Model.TabFormattingInfo,System.Int32,DevExpress.XtraRichEdit.ShowTabsFormCallback,System.Object)">
+        <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowTabsForm(DevExpress.XtraRichEdit.Model.TabFormattingInfo,System.Int32,DevExpress.XtraRichEdit.ShowTabsFormCallback,System.Object,System.Boolean)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="tabInfo">
-		  
-
+		 
             </param>
             <param name="defaultTabWidth">
-		  
-
+		 
             </param>
             <param name="callback">
-		  
-
+		 
             </param>
             <param name="callbackData">
 		 
+            </param>
+            <param name="hideDefaultTabWidth">
+		 
+            </param>
 
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.IRichEditControl.ShowTabsForm(DevExpress.XtraRichEdit.Model.TabFormattingInfo,System.Int32,DevExpress.XtraRichEdit.ShowTabsFormCallback,System.Object)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="tabInfo">
+		 
+            </param>
+            <param name="defaultTabWidth">
+		 
+            </param>
+            <param name="callback">
+		 
+            </param>
+            <param name="callbackData">
+		 
             </param>
 
 
@@ -17190,6 +17433,57 @@ context.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox">
+
+            <summary>
+                <para>Layout element that relates to a text paragraph frame.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox.Accept(DevExpress.XtraRichEdit.API.Layout.LayoutVisitor)">
+            <summary>
+                <para>Accepts a visitor.
+</para>
+            </summary>
+            <param name="visitor">
+		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor"/> object that is the visitor.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox.BackColor">
+            <summary>
+                <para>Gets the background color of the text paragraph frame box.
+</para>
+            </summary>
+            <value>A <b>System.Drawing.Color</b> object that is the background color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox.Borders">
+            <summary>
+                <para>Gets the borders of the text paragraph frame box. 
+</para>
+            </summary>
+            <value>A <see cref="Borders"/> object that is the borders of the frame box.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox.Type">
+            <summary>
+                <para>Gets the type of the <see cref="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox"/> object.
+</para>
+            </summary>
+            <value>One of the <see cref="LayoutType"/> enumeration values that corresponds to the ParagraphFrameBox object.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.Commands.RichEditMenuItemSimpleCommand">
 
             <summary>
@@ -17421,9 +17715,11 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.Export.DocumentExporterOptions.ExportedDocumentProperties">
             <summary>
-                <para> </para>
+                <para>Gets or sets the document properties being exported.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="DocumentPropertyNames"/> enumeration values indicating what document properties are specified.
+</value>
 
 
         </member>
@@ -18812,10 +19108,12 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawCommentsArea(DevExpress.XtraRichEdit.API.Layout.LayoutCommentsArea)">
             <summary>
-                <para> </para>
+                <para>Draws the LayoutCommentArea element. Override it in a class descendant to customize the element appearance. 
+</para>
             </summary>
             <param name="commentsArea">
-		 
+		The element to draw.
+
             </param>
 
 
@@ -18870,10 +19168,12 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawFrame(DevExpress.XtraRichEdit.API.Layout.LayoutFrame)">
             <summary>
-                <para> </para>
+                <para>Draws the LayoutFrame element. Override it in a class descendant to customize the element appearance. 
+</para>
             </summary>
             <param name="frame">
-		 
+		The element to draw.
+
             </param>
 
 
@@ -19024,10 +19324,12 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawParagraphFrame(DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox)">
             <summary>
-                <para> </para>
+                <para>Draws the ParagraphFrameBox element. Override it in a class descendant to customize the element appearance. 
+</para>
             </summary>
             <param name="paragraphFrame">
-		 
+		The element to draw.
+
             </param>
 
 
@@ -19819,6 +20121,66 @@ context.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.API.Layout.LayoutFrame">
+
+            <summary>
+                <para>Represents a frame object in the document.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.LayoutFrame.Accept(DevExpress.XtraRichEdit.API.Layout.LayoutVisitor)">
+            <summary>
+                <para>Accepts a visitor.
+</para>
+            </summary>
+            <param name="visitor">
+		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor"/> object  that is the visitor.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutFrame.ParagraphFrames">
+            <summary>
+                <para>Provides access to the collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox"/> objects.
+</para>
+            </summary>
+            <value>A <see cref="ParagraphFrameBoxCollection"/> object that is the paragraph frame box collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutFrame.Rows">
+            <summary>
+                <para>Provides access to the collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutRow"/> objects.
+</para>
+            </summary>
+            <value>A <see cref="LayoutRowCollection"/> object that is the layout row collection. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutFrame.Tables">
+            <summary>
+                <para>Provides access to the collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutTable"/> objects.
+</para>
+            </summary>
+            <value>A <see cref="LayoutTableCollection"/> object that is the layout table collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutFrame.Type">
+            <summary>
+                <para>Gets the type of the LayoutFrame object.
+</para>
+            </summary>
+            <value>One of the <see cref="LayoutType"/> enumeration values corresponding to the object.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.Commands.IncrementIndentCommand">
 
             <summary>
@@ -20094,44 +20456,171 @@ context.
 
 
         </member>
-        <member name="T:DevExpress.XtraRichEdit.Import.DocumentImporterOptions">
+        <member name="T:DevExpress.XtraRichEdit.Export.DocumentPropertyNames">
 
             <summary>
-                <para>Represents the base class for options used for loading (importing) the document in different formats.
+                <para>Lists document properties used to hold document metadata.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.Import.DocumentImporterOptions.CopyFrom(DevExpress.Office.Import.IImporterOptions)">
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.All">
             <summary>
-                <para>Copies the appropriate properties of the specified object into the current instance of the <b>DocumentImporterOptions</b> class.
+                <para>All document properties (built-in and custom).
 </para>
             </summary>
-            <param name="value">
-		A <see cref="T:DevExpress.Office.Import.IImporterOptions"/> class instance, representing the source object for copying.
-
-            </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraRichEdit.Import.DocumentImporterOptions.SourceUri">
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.BuiltinProperties">
             <summary>
-                <para>Gets or sets the base URI for the external content of the document.
-
+                <para>Built-in (core) properties contained in the <see cref="T:DevExpress.Spreadsheet.DocumentProperties"/> class. 
 </para>
             </summary>
-            <value>A string representing a base URI used for constructing an actual URI.
-</value>
 
 
         </member>
-        <member name="P:DevExpress.XtraRichEdit.Import.DocumentImporterOptions.UpdateField">
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Category">
             <summary>
-                <para>Provides access to options that specify whether a certain document field is updated during import.
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Category"/> property.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraRichEdit.Import.UpdateFieldOptions"/> object containing update options for various fields.
-</value>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.ContentStatus">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.ContentStatus"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.ContentType">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.ContentType"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Created">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Created"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Creator">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Creator"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.CustomProperties">
+            <summary>
+                <para>Custom properties contained in the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Description">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Description"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Identifier">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Identifier"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Keywords">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Keywords"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Language">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Language"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.LastModifiedBy">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.LastModifiedBy"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.LastPrinted">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.LastPrinted"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Modified">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Modified"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.None">
+            <summary>
+                <para>Undefined name.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Revision">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Revision"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Subject">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Subject"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Title">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Title"/> property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.DocumentPropertyNames.Version">
+            <summary>
+                <para>The <see cref="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.Version"/> property.
+</para>
+            </summary>
 
 
         </member>
@@ -20730,7 +21219,18 @@ context.
                 <para> Enables you to add the '\par' tag to the end of RTF content.
 </para>
             </summary>
-            <value>An <see cref="T:DevExpress.XtraRichEdit.Export.Rtf.ExportFinalParagraphMark"/> enumeration member. Default is <see cref="F:DevExpress.XtraRichEdit.Export.Rtf.ExportFinalParagraphMark.Never"/>.
+            <value>An <see cref="T:DevExpress.XtraRichEdit.Export.Rtf.ExportFinalParagraphMark"/> enumeration member.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Export.RtfDocumentExporterOptions.ExportTheme">
+            <summary>
+                <para>Gets or sets whether the color theme information is included in the exported RTF file. 
+
+</para>
+            </summary>
+            <value><b>True</b> to include color theme information in RTF; otherwise, <b>false</b>.
 </value>
 
 
@@ -20772,6 +21272,17 @@ context.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.Export.RtfDocumentExporterCompatibilityOptions.BackColorExportMode">
+            <summary>
+                <para>Specifies tags used to represent the BackColor attribute in a resulting RTF document.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.Export.RtfRunBackColorExportMode"/> enumeration value.
+</value>
+
+
+        </member>
         <member name="M:DevExpress.XtraRichEdit.Export.RtfDocumentExporterCompatibilityOptions.CopyFrom(DevExpress.XtraRichEdit.Export.RtfDocumentExporterCompatibilityOptions)">
             <summary>
                 <para>Copies the appropriate properties of the specified object into the current instance of the <b>RtfDocumentExporterCompatibilityOptions</b> class.
@@ -20792,80 +21303,6 @@ context.
             </summary>
             <value><b>true</b> to duplicate objects as metafiles when saving; otherwise, <b>false</b>. Default value is <b>false</b>.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraRichEdit.Model.CustomProperty">
-
-            <summary>
-                <para>Encapsulates a custom property value and its attributes.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomProperty.#ctor(DevExpress.XtraRichEdit.Model.CustomPropertyValue,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="value">
-		 
-            </param>
-            <param name="linkTarget">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomProperty.#ctor(DevExpress.XtraRichEdit.Model.CustomPropertyValue)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="value">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomProperty.Equals(System.Object)">
-            <summary>
-                <para>Determines whether or not the specified object is equal to the current CustomProperty instance.
-
-</para>
-            </summary>
-            <param name="obj">
-		The object to compare with the current object.
-
-            </param>
-            <returns><b>true</b> if the specified object is equal to the current CustomProperty instance; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Model.CustomProperty.GetHashCode">
-            <summary>
-                <para>Serves as the default hash function.
-</para>
-            </summary>
-            <returns>An integer value, specifying the hash code for the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomProperty.LinkTarget">
-            <summary>
-                <para>Gets or sets the name of the bookmark in the document form which the custom property value should be obtained.
-</para>
-            </summary>
-            <value>A string that is the bookmark's name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Model.CustomProperty.Value">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -21421,6 +21858,17 @@ context.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.RichEditControlCompatibility.KeepLastParagraphOnDeletion">
+            <summary>
+                <para>A static property that enables you to retain the behavior when the last paragraph cannot be deleted.
+</para>
+            </summary>
+            <value><b>True</b>, to retain the former behavior and not remove the last paragraph when the last range is deleted; otherwise, <b>false</b>.
+
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditControlCompatibility.UsePrintingSystemPdfExport">
             <summary>
                 <para>Allows you to use an obsolete PDF export implemented in earlier versions.
@@ -21490,25 +21938,33 @@ context.
         </member>
         <member name="M:DevExpress.XtraRichEdit.BeforeExportEventArgs.#ctor(DevExpress.XtraRichEdit.DocumentFormat,DevExpress.Office.Export.IExporterOptions,DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties)">
             <summary>
-                <para> </para>
+                <para>Creates a new <b>BeforeExportEventArgs</b> object with the specified settings.
+</para>
             </summary>
             <param name="documentFormat">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.DocumentFormat"/> enumeration value that specifies the format of the document being exported.
+
+
             </param>
             <param name="options">
-		 
+		An <see cref="T:DevExpress.Office.Export.IExporterOptions"/> object that contains export options.
+
             </param>
             <param name="customProperties">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> object that stores a document's custom properties.
+
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.BeforeExportEventArgs.CustomProperties">
             <summary>
-                <para> </para>
+                <para>Provides access to the document's custom properties.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> object that stores document's custom properties.
+</value>
 
 
         </member>
@@ -21668,7 +22124,7 @@ context.
                 <para>Gets or sets a specific data member in a data source that contains several tables or members.
 </para>
             </summary>
-            <value>A string value representing the data source member.
+            <value>A string that identifies a member in the data source.
 </value>
 
 
@@ -25407,6 +25863,15 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontHighlightColor">
+            <summary>
+                <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFontColorCommand"/> ID.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeFontName">
             <summary>
                 <para><see cref="T:DevExpress.XtraRichEdit.Commands.ChangeFontNameCommand"/> ID
@@ -25521,6 +25986,15 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSectionPaperKindPlaceholder">
             <summary>
                 <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ChangeSelectionShading">
+            <summary>
+                <para>ChangeSelectionShadingCommand ID.
 </para>
             </summary>
             <returns> </returns>
@@ -27755,6 +28229,15 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowBorderShadingForm">
+            <summary>
+                <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand"/> ID.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.ShowColumnsSetupForm">
             <summary>
                 <para><see cref="T:DevExpress.XtraRichEdit.Commands.ShowColumnsSetupFormCommand"/> ID.
@@ -29617,30 +30100,41 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.Commands.ShowTabsFormCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
+        <member name="M:DevExpress.XtraRichEdit.Commands.ShowTabsFormCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl,System.Boolean)">
             <summary>
-                <para>Initializes a new instance of the ShowTabsFormCommand class with the specified owner.
-</para>
+                <para> </para>
             </summary>
             <param name="control">
-		An object implementing the <b>DevExpress.XtraRichEdit.IRichEditControl</b> interface, specifying the command owner.
-
+		 
+            </param>
+            <param name="hideDefaultTabWidth">
+		 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.Commands.ShowTabsFormCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl,DevExpress.XtraRichEdit.Internal.IFormOwner)">
+        <member name="M:DevExpress.XtraRichEdit.Commands.ShowTabsFormCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl,DevExpress.XtraRichEdit.Internal.IFormOwner,System.Boolean)">
             <summary>
-                <para>Initializes a new instance of the ShowTabsFormCommand class with the specified owner.
-</para>
+                <para> </para>
             </summary>
             <param name="control">
-		An object implementing the <b>DevExpress.XtraRichEdit.IRichEditControl</b> interface, specifying the command owner.
-
+		 
             </param>
             <param name="tabFormOwner">
-		A form that owns the Tabs form.
+		 
+            </param>
+            <param name="hideDefaultTabWidth">
+		 
+            </param>
 
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.Commands.ShowTabsFormCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="control">
+		 
             </param>
 
 
@@ -34224,9 +34718,11 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Layout.HighlightAreaBox.Color">
             <summary>
-                <para> </para>
+                <para>Gets the color of the highlight applied to the layout element.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>System.Drawing.Color</b> object that is the highlight color.
+</value>
 
 
         </member>
@@ -34695,9 +35191,11 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Layout.LayoutFloatingObject.GetRotationMatrix">
             <summary>
-                <para> </para>
+                <para>Gets the geometric transform for a <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutFloatingObject"/> element.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <b>System.Drawing.2D.Matrix</b> object representing the geometric transform.
+</returns>
 
 
         </member>
@@ -34877,17 +35375,21 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Layout.LayoutTextBox.GetRotationMatrix">
             <summary>
-                <para> </para>
+                <para>Gets the geometric transform for a <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutTextBox"/> element.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <b>System.Drawing.2D.Matrix</b> object representing the geometric transform.
+</returns>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutTextBox.ParagraphFrames">
             <summary>
-                <para> </para>
+                <para>Provides access to the paragraph frames located in the text box.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ParagraphFrameBoxCollection"/> object that is a collection of the text box paragraph frames.
+</value>
 
 
         </member>
@@ -35465,7 +35967,8 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Layout.LayoutType.CommentsArea">
             <summary>
-                <para> </para>
+                <para> The type of layout element of the LayoutCommentsArea class.  
+</para>
             </summary>
 
 
@@ -35528,7 +36031,8 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Layout.LayoutType.Frame">
             <summary>
-                <para> </para>
+                <para> The type of layout element of the <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutFrame"/> class.
+</para>
             </summary>
 
 
@@ -35639,7 +36143,8 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Layout.LayoutType.ParagraphFrameBox">
             <summary>
-                <para> </para>
+                <para>The type of layout element of the <see cref="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox"/> class related to the text paragraph frame.
+</para>
             </summary>
 
 
@@ -37262,9 +37767,11 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.Document.CustomProperties">
             <summary>
-                <para> </para>
+                <para>Provides access to a collection of the document's custom properties.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> object that stores document's custom properties.
+</value>
 
 
         </member>
@@ -37331,9 +37838,11 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.Document.DocumentProperties">
             <summary>
-                <para> </para>
+                <para>Provides access to the collection of document's core properties.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties"/> object that stores the document's core properties.
+</value>
 
 
         </member>
@@ -38335,34 +38844,44 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.RichEditHitTestResult">
 
             <summary>
-                <para> </para>
+                <para>Represents the return value from a hit test.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditHitTestResult.LayoutElement">
             <summary>
-                <para> </para>
+                <para>Gets the type of the layout element  located under the test point.
+</para>
             </summary>
-            <value> </value>
+            <value>An <see cref="LayoutElement"/> object indicating the layout element.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditHitTestResult.Next">
             <summary>
-                <para> </para>
+                <para>Provides the hit information about the element that is positioned next to the current hit element.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="RichEditHitTestResult"/> object containing information about the next element.
+</value>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.RichEditHitTestResult.Reverse(DevExpress.XtraRichEdit.RichEditHitTestResult)">
             <summary>
-                <para> </para>
+                <para>Reverses the order of the elements in the hit test result.
+</para>
             </summary>
             <param name="originalResult">
-		 
+		An original <see cref="T:DevExpress.XtraRichEdit.RichEditHitTestResult"/> object.
+
             </param>
-            <returns> </returns>
+            <returns>A new <see cref="T:DevExpress.XtraRichEdit.RichEditHitTestResult"/> object that is the hit test result with a reversed order of elements.
+
+</returns>
 
 
         </member>
@@ -38407,36 +38926,44 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentTextBox">
 
             <summary>
-                <para> </para>
+                <para>Document element that is a text box accessed by the DocumentIterator.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentTextBox.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentTextBox.GetIterator(System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Gives the iterator access to the content of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTextBox"/> object.
+</para>
             </summary>
             <param name="visibleTextOnly">
-		 
+		<b>true</b>, if the iterator should visit only visible text; otherwise, <b>false</b>.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="DocumentIterator"/> object that is the iterator.
+</returns>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentTextBox.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTextBox"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTextBox"/> object.
+</value>
 
 
         </member>
@@ -38647,6 +39174,16 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.KeepLineSpacing">
+            <summary>
+                <para>Gets or sets whether the <see cref="P:DevExpress.XtraRichEdit.API.Native.Paragraph.LineSpacing"/> setting is exported in HTML.
+</para>
+            </summary>
+            <value><b>True</b>, to export line spacing setting; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.OverrideImageResolution">
             <summary>
                 <para>Gets or sets the graphics resolution used to save images when a document is exported in HTML format.
@@ -38709,27 +39246,33 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder.TableCellBorderProperties">
             <summary>
-                <para> </para>
+                <para>Provides access to properties for document table cell borders.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlyTableCellBorderProperties"/> object that provides access to the current table cell border properties.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentTableCellBorder"/> object.
+</value>
 
 
         </member>
@@ -38923,6 +39466,24 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.CopyPasteOptions.PasteUnstyledRtfMode">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.CopyPasteOptions.TabInsertOptions">
+            <summary>
+                <para>Gets or sets how to set tab stops in the inserted paragraph.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraRichEdit.API.Native.InsertOptions"/> enumeration member that specifies whose tab arrangement should be used for the inserted paragraph.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.SpellCheckerOptions">
 
             <summary>
@@ -38963,20 +39524,25 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.HitTestSearchOption">
 
             <summary>
-                <para> </para>
+                <para>Lists the levels of the accuracy.
+
+
+</para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.HitTestSearchOption.Exact">
             <summary>
-                <para> </para>
+                <para>Identifies the type of the visual elements located exactly under the test point.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.HitTestSearchOption.Nearest">
             <summary>
-                <para> </para>
+                <para>Identifies the type of the visual elements located near the test point.
+</para>
             </summary>
 
 
@@ -39186,19 +39752,64 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentSectionEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentSectionEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionEnd"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionEnd"/> object.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraRichEdit.Import.DocumentImporterOptions">
+
+            <summary>
+                <para>Represents the base class for options used for loading (importing) the document in different formats.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.Import.DocumentImporterOptions.CopyFrom(DevExpress.Office.Import.IImporterOptions)">
+            <summary>
+                <para>Copies the appropriate properties of the specified object into the current instance of the <b>DocumentImporterOptions</b> class.
+</para>
+            </summary>
+            <param name="value">
+		A <see cref="T:DevExpress.Office.Import.IImporterOptions"/> class instance, representing the source object for copying.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Import.DocumentImporterOptions.SourceUri">
+            <summary>
+                <para>Gets or sets the base URI for the external content of the document.
+
+</para>
+            </summary>
+            <value>A string representing a base URI used for constructing an actual URI.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Import.DocumentImporterOptions.UpdateField">
+            <summary>
+                <para>Provides access to options that specify whether a certain document field is updated during import.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.Import.UpdateFieldOptions"/> object containing update options for various fields.
+</value>
 
 
         </member>
@@ -39275,35 +39886,43 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart.Group">
             <summary>
-                <para> </para>
+                <para>Gets the name of a group of users for which the editing permission is set.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the group's name.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart"/> object.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionStart.UserName">
             <summary>
-                <para> </para>
+                <para>Gets the name of a user for which the editing permission is set.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the user's name.
+</value>
 
 
         </member>
@@ -39401,35 +40020,45 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd.Group">
             <summary>
-                <para> </para>
+                <para>Gets the name of a group of users for whom the editing permission is set.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the user group name.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd"/> object.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentRangePermissionEnd.UserName">
             <summary>
-                <para> </para>
+                <para>Gets the name of a user for whom the editing permission is set.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the user's name.
+</value>
 
 
         </member>
@@ -39537,27 +40166,33 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentPicture.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentPicture.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPicture"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPicture"/> object.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentPicture.Uri">
             <summary>
-                <para> </para>
+                <para>Gets the URI of a picture.
+</para>
             </summary>
-            <value> </value>
+            <value>A string that is the URI of the picture. 
+</value>
 
 
         </member>
@@ -39706,27 +40341,33 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart.ParagraphProperties">
             <summary>
-                <para> </para>
+                <para>Gets access to the document paragraph properties.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlyParagraphProperties"/> object that provides access to the current document paragraph properties.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphStart"/> object.
+</value>
 
 
         </member>
@@ -40475,35 +41116,43 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture.ActualSize">
             <summary>
-                <para> </para>
+                <para>Gets the size of an inline picture.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Size"/> object that is the picture's size.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture"/> object.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentInlinePicture.Uri">
             <summary>
-                <para> </para>
+                <para>Gets the URI of an inline picture.
+</para>
             </summary>
-            <value> </value>
+            <value>A String specifying the image source URI.
+</value>
 
 
         </member>
@@ -40518,127 +41167,160 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase">
 
             <summary>
-                <para> </para>
+                <para>Base interface for all paragraph properties accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.Alignment">
             <summary>
-                <para> </para>
+                <para>Gets the text alignment within the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphAlignment"/> enumeration values indicating the text alignment.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.BackColor">
             <summary>
-                <para> </para>
+                <para>Gets the background color of the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Drawing.Color"/> value representing the background color.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.FirstLineIndent">
             <summary>
-                <para> </para>
+                <para>Gets the indent for the first line in the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int value indicating the indent for the first line, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.FirstLineIndentType">
             <summary>
-                <para> </para>
+                <para>Gets whether and how the first line in the current paragraph is indented.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="T:DevExpress.XtraRichEdit.API.Native.ParagraphFirstLineIndent"/> enumeration values indicating the first line's indent.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.KeepLinesTogether">
             <summary>
-                <para> </para>
+                <para>Gets whether to prevent all page breaks that interrupt the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, the paragraph lines are kept together; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.KeepWithNext">
             <summary>
-                <para> </para>
+                <para>Gets whether a break may occur between the current paragraph and the next paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if there is no break between this paragraph and the next paragraph; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.LeftIndent">
             <summary>
-                <para> </para>
+                <para>Gets the left indent for the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int value indicating the left indent, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.LineSpacing">
             <summary>
-                <para> </para>
+                <para>Gets the line spacing value of the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.Single"/> value representing line spacing, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.LineSpacingType">
             <summary>
-                <para> </para>
+                <para> Gets the spacing between lines in the current paragraph.  
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ParagraphLineSpacing"/> enumeration value representing the line spacing type. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.ListLevel">
             <summary>
-                <para> </para>
+                <para>Gets list level applied to the numbering list in the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer that is the list level of the current paragraph.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.NumberingListIndex">
             <summary>
-                <para> </para>
+                <para>Gets the index of the list applied to the current paragraph style.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer that is the index of a list to which the paragraph formatted with the current style belongs.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.OutlineLevel">
             <summary>
-                <para> </para>
+                <para>Gets the outline level of the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int value that is the level number.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.RightIndent">
             <summary>
-                <para> </para>
+                <para>Gets the right indent for the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int value indicating the right indent, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.SpacingAfter">
             <summary>
-                <para> </para>
+                <para>Gets the spacing after the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int value representing the spacing after the paragraph, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyParagraphPropertiesBase.SpacingBefore">
             <summary>
-                <para> </para>
+                <para>Gets the spacing before the current paragraph.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int value indicating the spacing before the paragraph, measured in <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> units.
+</value>
 
 
         </member>
@@ -40701,19 +41383,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkStart.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkStart"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkStart"/> object.
+</value>
 
 
         </member>
@@ -40790,19 +41476,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkEnd"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentHyperlinkEnd"/> object.
+</value>
 
 
         </member>
@@ -40924,41 +41614,51 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentHyperlink.Anchor">
             <summary>
-                <para> </para>
+                <para>Gets the name of a bookmark which will be the target of the DocumentHyperlink object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the bookmark's name.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentHyperlink.NavigateUri">
             <summary>
-                <para> </para>
+                <para>Gets a URI to navigate to when the hyperlink is activated. 
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is a URI.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentHyperlink.Target">
             <summary>
-                <para> </para>
+                <para>Gets the target window or frame in which to display the web page content when the hyperlink is clicked.
+</para>
             </summary>
-            <value> </value>
+            <value>A string, representing a predefined name of the target window (frame). 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentHyperlink.ToolTip">
             <summary>
-                <para> </para>
+                <para>Gets a text for the tooltip displayed when the mouse hovers over a hyperlink.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the tooltip text.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentHyperlink.Visited">
             <summary>
-                <para> </para>
+                <para>Gets whether the location referred to by a DocumentHyperlink object has been recently visited.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the hyperlink URI has been recently opened in the browser; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -41040,19 +41740,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentFieldResultEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentFieldResultEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldResultEnd"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldResultEnd"/> object.
+</value>
 
 
         </member>
@@ -41116,19 +41820,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeStart.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeStart"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeStart"/> object.
+</value>
 
 
         </member>
@@ -41338,19 +42046,24 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeEnd"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentFieldCodeEnd"/> object.
+
+</value>
 
 
         </member>
@@ -41480,27 +42193,33 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentElementBase.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentElementBase.Position">
             <summary>
-                <para> </para>
+                <para>Gets the position of a document element within a document.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Int32"/> object that is the element's position.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentElementBase.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a document element.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="DocumentElementType"/> enumeration values that corresponds to the specified element.
+</value>
 
 
         </member>
@@ -41528,6 +42247,50 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.Export.RtfRunBackColorExportMode">
+
+            <summary>
+                <para>Lists conventions used for exporting the background color to RTF format.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.RtfRunBackColorExportMode.Both">
+            <summary>
+                <para>Exports background color using both \chcbpat and \highlight tags (both tags will have the same color value).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.RtfRunBackColorExportMode.Chcbpat">
+            <summary>
+                <para>Exports the background color as the <b>\chcbpatN</b> tag, where N is the fill color, specified as an index into the document's color table.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.RtfRunBackColorExportMode.Default">
+            <summary>
+                <para>Exports Highlight and Shading characteristics of the background color separately - as the <b>\highlightN</b> the <b>\chcbpatN</b> tag where N is the fill color, specified as an index into the document's color table.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.Export.RtfRunBackColorExportMode.Highlight">
+            <summary>
+                <para>Exports the background color as the <b>\highlightN</b> tag where N specifies the color.
+
+
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentEnd">
 
             <summary>
@@ -41538,19 +42301,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentCommentEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentCommentEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCommentEnd"/> element.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the <see cref="DocumentElementType"/> enumeration values that corresponds to the <b>DocumentCommentEnd</b> object.
+</value>
 
 
         </member>
@@ -41753,19 +42520,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart"/> object.
+</value>
 
 
         </member>
@@ -41824,6 +42595,14 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBoxCollection">
+
+            <summary>
+                <para>A collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox"/> objects.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd">
 
             <summary>
@@ -41834,19 +42613,23 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd"/> object.
+</value>
 
 
         </member>
@@ -41868,9 +42651,11 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentBookmark.Name">
             <summary>
-                <para> </para>
+                <para>Gets the name of a bookmark.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the bookmark's name.
+</value>
 
 
         </member>
@@ -42355,7 +43140,8 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.CustomPropertiesChanged">
             <summary>
-                <para> </para>
+                <para>Occurs after one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentCustomProperties"/> has changed.
+</para>
             </summary>
 
 
@@ -42389,7 +43175,8 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="E:DevExpress.XtraRichEdit.IRichEditDocumentServer.DocumentPropertiesChanged">
             <summary>
-                <para> </para>
+                <para>Occurs after one of the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentProperties"/> has changed.
+</para>
             </summary>
 
 
@@ -42882,176 +43669,202 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextProperties">
 
             <summary>
-                <para> </para>
+                <para>An interface implementing the text properties accessed by the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>.
+</para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTextProperties.StyleName">
             <summary>
-                <para> </para>
+                <para>Gets the name of a style applied to characters in the current <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentText"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the style name.
+</value>
 
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentElementType">
 
             <summary>
-                <para>Lists types of document elements accessed by DocumentIterator.
+                <para>Lists types of document elements accessed by <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentIterator"/>
 </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.All">
             <summary>
-                <para> </para>
+                <para>All document elements.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.BookmarkEnd">
             <summary>
-                <para> </para>
+                <para>The end of a bookmark.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.BookmarkStart">
             <summary>
-                <para> </para>
+                <para>The beginning of a bookmark.
+
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.CommentEnd">
             <summary>
-                <para> </para>
+                <para>The end of a commented range.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.CommentStart">
             <summary>
-                <para> </para>
+                <para>The beginning of a commented range.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.FieldCodeEnd">
             <summary>
-                <para> </para>
+                <para>The end of a field code range.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.FieldCodeStart">
             <summary>
-                <para> </para>
+                <para>The beginning of a field code range.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.FieldResultEnd">
             <summary>
-                <para> </para>
+                <para>The end of a field result range.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.HyperlinkEnd">
             <summary>
-                <para> </para>
+                <para>The end of a hyperlink.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.HyperlinkStart">
             <summary>
-                <para> </para>
+                <para>The beginning of a hyperlink.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.InlinePicture">
             <summary>
-                <para> </para>
+                <para>An inline picture.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.ParagraphEnd">
             <summary>
-                <para> </para>
+                <para>The end of a paragraph.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.ParagraphStart">
             <summary>
-                <para> </para>
+                <para> The beginning of a paragraph.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.Picture">
             <summary>
-                <para> </para>
+                <para>A floating picture.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.RangePermissionEnd">
             <summary>
-                <para> </para>
+                <para>The end of a range permission.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.RangePermissionStart">
             <summary>
-                <para> </para>
+                <para>The beginning of a range permission.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.SectionEnd">
             <summary>
-                <para> </para>
+                <para>The end of a section.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.SectionStart">
             <summary>
-                <para> </para>
+                <para>The beginning of a section.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.Shape">
             <summary>
-                <para> </para>
+                <para>A floating object (a picture or a text box).
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.TableCellBorder">
             <summary>
-                <para> </para>
+                <para>The border of a table cell.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.Text">
             <summary>
-                <para> </para>
+                <para>A group of characters with the same format.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.DocumentElementType.TextBox">
             <summary>
-                <para> </para>
+                <para>A text box.
+</para>
             </summary>
 
 
@@ -43418,27 +44231,33 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart.SectionProperties">
             <summary>
-                <para> </para>
+                <para>Provides access to the document section properties.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ReadOnlySectionsProperties"/> object that provides access to current document section properties.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration object that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentSectionStart"/> object.
+</value>
 
 
         </member>
@@ -43923,7 +44742,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
             <param name="point">
 		Sets the coordinates to locate the object.
 
-
             </param>
             <param name="unit">
 		Specifies the measurement for image parameters.
@@ -43946,6 +44764,158 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
             <param name="point">
 		Sets the coordinates to place the object.
 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(System.Drawing.Image,System.Drawing.Point)">
+            <summary>
+                <para>Draws a custom image.
+</para>
+            </summary>
+            <param name="image">
+		A <see cref="T:System.Drawing.Image"/> object that is an image that will be placed at the selected position. 
+
+            </param>
+            <param name="point">
+		Sets the coordinates to locate the object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(System.Drawing.Image,System.Drawing.Point,DevExpress.XtraRichEdit.DocumentLayoutUnit)">
+            <summary>
+                <para>Draws a custom image. 
+</para>
+            </summary>
+            <param name="image">
+		A <see cref="T:System.Drawing.Image"/> object that is an image that will be placed at the selected position. 
+
+            </param>
+            <param name="point">
+		Sets the coordinates to locate the object.
+
+            </param>
+            <param name="unit">
+		Sets the measurement for the image parameters. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(System.Drawing.Image,System.Drawing.Rectangle)">
+            <summary>
+                <para>Draws a custom image.
+</para>
+            </summary>
+            <param name="image">
+		A <see cref="T:System.Drawing.Image"/> object that is an image that will be placed at the selected position. 
+
+            </param>
+            <param name="bounds">
+		Sets the image's location and size.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(System.Drawing.Image,System.Drawing.Rectangle,DevExpress.XtraPrinting.ImageSizeMode)">
+            <summary>
+                <para>Draws a custom image.
+</para>
+            </summary>
+            <param name="image">
+		A <see cref="T:System.Drawing.Image"/> object that is an image that will be placed at the selected position. 
+
+            </param>
+            <param name="bounds">
+		Sets the image's location and size.
+
+            </param>
+            <param name="sizeMode">
+		Sets the object position within the stated bounds.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(System.Drawing.Image,System.Drawing.Rectangle,DevExpress.XtraPrinting.ImageSizeMode,DevExpress.XtraRichEdit.DocumentLayoutUnit)">
+            <summary>
+                <para>Draws a custom image.
+</para>
+            </summary>
+            <param name="image">
+		A <see cref="T:System.Drawing.Image"/> object that is an image that will be placed at the selected position. 
+
+            </param>
+            <param name="bounds">
+		Sets the image's location and size.
+
+            </param>
+            <param name="sizeMode">
+		Sets the object position within the stated bounds.
+
+            </param>
+            <param name="unit">
+		Specifies the measurement for the image parameters.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(DevExpress.Office.Utils.OfficeImage,System.Drawing.Rectangle,DevExpress.XtraRichEdit.DocumentLayoutUnit)">
+            <summary>
+                <para>Draws a custom image. 
+</para>
+            </summary>
+            <param name="image">
+		The <see cref="T:DevExpress.Office.Utils.OfficeImage"/> descendant that will be placed at the selected position.
+
+            </param>
+            <param name="bounds">
+		Sets the image's location and size.
+
+            </param>
+            <param name="unit">
+		Specifies the measurement for the image parameters.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(DevExpress.Office.Utils.OfficeImage,System.Drawing.Rectangle)">
+            <summary>
+                <para>Draws a custom image. 
+</para>
+            </summary>
+            <param name="image">
+		The <see cref="T:DevExpress.Office.Utils.OfficeImage"/> descendant that will be placed at the selected position.
+
+            </param>
+            <param name="bounds">
+		Sets the image's location and size.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Layout.PageCanvas.DrawImage(System.Drawing.Image,System.Drawing.Rectangle,DevExpress.XtraRichEdit.DocumentLayoutUnit)">
+            <summary>
+                <para>Draws a custom image. 
+</para>
+            </summary>
+            <param name="image">
+		A <see cref="T:System.Drawing.Image"/> object that is an image that will be placed at the selected position.
+
+            </param>
+            <param name="bounds">
+		Sets the image's location and size. 
+
+            </param>
+            <param name="unit">
+		Sets the measurement for the image parameters. 
 
             </param>
 
@@ -44199,7 +45169,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 </para>
             </summary>
             <param name="str">
-		A ?ustom string that will be placed at the selected position.
+		A custom string that will be placed at the selected position.
 
 
             </param>
@@ -46043,6 +47013,35 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.IDataSourceContainerOptions">
+
+            <summary>
+                <para>Defines parameters required to connect to an external data source.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.IDataSourceContainerOptions.DataMember">
+            <summary>
+                <para>Gets or sets a specific data member in a data source which contains several tables or members.
+</para>
+            </summary>
+            <value>A string that identifies a member in the data source, such as the table name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.IDataSourceContainerOptions.DataSource">
+            <summary>
+                <para>Gets or sets the data source object used to connect to data.
+</para>
+            </summary>
+            <value>An object that is the data source from which data is retrieved.
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.Commands.InsertTableRowAboveCommand">
 
             <summary>
@@ -46131,6 +47130,84 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 </para>
             </summary>
             <value>A <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraRichEdit.API.Layout.LayoutFrameCollection">
+
+            <summary>
+                <para>A collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutFrame"/> objects.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand">
+
+            <summary>
+                <para>Invokes the Borders and Shading dialog.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
+            <summary>
+                <para>Initializes a new instance of the ShowBorderShadingFormCommand class with the specified owner.
+</para>
+            </summary>
+            <param name="control">
+		An object implementing the <b>DevExpress.XtraRichEdit.IRichEditControl</b> interface, specifying the command owner.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand.DescriptionStringId">
+            <summary>
+                <para>Gets a string resource identifier of a command description.
+</para>
+            </summary>
+            <value>An <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand.Id">
+            <summary>
+                <para>Gets the ID of the ShowBorderShadingFormCommand.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand.ImageName">
+            <summary>
+                <para>Gets the name of the resource image corresponding to ShowBorderShadingFormCommand.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the name of an image contained in resources.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand.MenuCaptionStringId">
+            <summary>
+                <para>Gets a string resource identifier of a menu caption corresponding to ShowBorderShadingFormCommand.
+</para>
+            </summary>
+            <value>A <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ShowBorderShadingFormCommand.ShowsModalDialog">
+            <summary>
+                <para>Gets whether the focus should be set to the command owner after a command is executed.
+</para>
+            </summary>
+            <value>Returns <b>true</b>.
 </value>
 
 
@@ -47997,9 +49074,11 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutPage.CommentsArea">
             <summary>
-                <para> </para>
+                <para>Gets the comments area of the current page.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="LayoutCommentsArea"/> object that is the comments area.
+</value>
 
 
         </member>
@@ -48035,9 +49114,12 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutPage.Frames">
             <summary>
-                <para> </para>
+                <para>Provides access to the frames located in the document.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="LayoutFrameCollection"/> object that is a collection of frames.
+
+</value>
 
 
         </member>
@@ -49139,7 +50221,7 @@ The following languages are currently supported: English, French, German, Italia
         <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.RussianLower">
             <summary>
                 <para>Specifies that the sequence shall consist of the letters of the Russian alphabet in lower case.
-Example: ?, ?, ?
+Example: &#x430;, &#x431;, &#x432;
 </para>
             </summary>
 
@@ -49148,7 +50230,7 @@ Example: ?, ?, ?
         <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.RussianUpper">
             <summary>
                 <para>Specifies that the sequence shall consist of the letters of the Russian alphabet in upper case.
-Example: ?, ?, ?
+Example: &#x410;, &#x411;, &#x412;
 </para>
             </summary>
 
@@ -49252,7 +50334,7 @@ Currently not supported.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.SectionPageNumbering.ContinueNumbering">
             <summary>
-                <para>Gets whether the numbering should be continued from the previous section or should start from the beginning.
+                <para>Gets or sets whether the numbering should be continued from the previous section or should start from the beginning.
 </para>
             </summary>
             <value><b>True</b>, to continue numbering; otherwise, <b>false</b>.
@@ -50494,19 +51576,23 @@ Currently not supported.
         </member>
         <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentParagraphEnd.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
             <summary>
-                <para> </para>
+                <para>Accepts a visitor.
+</para>
             </summary>
             <param name="visitor">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentParagraphEnd.Type">
             <summary>
-                <para> </para>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphEnd"/> object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentParagraphEnd"/> object.
+</value>
 
 
         </member>
@@ -52146,6 +53232,23 @@ Currently not supported.
             </summary>
 
         </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Native.SectionStartType.Column">
+            <summary>
+                <para>A new section starts on the next column on the page. Currently this type of section break is not supported.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Native.SectionStartType.Continuous">
+            <summary>
+                <para>A new section starts on the following paragraph of the same page. Currently this type of section break is not supported.
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.SectionStartType.EvenPage">
             <summary>
                 <para>A new section begins on the next even-numbered page. If the section break falls on an even-numbered page, the next odd-numbered page is left blank.
@@ -52654,14 +53757,15 @@ Currently not supported.
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.ParagraphFormShowingEventArgs.#ctor(DevExpress.XtraRichEdit.Forms.ParagraphFormControllerParameters)">
+        <member name="M:DevExpress.XtraRichEdit.ParagraphFormShowingEventArgs.#ctor(DevExpress.XtraRichEdit.Forms.ParagraphFormControllerParameters,DevExpress.XtraRichEdit.TabsClickCallback)">
             <summary>
-                <para>Initializes a new instance of the ParagraphFormShowingEventArgs class with the specified information for initializing the dialog controls.
-</para>
+                <para> </para>
             </summary>
             <param name="controllerParameters">
-		A <see cref="T:DevExpress.XtraRichEdit.Forms.ParagraphFormControllerParameters"/> object containing information to be displayed in the form.
-
+		 
+            </param>
+            <param name="tabsClickCallback">
+		 
             </param>
 
 
@@ -52673,6 +53777,14 @@ Currently not supported.
             </summary>
             <value>A <see cref="T:DevExpress.XtraRichEdit.Forms.ParagraphFormControllerParameters"/> object containing information to be displayed in the form.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.ParagraphFormShowingEventArgs.TabsClickCallback">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -53618,51 +54730,68 @@ Currently not supported.
         <member name="T:DevExpress.XtraRichEdit.HitTestManager">
 
             <summary>
-                <para> </para>
+                <para>Provides hit testing for the RichEditControl.
+
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.HitTestManager.#ctor(DevExpress.XtraRichEdit.API.Layout.DocumentLayout)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HitTestManager class with default settings.
+</para>
             </summary>
             <param name="documentLayout">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.DocumentLayout"/> object where the hit testing is performed.
+
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.HitTestManager.HitTest(DevExpress.XtraRichEdit.API.Layout.LayoutPage,System.Drawing.Point,DevExpress.XtraRichEdit.HitTestSearchOption)">
             <summary>
-                <para> </para>
+                <para>Returns specific document elements located under the test point.
+
+</para>
             </summary>
             <param name="page">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutPage"/> object indicating the search frontier.
+
             </param>
             <param name="point">
-		 
+		The test point.
+
             </param>
             <param name="findOption">
-		 
+		One of the <see cref="T:DevExpress.XtraRichEdit.HitTestSearchOption"/> enumeration values specifying the search accuracy. 
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="RichEditHitTestResult"/> object containing information about the determined element.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraRichEdit.HitTestManager.HitTest(DevExpress.XtraRichEdit.API.Layout.LayoutPageAreaBase,System.Drawing.Point,DevExpress.XtraRichEdit.HitTestSearchOption)">
             <summary>
-                <para> </para>
+                <para>Returns specific document elements located under the test point.
+
+</para>
             </summary>
             <param name="pageArea">
-		 
+		A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutPageArea"/> object indicating the search frontier.
+
             </param>
             <param name="point">
-		 
+		The test point.
+
             </param>
             <param name="findOption">
-		 
+		One of the <see cref="T:DevExpress.XtraRichEdit.HitTestSearchOption"/> enumeration values specifying the search accuracy. 
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="RichEditHitTestResult"/> object containing information about the determined element.
+</returns>
 
 
         </member>

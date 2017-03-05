@@ -534,7 +534,7 @@
         <member name="T:DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent">
 
             <summary>
-                <para>Represents a background layer  within linear gauges.
+                <para>Represents a background layer within linear gauges.
 </para>
             </summary>
 

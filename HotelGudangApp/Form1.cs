@@ -33,7 +33,7 @@ namespace HotelGudangApp
             //    });
 
             var data = _category.GetMasterData().Select(x => new { x.category_name, x.Item.item_name});
-            treeList1.DataSource = data;
+            gridControl1.DataSource = data;
         }
         private void ComboBoxUpdateCategory()
         {
@@ -87,5 +87,7 @@ namespace HotelGudangApp
                 navigationFrame2.SelectedPage = addItem;
             }
         }
+
+        
     }
  }

@@ -4,3 +4,9 @@ E:\kerjaan\HotelCalifornia\HotelService\bin\Debug\HotelService.pdb
 E:\kerjaan\HotelCalifornia\HotelService\obj\Debug\HotelService.dll
 E:\kerjaan\HotelCalifornia\HotelService\obj\Debug\HotelService.pdb
 E:\kerjaan\HotelCalifornia\HotelService\obj\Debug\HotelService.csprojResolveAssemblyReference.cache
+D:\Marshall\hotel\HotelService\bin\Debug\HotelService.dll.config
+D:\Marshall\hotel\HotelService\bin\Debug\HotelService.dll
+D:\Marshall\hotel\HotelService\bin\Debug\HotelService.pdb
+D:\Marshall\hotel\HotelService\obj\Debug\HotelService.csprojResolveAssemblyReference.cache
+D:\Marshall\hotel\HotelService\obj\Debug\HotelService.dll
+D:\Marshall\hotel\HotelService\obj\Debug\HotelService.pdb

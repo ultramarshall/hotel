@@ -631,6 +631,54 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraTreeMap.TreeMapElement">
+
+            <summary>
+                <para>A base class for all tree map elements.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.Assign(DevExpress.XtraTreeMap.TreeMapElement)">
+            <summary>
+                <para>Copies all settings from the TreeMapElement object passed as the parameter.
+</para>
+            </summary>
+            <param name="obj">
+		An TreeMapElement object whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.Clone">
+            <summary>
+                <para>Creates a copy of the current TreeMapElement object.
+</para>
+            </summary>
+            <returns>A TreeMapElement object which is a copy of the current object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.Dispose">
+            <summary>
+                <para>Disposes an TreeMapElement object.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.ToString">
+            <summary>
+                <para>Returns the textual representation of the axis.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value which is the textual representation of the axis.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraTreeMap.TreeMapSquarifiedLayoutAlgorithm">
 
             <summary>
@@ -1935,54 +1983,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraTreeMap.TreeMapElement">
-
-            <summary>
-                <para>A base class for all tree map elements.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.Assign(DevExpress.XtraTreeMap.TreeMapElement)">
-            <summary>
-                <para>Copies all settings from the TreeMapElement object passed as the parameter.
-</para>
-            </summary>
-            <param name="obj">
-		An TreeMapElement object whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.Clone">
-            <summary>
-                <para>Creates a copy of the current TreeMapElement object.
-</para>
-            </summary>
-            <returns>A TreeMapElement object which is a copy of the current object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.Dispose">
-            <summary>
-                <para>Disposes an TreeMapElement object.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeMap.TreeMapElement.ToString">
-            <summary>
-                <para>Returns the textual representation of the axis.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> value which is the textual representation of the axis.
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraTreeMap.TreeMapPaletteColorizerBase">
 
             <summary>
@@ -2030,7 +2030,7 @@
 
 
         </member>
-        <member name="M:DevExpress.XtraTreeMap.TreeMapItemStyle.#ctor(System.Drawing.Color,System.Drawing.Color,System.Drawing.Font,System.Windows.Forms.Padding)">
+        <member name="M:DevExpress.XtraTreeMap.TreeMapItemStyle.#ctor(System.Drawing.Color,System.Drawing.Color,System.Drawing.Font,System.Windows.Forms.Padding,System.Drawing.Color)">
             <summary>
                 <para> </para>
             </summary>
@@ -2046,6 +2046,17 @@
             <param name="padding">
 		 
             </param>
+            <param name="borderColor">
+		 
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeMap.TreeMapItemStyle.BorderColor">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -2138,6 +2149,14 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraTreeMap.TreeMapItemGroupStyle.SubGroupBorderColor">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraTreeMap.TreeMapItemGroupStyle.SubGroupFill">
             <summary>
                 <para>Gets or sets the subgroup fill color.
@@ -2145,6 +2164,22 @@
             </summary>
             <value>A <see cref="T:System.Drawing.Color"/> value.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeMap.TreeMapItemGroupStyle.SubGroupFont">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeMap.TreeMapItemGroupStyle.SubGroupHeaderPadding">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

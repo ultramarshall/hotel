@@ -4,6 +4,62 @@
         <name>DevExpress.Sparkline.v16.1.Core</name>
     </assembly>
     <members>
+        <member name="T:DevExpress.Sparkline.ISparklineViewVisitor">
+
+            <summary>
+                <para>Interface implementing the <b>Visitor</b> pattern.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Sparkline.ISparklineViewVisitor.Visit(DevExpress.Sparkline.LineSparklineView)">
+            <summary>
+                <para>Performs the operation as required by the Visitor and the View, as defined in the Visitor pattern.
+</para>
+            </summary>
+            <param name="view">
+		An <see cref="T:DevExpress.Sparkline.LineSparklineView"/> object for which the operation is performed.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Sparkline.ISparklineViewVisitor.Visit(DevExpress.Sparkline.AreaSparklineView)">
+            <summary>
+                <para>Performs the operation as required by the Visitor and the View, as defined in the Visitor pattern.
+</para>
+            </summary>
+            <param name="view">
+		An <see cref="T:DevExpress.Sparkline.AreaSparklineView"/> object for which the operation is performed.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Sparkline.ISparklineViewVisitor.Visit(DevExpress.Sparkline.BarSparklineView)">
+            <summary>
+                <para>Performs the operation as required by the Visitor and the View, as defined in the Visitor pattern.
+</para>
+            </summary>
+            <param name="view">
+		An <see cref="T:DevExpress.Sparkline.BarSparklineView"/> object for which the operation is performed.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Sparkline.ISparklineViewVisitor.Visit(DevExpress.Sparkline.WinLossSparklineView)">
+            <summary>
+                <para>Performs the operation as required by the Visitor and the View, as defined in the Visitor pattern.
+</para>
+            </summary>
+            <param name="view">
+		An <see cref="T:DevExpress.Sparkline.WinLossSparklineView"/> object for which the operation is performed.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Sparkline.LineSparklineView">
 
             <summary>
@@ -185,10 +241,12 @@
         </member>
         <member name="M:DevExpress.Sparkline.LineSparklineView.Visit(DevExpress.Sparkline.ISparklineViewVisitor)">
             <summary>
-                <para> </para>
+                <para>Invokes the <b>Visit</b> method of the specified visitor for the current LineSparklineView object.
+</para>
             </summary>
             <param name="visitor">
-		 
+		An object implementing the <see cref="T:DevExpress.Sparkline.ISparklineViewVisitor"/> interface.
+
             </param>
 
 
@@ -267,9 +325,11 @@
         </member>
         <member name="M:DevExpress.Sparkline.SparklineRange.ToString">
             <summary>
-                <para> </para>
+                <para>Returns the textual representation of the SparklineRange.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:System.String"/> value which is the textual representation of the SparklineRange.
+</returns>
 
 
         </member>
@@ -301,10 +361,12 @@
         </member>
         <member name="M:DevExpress.Sparkline.WinLossSparklineView.Visit(DevExpress.Sparkline.ISparklineViewVisitor)">
             <summary>
-                <para> </para>
+                <para>Invokes the <b>Visit</b> method of the specified visitor for the current WinLossSparklineView object.
+</para>
             </summary>
             <param name="visitor">
-		 
+		An object implementing the <see cref="T:DevExpress.Sparkline.ISparklineViewVisitor"/> interface.
+
             </param>
 
 
@@ -391,10 +453,12 @@
         </member>
         <member name="M:DevExpress.Sparkline.BarSparklineView.Visit(DevExpress.Sparkline.ISparklineViewVisitor)">
             <summary>
-                <para> </para>
+                <para>Invokes the <b>Visit</b> method of the specified visitor for the current BarSparklineView object.
+</para>
             </summary>
             <param name="visitor">
-		 
+		An object implementing the <see cref="T:DevExpress.Sparkline.ISparklineViewVisitor"/> interface.
+
             </param>
 
 
@@ -451,10 +515,12 @@
         </member>
         <member name="M:DevExpress.Sparkline.AreaSparklineView.Visit(DevExpress.Sparkline.ISparklineViewVisitor)">
             <summary>
-                <para> </para>
+                <para>Invokes the <b>Visit</b> method of the specified visitor for the current AreaSparklineView object.
+</para>
             </summary>
             <param name="visitor">
-		 
+		An object implementing the <see cref="T:DevExpress.Sparkline.ISparklineViewVisitor"/> interface.
+
             </param>
 
 
@@ -734,10 +800,12 @@
         </member>
         <member name="M:DevExpress.Sparkline.SparklineViewBase.Visit(DevExpress.Sparkline.ISparklineViewVisitor)">
             <summary>
-                <para> </para>
+                <para>Invokes the <b>Visit</b> method of the specified visitor for the current SparklineViewBase object.
+</para>
             </summary>
             <param name="visitor">
-		 
+		An object implementing the <see cref="T:DevExpress.Sparkline.ISparklineViewVisitor"/> interface.
+
             </param>
 
 

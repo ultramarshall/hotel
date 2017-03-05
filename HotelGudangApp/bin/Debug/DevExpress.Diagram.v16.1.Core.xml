@@ -4,6 +4,32 @@
         <name>DevExpress.Diagram.v16.1.Core</name>
     </assembly>
     <members>
+        <member name="T:DevExpress.Diagram.Core.ResizingMode">
+
+            <summary>
+                <para>Lists the values used to specify whether diagram items change their size in real time during resizing.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ResizingMode.Live">
+            <summary>
+                <para>Diagram items change its size in real time during resizing.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ResizingMode.Preview">
+            <summary>
+                <para>Diagram items change size after the end-user exits the resizing mode by releasing the left mouse button.
+
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Diagram.Core.LineJumpPlacement">
 
             <summary>
@@ -39,20 +65,23 @@
         <member name="T:DevExpress.Diagram.Core.Layout.SplitToConnectedComponentsMode">
 
             <summary>
-                <para> </para>
+                <para>Specifies which diagram items are realigned when performing automatic relayout.
+</para>
             </summary>
 
         </member>
         <member name="F:DevExpress.Diagram.Core.Layout.SplitToConnectedComponentsMode.AllComponents">
             <summary>
-                <para> </para>
+                <para>Realign all items on the canvas.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.Layout.SplitToConnectedComponentsMode.NonTrivialComponentsOnly">
             <summary>
-                <para> </para>
+                <para>Realign only items that are connected to at least one other item.
+</para>
             </summary>
 
 
@@ -277,7 +306,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.FitToWidthCommand">
             <summary>
-                <para> </para>
+                <para>Sets the diagram zoom factor value to fit the entire diagram width.
+</para>
             </summary>
             <returns> </returns>
 
@@ -373,7 +403,7 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.PasteCommand">
             <summary>
-                <para>Paste the clipboard content.
+                <para>Inserts the diagram items from the clipboard onto the canvas.
 </para>
             </summary>
             <returns> </returns>
@@ -450,9 +480,11 @@
         </member>
         <member name="P:DevExpress.Diagram.Core.DiagramCommandsBase.SelectionCommands">
             <summary>
-                <para> </para>
+                <para>Provides access to selection commands.
+</para>
             </summary>
-            <value> </value>
+            <value>An object implementing the <see cref="T:System.Collections.IEnumerable"/> interface. 
+</value>
 
 
         </member>
@@ -641,9 +673,11 @@
         </member>
         <member name="P:DevExpress.Diagram.Core.DiagramCommandsBase.UndoRedoCommands">
             <summary>
-                <para> </para>
+                <para>Provides access to undo and redo commands.
+</para>
             </summary>
-            <value> </value>
+            <value>An object implementing the <see cref="T:System.Collections.IEnumerable"/> interface. 
+</value>
 
 
         </member>
@@ -668,9 +702,11 @@
         </member>
         <member name="P:DevExpress.Diagram.Core.DiagramCommandsBase.ZoomCommands">
             <summary>
-                <para> </para>
+                <para>Provides access to zoom commands.
+</para>
             </summary>
-            <value> </value>
+            <value>An object implementing the <see cref="T:System.Collections.IEnumerable"/> interface. 
+</value>
 
 
         </member>
@@ -726,43 +762,77 @@
 
 
         </member>
+        <member name="T:DevExpress.Diagram.Core.BringIntoViewMode">
+
+            <summary>
+                <para>Lists the values used to specify whether all items should be brought into view by <see cref="M:DevExpress.XtraDiagram.DiagramControl.BringItemsIntoView"/> and <see cref="M:DevExpress.Xpf.Diagram.DiagramControl.BringItemsIntoView"/> methods when other items are partially visible.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.BringIntoViewMode.AllowPartialVisibility">
+            <summary>
+                <para>Do not bring all specified items into view if at least one of them is already visible.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.BringIntoViewMode.ShowAll">
+            <summary>
+                <para>Bring all specified items into view.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Diagram.Core.MeasureUnit">
 
             <summary>
-                <para> </para>
+                <para>Represents a unit of measure used by the <see cref="T:DevExpress.XtraDiagram.DiagramControl"/> and <see cref="T:DevExpress.Xpf.Diagram.DiagramControl"/>.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Diagram.Core.MeasureUnit.#ctor(System.Double,System.Int32,System.String,DevExpress.Diagram.Core.TickStepsData[])">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the MeasureUnit class.
+</para>
             </summary>
             <param name="dpi">
-		 
+		A System.Double value that specifies the base resolution.
+
             </param>
             <param name="multiplier">
-		 
+		A multiplier for the <b>dpi</b> value.
+
             </param>
             <param name="name">
-		 
+		A string value that is the name of the measure unit.
+
             </param>
             <param name="stepsData">
-		 
+		An array of DevExpress.Diagram.Core.TickStepsData objects used to render the grid and ruler.
+
+
             </param>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.MeasureUnit.Dpi">
             <summary>
-                <para> </para>
+                <para>Specifies the base resolution.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>
+</returns>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.MeasureUnit.Multiplier">
             <summary>
-                <para> </para>
+                <para>Specifies the multiplier for the base resolution.
+</para>
             </summary>
             <returns> </returns>
 
@@ -770,15 +840,19 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.MeasureUnit.Name">
             <summary>
-                <para> </para>
+                <para>Specifies the name of the measure unit.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A string value that is the name of the measure unit.
+</returns>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.MeasureUnit.StepsData">
             <summary>
-                <para> </para>
+                <para>Specifies the array of the DevExpress.Diagram.Core.TickStepsData objects used to render the grid and ruler.
+
+</para>
             </summary>
             <returns> </returns>
 
@@ -786,9 +860,11 @@
         </member>
         <member name="M:DevExpress.Diagram.Core.MeasureUnit.ToString">
             <summary>
-                <para> </para>
+                <para>Returns the name of the MeasureUnit.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="T:System.String"/> value.
+</returns>
 
 
         </member>
@@ -1016,27 +1092,33 @@
         <member name="T:DevExpress.Diagram.Core.MeasureUnits">
 
             <summary>
-                <para> </para>
+                <para>Contains units of measurement available for the <see cref="T:DevExpress.XtraDiagram.DiagramControl"/> and <see cref="T:DevExpress.Xpf.Diagram.DiagramControl"/>.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Diagram.Core.MeasureUnits.FromPixels(DevExpress.Diagram.Core.MeasureUnit,System.Double)">
             <summary>
-                <para> </para>
+                <para>Converts the value in puxels to the value in the unit of measure.
+</para>
             </summary>
             <param name="unit">
-		 
+		A unit of measure for the desired value.
+
             </param>
             <param name="value">
-		 
+		A value to convert.
+
             </param>
-            <returns> </returns>
+            <returns>The value in the unit of measure.
+</returns>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.MeasureUnits.Inches">
             <summary>
-                <para> </para>
+                <para>Specifies that inches are used as the measure unit.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1044,7 +1126,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.MeasureUnits.Millimeters">
             <summary>
-                <para> </para>
+                <para>Specifies that millimeters are used as the measure unit.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1052,7 +1135,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.MeasureUnits.Pixels">
             <summary>
-                <para> </para>
+                <para>Specifies that pixels are used as the measure unit.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1060,15 +1144,262 @@
         </member>
         <member name="M:DevExpress.Diagram.Core.MeasureUnits.ToPixels(DevExpress.Diagram.Core.MeasureUnit,System.Double)">
             <summary>
-                <para> </para>
+                <para>Converts the value in the unit of measure to the value in pixels.
+</para>
             </summary>
             <param name="unit">
-		 
+		A unit of measure for the initial value.
+
             </param>
             <param name="value">
+		A value to convert.
+
+            </param>
+            <returns>The value in pixels.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.ShapeDescription">
+
+            <summary>
+                <para> </para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.#ctor(System.String,System.Func`1,System.Func`1,DevExpress.Diagram.Core.ShapeGetter,DevExpress.Diagram.Core.ShapeConnectionPointsGetter,System.Func`1,DevExpress.Diagram.Core.EditorBoundsGetter,System.Func`1,System.Func`1,System.Func`1)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="id">
+		 
+            </param>
+            <param name="getName">
+		 
+            </param>
+            <param name="getDefaultSize">
+		 
+            </param>
+            <param name="getShape">
+		 
+            </param>
+            <param name="getConnectionPoints">
+		 
+            </param>
+            <param name="getParameterCollection">
+		 
+            </param>
+            <param name="getEditorBounds">
+		 
+            </param>
+            <param name="getStyleId">
+		 
+            </param>
+            <param name="getIsQuick">
+		 
+            </param>
+            <param name="getUseBackgroundAsForeground">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.CreateSvgShape(System.String,System.String,System.IO.Stream,System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="shapeId">
+		 
+            </param>
+            <param name="name">
+		 
+            </param>
+            <param name="svgStream">
+		 
+            </param>
+            <param name="isQuick">
 		 
             </param>
             <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.CreateTemplateShape(System.String,System.Func`1,System.Func`1)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="shapeId">
+		 
+            </param>
+            <param name="getName">
+		 
+            </param>
+            <param name="getTemplateCore">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.DefaultParameters">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.DefaultSize">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.GetConnectionPoints(System.Windows.Size,System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="size">
+		 
+            </param>
+            <param name="parameters">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.GetDefaultShape">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.GetEditorBounds(System.Windows.Size,System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="size">
+		 
+            </param>
+            <param name="parameters">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.GetShape(System.Windows.Size,System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="size">
+		 
+            </param>
+            <param name="parameters">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.Id">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.IsQuick">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.Name">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.ParameterCollection">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.StyleId">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.ToString">
+            <summary>
+                <para>Returns the name of the ShapeDescription.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.ShapeDescription.Update(System.String,System.Func`1,System.Func`1,DevExpress.Diagram.Core.ShapeGetter,DevExpress.Diagram.Core.ShapeConnectionPointsGetter,System.Func`1,DevExpress.Diagram.Core.EditorBoundsGetter,System.Func`1,System.Func`1,System.Func`1)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="id">
+		 
+            </param>
+            <param name="getName">
+		 
+            </param>
+            <param name="getDefaultSize">
+		 
+            </param>
+            <param name="getShape">
+		 
+            </param>
+            <param name="getConnectionPoints">
+		 
+            </param>
+            <param name="getParameterCollection">
+		 
+            </param>
+            <param name="getEditorBounds">
+		 
+            </param>
+            <param name="getStyleId">
+		 
+            </param>
+            <param name="getIsQuick">
+		 
+            </param>
+            <param name="getUseBackgroundAsForeground">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.ShapeDescription.UseBackgroundAsForeground">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

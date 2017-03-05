@@ -231,7 +231,7 @@
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRRichText.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>Specifies the control's text.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value containing the text associated with the control.
@@ -745,6 +745,39 @@
             </summary>
             <value>A <see cref="T:System.String"/> representing the name of the script for this event.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Security.ExecutionMode">
+
+            <summary>
+                <para>Lists the available script executions modes.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Security.ExecutionMode.Deny">
+            <summary>
+                <para>Denies the execution of any scripts and disables the capability to invoke the Scripts editor in the Report Designer (by removing the Scripts toolbar button, along with a section listing script events of a control in the Property Grid).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Security.ExecutionMode.Restricted">
+            <summary>
+                <para>Enables the execution of scripts under the specified restrictions. To apply restrictions, it is required to enable the CAS policy option in the application's configuration file.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Security.ExecutionMode.Unrestricted">
+            <summary>
+                <para>Enables the execution of any script at your own risk.
+</para>
+            </summary>
 
 
         </member>
@@ -1421,6 +1454,26 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.BorderDashStyle">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BorderDashStyle"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.Borders">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Borders"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.BorderWidth">
             <summary>
                 <para>Specifies the XRPivotGrid border width.
@@ -1998,6 +2051,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.NavigateUrl">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.OddStyleName">
             <summary>
                 <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.OddStyleName"/> property to hide it.
@@ -2320,6 +2383,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.StylePriority">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.StylePriority"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.Styles">
             <summary>
                 <para>Provides access to the style settings that control the appearance of the <see cref="T:DevExpress.XtraReports.UI.XRPivotGrid"/>.
@@ -2330,9 +2403,19 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.Target">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Target"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRPivotGrid.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.
@@ -3047,13 +3130,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRChart.ImageType">
             <summary>
-                <para>Gets or sets a value which indicates how an XRChart contents are rendered.
-
-
+                <para>Specifies how XRChart contents are rendered.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.UI.ChartImageType"/> enumeration value which specifies how a chart is rendered in a report.
-
+            <value>A <see cref="T:DevExpress.XtraReports.UI.ChartImageType"/> enumeration value, specifying how a chart is rendered in a report.
 </value>
 
 
@@ -3492,10 +3572,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRChart.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A System.String value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -3653,7 +3733,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.ScriptSecurityPermission">
 
             <summary>
-                <para>Represents a security permission applied to scripts that are executed when creating a report.
+                <para>A security permission applied during execution of report scripts.
 
 
 </para>
@@ -4022,7 +4102,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.XRZipCode">
 
             <summary>
-                <para>A Zip Code control that displays a zip code in a report.
+                <para>Renders a numeric postal code that is used to identify the mail address in some countries. This control is not related to the Zone Improvement Plan (ZIP) code used by the United States Postal Service.
 </para>
             </summary>
 
@@ -4059,11 +4139,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRZipCode.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>Specifies the text to be encoded by the XRZipCode control.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing text associated with the control.
-
+            <value>A <see cref="T:System.String"/> value, specifying the control's text.
 </value>
 
 
@@ -4170,6 +4249,36 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.AnchorVertical">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.AnchorVertical"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.Bookmark">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Bookmark"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.BookmarkParent">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BookmarkParent"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.BoundsF">
             <summary>
                 <para>For internal use only. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BoundsF"/> property, to hide it.
@@ -4196,6 +4305,46 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value><b>true</b>, to display an XRTableOfContents in a printed or exported document; <b>false</b>, to display an XRTableOfContents only in a preview.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.DataBindings">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.DataBindings"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.Font">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Font"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.FormattingRules">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.FormattingRules"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.KeepTogether">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.KeepTogether"/> property to hide it.
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -4241,6 +4390,16 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.NavigateUrl">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.RightToLeft">
             <summary>
                 <para>Specifies the orientation of the XRTableOfContents's content.
@@ -4251,12 +4410,32 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.Scripts">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Scripts"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.SizeF">
             <summary>
                 <para>For internal use only. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.SizeF"/> property, to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.Drawing.SizeF"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.SnapLineMargin">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.SnapLineMargin"/> property to hide it.
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -4272,6 +4451,56 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value>A <b>DevExpress.XtraReports.UI.XRControl.XRControlStyles</b> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.Target">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Target"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.Text">
+            <summary>
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.TextAlignment">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.TextAlignment"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.WordWrap">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.WordWrap"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRTableOfContents.XlsxFormatString">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.XlsxFormatString"/> property to hide it.
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -4344,6 +4573,16 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRSparkline.ImageType">
+            <summary>
+                <para>Specifies how XRSparkline contents are rendered.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.UI.SparklineImageType"/> enumeration value, specifying how a sparkline is rendered in a report.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRSparkline.KeepTogether">
             <summary>
                 <para>For internal use only. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.KeepTogether"/> property, to hide it.
@@ -4356,7 +4595,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRSparkline.Text">
             <summary>
-                <para>For internal use only. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property, to hide it.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.
@@ -4832,11 +5071,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRRichTextBoxBase.Text">
             <summary>
-                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
-
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -5187,7 +5425,7 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Gets or sets the textual information to be coded into a barcode.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> to be coded into a barcode.
+            <value>A <see cref="T:System.String"/> value to be coded into a barcode.
 </value>
 
 
@@ -5858,6 +6096,14 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.Dlg_SaveFile_Title">
             <summary>
                 <para>"<b>Save '{0}'</b>"
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Localization.ReportStringId.ExpressionEditor_FieldDescription">
+            <summary>
+                <para>"<b>Description:</b>"
 </para>
             </summary>
 
@@ -6658,6 +6904,14 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="F:DevExpress.XtraReports.Localization.ReportStringId.RepTabCtl_HtmlView">
             <summary>
                 <para>"<b>HTML View</b>"
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Localization.ReportStringId.RepTabCtl_NoReportStatus">
+            <summary>
+                <para>"<b>Nothing</b>"
 </para>
             </summary>
 
@@ -10597,24 +10851,6 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.UI.SerializableString.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.SerializableString"/> class with the specified serialization information.
-</para>
-            </summary>
-            <param name="info">
-		A <see cref="T:System.Runtime.Serialization.SerializationInfo"/> value that holds all the data needed to serialize or deserialize an object.
-
-
-            </param>
-            <param name="context">
-		A <see cref="T:System.Runtime.Serialization.StreamingContext"/> value containing the source and destination of a given serialized stream.
-
-
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.XtraReports.UI.SerializableString.#ctor(System.String)">
             <summary>
                 <para>Initializes a new instance of the SerializableString class with the specified value.
@@ -10627,13 +10863,22 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.UI.SerializableString.Value">
+        <member name="M:DevExpress.XtraReports.UI.SerializableString.GetValue">
             <summary>
-                <para>Gets or sets the value to be serialized by the <see cref="T:DevExpress.XtraReports.UI.SerializableString"/> object.
+                <para>For internal use.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> specifying the value to be serialized.
-</value>
+            <returns>A <see cref="T:System.String"/> value.
+</returns>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.UI.SerializableString.Value">
+            <summary>
+                <para>A <b>System.String.Empty</b> value.
+</para>
+            </summary>
+            <returns> </returns>
 
 
         </member>
@@ -10878,11 +11123,26 @@ However, if the height of the entire group is more than the page height, this gr
             <param name="array">
 		A one-dimensional array that is the destination for the control styles copied from the collection.
 
-
             </param>
             <param name="arrayIndex">
 		An integer value specifying the zero-based index in the target array at which copying begins.
 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRControlStyleSheet.CopyTo(DevExpress.XtraReports.UI.XRControlStyle[],System.Int32)">
+            <summary>
+                <para>Copies the entire control style collection to an array of <see cref="T:DevExpress.XtraReports.UI.XRControlStyle"/> objects starting at the specified index of the target array.
+</para>
+            </summary>
+            <param name="array">
+		An array of <see cref="T:DevExpress.XtraReports.UI.XRControlStyle"/> objects that is the destination for the control styles copied from the collection.
+
+            </param>
+            <param name="arrayIndex">
+		An integer value specifying the zero-based index in the target array at which copying begins.
 
             </param>
 
@@ -10912,6 +11172,22 @@ However, if the height of the entire group is more than the page height, this gr
             <returns>A zero-based integer which represents the control style's position within the collection. <b>-1</b> if the control style doesn't belong to the collection.
 
 </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.XRControlStyleSheet.Insert(System.Int32,DevExpress.XtraReports.UI.XRControlStyle)">
+            <summary>
+                <para>Adds the specified control style to the collection at the specified position.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer, specifying the position at which the table row is to be inserted. 
+
+            </param>
+            <param name="item">
+		An <see cref="T:DevExpress.XtraReports.UI.XRControlStyle"/> object, specifying the control style to insert into the collection.
+
+            </param>
 
 
         </member>
@@ -11153,7 +11429,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XtraReportBase.DataAdapter">
             <summary>
-                <para>Gets or sets the data adapter, which should be used to populate a report's data source.
+                <para>Specifies the data adapter that should be used to populate a report's data source.
 
 </para>
             </summary>
@@ -13149,7 +13425,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRCrossBandControl.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.
@@ -13597,7 +13873,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.Data.DbConnectionDataProvider">
 
             <summary>
-                <para>The base class for classes that assist in accessing a Report Wizard's data sources using a connection string.
+                <para>The base class for classes that assist in accessing a Silverlight Report Wizard's data sources using a connection string.
 </para>
             </summary>
 
@@ -13794,6 +14070,14 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="M:DevExpress.XtraReports.UI.XRSubreport.CreateReportContainer">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRSubreport.DataBindings">
             <summary>
                 <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.DataBindings"/> property to hide it.
@@ -13942,10 +14226,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRSubreport.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value> 
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -14095,8 +14379,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.SubreportBase.NavigateUrl">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property.
-
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value containing the URL.
@@ -14229,7 +14512,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.SubreportBase.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value containing the text associated with the control.
@@ -14282,7 +14565,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.TopMarginBand">
 
             <summary>
-                <para>A band located on the top margin of every page.
+                <para>A band located at the top margin of every page.
 </para>
             </summary>
 
@@ -14298,7 +14581,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.BottomMarginBand">
 
             <summary>
-                <para>A band located on the bottom margin of every page.
+                <para>A band located at the bottom margin of every page.
 </para>
             </summary>
 
@@ -14943,10 +15226,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRPictureBox.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -15589,7 +15872,7 @@ However, if the height of the entire group is more than the page height, this gr
 
 </para>
             </summary>
-            <returns>An <see cref="T:DevExpress.XtraReports.UI.XRControlStyle"/> object containing appearance properties.
+            <returns>An <see cref="T:DevExpress.XtraReports.UI.XRControlStyle"/> object, specifying the actual values of appearance properties.
 </returns>
 
 
@@ -15943,10 +16226,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRPanel.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -16135,57 +16418,10 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraReports.UI.GroupHeaderBand.SortingSummaryRowChanged"/> event.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs.#ctor(System.Object,System.Object)">
-            <summary>
-                <para>Initializes a new instance of the GroupSortingSummaryRowChangedEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="row">
-		A <see cref="T:System.Object"/>, specifying the data row.
-
-            </param>
-            <param name="fieldValue">
-		A <see cref="T:System.Object"/>, specifying the data field's value.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs.FieldValue">
-            <summary>
-                <para>Provides access to a data field, whose data can be used in calculating a custom summary for sorting groups.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/> representing a data field.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs.Row">
-            <summary>
-                <para>Provides access to a data row, whose data can be used in calculating a custom summary for sorting groups.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/> representing a data row.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.Localization.ReportLocalizer">
 
             <summary>
-                <para>Provides the means to localize the XtraReports user interface elements.
+                <para>Enables you to localize the user interface elements of XtraReports.
 
 </para>
             </summary>
@@ -16405,6 +16641,30 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.UI.SparklineImageType">
+
+            <summary>
+                <para>Specifies how the <see cref="T:DevExpress.XtraReports.UI.XRSparkline"/> control should be internally rendered in a report.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraReports.UI.SparklineImageType.Bitmap">
+            <summary>
+                <para>The control is rendered as a bitmap. In this case the quality of the rendered image is sometimes poor, but it allows a control to be drawn more precisely.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.UI.SparklineImageType.Metafile">
+            <summary>
+                <para>The control is rendered as a metafile. In this case the quality of the rendered image is always good, but in some cases some details of the control may be lost.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.PivotGrid.PivotCustomColumnWidthEventArgs">
 
             <summary>
@@ -16542,6 +16802,38 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.UI.PivotGrid.PivotFieldValueEventArgs">
+
+            <summary>
+                <para>The base for the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.PivotCustomRowHeightEventArgs"/> class.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.PivotGrid.PivotFieldValueEventArgs.#ctor(DevExpress.XtraPivotGrid.Data.PivotFieldValueItem)">
+            <summary>
+                <para>For internal use. Initializes a new instance of the PivotFieldValueEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="item">
+		A <see cref="T:DevExpress.XtraPivotGrid.Data.PivotFieldValueItem"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.UI.PivotGrid.PivotFieldValueEventArgs.#ctor(DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField)">
+            <summary>
+                <para>Initializes a new instance of the PivotFieldValueEventArgs class with the specified pivot grid field.
+</para>
+            </summary>
+            <param name="field">
+		An <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.UI.XRLine">
 
             <summary>
@@ -16634,7 +16926,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRLine.NavigateUrl">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value containing the URL.
@@ -16667,10 +16959,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRLine.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -16782,10 +17074,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRFieldEmbeddableControl.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property of the <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class to hide it.
+                <para><b>Bindable</b>. Specifies the control's text.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value.
+            <value>A <see cref="T:System.String"/> value, specifying the control's text.
 </value>
 
 
@@ -17429,7 +17721,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.Data.IDataProvider">
 
             <summary>
-                <para>Implements methods that allow working with a data source that is used by a Report Wizard for Silverlight.
+                <para>Implements methods that allow working with a data source that is used by a Silverlight Report Wizard.
 
 </para>
             </summary>
@@ -17498,7 +17790,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.SubBand">
 
             <summary>
-                <para>A band provides a functional copy of the source band below which it is located.
+                <para>A band that provides a functional copy of the source band below which it is located.
 
 </para>
             </summary>
@@ -17561,6 +17853,90 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>The top of the control is positioned at the top of the band.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Security.ScriptPermissionManager">
+
+            <summary>
+                <para>Provides functionality to specify the scripting security at the application level.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Security.ScriptPermissionManager.#ctor(DevExpress.XtraReports.Security.ExecutionMode)">
+            <summary>
+                <para>Initializes a new instance of the ScriptPermissionManager class with the specified script execution mode.
+</para>
+            </summary>
+            <param name="scriptExecutionMode">
+		An <see cref="T:DevExpress.XtraReports.Security.ExecutionMode"/> enumeration value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Security.ScriptPermissionManager.ScriptExecutionMode"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Security.ScriptPermissionManager.#ctor(DevExpress.XtraReports.Security.ExecutionMode,System.Security.Policy.Evidence,System.Security.IPermission[])">
+            <summary>
+                <para>Initializes a new instance of the ScriptPermissionManager class with the specified script execution mode.
+</para>
+            </summary>
+            <param name="scriptExecutionMode">
+		An <see cref="T:DevExpress.XtraReports.Security.ExecutionMode"/> enumeration value.
+
+            </param>
+            <param name="evidence">
+		A <see cref="T:System.Security.Policy.Evidence"/> object.
+
+            </param>
+            <param name="restrictPermissions">
+		An array of objects implementing the <see cref="T:System.Security.IPermission"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Security.ScriptPermissionManager.Evidence">
+            <summary>
+                <para>Specifies the evidence-based security policy that is applied for script execution.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Security.Policy.Evidence"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Security.ScriptPermissionManager.GlobalInstance">
+            <summary>
+                <para>Specifies the script security permission level applied to the application.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.Security.ScriptPermissionManager"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Security.ScriptPermissionManager.RestrictScripts(System.Collections.Generic.IEnumerable`1)">
+            <summary>
+                <para>Specifies the security restrictions applied to report scripts.
+</para>
+            </summary>
+            <param name="sourcePermissions">
+		A collection of objects implementing the <see cref="T:System.Security.IPermission"/> interface.
+
+            </param>
+            <returns>An object implementing the <see cref="T:System.Security.IPermission"/> interface.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Security.ScriptPermissionManager.ScriptExecutionMode">
+            <summary>
+                <para>Specifies whether or not to apply any restrictions when executing report scripts.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraReports.Security.ExecutionMode"/> enumeration value.
+</value>
 
 
         </member>
@@ -17715,7 +18091,7 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <param name="index">
-		A zero-based integer which specifies the position at which the table row is to be inserted. 
+		A zero-based integer that specifies the position at which the table row is to be inserted. 
 
             </param>
             <param name="row">
@@ -17996,7 +18372,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRTableRow.NavigateUrl">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value containing the URL.
@@ -18074,10 +18450,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRTableRow.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -18309,7 +18685,7 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Specifies the number of rows in the <see cref="T:DevExpress.XtraReports.UI.XRTable"/> control that the cell spans.
 </para>
             </summary>
-            <value>An integer value, specifying the number of rows.
+            <value>An integer value specifying the number of rows.
 </value>
 
 
@@ -18599,7 +18975,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRTable.NavigateUrl">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property, to hide it.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
 </para>
             </summary>
             <value>Always <see cref="F:System.String.Empty"/>.
@@ -18639,10 +19015,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRTable.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -19872,7 +20248,7 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Gets or sets the text representation of the summary <see cref="P:DevExpress.XtraReports.UI.TextFormatEventArgs.Value"/> with the string formatting applied.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> representing the resulting string which will be printed as a label's summary value.
+            <value>A <see cref="T:System.String"/> value, specifying the text that will be printed as a control's summary value.
 </value>
 
 
@@ -20000,7 +20376,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRShape.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property. 
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.
@@ -20069,7 +20445,6 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="F:DevExpress.XtraReports.UI.ChartImageType.Metafile">
             <summary>
                 <para>The control is rendered as a metafile. In this case the quality of the rendered image is always good, but in some cases some details of the control may be lost.
-
 </para>
             </summary>
 
@@ -20305,10 +20680,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRPageInfo.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -20398,6 +20773,18 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <value>A <see cref="T:System.Drawing.Color"/> object specifying the borders' color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPageBreak.BorderDashStyle">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.BorderDashStyle"/> property to hide it.
+
+
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -20522,7 +20909,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRPageBreak.NavigateUrl">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value containing the URL.
@@ -20639,12 +21026,32 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPageBreak.StylePriority">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.StylePriority"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.XRPageBreak.Styles">
             <summary>
                 <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Styles"/> property.
 </para>
             </summary>
             <value>A <b>DevExpress.XtraReports.UI.XRControl.XRControlStyles</b> object that determines a set of styles for an <see cref="T:DevExpress.XtraReports.UI.XRControl"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRPageBreak.Tag">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Tag"/> property to hide it.
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -20661,10 +21068,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRPageBreak.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
    
 </value>
 
@@ -20863,6 +21270,17 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="P:DevExpress.XtraReports.UI.WinControlContainer.ParentStyleUsing">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.ParentStyleUsing"/> property.
+
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraReports.UI.WinControlContainer.PrintMode">
             <summary>
                 <para>Gets or sets a value which indicates whether a WinControl's contents should be rendered as a set of Printing System bricks (if possible), or as an image.
@@ -20910,10 +21328,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.WinControlContainer.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
    
 </value>
 
@@ -21242,7 +21660,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.Band">
 
             <summary>
-                <para>Defines a base class for report bands that can contain objects of the <see cref="T:DevExpress.XtraReports.UI.XRControl"/> class and its derived classes.
+                <para>The base for classes that provide functionality to report bands.
 </para>
             </summary>
 
@@ -21467,7 +21885,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.Band.NavigateUrl">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.NavigateUrl"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value containing the URL.
@@ -21634,10 +22052,10 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.Band.Text">
             <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value containing the text associated with the control.
+            <value>A <see cref="T:System.String"/> value.
 </value>
 
 
@@ -21942,7 +22360,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.ScriptSecurityPermissionCollection">
 
             <summary>
-                <para>Represents a collection of <see cref="T:DevExpress.XtraReports.ScriptSecurityPermission"/> objects.
+                <para>A collection of <see cref="T:DevExpress.XtraReports.ScriptSecurityPermission"/> objects.
 </para>
             </summary>
 
@@ -22737,7 +23155,8 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="M:DevExpress.XtraReports.UI.XtraReport.CreateDocument">
             <summary>
-                <para>Creates a document from the <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object, so the report can be displayed or printed.
+                <para>Creates a document from the <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object, so it can be displayed or printed.
+
 </para>
             </summary>
 
@@ -22745,11 +23164,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="M:DevExpress.XtraReports.UI.XtraReport.CreateDocument(System.Boolean)">
             <summary>
-                <para>Creates a document from the <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object, so the report can be displayed or printed. Optionally, the document pages can be generated in the background.
+                <para>Creates a document from the <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object, so the report can be displayed or printed. Optionally, the document pages can be generated in the background and accessed progressively as they are created. Document creation is always synchronous and does not occur in a background thread.
 </para>
             </summary>
             <param name="buildPagesInBackground">
-		<b>true</b> to generate pages in the background; otherwise, <b>false</b>.
+		<b>true</b> to enable accessing document pages progressively as they are created; otherwise <b>false</b>.
 
             </param>
 
@@ -22757,7 +23176,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="M:DevExpress.XtraReports.UI.XtraReport.CreateLayoutViewDocument">
             <summary>
-                <para>For internal use. Creates a report document for editing using a End-User Report Designer for Silverlight.
+                <para>For internal use. Creates a report document for editing using a Silverlight Report Designer.
 </para>
             </summary>
 
@@ -23189,7 +23608,7 @@ However, if the height of the entire group is more than the page height, this gr
 
             </param>
             <param name="to">
-		A <see cref="T:System.String"/> value, specifying the recipient.
+		A <see cref="T:System.String"/> value, specifying a comma-separated list of recipients.
 
             </param>
             <param name="subject">
@@ -23225,7 +23644,7 @@ However, if the height of the entire group is more than the page height, this gr
 
             </param>
             <param name="to">
-		A <see cref="T:System.String"/> value, specifying the recipient.
+		A <see cref="T:System.String"/> value, specifying a comma-separated list of recipients.
 
             </param>
             <param name="subject">
@@ -23666,36 +24085,34 @@ However, if the height of the entire group is more than the page height, this gr
 </para>
             </summary>
             <param name="path">
-		A <see cref="T:System.String"/> value, specifying the full path (including the file name and extension) to the REPX file.
+		A <see cref="T:System.String"/> value, specifying the full path (including the file name and extension) to the REPX or XML file.
 
             </param>
             <param name="loadState">
 		<b>true</b> to restore the property values of a report along with the settings applied to its elements (bands and controls); <b>false</b> to load only the base type settings of the specified report.
 
-
             </param>
-            <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> class (or its descendant, the type of which is specified in the REPX file).
-
+            <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> class (or its descendant, the type of which is specified in the REPX or XML file).
 </returns>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.UI.XtraReport.FromStream(System.IO.Stream,System.Boolean)">
             <summary>
-                <para>Loads the REPX data from the specified stream and creates a report object from it. The created report's class is also specified in the REPX data format. 
+                <para>Loads the report definition data from the specified stream and creates a report object from it. The created report's class is also specified in the REPX data format. 
 
 
 </para>
             </summary>
             <param name="stream">
-		The <see cref="T:System.IO.Stream"/> object containing the REPX data to load.
+		The <see cref="T:System.IO.Stream"/> object containing the REPX or XML data to load.
 
             </param>
             <param name="loadState">
-		<b>true</b> to load the report's state which is also saved in the REPX data; otherwise, <b>false</b>.
+		<b>true</b> to load the report's state which is also saved in the REPX or XML data; otherwise, <b>false</b>.
 
             </param>
-            <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> class or its descendant of the type specified in the REPX data. 
+            <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> class or its descendant of the type specified in the REPX or XML data.
 </returns>
 
 
@@ -24202,11 +24619,11 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XtraReport.ScriptSecurityPermissions">
             <summary>
-                <para>Gets the collection of security permissions used to permit particular operations in end-user's scripts.
+                <para>Provides access to the collection of security permissions used to permit particular operations in report scripts.
 
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.ScriptSecurityPermissionCollection"/> object which represents a collection of security permissions.
+            <value>A <see cref="T:DevExpress.XtraReports.ScriptSecurityPermissionCollection"/> object, specifying a collection of security permissions.
 </value>
 
 
@@ -24348,7 +24765,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="M:DevExpress.XtraReports.UI.XtraReport.StopPageBuilding">
             <summary>
-                <para>Finishes generating report pages.
+                <para>Interrupts the process of document creation.
 </para>
             </summary>
 
@@ -24434,91 +24851,49 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.FillDataSourceEventArgs">
+        <member name="T:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraReports.LightSwitchDataSource.FillDataSource"/> event.
+                <para>Provides data for the <see cref="E:DevExpress.XtraReports.UI.GroupHeaderBand.SortingSummaryRowChanged"/> event.
 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.FillDataSourceEventArgs.#ctor(System.Collections.IList,System.String,System.String,System.Boolean,System.Collections.ObjectModel.ReadOnlyCollection`1)">
+        <member name="M:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs.#ctor(System.Object,System.Object)">
             <summary>
-                <para>For internal use. Initializes a new instance of the FillDataSourceEventArgs class with the specified settings.
-
+                <para>Initializes a new instance of the GroupSortingSummaryRowChangedEventArgs class with the specified settings.
 </para>
             </summary>
-            <param name="list">
-		An object implementing the <see cref="T:System.Collections.IList"/> interface. This value is assigned to the <see cref="P:DevExpress.XtraReports.FillDataSourceEventArgs.List"/> property.
+            <param name="row">
+		A <see cref="T:System.Object"/>, specifying the data row.
 
             </param>
-            <param name="dataSourceName">
-		A <see cref="T:System.String"/> value, specifying the data source name. This value is assigned to the <see cref="P:DevExpress.XtraReports.FillDataSourceEventArgs.DataSourceName"/> property.
-
-            </param>
-            <param name="collectionName">
-		A <see cref="T:System.String"/> value, specifying the collection name. This value is assigned to the <see cref="P:DevExpress.XtraReports.FillDataSourceEventArgs.CollectionName"/> property.
-
-            </param>
-            <param name="isQuery">
-		<b>true</b> if the data source is a LightSwitch query; otherwise <b>false</b>. This value is assigned to the <see cref="P:DevExpress.XtraReports.FillDataSourceEventArgs.IsQuery"/> property.
-
-            </param>
-            <param name="parameters">
-		A read-only collection of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter"/> objects. This value is assigned to the <see cref="P:DevExpress.XtraReports.FillDataSourceEventArgs.Parameters"/> property.
+            <param name="fieldValue">
+		A <see cref="T:System.Object"/>, specifying the data field's value.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.FillDataSourceEventArgs.CollectionName">
+        <member name="P:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs.FieldValue">
             <summary>
-                <para>For internal use. Gets the name of a collection that is used as a LightSwitch data source.
+                <para>Provides access to a data field, whose data can be used in calculating a custom summary for sorting groups.
+
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the collection name.
+            <value>A <see cref="T:System.Object"/> representing a data field.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraReports.FillDataSourceEventArgs.DataSourceName">
+        <member name="P:DevExpress.XtraReports.UI.GroupSortingSummaryRowChangedEventArgs.Row">
             <summary>
-                <para>For internal use. Gets the name of a LightSwitch data source.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the data source name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.FillDataSourceEventArgs.IsQuery">
-            <summary>
-                <para>For internal use. Gets a value specifying whether or not a LightSwitch data source is a LightSwitch query.
-</para>
-            </summary>
-            <value><b>true</b> if the data source is a LightSwitch query; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.FillDataSourceEventArgs.List">
-            <summary>
-                <para>For internal use. Specifies the list that is used as a LightSwitch data source.
-</para>
-            </summary>
-            <value>An object implementing the <see cref="T:System.Collections.IList"/> interface. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.FillDataSourceEventArgs.Parameters">
-            <summary>
-                <para>For internal use. Provides access to the collection of LightSwitch data source parameters.
+                <para>Provides access to a data row, whose data can be used in calculating a custom summary for sorting groups.
 
 </para>
             </summary>
-            <value>A read-only collection of <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportParameter"/> objects.
+            <value>A <see cref="T:System.Object"/> representing a data row.
 </value>
 
 
@@ -25429,7 +25804,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRControl.Dpi">
             <summary>
-                <para>Gets or sets the dpi value used to render this control.
+                <para>For internal use. Gets or sets the dpi value used to render this control.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value representing the dpi value used to render this control.
@@ -25442,6 +25817,16 @@ However, if the height of the entire group is more than the page height, this gr
                 <para>Occurs when an <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object is drawn or redrawn in a report's Print Preview.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.UI.XRControl.DrillDownKey">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value> 
+</value>
 
 
         </member>
@@ -25612,6 +25997,16 @@ However, if the height of the entire group is more than the page height, this gr
 
 
         </member>
+        <member name="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveStyle">
+            <summary>
+                <para>Returns the actual visual style of a control taking into account all formatting rules and odd/even styles applied to the control.
+</para>
+            </summary>
+            <returns>An <see cref="T:DevExpress.XtraReports.UI.XRControlStyle"/> object, specifying the actual values of appearance properties.
+</returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraReports.UI.XRControl.GetEffectiveTextAlignment">
             <summary>
                 <para>Returns the text alignment actually used as the control's text alignment.
@@ -25753,7 +26148,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRControl.LocationFloat">
             <summary>
-                <para>For internal use only. For internal use. Supports serialization of the <see cref="P:DevExpress.XtraReports.UI.XRControl.LocationF"/> property.
+                <para>For internal use. Supports serialization of the <see cref="P:DevExpress.XtraReports.UI.XRControl.LocationF"/> property.
 
 </para>
             </summary>
@@ -26248,7 +26643,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRControl.Text">
             <summary>
-                <para><b>Bindable</b>. Specifies the text associated with the XRControl object.
+                <para><b>Bindable</b>. Specifies the control's text.
 
 </para>
             </summary>
@@ -27094,7 +27489,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.GroupBand">
 
             <summary>
-                <para>Defines the base class for the <b>Group Header</b> and <b>Group Footer</b> bands.
+                <para>The base for the <see cref="T:DevExpress.XtraReports.UI.GroupHeaderBand"/> and <see cref="T:DevExpress.XtraReports.UI.GroupFooterBand"/> classes that are used to group data in a report
 </para>
             </summary>
 
@@ -27243,7 +27638,7 @@ However, if the height of the entire group is more than the page height, this gr
         <member name="T:DevExpress.XtraReports.UI.DetailBand">
 
             <summary>
-                <para>A report band that contains controls used for displaying a single record from a report's data source. If there is no data source defined for the report, the <b>DetailBand</b> object displays its current state.
+                <para>The main report band that contains controls displaying recurrent data records from a report's data source. This band cannot be deleted from a report.
 </para>
             </summary>
 
@@ -27416,21 +27811,21 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.ImageType">
             <summary>
-                <para>Gets or sets a value that indicates how XRGauge contents are rendered.
+                <para>Specifies how XRGauge contents are rendered.
 
 </para>
             </summary>
-            <value> <see cref="T:DevExpress.XtraReports.UI.GaugeImageType"/> enumeration value which specifies how a gauge is rendered in a report.
+            <value>A <see cref="T:DevExpress.XtraReports.UI.GaugeImageType"/> enumeration value, specifying how a gauge is rendered in a report.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.KeepTogether">
             <summary>
-                <para>For internal use.
+                <para>Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.KeepTogether"/> property.
 </para>
             </summary>
-            <value>A Boolean value.
+            <value><b>true</b> to keep the contents of the entire control on a single page; otherwise, <b>false</b>.
 </value>
 
 
@@ -27467,7 +27862,7 @@ However, if the height of the entire group is more than the page height, this gr
         </member>
         <member name="P:DevExpress.XtraReports.UI.XRGauge.Text">
             <summary>
-                <para>For internal use.
+                <para>For internal use. Overrides the <see cref="P:DevExpress.XtraReports.UI.XRControl.Text"/> property to hide it.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.

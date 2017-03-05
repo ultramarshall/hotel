@@ -7,7 +7,7 @@
         <member name="T:DevExpress.Utils.UI.Localization.UtilsUIStringId">
 
             <summary>
-                <para>Contains values corresponding to strings that can be localized for the End-User Report Designer for WPF's Field List.
+                <para>Contains values corresponding to strings that can be localized for the WPF Report Designer's Field List.
 </para>
             </summary>
 

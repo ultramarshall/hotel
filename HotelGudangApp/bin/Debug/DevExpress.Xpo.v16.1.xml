@@ -6260,6 +6260,17 @@
 
 
         </member>
+        <member name="M:DevExpress.Xpo.XPDataView.GetTargetResultSet(DevExpress.Xpo.DB.SelectedData)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="data">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.Xpo.XPDataView.Item(System.Int32)">
             <summary>
                 <para>Provides indexed access to individual records within the data view.
@@ -8974,7 +8985,7 @@
         </member>
         <member name="P:DevExpress.Xpo.DB.MSSqlConnectionProvider.NativeSkipTakeSupported">
             <summary>
-                <para>Indicates whether the connection provider supports the <a href="">SKIP</a> and TAKE (<a href="http://msdn.microsoft.com/en-us/library/ms189463.aspx">TOP</a>) operators.
+                <para>Indicates whether the connection provider supports the SKIP and TAKE (<a href="http://msdn.microsoft.com/en-us/library/ms189463.aspx">TOP</a>) operators.
 </para>
             </summary>
             <value><b>true</b> for MS SQL Server version 2005 and later; otherwise, <b>false</b>.
@@ -15932,7 +15943,7 @@
                 <para>Specifies the default value of the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property of all Sessions.
 </para>
             </summary>
-            <value>The boolean value specifying the default value of the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property of all Sessions.
+            <value>The boolean value specifying the default value of the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property of all Sessions. The default is <b>false</b>.
 </value>
 
 
@@ -24052,7 +24063,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default">
             <summary>
-                <para>The changed objects are automatically reloaded. The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
+                <para>The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
 </para>
             </summary>
 
@@ -24068,7 +24079,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadBehavior.MergeCollisionIgnore">
             <summary>
-                <para>When the client-side and database values of a property are different, the client-side value persists. When field-level tracking is disabled (see <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/>), this value is treated like the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Mixed"/>.
+                <para>When the client-side and database values of a property are different, the client-side value persists. When field-level tracking is disabled (see <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/>), this value is treated like <b>Mixed</b>.
 
 </para>
             </summary>
@@ -24077,7 +24088,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadBehavior.MergeCollisionReload">
             <summary>
-                <para>When the client-side and database values of a property are different, the database value is reloaded. When field-level tracking is disabled (see <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/>), this value is treated like the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Mixed"/>.
+                <para>When the client-side and database values of a property are different, the database value is reloaded. When field-level tracking is disabled (see <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/>), this value is treated like <b>Mixed</b>.
 
 </para>
             </summary>
@@ -24086,7 +24097,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadBehavior.MergeCollisionThrowException">
             <summary>
-                <para>When the client-side and database values of a property are different, an exception is thrown. When field-level tracking is disabled (see <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/>), this value is treated like the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Mixed"/>.
+                <para>When the client-side and database values of a property are different, an exception is thrown. When field-level tracking is disabled (see <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/>), this value is treated like the <b>Mixed</b>.
 
 </para>
             </summary>

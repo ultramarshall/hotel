@@ -423,9 +423,11 @@
         </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView.RootContainer">
             <summary>
-                <para> </para>
+                <para>Returns the root docking container for this WidgetView.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="WidgetDockingContainer"/> object that is the root docking container for this WidgetView.
+</value>
 
 
         </member>
@@ -1262,6 +1264,14 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.AllowOverlayResize">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.AllowResize">
             <summary>
                 <para>Gets or sets whether end-users are allowed to resize the NavigationPane's content area by dragging its border.
@@ -1382,6 +1392,21 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
 
 
         </member>
+        <member name="E:DevExpress.XtraBars.Navigation.NavigationPane.OverlayResizeEnter">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.OverlayResizeZoneThickness">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.PageProperties">
             <summary>
                 <para>Provides access to global settings that affect every <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/> hosted within this NavigationPane.
@@ -1404,9 +1429,11 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.ShowToolTips">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not hovering over tab headers displays hints and super tips associated with these tabs.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not hovering over tab headers displays hints and super tips associated with these tabs.
+</value>
 
 
         </member>
@@ -1430,7 +1457,8 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
         </member>
         <member name="E:DevExpress.XtraBars.Navigation.NavigationPane.StateChanging">
             <summary>
-                <para> </para>
+                <para>Occurs whenever this NavigationPane changes its state (expanded, collapsed, regular).
+</para>
             </summary>
 
 
@@ -1486,6 +1514,14 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
                 <para>Locks the ToolboxControl object by preventing visual updates of the object and its elements until the <b>EndUpdate</b> method is called.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraToolbox.ToolboxControl.CalcMinBestWidth">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
 
 
         </member>
@@ -1729,554 +1765,6 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
 </para>
             </summary>
             <value> 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog">
-
-            <summary>
-                <para>Provides functionality for Windows 10-styled pop-ups and flyout messages.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Control)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control that will be displayed by this FlyoutDialog.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that will own this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object that will be displayed within this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that specifies advanced FlyoutDialog settings.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that will own the newly created FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that will own the newly created FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within the FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that contains advanced FlyoutDialog settings.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.Utils.Menu.IDXMenuManager)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that will own the newly created FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control that is this FlyoutDialog's content.
-
-            </param>
-            <param name="menuManager">
-		An IDXMenuManager object that controls this FlyoutDialog.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that will own this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object that will be displayed in this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed in the FlyoutDialog.
-
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that specifies advanced FlyoutDialog settings.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object that will be displayed in this FlyoutDialog.
-
-
-            </param>
-            <param name="flyoutControl">
-		A Control that will be displayed by this FlyoutDialog.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this newly created FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A FlyoutAction object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that contains advanced FlyoutDialog settings.
-
-            </param>
-            <param name="useControlBackColor">
-		<b>true</b>, if the FlyoutDialog should use the backcolor of the assigned <i>flyoutControl</i>; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this newly created FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A FlyoutAction object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="useControlBackColor">
-		<b>true</b>, if the FlyoutDialog should use the backcolor of the assigned <i>flyoutControl</i>; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.FlyoutControl">
-            <summary>
-                <para>Gets a control assigned to this FlyoutDialog.
-</para>
-            </summary>
-            <value>A Control assigned to this FlyoutDialog.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Properties">
-            <summary>
-                <para>Provides access to an object that stores advanced FlyoutDialog settings.
-</para>
-            </summary>
-            <value>A <see cref="IFlyoutDefaultProperties"/> object that stores advanced FlyoutDialog settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
-            <summary>
-                <para>Displays a FlyoutDialog with specific parameters and assigned flyout action.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object assigned to this FlyoutDialog.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction)">
-            <summary>
-                <para>Displays a FlyoutDialog object with a specific action assigned to it.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it is closed.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,System.Predicate`1)">
-            <summary>
-                <para>Displays a FlyoutDialog with a specific control within and related to a predicate function.
-
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="canClose">
-		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it is closed.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Predicate`1)">
-            <summary>
-                <para>Displays a FlyoutDialog that has an assigned flyout action and predicate function.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="canClose">
-		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value, returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
-            <summary>
-                <para>Shows a FlyoutDialog with specific properties and displayed content.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns the FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that stores advanced FlyoutDialog settings.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value, returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1)">
-            <summary>
-                <para>Displays a FlyoutDialog object that displays a specific control and has the related predicate function.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that stores advanced FlyoutDialog settings.
-
-            </param>
-            <param name="canClose">
-		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1)">
-            <summary>
-                <para>Displays a FlyoutDialog object with a flyout action, flyout properies and predicate function assigned.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that stores this FlyoutDialog's properties.
-
-            </param>
-            <param name="canClose">
-		A Predicate that checks whether the FlyoutDialog can be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value, returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control)">
-            <summary>
-                <para>Displays a FlyoutDialog object with the target control within.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it is closed.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control)">
-            <summary>
-                <para>Displays a FlyoutDialog with a flyout action and a specific control within.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="control">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Predicate`1)">
-            <summary>
-                <para>Displays a FlyoutDialog with a flyout action and a specific control within, using a related predicate function.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns the FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="canClose">
-		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
-
-            </param>
-            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
-            <summary>
-                <para>Displays a FlyoutDialog with a flyout action and a specific control within, using specific properties.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns the FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that stores advanced FlyoutDialog settings.
-
-            </param>
-            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1)">
-            <summary>
-                <para>Displays a FlyoutDialog with a flyout action and a specific control within, using specific properties and a related predicate function.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns the FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that stores advanced FlyoutDialog settings.
-
-            </param>
-            <param name="canClose">
-		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
-
-            </param>
-            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1,System.Boolean)">
-            <summary>
-                <para>Shows this FlyoutDialog with the specific parameters set.
-</para>
-            </summary>
-            <param name="owner">
-		A Form that owns this FlyoutDialog.
-
-            </param>
-            <param name="flyoutControl">
-		A Control displayed within this FlyoutDialog.
-
-            </param>
-            <param name="action">
-		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> assigned to this FlyoutDialog.
-
-            </param>
-            <param name="parameters">
-		A FlyoutProperties object that stores advanced FlyoutDialog settings.
-
-            </param>
-            <param name="canClose">
-		A Predicate function that checks the DialogResult value, returned by this FlyoutDialog and depending on this, determines whether or not this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns true. 
-
-
-            </param>
-            <param name="useControlBackColor">
-		<b>true</b>, if the FlyoutDialog should use the same background color as the <i>flyoutControl</i> assigned; otherwise, <b>false</b>.
-
-            </param>
-            <returns>A DialogResult enumerator value that specifies the way this FlyoutDialog is closed.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.UseControlBackColor">
-            <summary>
-                <para>Gets or sets whether or not this FlyoutDialog should use the same background color as the control displayed in it.
-
-</para>
-            </summary>
-            <value><b>true</b>, if this FlyoutDialog should use the same background color as the control displayed within it; otherwise, <b>false</b>.
 </value>
 
 
@@ -2561,6 +2049,17 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
             </summary>
             <value><b>true</b> if the page is visible; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.RibbonPage.XtraFindGroupsItem(DevExpress.Utils.Serializing.XtraItemEventArgs)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="e">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -3865,6 +3364,26 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
 
 
         </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.IWidgetViewController.Dock(DevExpress.XtraBars.Docking2010.Views.Widget.Document,DevExpress.XtraBars.Docking2010.Views.Widget.Document,System.Windows.Forms.Orientation,System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="sourceDocument">
+		 
+            </param>
+            <param name="targetDocument">
+		 
+            </param>
+            <param name="orientation">
+		 
+            </param>
+            <param name="index">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.IWidgetViewController.Maximize(DevExpress.XtraBars.Docking2010.Views.Widget.Document)">
             <summary>
                 <para>Maximizes the target <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>.
@@ -4220,19 +3739,40 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.Document.FreeLayoutHeight">
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.Document.DockTo(DevExpress.XtraBars.Docking2010.Views.Widget.Document,System.Windows.Forms.Orientation,System.Int32)">
             <summary>
                 <para> </para>
             </summary>
-            <value> </value>
+            <param name="document">
+		 
+            </param>
+            <param name="orientation">
+		 
+            </param>
+            <param name="index">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.Document.FreeLayoutHeight">
+            <summary>
+                <para>Provides access to a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Length"/> structure that specifies the height of this widget in Free Layout Mode.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Length"/> structure that specifies the height of this widget in Free Layout Mode.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.Document.FreeLayoutWidth">
             <summary>
-                <para> </para>
+                <para>Provides access to a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Length"/> structure that specifies the width of this widget in Free Layout Mode.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Length"/> structure that specifies the width of this widget in Free Layout Mode.
+</value>
 
 
         </member>
@@ -5944,17 +5484,21 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.TabNavigationPage.SuperTip">
             <summary>
-                <para> </para>
+                <para>Gets or sets the super tip associated with this TabNavigationPage.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="SuperToolTip"/> object that is the super tip associated with this TabNavigationPage.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.TabNavigationPage.ToolTip">
             <summary>
-                <para> </para>
+                <para>Gets or sets the regular hint associated with this TabNavigationPage.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object that is the regular hint associated with this TabNavigationPage.
+</value>
 
 
         </member>
@@ -7876,7 +7420,7 @@ This option is in effect when a custom control is embedded into the gallery grou
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Controller">
             <summary>
-                <para>Gets or sets the Bar and Docking Controller that provides default look and feel options for the GalleryControl.
+                <para>Gets or sets the Bar and Docking Controllers that provides default look and feel options for the GalleryControl.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides default look and feel options for the GalleryControl.
@@ -7944,7 +7488,7 @@ This option is in effect when a custom control is embedded into the gallery grou
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.GetController">
             <summary>
-                <para>Returns the Bar and Docking Controller that provides look and feel options for the GalleryControl. 
+                <para>Returns the Bar and Docking Controllers that provides look and feel options for the GalleryControl. 
 </para>
             </summary>
             <returns>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides look and feel  options for the GalleryControl
@@ -9326,9 +8870,11 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.GetCheckedItemsCount">
             <summary>
-                <para> </para>
+                <para>Returns the total number of currently checked gallery items in this GalleryItemGroup.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>An Int32 value that is the total number of currently checked gallery items in this GalleryItemGroup.
+</returns>
 
 
         </member>
@@ -13272,7 +12818,7 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.Controller">
             <summary>
-                <para>Gets or sets the Bar and Docking Controller that provides default appearance options for the Ribbon Control.
+                <para>Gets or sets the Bar and Docking Controllers that provides default appearance options for the Ribbon Control.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides default appearance options for the Ribbon Control.
@@ -13412,7 +12958,7 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.GetController">
             <summary>
-                <para>Returns the Bar and Docking Controller that provides default appearance options for the Ribbon Control. 
+                <para>Returns the Bar and Docking Controllers that provides default appearance options for the Ribbon Control. 
 </para>
             </summary>
             <returns>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides default appearance options for the Ribbon Control.
@@ -14094,7 +13640,7 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
                 <para>Gets or sets whether the button allowing an end-user to switch between the regular, minimized and full-screen ribbon modes is displayed in the form title bar. This property is in effect for the RibbonControl embedded into the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, and displayed using the <b>Office2013</b> style.
 </para>
             </summary>
-            <value>A <see cref="DefaultBoolean"/> enumeration value that specifies whether the button is displayed.
+            <value><b>True</b> or <b>Default</b> if the button is displayed; otherwise, <b>False</b>.
 </value>
 
 
@@ -14326,6 +13872,28 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 
         </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.XtraFindItemsItem(DevExpress.Utils.Serializing.XtraItemEventArgs)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="e">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.XtraFindPagesItem(DevExpress.Utils.Serializing.XtraItemEventArgs)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="e">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.TabFormPage">
 
             <summary>
@@ -14538,9 +14106,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.TabFormControlBase.AddPageButton">
             <summary>
-                <para> </para>
+                <para>Provides access to the Add button, and allows you to bind a command executed with a button click.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="TabFormAddPageButton"/> object that represents the Add button.
+</value>
 
 
         </member>
@@ -14598,6 +14168,13 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="E:DevExpress.XtraBars.TabFormControlBase.ApplicationButtonClick">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.TabFormControlBase.ApplicationButtonDropDownControl">
             <summary>
                 <para> </para>
@@ -14639,6 +14216,18 @@ A specific version of the addressed image is automatically chosen based on the a
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.TabFormControlBase.ClosePage(DevExpress.XtraBars.TabFormPage)">
+            <summary>
+                <para>Closes the specified page.
+</para>
+            </summary>
+            <param name="page">
+		The <see cref="T:DevExpress.XtraBars.TabFormPage"/> to close.
+
+            </param>
 
 
         </member>
@@ -14874,7 +14463,7 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="E:DevExpress.XtraBars.TabFormControlBase.PageClosing">
             <summary>
-                <para>Fires when a page is about to be closed at run time using the built-in close button, and allows you to cancel the action.
+                <para>Fires when a page is about to be closed, and allows you to cancel the action.
 </para>
             </summary>
 
@@ -15543,7 +15132,7 @@ A specific version of the addressed image is automatically chosen based on the a
 
             </param>
             <param name="imageUri">
-		A String value that is the Unified Resource Identifier (URI) for the image contained within the Image Gallery and Context-Dependent Images that should be used as the button glyph. Overrides the <i>image</i> parameter.
+		A String value that is the Unified Resource Identifier (URI) for the image contained within the Icon Library and Context-Dependent Images that should be used as the button glyph. Overrides the <i>image</i> parameter.
 
             </param>
             <param name="imageIndex">
@@ -15626,7 +15215,7 @@ A specific version of the addressed image is automatically chosen based on the a
 
             </param>
             <param name="imageUri">
-		A String value that is the Unified Resource Identifier (URI) for the image, contained within the Image Gallery and Context-Dependent Images, that should be used as the button glyph.
+		A String value that is the Unified Resource Identifier (URI) for the image, contained within the Icon Library and Context-Dependent Images, that should be used as the button glyph.
 
             </param>
             <param name="imageLocation">
@@ -15704,7 +15293,7 @@ A specific version of the addressed image is automatically chosen based on the a
 
             </param>
             <param name="imageUri">
-		A String value that is the Unified Resource Identifier (URI) for the image contained within the Image Gallery and Context-Dependent Images that should be used as the button glyph.
+		A String value that is the Unified Resource Identifier (URI) for the image contained within the Icon Library and Context-Dependent Images that should be used as the button glyph.
 
             </param>
             <param name="imageLocation">
@@ -15754,7 +15343,7 @@ A specific version of the addressed image is automatically chosen based on the a
 
             </param>
             <param name="imageUri">
-		A String value that is the Unified Resource Identifier (URI) for the image contained within the Image Gallery and Context-Dependent Images that should be used as the button glyph.
+		A String value that is the Unified Resource Identifier (URI) for the image contained within the Icon Library and Context-Dependent Images that should be used as the button glyph.
 
             </param>
             <param name="imageLocation">
@@ -15800,7 +15389,7 @@ A specific version of the addressed image is automatically chosen based on the a
 
             </param>
             <param name="imageUri">
-		A String value that is the Unified Resource Identifier (URI) for the image contained within the Image Gallery and Context-Dependent Images that should be used as the button glyph. Overrides the <i>image</i> argument value.
+		A String value that is the Unified Resource Identifier (URI) for the image contained within the Icon Library and Context-Dependent Images that should be used as the button glyph. Overrides the <i>image</i> argument value.
 
             </param>
 
@@ -15816,7 +15405,7 @@ A specific version of the addressed image is automatically chosen based on the a
 
             </param>
             <param name="imageUri">
-		A String value that is the Unified Resource Identifier (URI) for the image contained within the Image Gallery and Context-Dependent Images that should be used as the button glyph.
+		A String value that is the Unified Resource Identifier (URI) for the image contained within the Icon Library and Context-Dependent Images that should be used as the button glyph.
 
             </param>
             <param name="style">
@@ -15841,7 +15430,7 @@ A specific version of the addressed image is automatically chosen based on the a
 
             </param>
             <param name="imageUri">
-		A String value that is the Unified Resource Identifier (URI) for the image contained within the Image Gallery and Context-Dependent Images that should be used as the button glyph.
+		A String value that is the Unified Resource Identifier (URI) for the image contained within the Icon Library and Context-Dependent Images that should be used as the button glyph.
 
             </param>
             <param name="imageLocation">
@@ -17361,47 +16950,63 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Alerter.AlertControl.Show(System.Windows.Forms.Form,System.String,System.String,System.String,System.Drawing.Image,System.Object,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Displays an alert with customized settings and the capability to close on click.
+
+</para>
             </summary>
             <param name="owner">
-		 
+		A Form that owns the displayed alert.
+
+
             </param>
             <param name="caption">
-		 
+		A String value that is the alert form's caption.
+
             </param>
             <param name="text">
-		 
+		A String value that is the alert form's text.
+
             </param>
             <param name="hotTrackedText">
-		 
+		A String value that is the alert form's text displayed only when hovered over (see the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property).
+
             </param>
             <param name="image">
-		 
+		An Image displayed by this alert window.
+
             </param>
             <param name="tag">
-		 
+		An Object that serves as a unique ID associated with this alert.
+
             </param>
             <param name="autoCloseFormOnClick">
-		 
+		<b>true</b>, if the alert form should be closed on click; otherwise, <b>false</b>.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraBars.Alerter.AlertControl.Show(System.Windows.Forms.Form,System.String,System.String,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Displays an alert window with customized content settings.
+</para>
             </summary>
             <param name="owner">
-		 
+		A Form that owns the displayed alert.
+
+
             </param>
             <param name="caption">
-		 
+		A String value that is the alert form's caption.
+
             </param>
             <param name="text">
-		 
+		A String value that is the alert form's text.
+
             </param>
             <param name="autoCloseFormOnClick">
-		 
+		<b>true</b>, if the alert form should be closed on click; otherwise, <b>false</b>.
+
             </param>
 
 
@@ -17831,6 +17436,14 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RecentPinItem.IsSelected">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RecentPinItem.PinButtonChecked">
             <summary>
                 <para>Gets or sets whether or not this RecentPinItem is currently pinned.
@@ -17955,6 +17568,14 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RecentPanelBase.IsMainPanel">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RecentPanelBase.Items">
             <summary>
                 <para>Provides zero-based indexed access to all Recent Item Control elements hosted within this panel.
@@ -17977,9 +17598,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RecentPanelBase.Name">
             <summary>
-                <para> </para>
+                <para>Gets or sets this RecentPanelBase object's name.
+</para>
             </summary>
-            <value> </value>
+            <value>A String value that is this RecentPanelBase object's name.
+</value>
 
 
         </member>
@@ -18004,6 +17627,24 @@ A specific version of the addressed image is automatically chosen based on the a
 
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RecentPanelBase.SelectedItem">
+            <summary>
+                <para>Gets or sets the currently selected item owned by this RecentPanelBase.
+</para>
+            </summary>
+            <value>A <see cref="RecentItemBase"/> class descendant that is the currently selected item owned by this RecentPanelBase.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RecentPanelBase.SelectedPinItem">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RecentPanelBase.SelectedTabItem">
             <summary>
                 <para> </para>
             </summary>
@@ -18181,7 +17822,8 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.RecentItemControl.CreateStandardPanels">
             <summary>
-                <para> </para>
+                <para>Creates two <see cref="T:DevExpress.XtraBars.Ribbon.RecentStackPanel"/> objects and assigns them to the <see cref="P:DevExpress.XtraBars.Ribbon.RecentItemControl.MainPanel"/> and <see cref="P:DevExpress.XtraBars.Ribbon.RecentItemControl.DefaultContentPanel"/> properties of this RecentItemControl.
+</para>
             </summary>
 
 
@@ -18220,6 +17862,14 @@ A specific version of the addressed image is automatically chosen based on the a
             <summary>
                 <para>Occurs whenever an end-user clicks any item in this RecentItemControl.
 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Ribbon.RecentItemControl.ItemMouseClick">
+            <summary>
+                <para>A global event that fires when a user clicks any item that belongs to this Recent Item Control.
 </para>
             </summary>
 
@@ -18389,6 +18039,22 @@ A specific version of the addressed image is automatically chosen based on the a
                 <para>Initializes a new instance of the RecentItemBase class with the default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RecentItemBase.IsInContentPanel">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RecentItemBase.IsInMainPanel">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -18904,12 +18570,40 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction.#ctor(System.Windows.Forms.DialogResult[],System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutAction class and allows you to specify which FlyoutAction button should act as a default button.
+</para>
+            </summary>
+            <param name="commands">
+		A DialogResult array that specifies buttons displayed by this FlyoutAction.
+
+            </param>
+            <param name="defaultButton">
+		A <a href="https://msdn.microsoft.com/en-us/library/system.windows.forms.messageboxdefaultbutton(v=vs.110).aspx">System.Windows.Forms.MessageBoxDefaultButton</a> enumeration value that specifies which of the FlyoutAction buttons should act as a default button. This button will be "clicked" when a user presses Enter key to dismiss this FlyoutAction.
+
+
+            </param>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction.Commands">
             <summary>
                 <para>Gets a collection of the FlyoutAction's buttons. 
 </para>
             </summary>
             <value>A List object that stores <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand"/>s. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction.DefaultCommand">
+            <summary>
+                <para>Returns the default button for this FlyoutAction.
+</para>
+            </summary>
+            <value>A <see cref="FlyoutCommand"/> object that is the default button for this FlyoutAction.
+
 </value>
 
 
@@ -19483,9 +19177,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.AllowAllUp">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not all gallery items can simultaneously be in a normal (elevated) state.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if all gallery items can simultaneously be in a normal (elevated) state; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -19501,9 +19197,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.AllowHoverAnimation">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not hovering over gallery items is accompanied with animation effects.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if hovering over gallery items is accompanied with animation effects; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -19755,7 +19453,7 @@ A specific version of the addressed image is automatically chosen based on the a
         <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.FirstItemVertAlignment">
             <summary>
                 <para>Gets or sets the first gallery item's <b>vertical</b> position beyond which this item cannot be moved when scrolling backwards.
-(When the gallery is horizontally oriented (see <see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.Orientation"/>), the FirstItemVertAlignment property defines the fist item's <b>horizontal</b> position.
+(When the gallery is horizontally oriented (see <see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.Orientation"/>), the FirstItemVertAlignment property defines the first item's <b>horizontal</b> position.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAlignment"/> value that specifies the item's vertical or horizontal position.
@@ -19869,9 +19567,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.GetCheckedItemsCount">
             <summary>
-                <para> </para>
+                <para>Returns the total number of currently checked gallery items.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>An Int32 value that is the number of currently checked gallery items.
+</returns>
 
 
         </member>
@@ -20516,12 +20216,15 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.BackstageViewControl.CalcHitInfo(System.Drawing.Point)">
             <summary>
-                <para> </para>
+                <para>Returns the hit info object for this BackstageViewControl. A hit info object provides means to identify which BackstageViewControl element is located at the target position.
+</para>
             </summary>
             <param name="point">
-		 
+		A Point structure that is the location for which the hit info should be returned.
+
             </param>
-            <returns> </returns>
+            <returns>A <see cref="BackstageViewHitInfo"/> object.
+</returns>
 
 
         </member>
@@ -20556,7 +20259,8 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.BackstageViewControl.Close">
             <summary>
-                <para> </para>
+                <para>Closes this BackstageViewControl.
+</para>
             </summary>
 
 
@@ -20619,7 +20323,7 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.BackstageViewControl.GetController">
             <summary>
-                <para>Returns the Bar and Docking Controller that provides look and feel options for the BackstageViewControl. 
+                <para>Returns the Bar and Docking Controllers that provides look and feel options for the BackstageViewControl. 
 </para>
             </summary>
             <returns>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides look and feel  options for the BackstageViewControl
@@ -20832,9 +20536,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.OwnerControl">
             <summary>
-                <para> </para>
+                <para>Gets or sets the control that owns the current BackstageViewControl.
+</para>
             </summary>
-            <value> </value>
+            <value>A control that implements the IBackstageViewOwner interface.
+</value>
 
 
         </member>
@@ -22181,7 +21887,7 @@ This method is in effect if item selection is enabled with the <see cref="P:DevE
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShowGroupExpandButtons">
             <summary>
-                <para>Gets or sets whether AccordionControl groups should display their expand/collapse buttons.
+                <para>Gets or sets whether or not AccordionControl groups should display their expand/collapse buttons.
 </para>
             </summary>
             <value><b>true</b>, if AccordionControl groups should display their expand/collapse buttons; otherwise, <b>false</b>.
@@ -22819,6 +22525,14 @@ This method is in effect if item selection is enabled with the <see cref="P:DevE
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.ITileContainerDefaultProperties.ActualAllowSmoothScrolling">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.ITileContainerDefaultProperties.ActualAppearanceGroupHighlighting">
             <summary>
                 <para>Gets the current appearance settings used to highlight Tile Groups within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/>.
@@ -23013,6 +22727,16 @@ This method is in effect if item selection is enabled with the <see cref="P:DevE
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.ITileContainerDefaultProperties.ActualOptionsLayout">
+            <summary>
+                <para>Returns the object that stores layout settings currently applied to this <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/>.
+</para>
+            </summary>
+            <value>A <see cref="TileControlOptionsLayout"/> object that stores layout settings currently applied to this <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.ITileContainerDefaultProperties.ActualPadding">
             <summary>
                 <para>Gets the current amount of space between the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer"/>'s outer border and content.
@@ -23123,6 +22847,14 @@ This method is in effect if item selection is enabled with the <see cref="P:DevE
             </summary>
             <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not a selection border should be drawn around the currently selected tile.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.ITileContainerDefaultProperties.AllowSmoothScrolling">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -24258,9 +23990,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.BarOptions.ExpandAnimationDuration">
             <summary>
-                <para> </para>
+                <para>Gets or sets the duration of expand animation for all drop-down menus within this bar.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int32 value that is the expand animation duration.
+</value>
 
 
         </member>
@@ -29548,9 +29282,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.WinRTLiveTiles.WinRTLiveTileManager.ActualSquareTileSize">
             <summary>
-                <para> </para>
+                <para>Returns the current size for tiles with square templates.
+</para>
             </summary>
-            <value> </value>
+            <value>A Size structure that is the size for all square tiles owned by this WinRTLiveTileManager.
+</value>
 
 
         </member>
@@ -32457,9 +32193,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Utils.BarManagerOptionsLayout.AllowSerializeBarSubItemChildren">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not links contained within <see cref="T:DevExpress.XtraBars.BarSubItem"/> objects are serialized. 
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if links contained within <see cref="T:DevExpress.XtraBars.BarSubItem"/> objects are serialized; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -34314,10 +34052,10 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Docking.DockManager.AutoHiddenPanelCaptionShowMode">
             <summary>
-                <para>Gets or sets the way auto-hidden panel captions are displayed.
+                <para>Gets or sets how panel captions are displayed within an auto-hide container when these panels are combined into an auto-hidden tab container.
 </para>
             </summary>
-            <value>The AutoHiddenPanelCaptionShowMode enumeration value that specifies the way auto-hidden panel captions are displayed.
+            <value>A value that specifies the way auto-hidden panel captions are displayed when these panels are combined into an auto-hidden tab container.
 </value>
 
 
@@ -35179,9 +34917,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CustomResizeZoneThickness">
             <summary>
-                <para> </para>
+                <para>Gets or sets the thickness of a resize zone for any dock panel owned by this manager.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int32 value that is the resize zone thickness.
+</value>
 
 
         </member>
@@ -35239,9 +34979,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Docking.DockingOptions.TabbedPanelVerticalTextOrientation">
             <summary>
-                <para> </para>
+                <para>Gets or sets the text direction, according to which tabbed panels' header strings are drawn.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="VerticalTextOrientation"/> enumerator value that specifies the text direction, according to which tabbed panels' header strings are drawn.
+</value>
 
 
         </member>
@@ -36427,7 +36169,8 @@ It's not possible to make a dock panel fill the form (user control).
         <member name="T:DevExpress.XtraBars.DefaultBarAndDockingController">
 
             <summary>
-                <para>Provides access to the default <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object which is used for default painting XtraBars controls (bars, dock panels, Ribbon Controls and tabbed windows of the XtraTabbedMdiManager).
+                <para>Allows you to customize the application-scope display and behavior settings for controls and components included in the XtraBars library - bars, dock panels, Ribbon controls, App UI Manager (<see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>) and tabbed windows (<see cref="T:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager"/>).
+
 </para>
             </summary>
 
@@ -36845,9 +36588,11 @@ It's not possible to make a dock panel fill the form (user control).
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPageDefaultProperties.AllowCustomHeaderButtonsGlyphSkinning">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not custom header buttons for this <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/> should colorize their icons with fore colors.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not custom header buttons for this <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/> should colorize their icons with fore colors.
+</value>
 
 
         </member>
@@ -36886,9 +36631,11 @@ It's not possible to make a dock panel fill the form (user control).
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPageDefaultProperties.CanCustomHeaderButtonsGlyphSkinning">
             <summary>
-                <para> </para>
+                <para>Returns whether or not the Glyph Skinning feature is currently enabled for this page.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the Glyph Skinning feature is currently enabled for this page; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -37015,17 +36762,21 @@ It's not possible to make a dock panel fill the form (user control).
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPage.SuperTip">
             <summary>
-                <para> </para>
+                <para>Gets or sets a super tip associated with this NavigationPage.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="SuperToolTip"/> object associated with this NavigationPage.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPage.ToolTip">
             <summary>
-                <para> </para>
+                <para>Gets or sets a regular hint associated with this NavigationPage.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="String"/> object associated with this NavigationPage.
+</value>
 
 
         </member>
@@ -37343,9 +37094,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPageProperties.AllowCustomHeaderButtonsGlyphSkinning">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not custom header buttons for all <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/>s should colorize their icons with fore colors.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to colorize icons for all navigation pages; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -37553,6 +37306,554 @@ See Navigation Frame and Tab Pane.
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog">
+
+            <summary>
+                <para>Provides functionality for Windows 10-styled pop-ups and flyout messages.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Control)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control that will be displayed by this FlyoutDialog.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that will own this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object that will be displayed within this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that specifies advanced FlyoutDialog settings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that will own the newly created FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that will own the newly created FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within the FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that contains advanced FlyoutDialog settings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.Utils.Menu.IDXMenuManager)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that will own the newly created FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control that is this FlyoutDialog's content.
+
+            </param>
+            <param name="menuManager">
+		An IDXMenuManager object that controls this FlyoutDialog.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that will own this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object that will be displayed in this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed in the FlyoutDialog.
+
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that specifies advanced FlyoutDialog settings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object that will be displayed in this FlyoutDialog.
+
+
+            </param>
+            <param name="flyoutControl">
+		A Control that will be displayed by this FlyoutDialog.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this newly created FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A FlyoutAction object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that contains advanced FlyoutDialog settings.
+
+            </param>
+            <param name="useControlBackColor">
+		<b>true</b>, if the FlyoutDialog should use the backcolor of the assigned <i>flyoutControl</i>; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.#ctor(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the FlyoutDialog class with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this newly created FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A FlyoutAction object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="useControlBackColor">
+		<b>true</b>, if the FlyoutDialog should use the backcolor of the assigned <i>flyoutControl</i>; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.FlyoutControl">
+            <summary>
+                <para>Gets a control assigned to this FlyoutDialog.
+</para>
+            </summary>
+            <value>A Control assigned to this FlyoutDialog.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Properties">
+            <summary>
+                <para>Provides access to an object that stores advanced FlyoutDialog settings.
+</para>
+            </summary>
+            <value>A <see cref="IFlyoutDefaultProperties"/> object that stores advanced FlyoutDialog settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
+            <summary>
+                <para>Displays a FlyoutDialog with specific parameters and assigned flyout action.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object assigned to this FlyoutDialog.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction)">
+            <summary>
+                <para>Displays a FlyoutDialog object with a specific action assigned to it.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it is closed.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,System.Predicate`1)">
+            <summary>
+                <para>Displays a FlyoutDialog with a specific control within and related to a predicate function.
+
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="canClose">
+		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it is closed.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Predicate`1)">
+            <summary>
+                <para>Displays a FlyoutDialog that has an assigned flyout action and predicate function.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="canClose">
+		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value, returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
+            <summary>
+                <para>Shows a FlyoutDialog with specific properties and displayed content.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns the FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that stores advanced FlyoutDialog settings.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value, returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1)">
+            <summary>
+                <para>Displays a FlyoutDialog object that displays a specific control and has the related predicate function.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that stores advanced FlyoutDialog settings.
+
+            </param>
+            <param name="canClose">
+		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1)">
+            <summary>
+                <para>Displays a FlyoutDialog object with a flyout action, flyout properies and predicate function assigned.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that stores this FlyoutDialog's properties.
+
+            </param>
+            <param name="canClose">
+		A Predicate that checks whether the FlyoutDialog can be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value, returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control)">
+            <summary>
+                <para>Displays a FlyoutDialog object with the target control within.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <returns>A DialogResult enumerator value that is the value returned from the FlyoutDialog after it is closed.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Windows.Forms.Control)">
+            <summary>
+                <para>Displays a FlyoutDialog with a flyout action and a specific control within.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="control">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,System.Predicate`1)">
+            <summary>
+                <para>Displays a FlyoutDialog with a flyout action and a specific control within, using a related predicate function.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns the FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="canClose">
+		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
+
+            </param>
+            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties)">
+            <summary>
+                <para>Displays a FlyoutDialog with a flyout action and a specific control within, using specific properties.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns the FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that stores advanced FlyoutDialog settings.
+
+            </param>
+            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1)">
+            <summary>
+                <para>Displays a FlyoutDialog with a flyout action and a specific control within, using specific properties and a related predicate function.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns the FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> object assigned to this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that stores advanced FlyoutDialog settings.
+
+            </param>
+            <param name="canClose">
+		A Predicate function that checks whether this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns <b>true</b>.
+
+            </param>
+            <returns>A DialogResult enumeration value returned from the FlyoutDialog after it was closed.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(System.Windows.Forms.Form,System.Windows.Forms.Control,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction,DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties,System.Predicate`1,System.Boolean)">
+            <summary>
+                <para>Shows this FlyoutDialog with the specific parameters set.
+</para>
+            </summary>
+            <param name="owner">
+		A Form that owns this FlyoutDialog.
+
+            </param>
+            <param name="flyoutControl">
+		A Control displayed within this FlyoutDialog.
+
+            </param>
+            <param name="action">
+		A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> assigned to this FlyoutDialog.
+
+            </param>
+            <param name="parameters">
+		A FlyoutProperties object that stores advanced FlyoutDialog settings.
+
+            </param>
+            <param name="canClose">
+		A Predicate function that checks the DialogResult value, returned by this FlyoutDialog and depending on this, determines whether or not this FlyoutDialog can currently be closed. End-users cannot close the FlyoutDialog until this function returns true. 
+
+
+            </param>
+            <param name="useControlBackColor">
+		<b>true</b>, if the FlyoutDialog should use the same background color as the <i>flyoutControl</i> assigned; otherwise, <b>false</b>.
+
+            </param>
+            <returns>A DialogResult enumerator value that specifies the way this FlyoutDialog is closed.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.UseControlBackColor">
+            <summary>
+                <para>Gets or sets whether or not this FlyoutDialog should use the same background color as the control displayed in it.
+
+</para>
+            </summary>
+            <value><b>true</b>, if this FlyoutDialog should use the same background color as the control displayed within it; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.ShowToolbarsContextMenuEventHandler">
 
             <summary>
@@ -37655,6 +37956,14 @@ See Navigation Frame and Tab Pane.
 		A <see cref="T:DevExpress.XtraBars.BarShortcut"/> object, the item's shortcut. This value is assigned to the <see cref="P:DevExpress.XtraBars.ShortcutItemClickEventArgs.Shortcut"/> property.
 
             </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.ShortcutItemClickEventArgs.Accelerator">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -37955,6 +38264,26 @@ See Navigation Frame and Tab Pane.
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.BarManagerProperties.DrawMenuRightIndent">
+            <summary>
+                <para>Gets or sets whether pop-up menus display the right margin. 
+</para>
+            </summary>
+            <value><b>true</b>, if pop-up menus display the right margin; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.BarManagerProperties.DrawMenuSideStrip">
+            <summary>
+                <para>Gets or sets whether pop-up menus display the side strip for item glyphs.
+</para>
+            </summary>
+            <value><b>true</b>, if pop-up menus display the side strip for item glyphs; otherwise, <b>false</b>. The default is <b>true</b>.
+</value>
+
+
+        </member>
         <member name="M:DevExpress.XtraBars.BarManagerProperties.GetLinkHorzIndent">
             <summary>
                 <para>Returns the horizontal indent between the content and the borders of bar links.
@@ -38197,9 +38526,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="M:DevExpress.XtraBars.BarManagerCategoryCollection.GetSortedList">
             <summary>
-                <para> </para>
+                <para>Returns a list of alphabetically sorted BarManagerCategoryCollection child elements.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A List that contains alphabetically sorted categories owned by this BarManagerCategoryCollection object.
+</returns>
 
 
         </member>
@@ -39010,7 +39341,7 @@ See Navigation Frame and Tab Pane.
         <member name="T:DevExpress.XtraBars.BarAndDockingController">
 
             <summary>
-                <para>The component that provides default settings for controls included in the DevExpress Ribbon, Menu and Docking Library (dock windows, bars, Ribbon Controls and tabbed windows of the <see cref="T:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager"/> component).
+                <para>Allows you to customize the form-scope display and behavior settings for controls and components included in the XtraBars library - bars, dock panels, Ribbon controls, App UI Manager (<see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>) and tabbed windows (<see cref="T:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager"/>).
 
 </para>
             </summary>
@@ -39050,50 +39381,51 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.AppearancesBackstageView">
             <summary>
-                <para>Provides access to the appearance settings applied to <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/> controls.
+                <para>Provides the default appearance settings applied to <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/> controls.
 </para>
             </summary>
-            <value>A BackstageViewAppearances object that provides corresponding appearance settings.
+            <value>An object that provides appearance settings applied to <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/> controls.
+
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.AppearancesBar">
             <summary>
-                <para>Provides access to the properties that control the bars' default style.
+                <para>Provides the default appearance settings of the Bars UI, implemented with the <see cref="T:DevExpress.XtraBars.BarManager"/> component.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.BarManagerAppearances"/> object providing default style settings for bars.
+            <value>A <see cref="T:DevExpress.XtraBars.BarManagerAppearances"/> object providing the default appearance settings of the Bars UI.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.AppearancesDocking">
             <summary>
-                <para>Provides access to the properties which control the appearance of all dock panels.
+                <para>Provides the default appearance settings for all dock panels, implemented with the <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> component.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> object providing appearance settings for dock panels.
+            <value>A <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> object providing the appearance settings for dock panels.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.AppearancesDocumentManager">
             <summary>
-                <para>Contains appearance settings that specify the appearance of a <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>'s elements.
+                <para>Contains the default appearance settings applied to Views of the <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> component.
 </para>
             </summary>
-            <value>A DocumentManagerAppearances object that specifies the appearance of a <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>'s elements.
+            <value>The default appearance settings applied to Views of the <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> component.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.AppearancesRibbon">
             <summary>
-                <para>Provides access to the properties which control the appearance of the Ribbon Control's elements.
+                <para>Provides the default appearance settings of the Ribbon Controls and Ribbon Forms.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.RibbonAppearances"/> object that provides the appearance settings for the Ribbon Control's elements.
+            <value>The default appearance settings of the Ribbon Controls and Ribbon Forms.
 </value>
 
 
@@ -39125,10 +39457,10 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.Default">
             <summary>
-                <para>Provides access to the DefaultBarAndDockingController.
+                <para>Provides access to the <b>Default BarAndDockingController</b>, which contains the application-scope settings for the XtraBars controls and components.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object specifying the DefaultBarAndDockingController.
+            <value>The <b>Default BarAndDockingController</b>
 </value>
 
 
@@ -39164,7 +39496,7 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.LookAndFeel">
             <summary>
-                <para>Provides access to Look And Feel settings common to all components related to this BarAndDockingController.
+                <para>Provides Look And Feel settings for the controls/components included in the XtraBars library.
 </para>
             </summary>
             <value>A <see cref="BarAndDockingControllerLookAndFeel"/> object that stores Look And Feel settings common to all components related to this BarAndDockingController.
@@ -39174,21 +39506,22 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.PaintStyle">
             <summary>
-                <para>Gets the object that provides paint information for bars according to the current paint scheme.
+                <para>Gets the object that provides information on the current paint scheme.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Styles.BarManagerPaintStyle"/> descendant that provides paint information according to the current paint scheme.
+            <value>A <see cref="T:DevExpress.XtraBars.Styles.BarManagerPaintStyle"/> descendant that provides information on the current paint scheme.
+
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.PaintStyleName">
             <summary>
-                <para>Gets or sets the paint scheme applied to bars created with the <see cref="T:DevExpress.XtraBars.BarManager"/> component, by its name.
+                <para>Gets or sets the name of the paint scheme applied to the Bars UI (<see cref="T:DevExpress.XtraBars.BarManager"/>), dock panels (<see cref="T:DevExpress.XtraBars.Docking.DockManager"/>) and MDI tabbed windows (<see cref="T:DevExpress.XtraTabbedMdi.XtraTabbedMdiManager"/>).
 
 </para>
             </summary>
-            <value>A string specifying the paint style's name.
+            <value>A string specifying the paint scheme name.
 </value>
 
 
@@ -39205,7 +39538,7 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.PropertiesBar">
             <summary>
-                <para>Provides access to the default customization settings of bars.
+                <para>Contains the default customization settings of the Bars UI (<see cref="T:DevExpress.XtraBars.BarManager"/>).
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraBars.BarManagerProperties"/> object, containing bar settings.
@@ -39216,18 +39549,20 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.PropertiesDocking">
             <summary>
-                <para> </para>
+                <para>Provides the default customization settings for the Application UI Manager (<see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/>) and Dock Manager.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that stores default settings common to the Application UI Manager and Dock Manager controls.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingController.PropertiesRibbon">
             <summary>
-                <para>Provides properties that control the display of bar items in a RibbonControl.
+                <para>Provides the default customization properties for the Ribbon UI elements.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.RibbonProperties"/> object that contains the corresponding properties.
+            <value>The Ribbon UI customization properties.
 </value>
 
 
@@ -40643,15 +40978,19 @@ If such an item is not found in the parent form's bar/RibbonControl, the child f
         </member>
         <member name="M:DevExpress.XtraBars.Docking2010.Views.BaseView.AddOrActivateDocument(System.Predicate`1,System.Func`1)">
             <summary>
-                <para> </para>
+                <para>Activates an existing document that contains the specific control. If no such document was found, a new document is created and added to this View.
+</para>
             </summary>
             <param name="match">
-		 
+		A Predicate that retrieves an existing document.
+
             </param>
             <param name="getControl">
-		 
+		A Function that retrieves a control. This control will be placed within a newly created document of the <i>match</i> predicate returns nothing.
+
             </param>
-            <returns> </returns>
+            <returns>A BaseDocument class descendant that is the activated or created document.
+</returns>
 
 
         </member>
@@ -40824,15 +41163,17 @@ If such an item is not found in the parent form's bar/RibbonControl, the child f
         </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.CustomResizeZoneThickness">
             <summary>
-                <para> </para>
+                <para>Gets or sets the resize zone thickness.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int32 value that is the resize zone thickness.
+</value>
 
 
         </member>
         <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.DocumentActivated">
             <summary>
-                <para>Fires when a document is activated.
+                <para>Fires when the View's <see cref="P:DevExpress.XtraBars.Docking2010.Views.BaseView.ActiveDocument"/> property changes.
 </para>
             </summary>
 
@@ -46583,9 +46924,11 @@ To display the Application Button in the MacOffice style, ensure that the <see c
         </member>
         <member name="P:DevExpress.XtraBars.QueryShowPopupMenuEventArgs.BreakShowPopupMenu">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not the parent <see cref="E:DevExpress.XtraBars.BarManager.QueryShowPopupMenu"/> event should affect only the <see cref="T:DevExpress.XtraBars.BarManager"/> itself.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the parent <see cref="E:DevExpress.XtraBars.BarManager.QueryShowPopupMenu"/> event should affect only the <see cref="T:DevExpress.XtraBars.BarManager"/> itself; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -47106,7 +47449,7 @@ To display the Application Button in the MacOffice style, ensure that the <see c
         </member>
         <member name="F:DevExpress.XtraBars.Ribbon.ViewInfo.RibbonHitTest.Item">
             <summary>
-                <para>The test point belongs to a Bar Items and Links.
+                <para>The test point belongs to a Items and Item Links.
 </para>
             </summary>
 
@@ -47498,6 +47841,14 @@ To display the Application Button in the MacOffice style, ensure that the <see c
             </summary>
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IDocumentSelectorDefaultProperties.ActualButtonInterval">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IDocumentSelectorDefaultProperties.ActualSwitchDocumentAnimationFrameInterval">
             <summary>
                 <para>Gets the current <see cref="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IDocumentSelectorDefaultProperties.SwitchDocumentAnimationFrameInterval"/> property value.
@@ -47538,6 +47889,14 @@ To display the Application Button in the MacOffice style, ensure that the <see c
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IDocumentSelectorDefaultProperties.ButtonInterval">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IDocumentSelectorDefaultProperties.CanHtmlDrawHeaders">
             <summary>
                 <para>Returns whether this Content Container can use HTML tags to draw Document headers.
@@ -47545,6 +47904,14 @@ To display the Application Button in the MacOffice style, ensure that the <see c
             </summary>
             <value><b>true</b>, if this Content Container can use HTML tags to draw Document headers; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IDocumentSelectorDefaultProperties.HasButtonInterval">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -47595,6 +47962,14 @@ To display the Application Button in the MacOffice style, ensure that the <see c
             </summary>
             <value><b>true</b>, if the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup"/> and <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup"/> containers within this View can use HTML tags to draw Document headers; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IDocumentSelectorProperties.ButtonInterval">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -47656,6 +48031,64 @@ To display the Application Button in the MacOffice style, ensure that the <see c
 </para>
             </summary>
             <value>The <see cref="T:DevExpress.XtraBars.Navigation.TileNavCategory"/> that owns the current TileNavItemCollection.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Docking2010.WindowsUISeparator">
+
+            <summary>
+                <para>A separator item that delimits neighboring <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/> objects.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.WindowsUISeparator.#ctor">
+            <summary>
+                <para>Initializes a new instance of the WindowsUISeparator class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.WindowsUISeparator.#ctor(System.Drawing.Image)">
+            <summary>
+                <para>Initializes a new instance of the WindowsUISeparator class with the specified settings.
+</para>
+            </summary>
+            <param name="image">
+		An Image displayed by this separator.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.WindowsUISeparator.#ctor(System.Drawing.Image,System.Boolean,System.Int32)">
+            <summary>
+                <para>Initializes a new instance of the WindowsUISeparator class with the specified settings.
+</para>
+            </summary>
+            <param name="image">
+		An Image displayed by this separator.
+
+            </param>
+            <param name="visible">
+		<b>true</b>, if the separator is initially visible; otherwise, <b>false</b>.
+
+            </param>
+            <param name="visibleIndex">
+		An Int32 value that is the display order of this separator.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.WindowsUISeparator.IsLeft">
+            <summary>
+                <para>Gets or sets whether or not this separator is aligned to the left border of its parent container.
+</para>
+            </summary>
+            <value><b>true</b>, if this separator is aligned to the left border of its parent container; otherwise, <b>false</b>.
 </value>
 
 
@@ -47787,8 +48220,17 @@ To display the Application Button in the MacOffice style, ensure that the <see c
         </member>
         <member name="E:DevExpress.XtraBars.Navigation.OfficeNavigationBar.CompactChanged">
             <summary>
+                <para>Occurs when the <see cref="P:DevExpress.XtraBars.Navigation.OfficeNavigationBar.Compact"/> property changes its value.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.OfficeNavigationBar.CreateItemInstance">
+            <summary>
                 <para> </para>
             </summary>
+            <returns> </returns>
 
 
         </member>
@@ -49255,6 +49697,27 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.PopupMenu.DrawMenuRightIndent">
+            <summary>
+                <para>Gets or sets whether the current pop-up menu displays the right margin. 
+</para>
+            </summary>
+            <value><b>True</b> to display the right margin; <b>False</b> to hide it; <b>Default</b> - use the <see cref="P:DevExpress.XtraBars.BarManagerProperties.DrawMenuRightIndent"/> global setting.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.PopupMenu.DrawMenuSideStrip">
+            <summary>
+                <para>Gets or sets whether the current pop-up menu displays the side strip for item glyphs.
+</para>
+            </summary>
+            <value><b>True</b> to display the side strip; <b>False</b> to hide it; <b>Default</b> - use the <see cref="P:DevExpress.XtraBars.BarManagerProperties.DrawMenuSideStrip"/> global setting.
+
+</value>
+
+
+        </member>
         <member name="M:DevExpress.XtraBars.PopupMenu.HidePopup">
             <summary>
                 <para>Hides the current <see cref="T:DevExpress.XtraBars.PopupMenu"/>.
@@ -49752,13 +50215,34 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.BarSubItem.DrawMenuRightIndent">
+            <summary>
+                <para>Gets or sets whether the current sub-menu displays the right margin. 
+</para>
+            </summary>
+            <value><b>True</b> to display the right margin; <b>False</b> to hide it; <b>Default</b> - use the <see cref="P:DevExpress.XtraBars.BarManagerProperties.DrawMenuRightIndent"/> global setting.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.BarSubItem.DrawMenuSideStrip">
+            <summary>
+                <para>Gets or sets whether the current sub-menu displays the side strip for item glyphs.
+</para>
+            </summary>
+            <value><b>True</b> to display the side strip; <b>False</b> to hide it; <b>Default</b> - use the <see cref="P:DevExpress.XtraBars.BarManagerProperties.DrawMenuSideStrip"/> global setting.
+
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.BarSubItem.HideWhenEmpty">
             <summary>
-                <para>Gets or sets whether the sub-menu button is automatically hidden from the menu containing it if the sub-menu does not contain any items.
+                <para>Gets or sets whether the sub-menu button is automatically hidden from the menu if the sub-menu does not contain any items.
 
 </para>
             </summary>
-            <value><b>true</b>, if the sub-menu button is automatically hidden if the sub-menu is empty; otherwise, <b>false</b>.
+            <value><b>true</b>, if the sub-menu button is automatically hidden if the sub-menu is empty; otherwise, <b>false</b>. The default is <b>false</b>.
 </value>
 
 
@@ -50454,7 +50938,7 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
         </member>
         <member name="P:DevExpress.XtraBars.BarManager.Controller">
             <summary>
-                <para>Gets or sets the Bar and Docking Controller that will provide default appearance and customization options for the bars  belonging to the current BarManager.
+                <para>Gets or sets the Bar and Docking Controllers that will provide default appearance and customization options for the bars  belonging to the current BarManager.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object providing appearance options.
@@ -50625,7 +51109,7 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
         </member>
         <member name="M:DevExpress.XtraBars.BarManager.GetController">
             <summary>
-                <para>Returns the actual Bar and Docking Controller specifying behavior and appearance settings for the corresponding bars.
+                <para>Returns the actual Bar and Docking Controllers specifying behavior and appearance settings for the corresponding bars.
 </para>
             </summary>
             <returns>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object providing common appearance settings for bars.
@@ -51139,7 +51623,7 @@ This option is in effect if you subscribed to the parent BarManager's <see cref=
         </member>
         <member name="M:DevExpress.XtraBars.BarManager.ResetStyleDefaults">
             <summary>
-                <para>This method is obsolete. Use the <see cref="M:DevExpress.XtraBars.BarAndDockingController.ResetStyleDefaults"/> method of a Bar and Docking Controller to restore style settings which depend on the current paint scheme.
+                <para>This method is obsolete. Use the <see cref="M:DevExpress.XtraBars.BarAndDockingController.ResetStyleDefaults"/> method of a Bar and Docking Controllers to restore style settings which depend on the current paint scheme.
 </para>
             </summary>
 
@@ -51671,7 +52155,7 @@ This option is in effect if you subscribed to the parent BarManager's <see cref=
 </para>
             </summary>
             <param name="barManager">
-		? <see cref="T:DevExpress.XtraBars.BarManager"/> responsible for managing the current item. This value is assigned to the <see cref="P:DevExpress.XtraBars.BarItem.Manager"/> property.
+		A <see cref="T:DevExpress.XtraBars.BarManager"/> responsible for managing the current item. This value is assigned to the <see cref="P:DevExpress.XtraBars.BarItem.Manager"/> property.
 
             </param>
             <param name="caption">
@@ -51832,9 +52316,11 @@ This option is in effect if you subscribed to the parent BarManager's <see cref=
         </member>
         <member name="P:DevExpress.XtraBars.BarLinkContainerItem.AllowSerializeChildren">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not links contained within this BarLinkContainerItem should be serialized.
+</para>
             </summary>
-            <value> </value>
+            <value>A DefaultBoolean enumerator value that specifies whether or not links contained within this BarLinkContainerItem should be serialized.
+</value>
 
 
         </member>
@@ -52113,9 +52599,11 @@ This option is in effect if you subscribed to the parent BarManager's <see cref=
         </member>
         <member name="M:DevExpress.XtraBars.BarItems.GetSortedList">
             <summary>
-                <para> </para>
+                <para>Returns a list of alphabetically sorted BarItems child elements.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A List that contains items owned by this BarItems collection. Items in this list are sorted alphabetically.
+</returns>
 
 
         </member>
@@ -53299,6 +53787,14 @@ This property is supported for bar items used within a <see cref="T:DevExpress.X
 
 
         </member>
+        <member name="M:DevExpress.XtraBars.BarItem.GetVisibleLinks">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.BarItem.Glyph">
             <summary>
                 <para>Gets or sets the item's image.
@@ -54235,6 +54731,14 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.BarEditItem.UseEditorPadding">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.BarEditItem.VisibleWhenVertical">
             <summary>
                 <para>Determines whether the current <see cref="T:DevExpress.XtraBars.BarEditItem"/> is visible, if a specific bar is vertically oriented.
@@ -54566,9 +55070,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.BarButtonItemLink.ImageIndex">
             <summary>
-                <para> </para>
+                <para>Gets or sets the index of an image from the <see cref="P:DevExpress.XtraBars.BarItem.Images"/> collection that should be used as an icon for this link.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int32 value that is the index of an image from the <see cref="P:DevExpress.XtraBars.BarItem.Images"/> collection that should be used as an icon for this link.
+</value>
 
 
         </member>
@@ -55721,7 +56227,7 @@ A specific version of the addressed image is automatically chosen, based on the 
 
 </para>
             </summary>
-            <value>An integer value specifying the number of pixels separating the content of bar items from their borders, horizontally. <b>-1</b> if the indent is specified by the <see cref="P:DevExpress.XtraBars.BarManagerProperties.BarItemHorzIndent"/> property of the Bar and Docking Controller.
+            <value>An integer value specifying the number of pixels separating the content of bar items from their borders, horizontally. <b>-1</b> if the indent is specified by the <see cref="P:DevExpress.XtraBars.BarManagerProperties.BarItemHorzIndent"/> property of the Bar and Docking Controllers.
 
 </value>
 
@@ -55732,7 +56238,7 @@ A specific version of the addressed image is automatically chosen, based on the 
                 <para>Gets or sets a value specifying the size of the vertical indent between the link's borders and their content, in pixels.
 </para>
             </summary>
-            <value>An integer value specifying the number of pixels separating the contents of bar items from their borders vertically. <b>-1</b> if the indent is specified by the <see cref="P:DevExpress.XtraBars.BarManagerProperties.BarItemVertIndent"/> of the Bar and Docking Controller.
+            <value>An integer value specifying the number of pixels separating the contents of bar items from their borders vertically. <b>-1</b> if the indent is specified by the <see cref="P:DevExpress.XtraBars.BarManagerProperties.BarItemVertIndent"/> of the Bar and Docking Controllers.
 </value>
 
 
