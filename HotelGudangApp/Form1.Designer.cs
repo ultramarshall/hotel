@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
+            this.NavFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -54,21 +54,23 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.navigationFrame2 = new DevExpress.XtraBars.Navigation.NavigationFrame();
-            this.addItem = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.NavPage = new DevExpress.XtraBars.Navigation.NavigationFrame();
+            this.MasterItem = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.btnAddItem = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dashboard = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.AddItem = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.loading = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::HotelGudangApp.WaitForm1), true, true, true);
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
-            this.navigationFrame1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NavFrame)).BeginInit();
+            this.NavFrame.SuspendLayout();
             this.navigationPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -79,33 +81,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame2)).BeginInit();
-            this.navigationFrame2.SuspendLayout();
-            this.addItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NavPage)).BeginInit();
+            this.NavPage.SuspendLayout();
+            this.MasterItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // navigationFrame1
+            // NavFrame
             // 
-            this.navigationFrame1.Controls.Add(this.navigationPage1);
-            this.navigationFrame1.Controls.Add(this.navigationPage2);
-            this.navigationFrame1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame1.Location = new System.Drawing.Point(0, 0);
-            this.navigationFrame1.Name = "navigationFrame1";
-            this.navigationFrame1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.NavFrame.Controls.Add(this.navigationPage1);
+            this.NavFrame.Controls.Add(this.navigationPage2);
+            this.NavFrame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NavFrame.Location = new System.Drawing.Point(0, 0);
+            this.NavFrame.Name = "NavFrame";
+            this.NavFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPage1,
             this.navigationPage2});
-            this.navigationFrame1.SelectedPage = this.navigationPage2;
-            this.navigationFrame1.Size = new System.Drawing.Size(1035, 601);
-            this.navigationFrame1.TabIndex = 0;
-            this.navigationFrame1.Text = "navigationFrame1";
+            this.NavFrame.SelectedPage = this.navigationPage2;
+            this.NavFrame.Size = new System.Drawing.Size(1035, 601);
+            this.NavFrame.TabIndex = 0;
+            this.NavFrame.Text = "navigationFrame1";
             // 
             // navigationPage1
             // 
@@ -117,7 +120,7 @@
             // 
             this.navigationPage2.Caption = "navigationPage2";
             this.navigationPage2.Controls.Add(this.layoutControl1);
-            this.navigationPage2.Controls.Add(this.navigationFrame2);
+            this.navigationPage2.Controls.Add(this.NavPage);
             this.navigationPage2.Name = "navigationPage2";
             this.navigationPage2.Size = new System.Drawing.Size(1035, 601);
             // 
@@ -198,6 +201,7 @@
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement6,
             this.accordionControlElement2});
+            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.Image")));
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Stok";
@@ -206,6 +210,7 @@
             // 
             this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement7});
+            this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Master";
             // 
@@ -312,39 +317,41 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // navigationFrame2
+            // NavPage
             // 
-            this.navigationFrame2.Controls.Add(this.addItem);
-            this.navigationFrame2.Controls.Add(this.dashboard);
-            this.navigationFrame2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.navigationFrame2.Location = new System.Drawing.Point(271, 0);
-            this.navigationFrame2.Name = "navigationFrame2";
-            this.navigationFrame2.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.NavPage.Controls.Add(this.MasterItem);
+            this.NavPage.Controls.Add(this.dashboard);
+            this.NavPage.Controls.Add(this.AddItem);
+            this.NavPage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.NavPage.Location = new System.Drawing.Point(271, 0);
+            this.NavPage.Name = "NavPage";
+            this.NavPage.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.dashboard,
-            this.addItem});
-            this.navigationFrame2.SelectedPage = this.addItem;
-            this.navigationFrame2.Size = new System.Drawing.Size(764, 601);
-            this.navigationFrame2.TabIndex = 2;
-            this.navigationFrame2.Text = "navigationFrame2";
-            this.navigationFrame2.TransitionAnimationProperties.FrameCount = 300;
-            this.navigationFrame2.TransitionType = DevExpress.Utils.Animation.Transitions.Shape;
+            this.MasterItem,
+            this.AddItem});
+            this.NavPage.SelectedPage = this.MasterItem;
+            this.NavPage.Size = new System.Drawing.Size(764, 601);
+            this.NavPage.TabIndex = 2;
+            this.NavPage.TransitionAnimationProperties.FrameCount = 300;
+            this.NavPage.TransitionType = DevExpress.Utils.Animation.Transitions.Shape;
             // 
-            // addItem
+            // MasterItem
             // 
-            this.addItem.Caption = "addItem";
-            this.addItem.Controls.Add(this.groupControl3);
-            this.addItem.Controls.Add(this.groupControl1);
-            this.addItem.Controls.Add(this.gridControl1);
-            this.addItem.Name = "addItem";
-            this.addItem.Size = new System.Drawing.Size(764, 601);
+            this.MasterItem.Caption = "MasterItem";
+            this.MasterItem.Controls.Add(this.groupControl3);
+            this.MasterItem.Controls.Add(this.groupControl1);
+            this.MasterItem.Controls.Add(this.groupControl4);
+            this.MasterItem.Controls.Add(this.gridControl1);
+            this.MasterItem.Name = "MasterItem";
+            this.MasterItem.Size = new System.Drawing.Size(764, 601);
             // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.labelControl1);
-            this.groupControl3.Location = new System.Drawing.Point(6, 12);
+            this.groupControl3.Location = new System.Drawing.Point(6, 14);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(743, 58);
-            this.groupControl3.TabIndex = 12;
+            this.groupControl3.TabIndex = 13;
             // 
             // labelControl1
             // 
@@ -361,39 +368,25 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
             this.groupControl1.Controls.Add(this.comboBoxEdit2);
-            this.groupControl1.Location = new System.Drawing.Point(604, 67);
+            this.groupControl1.Location = new System.Drawing.Point(604, 68);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(145, 112);
-            this.groupControl1.TabIndex = 9;
+            this.groupControl1.Size = new System.Drawing.Size(145, 96);
+            this.groupControl1.TabIndex = 10;
             // 
             // simpleButton1
             // 
             this.simpleButton1.AllowFocus = false;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(9, 72);
+            this.simpleButton1.Location = new System.Drawing.Point(9, 50);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(125, 28);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "ok";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(9, 20);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.AllowFocused = false;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.NullText = "Vendors";
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(125, 20);
-            this.comboBoxEdit1.TabIndex = 0;
             // 
             // comboBoxEdit2
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(9, 46);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(9, 24);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.AllowFocused = false;
             this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -403,12 +396,31 @@
             this.comboBoxEdit2.Size = new System.Drawing.Size(125, 20);
             this.comboBoxEdit2.TabIndex = 2;
             // 
+            // groupControl4
+            // 
+            this.groupControl4.Controls.Add(this.btnAddItem);
+            this.groupControl4.Location = new System.Drawing.Point(604, 159);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(145, 199);
+            this.groupControl4.TabIndex = 13;
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.AllowFocus = false;
+            this.btnAddItem.Image = ((System.Drawing.Image)(resources.GetObject("btnAddItem.Image")));
+            this.btnAddItem.Location = new System.Drawing.Point(9, 24);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(125, 28);
+            this.btnAddItem.TabIndex = 5;
+            this.btnAddItem.Text = "Add item";
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            // 
             // gridControl1
             // 
             this.gridControl1.Location = new System.Drawing.Point(6, 78);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(587, 471);
+            this.gridControl1.Size = new System.Drawing.Size(587, 511);
             this.gridControl1.TabIndex = 10;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -425,6 +437,12 @@
             this.dashboard.Name = "dashboard";
             this.dashboard.Size = new System.Drawing.Size(764, 601);
             // 
+            // AddItem
+            // 
+            this.AddItem.Caption = "AddItem";
+            this.AddItem.Name = "AddItem";
+            this.AddItem.Size = new System.Drawing.Size(764, 601);
+            // 
             // loading
             // 
             this.loading.ClosingDelay = 500;
@@ -438,7 +456,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 601);
-            this.Controls.Add(this.navigationFrame1);
+            this.Controls.Add(this.NavFrame);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -447,8 +465,8 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PT CALIFORNIA - INVENTORY";
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).EndInit();
-            this.navigationFrame1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NavFrame)).EndInit();
+            this.NavFrame.ResumeLayout(false);
             this.navigationPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -460,16 +478,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame2)).EndInit();
-            this.navigationFrame2.ResumeLayout(false);
-            this.addItem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NavPage)).EndInit();
+            this.NavPage.ResumeLayout(false);
+            this.MasterItem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -478,19 +497,10 @@
 
         #endregion
 
-        private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame1;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
+        private DevExpress.XtraBars.Navigation.NavigationFrame NavFrame;
         private DevExpress.XtraSplashScreen.SplashScreenManager loading;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
-        private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame2;
-        private DevExpress.XtraBars.Navigation.NavigationPage addItem;
-        private DevExpress.XtraBars.Navigation.NavigationPage dashboard;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
@@ -513,8 +523,19 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.SimpleButton btnAddItem;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        public DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
+        public DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
+        public DevExpress.XtraBars.Navigation.NavigationFrame NavPage;
+        public DevExpress.XtraBars.Navigation.NavigationPage MasterItem;
+        public DevExpress.XtraBars.Navigation.NavigationPage dashboard;
+        public DevExpress.XtraBars.Navigation.NavigationPage AddItem;
     }
 }
 

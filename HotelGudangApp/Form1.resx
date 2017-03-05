@@ -170,6 +170,16 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnAddItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAEVQTFRFdqeX
+        /////P39ncC0+/38mL2x+vz7d6eXncC1osO44Ovo6vLvibOle6qb7fPxgK2eo8S54ezouNHJeKiY+fv6
+        n8G2ga6gnQOw4AAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAVdEVYdFRpdGxl
+        AENoZWNrO01hcms7VGljawsAxyQAAABWSURBVChTpYtJEoAgDARnCKi47/9/qkBCefRgH5LpLPhJa70i
+        /WJJEc9Nb45ShfRdSeMQsntSfZrZhOy2B1bHZk8u5kB0TP+vl4mr90o8L0uV2/o3wAO2NwF6jxK/OAAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="defaultLookAndFeel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>110, 17</value>
   </metadata>
